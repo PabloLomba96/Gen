@@ -1,0 +1,144 @@
+import { Button } from '@/components/ui/button';
+import { ArrowRight, BookOpen, Headphones, FileText, Star, ShoppingBag } from 'lucide-react';
+
+const products = [
+  {
+    icon: FileText,
+    title: 'Cuaderno Anti-Ansiedad',
+    description: '10 días de ejercicios prácticos para calmar tu mente y gestionar la ansiedad.',
+    price: '9,99€',
+    type: 'PDF Descargable',
+    popular: true,
+  },
+  {
+    icon: Headphones,
+    title: 'Pack de Meditaciones',
+    description: '5 meditaciones guiadas para antes de dormir. Reducen el estrés y mejoran el sueño.',
+    price: '4,99€',
+    type: 'Audio MP3',
+    popular: false,
+  },
+];
+
+const recommendations = [
+  {
+    title: 'Libros que me han ayudado',
+    description: 'Mi selección de lecturas sobre autoestima, ansiedad y relaciones.',
+    icon: BookOpen,
+  },
+  {
+    title: 'Kit de Salud Mental',
+    description: 'Gadgets, diarios y herramientas que recomiendo a mis pacientes.',
+    icon: ShoppingBag,
+  },
+];
+
+const Resources = () => {
+  return (
+    <section id="recursos" className="py-24 bg-secondary/30">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
+          <span className="text-sm font-semibold text-primary uppercase tracking-wider">
+            Recursos
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground">
+            Herramientas para empezar hoy
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            No siempre puedes empezar terapia, pero siempre puedes empezar a cuidarte. 
+            Recursos prácticos y accesibles.
+          </p>
+        </div>
+
+        {/* Digital Products */}
+        <div className="mb-16">
+          <h3 className="text-xl font-display font-semibold text-foreground mb-8 text-center">
+            Productos Digitales
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {products.map((product) => (
+              <div
+                key={product.title}
+                className="relative bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl"
+                style={{ boxShadow: 'var(--shadow-soft)' }}
+              >
+                {product.popular && (
+                  <div className="absolute -top-3 right-6 flex items-center gap-1 px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
+                    <Star className="w-3 h-3 fill-current" />
+                    Más vendido
+                  </div>
+                )}
+                
+                <div className="flex items-start gap-6">
+                  <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <product.icon className="w-8 h-8 text-primary" />
+                  </div>
+                  
+                  <div className="space-y-3 flex-1">
+                    <div>
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider">
+                        {product.type}
+                      </span>
+                      <h4 className="text-lg font-display font-semibold text-foreground">
+                        {product.title}
+                      </h4>
+                    </div>
+                    
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {product.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between pt-2">
+                      <span className="text-2xl font-bold text-primary">
+                        {product.price}
+                      </span>
+                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                        Comprar
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Recommendations */}
+        <div>
+          <h3 className="text-xl font-display font-semibold text-foreground mb-8 text-center">
+            Mis Recomendaciones
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {recommendations.map((item) => (
+              <a
+                key={item.title}
+                href="#"
+                className="group bg-card rounded-2xl p-6 border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-xl flex items-center gap-6"
+                style={{ boxShadow: 'var(--shadow-soft)' }}
+              >
+                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-7 h-7 text-accent" />
+                </div>
+                
+                <div className="flex-1">
+                  <h4 className="text-lg font-display font-semibold text-foreground group-hover:text-accent transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {item.description}
+                  </p>
+                </div>
+                
+                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Resources;
