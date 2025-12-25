@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play, MapPin, Video, Star } from 'lucide-react';
+import { ArrowRight, Play, MapPin, Video, Star, GraduationCap } from 'lucide-react';
+import logoPatricia from '@/assets/logo-patricia.jpg';
 
 const Hero = () => {
   return (
@@ -25,20 +26,25 @@ const Hero = () => {
             {/* Main Heading */}
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight">
-                Tu bienestar mental{' '}
-                <span className="text-gradient">merece atención</span>
+                Psicología Infantil{' '}
+                <span className="text-gradient">con corazón</span>
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
-                Soy Patricia Martínez, Psicóloga General Sanitaria. Te ayudo a entender 
-                tus emociones y desarrollar herramientas para una vida más plena.
+                Soy Patricia Martínez Díaz, Psicóloga especializada en infancia y adolescencia 
+                en el centro Divergentes de Valencia. Te ayudo a entender y acompañar a los más pequeños 
+                en su desarrollo emocional.
               </p>
             </div>
 
-            {/* Location Tags */}
+            {/* Credentials */}
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-muted-foreground">
+                <GraduationCap className="w-4 h-4 text-primary" />
+                <span className="text-sm">Dos Másteres en Psicología</span>
+              </div>
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm">Consulta en Valencia</span>
+                <span className="text-sm">Centro Divergentes, Valencia</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Video className="w-4 h-4 text-primary" />
@@ -80,38 +86,30 @@ const Hero = () => {
                 ))}
               </div>
               <div>
-                <p className="text-sm font-semibold text-foreground">+500 pacientes</p>
-                <p className="text-xs text-muted-foreground">han mejorado su bienestar</p>
+                <p className="text-sm font-semibold text-foreground">+500 familias</p>
+                <p className="text-xs text-muted-foreground">han confiado en nosotros</p>
               </div>
             </div>
           </div>
 
-          {/* Right Content - Image Area */}
+          {/* Right Content - Logo Display */}
           <div className="relative animate-scale-in" style={{ animationDelay: '0.2s' }}>
             <div className="relative">
-              {/* Main Image Container */}
-              <div className="relative aspect-[4/5] max-w-md mx-auto">
+              {/* Main Logo Container */}
+              <div className="relative aspect-square max-w-md mx-auto">
                 <div 
                   className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20"
                   style={{ transform: 'rotate(3deg)' }}
                 />
                 <div 
-                  className="relative h-full rounded-3xl bg-card overflow-hidden shadow-2xl border border-border"
+                  className="relative h-full rounded-3xl bg-card overflow-hidden shadow-2xl border border-border flex items-center justify-center p-8"
                   style={{ boxShadow: 'var(--shadow-card)' }}
                 >
-                  {/* Placeholder for profile image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 flex items-center justify-center">
-                    <div className="text-center space-y-4 p-8">
-                      <div className="w-32 h-32 mx-auto rounded-full bg-primary/10 flex items-center justify-center">
-                        <span className="text-5xl font-display font-bold text-primary">PM</span>
-                      </div>
-                      <div>
-                        <h3 className="font-display text-xl font-semibold text-foreground">Patricia Martínez</h3>
-                        <p className="text-sm text-muted-foreground">Psicóloga General Sanitaria</p>
-                        <p className="text-xs text-muted-foreground mt-1">Especialista en Infancia y Adolescencia</p>
-                      </div>
-                    </div>
-                  </div>
+                  <img 
+                    src={logoPatricia} 
+                    alt="Patricia Martínez Psicología - Logo con manos que se encuentran" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
 
@@ -140,8 +138,8 @@ const Hero = () => {
                     <Star className="w-5 h-5 text-primary fill-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">4.9/5 Valoración</p>
-                    <p className="text-xs text-muted-foreground">en Doctoralia</p>
+                    <p className="text-sm font-semibold text-foreground">Divergentes</p>
+                    <p className="text-xs text-muted-foreground">Centro especializado</p>
                   </div>
                 </div>
               </div>

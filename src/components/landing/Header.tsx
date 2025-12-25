@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Brain } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoPatricia from '@/assets/logo-patricia.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,18 +18,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Brain className="w-5 h-5 text-primary" />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-semibold text-lg text-foreground leading-tight">
-                Patri Psicología
-              </span>
-              <span className="text-xs text-muted-foreground hidden sm:block">
-                Patricia Martínez
-              </span>
-            </div>
+          <a href="/" className="flex items-center gap-3 group">
+            <img 
+              src={logoPatricia} 
+              alt="Patricia Martínez Psicología" 
+              className="h-12 md:h-14 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
