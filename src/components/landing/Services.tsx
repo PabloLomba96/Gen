@@ -1,41 +1,41 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, User, Users, Baby, Brain, Heart, Sparkles } from 'lucide-react';
+import { ArrowRight, Baby, Brain, Heart, Sparkles, Users, Puzzle } from 'lucide-react';
 
 const services = [
   {
-    icon: User,
-    title: 'Terapia Individual',
-    description: 'Sesiones personalizadas para adultos. Trabajamos ansiedad, depresión, autoestima y más.',
-    color: 'primary',
-  },
-  {
     icon: Baby,
-    title: 'Infancia y Adolescencia',
-    description: 'Apoyo especializado para los más pequeños y jóvenes en su desarrollo emocional.',
-    color: 'accent',
+    title: 'Psicología Infantil',
+    description: 'Apoyo especializado para niños y niñas. Desarrollo emocional, conducta, miedos y autoestima.',
+    color: 'primary',
   },
   {
     icon: Users,
-    title: 'Terapia de Pareja',
-    description: 'Mejora la comunicación y resuelve conflictos para una relación más sana.',
-    color: 'primary',
+    title: 'Adolescentes',
+    description: 'Acompañamiento en esta etapa de cambios. Identidad, relaciones sociales y gestión emocional.',
+    color: 'accent',
   },
   {
     icon: Brain,
-    title: 'Gestión de Ansiedad',
-    description: 'Aprende técnicas efectivas para manejar la ansiedad y el estrés del día a día.',
+    title: 'Altas Capacidades',
+    description: 'Evaluación y apoyo para niños con altas capacidades intelectuales y sus familias.',
+    color: 'primary',
+  },
+  {
+    icon: Puzzle,
+    title: 'TDAH y TEA',
+    description: 'Diagnóstico e intervención especializada en trastornos del neurodesarrollo.',
     color: 'accent',
   },
   {
     icon: Heart,
     title: 'Regulación Emocional',
-    description: 'Desarrolla herramientas para entender y gestionar tus emociones de forma saludable.',
+    description: 'Herramientas para que los pequeños aprendan a entender y gestionar sus emociones.',
     color: 'primary',
   },
   {
     icon: Sparkles,
-    title: 'Crecimiento Personal',
-    description: 'Descubre tu potencial y trabaja hacia la mejor versión de ti mismo/a.',
+    title: 'Creatividad y Talento',
+    description: 'Estimulamos el pensamiento divergente y desarrollamos el potencial de cada niño.',
     color: 'accent',
   },
 ];
@@ -53,8 +53,8 @@ const Services = () => {
             ¿Cómo puedo ayudarte?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Ofrezco diferentes modalidades de terapia adaptadas a tus necesidades, 
-            tanto presencial en Valencia como online.
+            En Divergentes trabajamos desde el juego y la diversión, 
+            haciendo del aprendizaje una experiencia única para cada niño.
           </p>
         </div>
 
