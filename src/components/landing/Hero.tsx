@@ -118,7 +118,7 @@ const Hero = () => {
                     <Star className="w-5 h-5 text-primary fill-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">Presencial</p>
+                    <p className="text-sm font-semibold text-foreground">Divergentes</p>
                     <p className="text-xs text-muted-foreground">Centro especializado</p>
                   </div>
                 </div>
