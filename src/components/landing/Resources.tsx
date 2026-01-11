@@ -4,16 +4,16 @@ import { ArrowRight, BookOpen, Headphones, FileText, Star, ShoppingBag } from 'l
 const products = [
   {
     icon: FileText,
-    title: 'Cuaderno Anti-Ansiedad',
-    description: '10 días de ejercicios prácticos para calmar tu mente y gestionar la ansiedad.',
-    price: '9,99€',
+    title: 'Guía de Regulación Emocional',
+    description: 'Ejercicios y técnicas para ayudar a los niños a identificar y gestionar sus emociones.',
+    price: 'Gratis',
     type: 'PDF Descargable',
     popular: true,
   },
   {
     icon: Headphones,
-    title: 'Pack de Meditaciones',
-    description: '5 meditaciones guiadas para antes de dormir. Reducen el estrés y mejoran el sueño.',
+    title: 'Cuentos para Dormir',
+    description: 'Historias relajantes con técnicas de mindfulness para ayudar a los pequeños a descansar.',
     price: '4,99€',
     type: 'Audio MP3',
     popular: false,
@@ -22,13 +22,13 @@ const products = [
 
 const recommendations = [
   {
-    title: 'Libros que me han ayudado',
-    description: 'Mi selección de lecturas sobre autoestima, ansiedad y relaciones.',
+    title: 'Libros para familias',
+    description: 'Mi selección de lecturas sobre crianza respetuosa y desarrollo infantil.',
     icon: BookOpen,
   },
   {
-    title: 'Kit de Salud Mental',
-    description: 'Gadgets, diarios y herramientas que recomiendo a mis pacientes.',
+    title: 'Juegos terapéuticos',
+    description: 'Juegos y materiales que uso en consulta y que puedes usar en casa.',
     icon: ShoppingBag,
   },
 ];

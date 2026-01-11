@@ -3,24 +3,24 @@ import { ArrowRight, Clock, TrendingUp } from 'lucide-react';
 
 const blogPosts = [
   {
-    title: '¿Se agota tu batería social rápido? 5 señales de introversión vs ansiedad social',
-    excerpt: 'Descubre la diferencia entre ser introvertido y tener ansiedad social, y cómo gestionar ambas situaciones.',
-    category: 'Ansiedad',
+    title: 'Cómo ayudar a tu hijo a gestionar la frustración',
+    excerpt: 'Estrategias prácticas para acompañar a los niños cuando las cosas no salen como esperaban.',
+    category: 'Emociones',
     readTime: '5 min',
     trending: true,
   },
   {
-    title: 'Cuando las bromas sobre depresión ya no son solo bromas',
-    excerpt: 'Cómo identificar cuando el humor negro se convierte en una señal de que necesitamos ayuda.',
-    category: 'Depresión',
-    readTime: '4 min',
+    title: 'Altas capacidades: ¿cómo identificarlas?',
+    excerpt: 'Señales que pueden indicar que tu hijo tiene altas capacidades intelectuales y cómo actuar.',
+    category: 'Altas Capacidades',
+    readTime: '6 min',
     trending: true,
   },
   {
-    title: 'Poner límites sin sentir culpa: guía práctica',
-    excerpt: 'Aprende a establecer límites saludables con familia, amigos y pareja sin sentirte mal por ello.',
-    category: 'Relaciones',
-    readTime: '6 min',
+    title: 'TDAH en niños: más allá del "niño movido"',
+    excerpt: 'Desmontando mitos sobre el TDAH y cómo apoyar realmente a los niños que lo tienen.',
+    category: 'TDAH',
+    readTime: '7 min',
     trending: false,
   },
 ];
