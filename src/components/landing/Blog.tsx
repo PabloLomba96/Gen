@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Clock, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const blogPosts = [
   {
@@ -98,12 +99,15 @@ const Blog = () => {
         {/* CTA */}
         <div className="text-center mt-12">
           <Button 
+            asChild
             variant="outline"
             size="lg"
             className="px-8 h-14 border-2 hover:bg-secondary group"
           >
-            Ver Todos los Artículos
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <Link to="/blog">
+              Ver Todos los Artículos
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
         </div>
       </div>
