@@ -1,9 +1,12 @@
 import Header from '@/components/landing/Header';
 import Hero from '@/components/landing/Hero';
+import About from '@/components/landing/About';
 import Services from '@/components/landing/Services';
+import Testimonials from '@/components/landing/Testimonials';
 import Blog from '@/components/landing/Blog';
 import Resources from '@/components/landing/Resources';
-import SocialProof from '@/components/landing/SocialProof';
+import FAQ from '@/components/landing/FAQ';
+import Contact from '@/components/landing/Contact';
 import Footer from '@/components/landing/Footer';
 
 const Index = () => {
@@ -12,10 +15,13 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <About />
         <Services />
-        <SocialProof />
+        <Testimonials />
         <Blog />
         <Resources />
+        <FAQ />
+        <Contact />
       </main>
       <Footer />
     </div>
