@@ -41,7 +41,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm">Valencia</span>
+                <span className="text-sm">Centro Divergentes, Valencia</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Video className="w-4 h-4 text-primary" />
