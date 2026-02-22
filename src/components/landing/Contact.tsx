@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Send, Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import { z } from 'zod';
 
 const contactSchema = z.object({
@@ -54,8 +55,11 @@ const Contact = () => {
     try {
       const validated = contactSchema.parse(formData);
       
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { data, error } = await supabase.functions.invoke('send-contact', {
+        body: validated,
+      });
+
+      if (error) throw error;
       
       setIsSubmitted(true);
       toast({
