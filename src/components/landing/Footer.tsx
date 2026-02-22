@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="text-background/70 max-w-md leading-relaxed">
               Patricia Martínez Díaz - Psicóloga Infantil y de Adolescentes. 
               Especialista en altas capacidades, TDAH, TEA y desarrollo emocional. 
-              Trabajo en el Centro Divergentes de Valencia.
+              Colaboro con Divergentes y Pausa Salud. Atención particular en Valencia y online.
             </p>
             <div className="flex items-center gap-4 pt-2">
               <a 
@@ -43,10 +43,10 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-4">Navegación</h4>
             <ul className="space-y-3">
               {[
-                { href: '#sobre-mi', label: 'Sobre Mí' },
-                { href: '#servicios', label: 'Servicios' },
-                { href: '#blog', label: 'Blog' },
-                { href: '#recursos', label: 'Recursos' },
+                { href: '/sobre-mi', label: 'Sobre Mí' },
+                { href: '/servicios', label: 'Servicios' },
+                { href: '/blog', label: 'Blog' },
+                { href: '/recursos', label: 'Recursos' },
               ].map((link) => (
                 <li key={link.href}>
                   <a 
@@ -72,11 +72,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-background/70">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Centro Divergentes, Valencia</span>
+                <span>Valencia, España</span>
               </li>
               <li className="flex items-center gap-2 text-background/70">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>Contactar por Instagram</span>
+                <a href="https://instagram.com/patri_psicologia" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">@patri_psicologia</a>
               </li>
             </ul>
           </div>

@@ -31,8 +31,8 @@ const Hero = () => {
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
                 Soy Patricia Martínez Díaz, Psicóloga especializada en infancia y adolescencia 
-                en el centro Divergentes de Valencia. Te ayudo a entender y acompañar a los más pequeños 
-                en su desarrollo emocional.
+                en Valencia. Colaboro con Divergentes y Pausa Salud, y atiendo de forma particular 
+                tanto presencial como online.
               </p>
             </div>
 
@@ -44,7 +44,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm">Centro Divergentes, Valencia</span>
+                <span className="text-sm">Valencia, España</span>
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Video className="w-4 h-4 text-primary" />

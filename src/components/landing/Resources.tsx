@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookOpen, Headphones, FileText, Star, ShoppingBag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const products = [
   {
@@ -134,6 +135,14 @@ const Resources = () => {
                 <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
               </a>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild variant="outline" size="lg" className="px-8 h-14 border-2 hover:bg-secondary group">
+              <Link to="/recursos">
+                Ver Todos los Recursos
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
