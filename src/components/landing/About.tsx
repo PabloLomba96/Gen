@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { GraduationCap, Heart, Award, ArrowRight, Quote } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.jpg';
 
 const credentials = [
@@ -10,8 +11,8 @@ const credentials = [
   },
   {
     icon: Award,
-    title: 'Centro Divergentes',
-    description: 'Trabajo en uno de los centros de referencia en Valencia para altas capacidades y neurodiversidad.',
+    title: 'Divergentes y Pausa Salud',
+    description: 'Colaboro con el Centro Divergentes, referente en altas capacidades, y con Pausa Salud. Los clientes de esta web los atiendo de forma particular.',
   },
   {
     icon: Heart,
@@ -74,8 +75,8 @@ const About = () => {
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Soy Psicóloga especializada en infancia y adolescencia, con años de experiencia 
-                en el Centro Divergentes de Valencia. Mi pasión es acompañar a los más pequeños 
-                en su desarrollo emocional, ayudándoles a entender y gestionar sus emociones.
+                en Valencia. Colaboro con el Centro Divergentes y Pausa Salud, y atiendo clientes 
+                particulares tanto de forma presencial como online.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Trabajo con niños y adolescentes en diferentes áreas: altas capacidades intelectuales, 
@@ -106,20 +107,22 @@ const About = () => {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-14 group"
-                onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Reservar Consulta
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Link to="/sobre-mi">
+                  Conocer Mi Historia
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
               <Button 
+                asChild
                 size="lg"
                 variant="outline"
                 className="border-2 h-14"
-                onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Ver Servicios
+                <Link to="/servicios">Ver Servicios</Link>
               </Button>
             </div>
           </div>

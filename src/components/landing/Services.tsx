@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Baby, Brain, Heart, Sparkles, Users, Puzzle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -91,11 +92,14 @@ const Services = () => {
         {/* CTA */}
         <div className="text-center mt-12">
           <Button 
+            asChild
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-14 shadow-lg group"
           >
-            Ver Tarifas y Reservar
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            <Link to="/servicios">
+              Ver Todos los Servicios
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
         </div>
       </div>

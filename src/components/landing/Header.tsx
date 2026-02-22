@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#sobre-mi', label: 'Sobre Mí' },
-    { href: '#servicios', label: 'Servicios' },
-    { href: '#blog', label: 'Blog' },
-    { href: '#recursos', label: 'Recursos' },
+    { href: '/sobre-mi', label: 'Sobre Mí' },
+    { href: '/servicios', label: 'Servicios' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/recursos', label: 'Recursos' },
   ];
 
   return (
@@ -29,13 +30,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -64,14 +65,14 @@ const Header = () => {
           <div className="md:hidden py-4 border-t border-border animate-fade-up">
             <nav className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <Button 
                 size="lg" 

@@ -139,9 +139,9 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Centro Divergentes</p>
+                    <p className="font-medium text-foreground">Consulta Presencial</p>
                     <p className="text-muted-foreground text-sm">Valencia, España</p>
-                    <p className="text-muted-foreground text-sm">Consulta presencial y online</p>
+                    <p className="text-muted-foreground text-sm">También disponible online</p>
                   </div>
                 </div>
 
