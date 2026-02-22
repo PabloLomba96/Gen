@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play, MapPin, Video, Star, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.jpg';
 
 const Hero = () => {
@@ -55,11 +56,14 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                asChild
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 h-14 shadow-lg hover:shadow-xl transition-all group"
               >
-                Reservar Primera Consulta
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Link to="/contacto">
+                  Reservar Primera Consulta
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
               <Button 
                 size="lg" 

@@ -10,8 +10,7 @@ const Header = () => {
   const navLinks = [
     { href: '/sobre-mi', label: 'Sobre Mí' },
     { href: '/servicios', label: 'Servicios' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/recursos', label: 'Recursos' },
+    { href: '/contacto', label: 'Contacto' },
   ];
 
   return (
@@ -43,10 +42,11 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-4">
             <Button 
+              asChild
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all"
             >
-              Reservar Cita
+              <Link to="/contacto">Reservar Cita</Link>
             </Button>
           </div>
 
@@ -75,10 +75,11 @@ const Header = () => {
                 </Link>
               ))}
               <Button 
+                asChild
                 size="lg" 
                 className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                Reservar Cita
+                <Link to="/contacto">Reservar Cita</Link>
               </Button>
             </nav>
           </div>
