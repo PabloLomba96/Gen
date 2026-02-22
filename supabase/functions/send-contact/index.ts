@@ -1,5 +1,14 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -35,7 +44,7 @@ Deno.serve(async (req) => {
     });
 
     if (dbError) {
-      console.error("DB error:", dbError);
+      console.error("DB error:", { code: dbError.code, message: dbError.message });
       return new Response(
         JSON.stringify({ error: "Error al guardar el mensaje" }),
         { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -58,12 +67,12 @@ Deno.serve(async (req) => {
             subject: `Nueva consulta: ${motivo} - ${nombre}`,
             html: `
               <h2>Nueva consulta desde tu web</h2>
-              <p><strong>Nombre:</strong> ${nombre}</p>
-              <p><strong>Email:</strong> ${email}</p>
-              <p><strong>Teléfono:</strong> ${telefono || "No proporcionado"}</p>
-              <p><strong>Motivo:</strong> ${motivo}</p>
+              <p><strong>Nombre:</strong> ${escapeHtml(nombre)}</p>
+              <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+              <p><strong>Teléfono:</strong> ${escapeHtml(telefono || "No proporcionado")}</p>
+              <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
               <p><strong>Mensaje:</strong></p>
-              <p>${mensaje}</p>
+              <p>${escapeHtml(mensaje)}</p>
             `,
           }),
         });
