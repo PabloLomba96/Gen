@@ -151,8 +151,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <a href="mailto:info@patripsicologa.es" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                      info@patripsicologa.es
+                    <a href="mailto:patri.psicologia29@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                      patri.psicologia29@gmail.com
                     </a>
                   </div>
                 </div>
