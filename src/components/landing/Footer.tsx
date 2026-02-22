@@ -30,7 +30,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5" />
               </a>
               <a 
-                href="mailto:info@patripsicologa.es"
+                href="mailto:patri.psicologia29@gmail.com"
                 className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
               >
                 <Mail className="w-5 h-5" />
@@ -66,8 +66,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-background/70">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:info@patripsicologa.es" className="hover:text-background transition-colors">
-                  info@patripsicologa.es
+                <a href="mailto:patri.psicologia29@gmail.com" className="hover:text-background transition-colors">
+                  patri.psicologia29@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-background/70">
@@ -76,7 +76,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-background/70">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="https://instagram.com/patri_psicologia" target="_blank" rel="noopener noreferrer" className="hover:text-background transition-colors">@patri_psicologia</a>
+                <a href="tel:+34611889209" className="hover:text-background transition-colors">+34 611 889 209</a>
               </li>
             </ul>
           </div>
