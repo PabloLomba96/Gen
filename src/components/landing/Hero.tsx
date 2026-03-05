@@ -99,33 +99,43 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Floating card — Entendimiento */}
-              <div className="absolute -left-8 top-1/4 glass rounded-2xl p-3.5 shadow-lg animate-float">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-primary/12 flex items-center justify-center">
-                    <span className="text-sm">🫶</span>
-                  </div>
-                  <p className="text-xs font-semibold text-foreground">Entendimiento</p>
-                </div>
-              </div>
-
-              {/* Floating card — Escucha Activa */}
-              <div className="absolute -right-6 top-1/2 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '2s' }}>
+              {/* Floating cards — positioned OUTSIDE the logo area */}
+              {/* Top-left: Primera consulta gratuita */}
+              <div className="absolute -left-28 -top-4 glass rounded-2xl p-3.5 shadow-lg animate-float">
                 <div className="flex items-center gap-2.5">
                   <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center">
-                    <span className="text-sm">👂</span>
+                    <span className="text-sm">💬</span>
                   </div>
-                  <p className="text-xs font-semibold text-foreground">Escucha Activa</p>
+                  <div>
+                    <p className="text-xs font-semibold text-foreground">Primera consulta</p>
+                    <p className="text-[10px] text-muted-foreground">Informativa y sin compromiso</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Floating card — Ayuda */}
-              <div className="absolute -left-4 bottom-1/5 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '4s' }}>
+              {/* Right: Presencial y Online */}
+              <div className="absolute -right-28 top-1/4 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '2s' }}>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-full bg-primary/12 flex items-center justify-center">
+                    <span className="text-sm">🏠</span>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-foreground">Presencial y Online</p>
+                    <p className="text-[10px] text-muted-foreground">Tú eliges cómo</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom-right: Espacio seguro */}
+              <div className="absolute -right-20 -bottom-6 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '4s' }}>
                 <div className="flex items-center gap-2.5">
                   <div className="w-9 h-9 rounded-full bg-overlap/20 flex items-center justify-center">
-                    <span className="text-sm">🤝</span>
+                    <span className="text-sm">🌿</span>
                   </div>
-                  <p className="text-xs font-semibold text-foreground">Ayuda</p>
+                  <div>
+                    <p className="text-xs font-semibold text-foreground">Espacio seguro</p>
+                    <p className="text-[10px] text-muted-foreground">A su ritmo, sin presión</p>
+                  </div>
                 </div>
               </div>
             </div>
