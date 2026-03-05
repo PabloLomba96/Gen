@@ -32,8 +32,8 @@ const Hero = () => {
                 para mentes jóvenes
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                Especialista en Ansiedad, Batería Social y Neurodivergencia. 
-                Acompaño a familias desde el entendimiento, la escucha activa y la ayuda.
+                Especialista en neurodivergencia e infantojuvenil. Acompaño a familias desde el entendimiento, la escucha activa y la ayuda.
+              
               </p>
             </div>
 
@@ -51,8 +51,8 @@ const Hero = () => {
                 asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 h-14 rounded-full group"
-                style={{ boxShadow: 'var(--shadow-glow-primary)' }}
-              >
+                style={{ boxShadow: 'var(--shadow-glow-primary)' }}>
+                
                 <Link to="/contacto">
                   Reserva Sesión Informativa
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -62,22 +62,22 @@ const Hero = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-base px-8 h-14 border-2 border-border hover:bg-secondary/80 rounded-full"
-              >
+                className="text-base px-8 h-14 border-2 border-border hover:bg-secondary/80 rounded-full">
+                
                 <Link to="/tienda">Ver Recursos Gratuitos</Link>
               </Button>
             </div>
 
             <div className="flex items-center gap-4 pt-3">
               <div className="flex -space-x-2.5">
-                {['LM', 'CA', 'MJ', 'PR'].map((initials, i) => (
-                  <div
-                    key={i}
-                    className="w-9 h-9 rounded-full bg-secondary border-2 border-background flex items-center justify-center"
-                  >
+                {['LM', 'CA', 'MJ', 'PR'].map((initials, i) =>
+                <div
+                  key={i}
+                  className="w-9 h-9 rounded-full bg-secondary border-2 border-background flex items-center justify-center">
+                  
                     <span className="text-[10px] font-semibold text-muted-foreground">{initials}</span>
                   </div>
-                ))}
+                )}
               </div>
               <p className="text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">+500 familias</span> confían en nosotros
@@ -95,8 +95,8 @@ const Hero = () => {
                 <img
                   src={logoPatricia}
                   alt="Patricia Martínez Psicología — Las manos que ayudan, el punto medio entre entendimiento, escucha activa y ayuda"
-                  className="w-full h-full object-contain drop-shadow-lg"
-                />
+                  className="w-full h-full object-contain drop-shadow-lg" />
+                
               </div>
 
               {/* Floating cards — outside logo bounds */}
@@ -142,8 +142,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
