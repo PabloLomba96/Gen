@@ -9,6 +9,27 @@ function escapeHtml(text: string): string {
     .replace(/'/g, '&#39;');
 }
 
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Simple in-memory rate limiter (per isolate lifecycle)
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const RATE_LIMIT_MAX = 5;
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
+// Allowed domains for sending copy emails (prevent open relay abuse)
+const ALLOWED_COPY_DOMAINS = new Set<string>(); // empty = allow all validated emails; populate to restrict
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -21,11 +42,42 @@ Deno.serve(async (req) => {
   }
 
   try {
+    // Rate limiting by IP
+    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (isRateLimited(clientIp)) {
+      return new Response(
+        JSON.stringify({ error: "Demasiadas solicitudes. Inténtalo más tarde." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const { nombre, email, telefono, motivo, mensaje, enviarCopia } = await req.json();
 
+    // Server-side validation
     if (!nombre || !email || !motivo || !mensaje) {
       return new Response(
         JSON.stringify({ error: "Faltan campos obligatorios" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    if (typeof email !== "string" || !EMAIL_REGEX.test(email) || email.length > 255) {
+      return new Response(
+        JSON.stringify({ error: "Email inválido" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    if (typeof nombre !== "string" || nombre.length > 100) {
+      return new Response(
+        JSON.stringify({ error: "Nombre inválido" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    if (typeof mensaje !== "string" || mensaje.length > 2000) {
+      return new Response(
+        JSON.stringify({ error: "Mensaje demasiado largo" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
@@ -74,7 +126,7 @@ Deno.serve(async (req) => {
           body: JSON.stringify({
             from: "Formulario Web <onboarding@resend.dev>",
             to: ["patri.psicologia29@gmail.com"],
-            subject: `Nueva consulta: ${motivo} - ${nombre}`,
+            subject: `Nueva consulta: ${escapeHtml(motivo)} - ${escapeHtml(nombre)}`,
             html: htmlBody,
           }),
         });
@@ -82,33 +134,38 @@ Deno.serve(async (req) => {
         console.error("Email error:", emailError);
       }
 
-      // Send copy to client if requested
+      // Send copy to client if requested — with domain validation
       if (enviarCopia) {
-        try {
-          await fetch("https://api.resend.com/emails", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${resendKey}`,
-            },
-            body: JSON.stringify({
-              from: "Patricia Martínez Psicología <onboarding@resend.dev>",
-              to: [email],
-              subject: `Copia de tu consulta — Patricia Martínez Psicología`,
-              html: `
-                <h2>Hemos recibido tu mensaje</h2>
-                <p>Hola ${escapeHtml(nombre)}, aquí tienes una copia de tu consulta:</p>
-                <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
-                <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
-                <p><strong>Mensaje:</strong></p>
-                <p>${escapeHtml(mensaje)}</p>
-                <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
-                <p style="color:#888;font-size:13px;">Te responderemos lo antes posible. Gracias por confiar en nosotros.</p>
-              `,
-            }),
-          });
-        } catch (copyError) {
-          console.error("Copy email error:", copyError);
+        const emailDomain = email.split("@")[1]?.toLowerCase();
+        const domainAllowed = ALLOWED_COPY_DOMAINS.size === 0 || ALLOWED_COPY_DOMAINS.has(emailDomain);
+
+        if (domainAllowed) {
+          try {
+            await fetch("https://api.resend.com/emails", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${resendKey}`,
+              },
+              body: JSON.stringify({
+                from: "Patricia Martínez Psicología <onboarding@resend.dev>",
+                to: [email],
+                subject: `Copia de tu consulta — Patricia Martínez Psicología`,
+                html: `
+                  <h2>Hemos recibido tu mensaje</h2>
+                  <p>Hola ${escapeHtml(nombre)}, aquí tienes una copia de tu consulta:</p>
+                  <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
+                  <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
+                  <p><strong>Mensaje:</strong></p>
+                  <p>${escapeHtml(mensaje)}</p>
+                  <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
+                  <p style="color:#888;font-size:13px;">Te responderemos lo antes posible. Gracias por confiar en nosotros.</p>
+                `,
+              }),
+            });
+          } catch (copyError) {
+            console.error("Copy email error:", copyError);
+          }
         }
       }
     }
