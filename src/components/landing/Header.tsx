@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.jpg';
+import logoPatricia from '@/assets/logo-patricia.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +25,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={logoPatricia} 
-              alt="Patricia Martínez Psicología" 
+              alt="Patricia Martínez Psicología — Las manos que ayudan" 
               className="h-11 md:h-13 w-auto object-contain"
             />
           </Link>
@@ -36,8 +36,8 @@ const Header = () => {
                 key={link.href}
                 to={link.href}
                 className={`text-sm font-medium transition-colors ${
-                  isActive(link.href) 
-                    ? 'text-primary' 
+                  isActive(link.href)
+                    ? 'text-primary'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
@@ -47,7 +47,7 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex">
-            <Button 
+            <Button
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all rounded-full px-6"
             >
@@ -58,7 +58,7 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
+            aria-label="Abrir menú"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -81,7 +81,7 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button 
+              <Button
                 asChild
                 className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full"
               >

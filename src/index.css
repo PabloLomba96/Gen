@@ -6,98 +6,117 @@
 
 @layer base {
   :root {
-    /* Natural-Calm palette */
-    --background: 43 100% 98%;
-    --foreground: 20 15% 15%;
+    /* 
+      Palette inspired by the logo:
+      - Granate circle = warmth, embrace, closeness → primary actions
+      - Cian circle = calm, listening, serenity → accent/trust
+      - Overlap = the meeting point, understanding → subtle highlights
+      - Background = soft warm ivory, safe space feeling
+    */
+    --background: 40 33% 97%;
+    --foreground: 345 20% 16%;
 
-    --card: 40 60% 99%;
-    --card-foreground: 20 15% 15%;
+    --card: 40 30% 99%;
+    --card-foreground: 345 20% 16%;
 
-    --popover: 40 60% 99%;
-    --popover-foreground: 20 15% 15%;
+    --popover: 40 30% 99%;
+    --popover-foreground: 345 20% 16%;
 
-    /* Terracota Suave - CTA principal */
-    --primary: 17 50% 58%;
-    --primary-foreground: 0 0% 100%;
+    /* Granate from logo — warm, inviting, action */
+    --primary: 345 38% 45%;
+    --primary-foreground: 40 33% 97%;
 
-    /* Crema calida */
-    --secondary: 40 40% 94%;
-    --secondary-foreground: 20 15% 20%;
+    /* Light warm surface */
+    --secondary: 35 25% 93%;
+    --secondary-foreground: 345 20% 20%;
 
-    --muted: 40 25% 93%;
-    --muted-foreground: 20 8% 46%;
+    --muted: 35 18% 91%;
+    --muted-foreground: 345 10% 44%;
 
-    /* Azul Sereno */
-    --accent: 181 40% 70%;
-    --accent-foreground: 20 15% 15%;
+    /* Cian from logo — calm, trust, serenity */
+    --accent: 180 45% 58%;
+    --accent-foreground: 345 20% 16%;
 
-    /* Granate del logo */
-    --granate: 352 45% 42%;
-    --granate-foreground: 0 0% 100%;
+    /* The overlap / meeting point — a soft mauve */
+    --overlap: 320 20% 72%;
 
-    /* Cian del logo */
-    --cian: 178 52% 48%;
-    --cian-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 35 20% 90%;
-    --input: 35 20% 88%;
-    --ring: 17 50% 58%;
+    --border: 35 15% 89%;
+    --input: 35 15% 87%;
+    --ring: 345 38% 45%;
 
     --radius: 1rem;
 
-    /* Custom tokens */
-    --gradient-hero: linear-gradient(160deg, hsl(43 100% 98%) 0%, hsl(40 40% 94%) 50%, hsl(181 40% 70% / 0.1) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(17 50% 58% / 0.08) 0%, hsl(181 40% 70% / 0.08) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.8) 0%, hsl(0 0% 100% / 0.4) 100%);
-    --shadow-soft: 0 4px 24px -4px hsl(20 15% 15% / 0.06);
-    --shadow-card: 0 8px 32px -8px hsl(20 15% 15% / 0.08);
-    --shadow-glow: 0 0 40px hsl(17 50% 58% / 0.12);
+    /* Custom design tokens */
+    --gradient-hero: linear-gradient(
+      165deg,
+      hsl(40 33% 97%) 0%,
+      hsl(35 25% 95%) 40%,
+      hsl(180 45% 58% / 0.06) 100%
+    );
+    --gradient-warm: linear-gradient(
+      135deg,
+      hsl(345 38% 45% / 0.06) 0%,
+      hsl(180 45% 58% / 0.06) 100%
+    );
+    --gradient-glass: linear-gradient(
+      145deg,
+      hsl(40 30% 99% / 0.85) 0%,
+      hsl(40 30% 99% / 0.55) 100%
+    );
+    --gradient-overlap: linear-gradient(
+      135deg,
+      hsl(345 38% 45% / 0.12),
+      hsl(320 20% 72% / 0.15),
+      hsl(180 45% 58% / 0.12)
+    );
+    --shadow-soft: 0 2px 20px -4px hsl(345 20% 16% / 0.06);
+    --shadow-card: 0 6px 28px -6px hsl(345 20% 16% / 0.08);
+    --shadow-glow-primary: 0 8px 30px -6px hsl(345 38% 45% / 0.2);
+    --shadow-glow-accent: 0 8px 30px -6px hsl(180 45% 58% / 0.2);
   }
 
   .dark {
-    --background: 20 12% 8%;
-    --foreground: 40 20% 92%;
+    --background: 345 15% 7%;
+    --foreground: 40 20% 90%;
 
-    --card: 20 10% 12%;
-    --card-foreground: 40 20% 92%;
+    --card: 345 12% 11%;
+    --card-foreground: 40 20% 90%;
 
-    --popover: 20 10% 12%;
-    --popover-foreground: 40 20% 92%;
+    --popover: 345 12% 11%;
+    --popover-foreground: 40 20% 90%;
 
-    --primary: 17 55% 62%;
+    --primary: 345 42% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 20 8% 18%;
-    --secondary-foreground: 40 20% 88%;
+    --secondary: 345 10% 16%;
+    --secondary-foreground: 40 20% 85%;
 
-    --muted: 20 8% 18%;
-    --muted-foreground: 40 10% 55%;
+    --muted: 345 10% 16%;
+    --muted-foreground: 40 10% 52%;
 
-    --accent: 181 45% 55%;
+    --accent: 180 48% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --granate: 352 50% 55%;
-    --granate-foreground: 0 0% 100%;
+    --overlap: 320 22% 50%;
 
-    --cian: 178 55% 50%;
-    --cian-foreground: 0 0% 100%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 45%;
-    --destructive-foreground: 210 40% 98%;
+    --border: 345 10% 18%;
+    --input: 345 10% 18%;
+    --ring: 345 42% 55%;
 
-    --border: 20 8% 20%;
-    --input: 20 8% 20%;
-    --ring: 17 55% 62%;
-
-    --gradient-hero: linear-gradient(160deg, hsl(20 12% 8%) 0%, hsl(20 8% 12%) 50%, hsl(181 45% 55% / 0.05) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(17 55% 62% / 0.1) 0%, hsl(181 45% 55% / 0.1) 100%);
-    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.05) 0%, hsl(0 0% 100% / 0.02) 100%);
-    --shadow-soft: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
-    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 40px hsl(17 55% 62% / 0.15);
+    --gradient-hero: linear-gradient(165deg, hsl(345 15% 7%) 0%, hsl(345 12% 10%) 40%, hsl(180 48% 50% / 0.04) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(345 42% 55% / 0.08) 0%, hsl(180 48% 50% / 0.08) 100%);
+    --gradient-glass: linear-gradient(145deg, hsl(345 12% 13% / 0.8) 0%, hsl(345 12% 11% / 0.5) 100%);
+    --gradient-overlap: linear-gradient(135deg, hsl(345 42% 55% / 0.1), hsl(320 22% 50% / 0.1), hsl(180 48% 50% / 0.1));
+    --shadow-soft: 0 2px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 6px 28px -6px hsl(0 0% 0% / 0.35);
+    --shadow-glow-primary: 0 8px 30px -6px hsl(345 42% 55% / 0.15);
+    --shadow-glow-accent: 0 8px 30px -6px hsl(180 48% 50% / 0.15);
   }
 }
 
@@ -116,27 +135,34 @@
 }
 
 @layer utilities {
+  /* Gradient text using both logo colors */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--granate)));
+    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
   }
 
+  /* Glassmorphism */
   .glass {
     background: var(--gradient-glass);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid hsl(var(--border) / 0.5);
+    border: 1px solid hsl(var(--border) / 0.6);
   }
 
   .glass-strong {
     background: var(--gradient-glass);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid hsl(var(--border) / 0.3);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    border: 1px solid hsl(var(--border) / 0.4);
+  }
+
+  /* The "meeting point" gradient — representing the overlap of the two circles */
+  .bg-overlap {
+    background: var(--gradient-overlap);
   }
 
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 7s ease-in-out infinite;
   }
 
   .animate-fade-up {
@@ -150,21 +176,17 @@
   .animate-scale-in {
     animation: scaleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
-
-  .animate-slide-right {
-    animation: slideRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-6px); }
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -180,21 +202,10 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.96);
+    transform: scale(0.97);
   }
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(-16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }

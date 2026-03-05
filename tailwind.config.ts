@@ -51,13 +51,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        granate: {
-          DEFAULT: "hsl(var(--granate))",
-          foreground: "hsl(var(--granate-foreground))",
-        },
-        cian: {
-          DEFAULT: "hsl(var(--cian))",
-          foreground: "hsl(var(--cian-foreground))",
+        overlap: {
+          DEFAULT: "hsl(var(--overlap))",
         },
       },
       borderRadius: {
