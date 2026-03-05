@@ -1,104 +1,59 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Baby, Brain, Heart, Sparkles, Users, Puzzle } from 'lucide-react';
+import { ArrowRight, Brain, Heart, Sparkles, Users, Puzzle, Baby } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
-  {
-    icon: Baby,
-    title: 'Psicología Infantil',
-    description: 'Apoyo especializado para niños y niñas. Desarrollo emocional, conducta, miedos y autoestima.',
-    color: 'primary',
-  },
-  {
-    icon: Users,
-    title: 'Adolescentes',
-    description: 'Acompañamiento en esta etapa de cambios. Identidad, relaciones sociales y gestión emocional.',
-    color: 'accent',
-  },
-  {
-    icon: Brain,
-    title: 'Altas Capacidades',
-    description: 'Evaluación y apoyo para niños con altas capacidades intelectuales y sus familias.',
-    color: 'primary',
-  },
-  {
-    icon: Puzzle,
-    title: 'TDAH y TEA',
-    description: 'Diagnóstico e intervención especializada en trastornos del neurodesarrollo.',
-    color: 'accent',
-  },
-  {
-    icon: Heart,
-    title: 'Regulación Emocional',
-    description: 'Herramientas para que los pequeños aprendan a entender y gestionar sus emociones.',
-    color: 'primary',
-  },
-  {
-    icon: Sparkles,
-    title: 'Creatividad y Talento',
-    description: 'Estimulamos el pensamiento divergente y desarrollamos el potencial de cada niño.',
-    color: 'accent',
-  },
+  { icon: Baby, title: 'Psicología Infantil', description: 'Desarrollo emocional, conducta, miedos y autoestima.' },
+  { icon: Users, title: 'Adolescentes', description: 'Identidad, relaciones sociales y gestión emocional.' },
+  { icon: Brain, title: 'Altas Capacidades', description: 'Evaluación y apoyo integral para niños y familias.' },
+  { icon: Puzzle, title: 'TDAH y TEA', description: 'Diagnóstico e intervención en neurodesarrollo.' },
+  { icon: Heart, title: 'Regulación Emocional', description: 'Herramientas para entender y gestionar emociones.' },
+  { icon: Sparkles, title: 'Batería Social', description: 'Introversión, sobrecarga social y límites saludables.' },
 ];
 
 const Services = () => {
   return (
-    <section id="servicios" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-          <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-            Servicios
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground">
+    <section className="py-24 relative overflow-hidden">
+      <div className="absolute inset-0 bg-secondary/40" />
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto text-center mb-14 space-y-4">
+          <span className="text-sm font-semibold text-primary uppercase tracking-widest">Servicios</span>
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground">
             ¿Cómo puedo ayudarte?
           </h2>
           <p className="text-lg text-muted-foreground">
-            En Divergentes trabajamos desde el juego y la diversión, 
-            haciendo del aprendizaje una experiencia única para cada niño.
+            Cada familia es diferente. Trabajamos juntos para encontrar el camino.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group bg-card rounded-2xl p-6 lg:p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl"
-              style={{ 
-                animationDelay: `${index * 0.1}s`,
-                boxShadow: 'var(--shadow-soft)'
-              }}
+              className="glass rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group animate-fade-up"
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
-              <div 
-                className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110 ${
-                  service.color === 'primary' 
-                    ? 'bg-primary/10 text-primary' 
-                    : 'bg-accent/10 text-accent'
-                }`}
-              >
-                <service.icon className="w-7 h-7" />
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
+                <service.icon className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+              <h3 className="text-lg font-display font-semibold text-foreground mb-2">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <Button 
             asChild
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-14 shadow-lg group"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 h-12 shadow-md group"
           >
             <Link to="/servicios">
               Ver Todos los Servicios
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
         </div>

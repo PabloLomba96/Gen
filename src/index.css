@@ -6,80 +6,98 @@
 
 @layer base {
   :root {
-    --background: 30 20% 98%;
-    --foreground: 240 10% 15%;
+    /* Natural-Calm palette */
+    --background: 43 100% 98%;
+    --foreground: 20 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 15%;
+    --card: 40 60% 99%;
+    --card-foreground: 20 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 15%;
+    --popover: 40 60% 99%;
+    --popover-foreground: 20 15% 15%;
 
-    /* Rose/Burgundy from logo */
-    --primary: 352 45% 53%;
+    /* Terracota Suave - CTA principal */
+    --primary: 17 50% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 20% 94%;
-    --secondary-foreground: 240 10% 20%;
+    /* Crema calida */
+    --secondary: 40 40% 94%;
+    --secondary-foreground: 20 15% 20%;
 
-    --muted: 30 15% 95%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 40 25% 93%;
+    --muted-foreground: 20 8% 46%;
 
-    /* Turquoise from logo */
-    --accent: 178 52% 58%;
-    --accent-foreground: 0 0% 100%;
+    /* Azul Sereno */
+    --accent: 181 40% 70%;
+    --accent-foreground: 20 15% 15%;
+
+    /* Granate del logo */
+    --granate: 352 45% 42%;
+    --granate-foreground: 0 0% 100%;
+
+    /* Cian del logo */
+    --cian: 178 52% 48%;
+    --cian-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 12% 88%;
-    --input: 30 12% 88%;
-    --ring: 352 45% 53%;
+    --border: 35 20% 90%;
+    --input: 35 20% 88%;
+    --ring: 17 50% 58%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom tokens matching logo colors */
-    --gradient-hero: linear-gradient(135deg, hsl(352 45% 53% / 0.08) 0%, hsl(178 52% 58% / 0.08) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(30 20% 98%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(240 10% 15% / 0.08);
-    --shadow-card: 0 8px 30px -8px hsl(240 10% 15% / 0.12);
-    --shadow-glow: 0 0 40px hsl(352 45% 53% / 0.15);
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(160deg, hsl(43 100% 98%) 0%, hsl(40 40% 94%) 50%, hsl(181 40% 70% / 0.1) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(17 50% 58% / 0.08) 0%, hsl(181 40% 70% / 0.08) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.8) 0%, hsl(0 0% 100% / 0.4) 100%);
+    --shadow-soft: 0 4px 24px -4px hsl(20 15% 15% / 0.06);
+    --shadow-card: 0 8px 32px -8px hsl(20 15% 15% / 0.08);
+    --shadow-glow: 0 0 40px hsl(17 50% 58% / 0.12);
   }
 
   .dark {
-    --background: 240 10% 8%;
-    --foreground: 30 20% 95%;
+    --background: 20 12% 8%;
+    --foreground: 40 20% 92%;
 
-    --card: 240 10% 12%;
-    --card-foreground: 30 20% 95%;
+    --card: 20 10% 12%;
+    --card-foreground: 40 20% 92%;
 
-    --popover: 240 10% 12%;
-    --popover-foreground: 30 20% 95%;
+    --popover: 20 10% 12%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 352 50% 60%;
+    --primary: 17 55% 62%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 8% 18%;
-    --secondary-foreground: 30 20% 90%;
+    --secondary: 20 8% 18%;
+    --secondary-foreground: 40 20% 88%;
 
-    --muted: 240 8% 18%;
-    --muted-foreground: 30 10% 60%;
+    --muted: 20 8% 18%;
+    --muted-foreground: 40 10% 55%;
 
-    --accent: 178 55% 55%;
+    --accent: 181 45% 55%;
     --accent-foreground: 0 0% 100%;
+
+    --granate: 352 50% 55%;
+    --granate-foreground: 0 0% 100%;
+
+    --cian: 178 55% 50%;
+    --cian-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 45%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 8% 20%;
-    --input: 240 8% 20%;
-    --ring: 352 50% 60%;
+    --border: 20 8% 20%;
+    --input: 20 8% 20%;
+    --ring: 17 55% 62%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(352 50% 60% / 0.12) 0%, hsl(178 55% 55% / 0.12) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(240 10% 12%) 0%, hsl(240 10% 10%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 40px hsl(352 50% 60% / 0.2);
+    --gradient-hero: linear-gradient(160deg, hsl(20 12% 8%) 0%, hsl(20 8% 12%) 50%, hsl(181 45% 55% / 0.05) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(17 55% 62% / 0.1) 0%, hsl(181 45% 55% / 0.1) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.05) 0%, hsl(0 0% 100% / 0.02) 100%);
+    --shadow-soft: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(17 55% 62% / 0.15);
   }
 }
 
@@ -99,7 +117,22 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--granate)));
+  }
+
+  .glass {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .glass-strong {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsl(var(--border) / 0.3);
   }
 
   .animate-float {
@@ -107,23 +140,31 @@
   }
 
   .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
+    animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 
   .animate-scale-in {
-    animation: scaleIn 0.5s ease-out forwards;
+    animation: scaleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   }
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-8px); }
 }
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -131,13 +172,29 @@
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.96);
   }
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
