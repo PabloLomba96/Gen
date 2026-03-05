@@ -1,3 +1,30 @@
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Simple in-memory rate limiter (per isolate lifecycle)
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const RATE_LIMIT_MAX = 5;
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return false;
+  }
+  entry.count++;
+  return entry.count > RATE_LIMIT_MAX;
+}
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -10,16 +37,27 @@ Deno.serve(async (req) => {
   }
 
   try {
+    // Rate limiting by IP
+    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    if (isRateLimited(clientIp)) {
+      return new Response(
+        JSON.stringify({ error: "Demasiadas solicitudes. Inténtalo más tarde." }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const { email, idioma } = await req.json();
 
-    if (!email) {
+    // Server-side email validation
+    if (!email || typeof email !== "string" || !EMAIL_REGEX.test(email) || email.length > 255) {
       return new Response(
-        JSON.stringify({ error: "Email requerido" }),
+        JSON.stringify({ error: "Email inválido" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
 
-    const idiomaLabel = idioma === 'en' ? '🇬🇧 Inglés' : '🇪🇸 Español';
+    const safeIdioma = idioma === 'en' ? 'en' : 'es';
+    const idiomaLabel = safeIdioma === 'en' ? '🇬🇧 Inglés' : '🇪🇸 Español';
 
     const resendKey = Deno.env.get("RESEND_API_KEY");
     if (resendKey) {
@@ -32,10 +70,10 @@ Deno.serve(async (req) => {
         body: JSON.stringify({
           from: "Píldoras de Bienestar <onboarding@resend.dev>",
           to: ["patri.psicologia29@gmail.com"],
-          subject: `Nueva suscripción newsletter: ${email}`,
+          subject: `Nueva suscripción newsletter: ${escapeHtml(email)}`,
           html: `
             <h2>🎉 Nueva suscripción a Píldoras de Bienestar</h2>
-            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Email:</strong> ${escapeHtml(email)}</p>
             <p><strong>Idioma preferido:</strong> ${idiomaLabel}</p>
             <p style="color:#888;font-size:13px;">Este email se ha suscrito a tu newsletter desde la web.</p>
           `,
