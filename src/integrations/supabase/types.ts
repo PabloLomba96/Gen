@@ -52,18 +52,21 @@ export type Database = {
           created_at: string
           email: string
           id: string
+          idioma: string
           nombre: string | null
         }
         Insert: {
           created_at?: string
           email: string
           id?: string
+          idioma?: string
           nombre?: string | null
         }
         Update: {
           created_at?: string
           email?: string
           id?: string
+          idioma?: string
           nombre?: string | null
         }
         Relationships: []
