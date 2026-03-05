@@ -117,9 +117,8 @@ const Recursos = () => {
                       <p className="text-muted-foreground text-sm leading-relaxed">{product.description}</p>
                       <div className="flex items-center justify-between pt-2">
                         <span className="text-2xl font-bold text-primary">{product.price}</span>
-                        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                          {product.price === 'Gratis' ? 'Descargar' : 'Comprar'}
-                          <ArrowRight className="w-4 h-4 ml-2" />
+                        <Button disabled className="bg-muted text-muted-foreground cursor-default">
+                          Próximamente
                         </Button>
                       </div>
                     </div>
@@ -142,20 +141,22 @@ const Recursos = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {recommendations.map((item) => (
-                <a
+                <div
                   key={item.title}
-                  href="#"
-                  className="group bg-card rounded-2xl p-6 border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-xl"
+                  className="group bg-card rounded-2xl p-6 border border-border opacity-75 cursor-default"
                   style={{ boxShadow: 'var(--shadow-soft)' }}
                 >
-                  <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-4">
                     <item.icon className="w-7 h-7 text-accent" />
                   </div>
-                  <h4 className="text-lg font-display font-semibold text-foreground group-hover:text-accent transition-colors mb-2">
+                  <h4 className="text-lg font-display font-semibold text-foreground mb-2">
                     {item.title}
                   </h4>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
-                </a>
+                  <span className="inline-block mt-3 text-xs font-medium text-muted-foreground bg-muted px-2.5 py-1 rounded-full">
+                    Próximamente
+                  </span>
+                </div>
               ))}
             </div>
           </div>
