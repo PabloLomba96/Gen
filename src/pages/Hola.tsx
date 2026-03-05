@@ -8,6 +8,7 @@ const links = [
     sublabel: 'Guía Gratuita de Regulación Emocional',
     href: '#lead-magnet',
     accent: true,
+    proximamente: true,
   },
   {
     icon: Calendar,
@@ -36,6 +37,7 @@ const links = [
     sublabel: 'Libros y juegos que recomiendo',
     href: '#amazon',
     accent: false,
+    proximamente: true,
   },
 ];
 
@@ -54,31 +56,45 @@ const Hola = () => {
 
       {/* Links */}
       <div className="w-full max-w-sm space-y-3">
-        {links.map((link, index) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className={`flex items-center gap-4 w-full p-4 rounded-2xl transition-all duration-200 animate-fade-up ${
-              link.accent
-                ? 'bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02]'
-                : 'glass hover:shadow-md hover:scale-[1.01]'
-            }`}
-            style={{ animationDelay: `${index * 0.08}s` }}
-          >
-            <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${
-              link.accent ? 'bg-primary-foreground/20' : 'bg-primary/10'
-            }`}>
-              <link.icon className={`w-5 h-5 ${link.accent ? 'text-primary-foreground' : 'text-primary'}`} />
-            </div>
-            <div className="flex-1 min-w-0">
-              <p className={`font-semibold text-sm ${link.accent ? '' : 'text-foreground'}`}>{link.label}</p>
-              <p className={`text-xs mt-0.5 ${link.accent ? 'text-primary-foreground/70' : 'text-muted-foreground'}`}>
-                {link.sublabel}
-              </p>
-            </div>
-            <ArrowRight className={`w-4 h-4 shrink-0 ${link.accent ? 'text-primary-foreground/60' : 'text-muted-foreground'}`} />
-          </a>
-        ))}
+        {links.map((link, index) => {
+          const isDisabled = 'proximamente' in link && link.proximamente;
+          const Tag = isDisabled ? 'div' : 'a';
+          return (
+            <Tag
+              key={link.label}
+              {...(!isDisabled ? { href: link.href } : {})}
+              className={`flex items-center gap-4 w-full p-4 rounded-2xl transition-all duration-200 animate-fade-up ${
+                isDisabled
+                  ? link.accent
+                    ? 'bg-primary/60 text-primary-foreground opacity-80 cursor-default'
+                    : 'glass opacity-75 cursor-default'
+                  : link.accent
+                    ? 'bg-primary text-primary-foreground shadow-md hover:shadow-lg hover:scale-[1.02]'
+                    : 'glass hover:shadow-md hover:scale-[1.01]'
+              }`}
+              style={{ animationDelay: `${index * 0.08}s` }}
+            >
+              <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${
+                link.accent ? 'bg-primary-foreground/20' : 'bg-primary/10'
+              }`}>
+                <link.icon className={`w-5 h-5 ${link.accent ? 'text-primary-foreground' : 'text-primary'}`} />
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className={`font-semibold text-sm ${link.accent ? '' : 'text-foreground'}`}>{link.label}</p>
+                <p className={`text-xs mt-0.5 ${link.accent ? 'text-primary-foreground/70' : 'text-muted-foreground'}`}>
+                  {link.sublabel}
+                </p>
+              </div>
+              {isDisabled ? (
+                <span className={`text-xs font-medium shrink-0 px-2 py-1 rounded-full ${link.accent ? 'bg-primary-foreground/20 text-primary-foreground' : 'bg-muted text-muted-foreground'}`}>
+                  Próximamente
+                </span>
+              ) : (
+                <ArrowRight className={`w-4 h-4 shrink-0 ${link.accent ? 'text-primary-foreground/60' : 'text-muted-foreground'}`} />
+              )}
+            </Tag>
+          );
+        })}
       </div>
 
       <a

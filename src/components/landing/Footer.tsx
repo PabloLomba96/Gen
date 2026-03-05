@@ -83,8 +83,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-background/35">
           <p>© {new Date().getFullYear()} Patricia Martínez Díaz — Psicología Infantil</p>
           <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-background transition-colors">Privacidad</a>
-            <a href="#" className="hover:text-background transition-colors">Aviso Legal</a>
+            <span className="text-background/25 cursor-default">Privacidad — Próximamente</span>
+            <span className="text-background/25 cursor-default">Aviso Legal — Próximamente</span>
           </div>
         </div>
       </div>
