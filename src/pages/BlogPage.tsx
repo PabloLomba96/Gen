@@ -74,9 +74,8 @@ const BlogPage = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                     {post.excerpt}
                   </p>
-                  <span className="inline-flex items-center text-sm text-primary font-medium group-hover:gap-2 gap-1 transition-all">
-                    Leer artículo
-                    <ArrowRight className="w-3.5 h-3.5" />
+                  <span className="inline-flex items-center text-sm text-muted-foreground font-medium">
+                    📌 Próximamente
                   </span>
                 </article>
               ))}

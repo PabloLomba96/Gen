@@ -84,13 +84,9 @@ const Blog = () => {
                   {post.excerpt}
                 </p>
                 
-                <a 
-                  href="#" 
-                  className="inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all"
-                >
-                  Leer artículo
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </a>
+              <span className="inline-flex items-center text-muted-foreground font-medium text-sm">
+                  📌 Próximamente
+                </span>
               </div>
             </article>
           ))}
