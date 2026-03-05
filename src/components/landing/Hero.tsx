@@ -99,29 +99,33 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Floating card — Escucha Activa */}
-              <div className="absolute -left-8 top-1/3 glass rounded-2xl p-3.5 shadow-lg animate-float">
+              {/* Floating card — Entendimiento */}
+              <div className="absolute -left-8 top-1/4 glass rounded-2xl p-3.5 shadow-lg animate-float">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center">
-                    <span className="text-lg">🤝</span>
+                  <div className="w-9 h-9 rounded-full bg-primary/12 flex items-center justify-center">
+                    <span className="text-sm">🫶</span>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-foreground">Escucha Activa</p>
-                    <p className="text-[10px] text-muted-foreground">El punto medio</p>
-                  </div>
+                  <p className="text-xs font-semibold text-foreground">Entendimiento</p>
                 </div>
               </div>
 
-              {/* Floating card — Online */}
-              <div className="absolute -right-6 bottom-1/4 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '3s' }}>
+              {/* Floating card — Escucha Activa */}
+              <div className="absolute -right-6 top-1/2 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '2s' }}>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-primary/12 flex items-center justify-center">
-                    <Video className="w-4 h-4 text-primary" />
+                  <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center">
+                    <span className="text-sm">👂</span>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-foreground">Terapia Online</p>
-                    <p className="text-[10px] text-muted-foreground">Desde cualquier lugar</p>
+                  <p className="text-xs font-semibold text-foreground">Escucha Activa</p>
+                </div>
+              </div>
+
+              {/* Floating card — Ayuda */}
+              <div className="absolute -left-4 bottom-1/5 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '4s' }}>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-full bg-overlap/20 flex items-center justify-center">
+                    <span className="text-sm">🤝</span>
                   </div>
+                  <p className="text-xs font-semibold text-foreground">Ayuda</p>
                 </div>
               </div>
             </div>
