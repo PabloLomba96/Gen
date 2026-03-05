@@ -1,5 +1,5 @@
 import { ArrowRight, BookOpen, Calendar, Download, Heart, Instagram, ShoppingBag } from 'lucide-react';
-import logoPatricia from '@/assets/logo-patricia.jpg';
+import logoPatricia from '@/assets/logo-patricia.png';
 
 const links = [
   {
@@ -44,8 +44,8 @@ const Hola = () => {
     <div className="min-h-screen bg-background flex flex-col items-center px-4 py-10">
       {/* Profile */}
       <div className="text-center mb-8 animate-fade-up">
-        <div className="w-24 h-24 rounded-full glass mx-auto mb-4 flex items-center justify-center overflow-hidden p-2">
-          <img src={logoPatricia} alt="Patricia Martínez" className="w-full h-full object-contain" />
+        <div className="w-28 h-28 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+          <img src={logoPatricia} alt="Patricia Martínez Psicología" className="w-full h-full object-contain" />
         </div>
         <h1 className="text-xl font-display font-bold text-foreground">Patricia Martínez</h1>
         <p className="text-sm text-muted-foreground mt-1">Psicóloga Infantojuvenil 🧠💛</p>
@@ -81,7 +81,6 @@ const Hola = () => {
         ))}
       </div>
 
-      {/* Instagram */}
       <a
         href="https://instagram.com/patri_psicologia"
         target="_blank"

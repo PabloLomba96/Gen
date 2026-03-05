@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, GraduationCap, Heart, Award, Quote, MapPin, Video, Users, Star, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.jpg';
+import logoPatricia from '@/assets/logo-patricia.png';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 

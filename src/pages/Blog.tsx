@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, Clock, TrendingUp, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.jpg';
+import logoPatricia from '@/assets/logo-patricia.png';
 
 const blogPosts = [
   {
