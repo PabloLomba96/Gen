@@ -99,42 +99,42 @@ const Hero = () => {
                 />
               </div>
 
-              {/* Floating cards — positioned OUTSIDE the logo area */}
-              {/* Top-left: Primera consulta gratuita */}
-              <div className="absolute -left-28 -top-4 glass rounded-2xl p-3.5 shadow-lg animate-float">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-accent/15 flex items-center justify-center">
-                    <span className="text-sm">💬</span>
+              {/* Floating cards — outside logo bounds */}
+              {/* Top-right: above the logo */}
+              <div className="absolute -top-14 left-1/2 -translate-x-1/4 glass rounded-2xl p-3 shadow-lg animate-float">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
+                    <span className="text-xs">💬</span>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-foreground">Primera consulta</p>
-                    <p className="text-[10px] text-muted-foreground">Informativa y sin compromiso</p>
+                    <p className="text-[11px] font-semibold text-foreground">Primera consulta</p>
+                    <p className="text-[9px] text-muted-foreground">Sin compromiso</p>
                   </div>
                 </div>
               </div>
 
-              {/* Right: Presencial y Online */}
-              <div className="absolute -right-28 top-1/4 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '2s' }}>
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-primary/12 flex items-center justify-center">
-                    <span className="text-sm">🏠</span>
+              {/* Bottom-left */}
+              <div className="absolute -bottom-16 -left-4 glass rounded-2xl p-3 shadow-lg animate-float" style={{ animationDelay: '2.5s' }}>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-primary/12 flex items-center justify-center shrink-0">
+                    <span className="text-xs">🏠</span>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-foreground">Presencial y Online</p>
-                    <p className="text-[10px] text-muted-foreground">Tú eliges cómo</p>
+                    <p className="text-[11px] font-semibold text-foreground">Presencial y Online</p>
+                    <p className="text-[9px] text-muted-foreground">Tú eliges cómo</p>
                   </div>
                 </div>
               </div>
 
-              {/* Bottom-right: Espacio seguro */}
-              <div className="absolute -right-20 -bottom-6 glass rounded-2xl p-3.5 shadow-lg animate-float" style={{ animationDelay: '4s' }}>
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-full bg-overlap/20 flex items-center justify-center">
-                    <span className="text-sm">🌿</span>
+              {/* Bottom-right */}
+              <div className="absolute -bottom-16 right-0 glass rounded-2xl p-3 shadow-lg animate-float" style={{ animationDelay: '5s' }}>
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-full bg-overlap/20 flex items-center justify-center shrink-0">
+                    <span className="text-xs">🌿</span>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-foreground">Espacio seguro</p>
-                    <p className="text-[10px] text-muted-foreground">A su ritmo, sin presión</p>
+                    <p className="text-[11px] font-semibold text-foreground">Espacio seguro</p>
+                    <p className="text-[9px] text-muted-foreground">A su ritmo, sin presión</p>
                   </div>
                 </div>
               </div>
