@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Send, Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -29,6 +30,7 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [enviarCopia, setEnviarCopia] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [formData, setFormData] = useState<ContactForm>({
     nombre: '',
@@ -56,7 +58,7 @@ const Contact = () => {
       const validated = contactSchema.parse(formData);
       
       const { data, error } = await supabase.functions.invoke('send-contact', {
-        body: validated,
+        body: { ...validated, enviarCopia },
       });
 
       if (error) throw error;
@@ -286,6 +288,17 @@ const Contact = () => {
                 {errors.mensaje && (
                   <p className="text-xs text-destructive">{errors.mensaje}</p>
                 )}
+              </div>
+
+              <div className="flex items-start gap-2 mb-6">
+                <Checkbox
+                  id="enviarCopia"
+                  checked={enviarCopia}
+                  onCheckedChange={(checked) => setEnviarCopia(checked === true)}
+                />
+                <label htmlFor="enviarCopia" className="text-sm text-muted-foreground leading-tight cursor-pointer">
+                  Recibir una copia de este mensaje en mi email
+                </label>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
