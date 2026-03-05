@@ -11,25 +11,6 @@ function escapeHtml(text: string): string {
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Simple in-memory rate limiter (per isolate lifecycle)
-const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
-const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
-const RATE_LIMIT_MAX = 5;
-
-function isRateLimited(ip: string): boolean {
-  const now = Date.now();
-  const entry = rateLimitMap.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
-    return false;
-  }
-  entry.count++;
-  return entry.count > RATE_LIMIT_MAX;
-}
-
-// Allowed domains for sending copy emails (prevent open relay abuse)
-const ALLOWED_COPY_DOMAINS = new Set<string>(); // empty = allow all validated emails; populate to restrict
-
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -42,9 +23,21 @@ Deno.serve(async (req) => {
   }
 
   try {
-    // Rate limiting by IP
+    const supabase = createClient(
+      Deno.env.get("SUPABASE_URL")!,
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
+    );
+
+    // Persistent rate limiting
     const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-    if (isRateLimited(clientIp)) {
+    const { data: allowed } = await supabase.rpc("check_rate_limit", {
+      p_ip: clientIp,
+      p_endpoint: "contact",
+      p_max: 5,
+      p_window_seconds: 60,
+    });
+
+    if (!allowed) {
       return new Response(
         JSON.stringify({ error: "Demasiadas solicitudes. Inténtalo más tarde." }),
         { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -53,7 +46,6 @@ Deno.serve(async (req) => {
 
     const { nombre, email, telefono, motivo, mensaje, enviarCopia } = await req.json();
 
-    // Server-side validation
     if (!nombre || !email || !motivo || !mensaje) {
       return new Response(
         JSON.stringify({ error: "Faltan campos obligatorios" }),
@@ -81,11 +73,6 @@ Deno.serve(async (req) => {
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
-
-    const supabase = createClient(
-      Deno.env.get("SUPABASE_URL")!,
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-    );
 
     const { error: dbError } = await supabase.from("contact_messages").insert({
       nombre,
@@ -115,7 +102,6 @@ Deno.serve(async (req) => {
         <p>${escapeHtml(mensaje)}</p>
       `;
 
-      // Send to Patricia
       try {
         await fetch("https://api.resend.com/emails", {
           method: "POST",
@@ -134,38 +120,32 @@ Deno.serve(async (req) => {
         console.error("Email error:", emailError);
       }
 
-      // Send copy to client if requested — with domain validation
       if (enviarCopia) {
-        const emailDomain = email.split("@")[1]?.toLowerCase();
-        const domainAllowed = ALLOWED_COPY_DOMAINS.size === 0 || ALLOWED_COPY_DOMAINS.has(emailDomain);
-
-        if (domainAllowed) {
-          try {
-            await fetch("https://api.resend.com/emails", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${resendKey}`,
-              },
-              body: JSON.stringify({
-                from: "Patricia Martínez Psicología <onboarding@resend.dev>",
-                to: [email],
-                subject: `Copia de tu consulta — Patricia Martínez Psicología`,
-                html: `
-                  <h2>Hemos recibido tu mensaje</h2>
-                  <p>Hola ${escapeHtml(nombre)}, aquí tienes una copia de tu consulta:</p>
-                  <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
-                  <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
-                  <p><strong>Mensaje:</strong></p>
-                  <p>${escapeHtml(mensaje)}</p>
-                  <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
-                  <p style="color:#888;font-size:13px;">Te responderemos lo antes posible. Gracias por confiar en nosotros.</p>
-                `,
-              }),
-            });
-          } catch (copyError) {
-            console.error("Copy email error:", copyError);
-          }
+        try {
+          await fetch("https://api.resend.com/emails", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${resendKey}`,
+            },
+            body: JSON.stringify({
+              from: "Patricia Martínez Psicología <onboarding@resend.dev>",
+              to: [email],
+              subject: `Copia de tu consulta — Patricia Martínez Psicología`,
+              html: `
+                <h2>Hemos recibido tu mensaje</h2>
+                <p>Hola ${escapeHtml(nombre)}, aquí tienes una copia de tu consulta:</p>
+                <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
+                <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
+                <p><strong>Mensaje:</strong></p>
+                <p>${escapeHtml(mensaje)}</p>
+                <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
+                <p style="color:#888;font-size:13px;">Te responderemos lo antes posible. Gracias por confiar en nosotros.</p>
+              `,
+            }),
+          });
+        } catch (copyError) {
+          console.error("Copy email error:", copyError);
         }
       }
     }
