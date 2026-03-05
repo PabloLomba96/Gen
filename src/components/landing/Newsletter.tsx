@@ -29,6 +29,14 @@ const Newsletter = () => {
         }
       } else {
         setIsSubscribed(true);
+        // Notify Patricia about new subscriber
+        try {
+          await supabase.functions.invoke('notify-subscriber', {
+            body: { email: email.trim() },
+          });
+        } catch {
+          // Non-blocking — subscription is already saved
+        }
       }
     } catch {
       toast({ title: 'Error', description: 'No se pudo suscribir. Inténtalo de nuevo.', variant: 'destructive' });

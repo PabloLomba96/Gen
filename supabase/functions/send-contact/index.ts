@@ -21,7 +21,7 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { nombre, email, telefono, motivo, mensaje } = await req.json();
+    const { nombre, email, telefono, motivo, mensaje, enviarCopia } = await req.json();
 
     if (!nombre || !email || !motivo || !mensaje) {
       return new Response(
@@ -51,9 +51,19 @@ Deno.serve(async (req) => {
       );
     }
 
-    // Send email notification via Resend
     const resendKey = Deno.env.get("RESEND_API_KEY");
     if (resendKey) {
+      const htmlBody = `
+        <h2>Nueva consulta desde tu web</h2>
+        <p><strong>Nombre:</strong> ${escapeHtml(nombre)}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Teléfono:</strong> ${escapeHtml(telefono || "No proporcionado")}</p>
+        <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
+        <p><strong>Mensaje:</strong></p>
+        <p>${escapeHtml(mensaje)}</p>
+      `;
+
+      // Send to Patricia
       try {
         await fetch("https://api.resend.com/emails", {
           method: "POST",
@@ -65,20 +75,41 @@ Deno.serve(async (req) => {
             from: "Formulario Web <onboarding@resend.dev>",
             to: ["patri.psicologia29@gmail.com"],
             subject: `Nueva consulta: ${motivo} - ${nombre}`,
-            html: `
-              <h2>Nueva consulta desde tu web</h2>
-              <p><strong>Nombre:</strong> ${escapeHtml(nombre)}</p>
-              <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-              <p><strong>Teléfono:</strong> ${escapeHtml(telefono || "No proporcionado")}</p>
-              <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
-              <p><strong>Mensaje:</strong></p>
-              <p>${escapeHtml(mensaje)}</p>
-            `,
+            html: htmlBody,
           }),
         });
       } catch (emailError) {
         console.error("Email error:", emailError);
-        // Don't fail the request if email fails - message is saved in DB
+      }
+
+      // Send copy to client if requested
+      if (enviarCopia) {
+        try {
+          await fetch("https://api.resend.com/emails", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${resendKey}`,
+            },
+            body: JSON.stringify({
+              from: "Patricia Martínez Psicología <onboarding@resend.dev>",
+              to: [email],
+              subject: `Copia de tu consulta — Patricia Martínez Psicología`,
+              html: `
+                <h2>Hemos recibido tu mensaje</h2>
+                <p>Hola ${escapeHtml(nombre)}, aquí tienes una copia de tu consulta:</p>
+                <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
+                <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
+                <p><strong>Mensaje:</strong></p>
+                <p>${escapeHtml(mensaje)}</p>
+                <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0;" />
+                <p style="color:#888;font-size:13px;">Te responderemos lo antes posible. Gracias por confiar en nosotros.</p>
+              `,
+            }),
+          });
+        } catch (copyError) {
+          console.error("Copy email error:", copyError);
+        }
       }
     }
 
