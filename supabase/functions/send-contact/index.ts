@@ -28,8 +28,11 @@ Deno.serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    // Persistent rate limiting
-    const clientIp = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
+    // Persistent rate limiting — use CF-Connecting-IP (set by proxy, not spoofable) or rightmost X-Forwarded-For
+    const clientIp = req.headers.get("cf-connecting-ip")
+      || req.headers.get("x-real-ip")
+      || req.headers.get("x-forwarded-for")?.split(",").pop()?.trim()
+      || "unknown";
     const { data: allowed } = await supabase.rpc("check_rate_limit", {
       p_ip: clientIp,
       p_endpoint: "contact",
