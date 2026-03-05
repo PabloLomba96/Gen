@@ -3,5 +3,5 @@ project_id = "tkvodlgemsjuoffajkul"
 [functions.send-contact]
 verify_jwt = false
 
-[functions.notify-subscriber]
+[functions.newsletter-subscribe]
 verify_jwt = false

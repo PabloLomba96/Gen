@@ -18,26 +18,18 @@ const Newsletter = () => {
 
     setIsSubmitting(true);
     try {
-      const { error } = await supabase
-        .from('newsletter_subscribers')
-        .insert({ email: email.trim(), idioma });
+      const { data, error } = await supabase.functions.invoke('newsletter-subscribe', {
+        body: { email: email.trim(), idioma },
+      });
 
-      if (error) {
-        if (error.code === '23505') {
-          toast({ title: '¡Ya estás suscrita/o!', description: 'Este email ya recibe nuestras Píldoras.' });
-        } else {
-          throw error;
-        }
-      } else {
+      if (error) throw error;
+
+      if (data?.error === 'duplicate') {
+        toast({ title: '¡Ya estás suscrita/o!', description: 'Este email ya recibe nuestras Píldoras.' });
+      } else if (data?.success) {
         setIsSubscribed(true);
-        // Notify Patricia about new subscriber
-        try {
-          await supabase.functions.invoke('notify-subscriber', {
-            body: { email: email.trim(), idioma },
-          });
-        } catch {
-          // Non-blocking — subscription is already saved
-        }
+      } else if (data?.error) {
+        toast({ title: 'Error', description: data.error, variant: 'destructive' });
       }
     } catch {
       toast({ title: 'Error', description: 'No se pudo suscribir. Inténtalo de nuevo.', variant: 'destructive' });
