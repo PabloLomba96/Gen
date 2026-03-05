@@ -223,7 +223,7 @@ const Servicios = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="h-14 px-8">
-                <Link to="/#contacto">
+                <Link to="/contacto">
                   Reservar Primera Consulta
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
