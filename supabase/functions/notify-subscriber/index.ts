@@ -10,7 +10,7 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { email } = await req.json();
+    const { email, idioma } = await req.json();
 
     if (!email) {
       return new Response(
@@ -18,6 +18,8 @@ Deno.serve(async (req) => {
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+
+    const idiomaLabel = idioma === 'en' ? '🇬🇧 Inglés' : '🇪🇸 Español';
 
     const resendKey = Deno.env.get("RESEND_API_KEY");
     if (resendKey) {
@@ -34,6 +36,7 @@ Deno.serve(async (req) => {
           html: `
             <h2>🎉 Nueva suscripción a Píldoras de Bienestar</h2>
             <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Idioma preferido:</strong> ${idiomaLabel}</p>
             <p style="color:#888;font-size:13px;">Este email se ha suscrito a tu newsletter desde la web.</p>
           `,
         }),

@@ -8,6 +8,7 @@ import { useToast } from '@/hooks/use-toast';
 const Newsletter = () => {
   const { toast } = useToast();
   const [email, setEmail] = useState('');
+  const [idioma, setIdioma] = useState<'es' | 'en'>('es');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
@@ -19,7 +20,7 @@ const Newsletter = () => {
     try {
       const { error } = await supabase
         .from('newsletter_subscribers')
-        .insert({ email: email.trim() });
+        .insert({ email: email.trim(), idioma });
 
       if (error) {
         if (error.code === '23505') {
@@ -32,7 +33,7 @@ const Newsletter = () => {
         // Notify Patricia about new subscriber
         try {
           await supabase.functions.invoke('notify-subscriber', {
-            body: { email: email.trim() },
+            body: { email: email.trim(), idioma },
           });
         } catch {
           // Non-blocking — subscription is already saved
@@ -73,22 +74,41 @@ const Newsletter = () => {
             Herramientas prácticas sobre ansiedad infantil, regulación emocional y crianza respetuosa. 
             Directo a tu email, sin spam.
           </p>
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <Input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="tu@email.com"
-              className="h-12 rounded-full px-5 flex-1"
-            />
-            <Button 
-              type="submit" 
-              disabled={isSubmitting}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full h-12 px-6 whitespace-nowrap"
-            >
-              {isSubmitting ? 'Suscribiendo...' : 'Suscribirme gratis'}
-            </Button>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="tu@email.com"
+                className="h-12 rounded-full px-5 flex-1"
+              />
+              <Button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full h-12 px-6 whitespace-nowrap"
+              >
+                {isSubmitting ? 'Suscribiendo...' : 'Suscribirme gratis'}
+              </Button>
+            </div>
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <span>Idioma preferido:</span>
+              <button
+                type="button"
+                onClick={() => setIdioma('es')}
+                className={`px-3 py-1 rounded-full transition-colors ${idioma === 'es' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'}`}
+              >
+                🇪🇸 Español
+              </button>
+              <button
+                type="button"
+                onClick={() => setIdioma('en')}
+                className={`px-3 py-1 rounded-full transition-colors ${idioma === 'en' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'}`}
+              >
+                🇬🇧 English
+              </button>
+            </div>
           </form>
           <p className="text-xs text-muted-foreground mt-4">
             Gratis. Cancelar en cualquier momento.

@@ -1,0 +1,1 @@
+ALTER TABLE public.newsletter_subscribers ADD COLUMN idioma text NOT NULL DEFAULT 'es';
