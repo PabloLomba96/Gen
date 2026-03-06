@@ -10,7 +10,7 @@ const testimonials = [
   {
     name: 'Carlos y Ana',
     role: 'Padres de Lucía (12 años)',
-    content: 'Cuando nos dijeron que Lucía tenía altas capacidades no sabíamos cómo ayudarla. En Gen Psicología nos han guiado a entenderla y acompañarla.',
+    content: 'Cuando nos dijeron que Lucía tenía altas capacidades no sabíamos cómo ayudarla. En Gen Centro de Psicología nos han guiado a entenderla y acompañarla.',
     highlight: 'Altas capacidades',
   },
   {
