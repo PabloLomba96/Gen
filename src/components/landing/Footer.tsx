@@ -1,23 +1,29 @@
-import { Mail, MapPin, Instagram, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import OverlappingCircles from '@/components/OverlappingCircles';
+import { useLanguage } from '@/i18n/context';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
+  const { t, lp, lang } = useLanguage();
+  const navLinks = t('footer.navLinks') as Array<{ label: string; href: string }>;
+
   return (
     <footer className="bg-foreground text-background py-14">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-flex items-center gap-2.5">
+            <Link to={lp('/')} className="inline-flex items-center gap-2.5">
               <OverlappingCircles size="md" />
               <span className="text-xl font-display font-bold text-background tracking-tight">
                 GEN <span className="text-background/40 font-normal">|</span>{' '}
-                <span className="font-semibold text-lg text-background/80">Centro de Psicología</span>
+                <span className="font-semibold text-lg text-background/80">
+                  {lang === 'es' ? 'Centro de Psicología' : 'Psychology Centre'}
+                </span>
               </span>
             </Link>
             <p className="text-background/55 max-w-sm leading-relaxed text-sm">
-              Gen Centro de Psicología — Psicología Infantojuvenil fundada por Patricia Martínez Díaz. 
-              Entendimiento, escucha activa y ayuda.
+              {t('footer.description')}
             </p>
             <div className="flex items-center gap-3 pt-1">
               <a
@@ -60,18 +66,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-4">Navegación</h4>
+            <h4 className="font-display font-semibold mb-4">{t('footer.navTitle')}</h4>
             <ul className="space-y-2.5 text-sm">
-              {[
-                { href: '/sobre-mi', label: 'Sobre Mí' },
-                { href: '/servicios', label: 'Servicios' },
-                { href: '/tienda', label: 'Recursos' },
-                { href: '/blog', label: 'Blog' },
-                { href: '/contacto', label: 'Contacto' },
-                { href: '/hola', label: 'Link in Bio' },
-              ].map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link to={link.href} className="text-background/55 hover:text-background transition-colors">
+                  <Link to={lp(link.href)} className="text-background/55 hover:text-background transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -80,7 +79,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-display font-semibold mb-4">Contacto</h4>
+            <h4 className="font-display font-semibold mb-4">{t('footer.contactTitle')}</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-background/55">
                 <Mail className="w-3.5 h-3.5 text-primary" />
@@ -90,7 +89,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-background/55">
                 <MapPin className="w-3.5 h-3.5 text-primary" />
-                <span>Valencia, España</span>
+                <span>{t('footer.locationDetail')}</span>
               </li>
               <li className="flex items-center gap-2 text-background/55">
                 <Phone className="w-3.5 h-3.5 text-primary" />
@@ -101,11 +100,11 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-background/35">
-          <p>© {new Date().getFullYear()} Gen Centro de Psicología — Patricia Martínez Díaz · Colegiada CV16625</p>
+          <p>{(t('footer.copyright') as string).replace('{year}', new Date().getFullYear().toString())}</p>
           <div className="flex items-center gap-5">
-            <Link to="/privacidad" className="hover:text-background/60 transition-colors">Política de Privacidad</Link>
-            <Link to="/aviso-legal" className="hover:text-background/60 transition-colors">Aviso Legal</Link>
-            <Link to="/cookies" className="hover:text-background/60 transition-colors">Política de Cookies</Link>
+            <Link to={lp('/privacidad')} className="hover:text-background/60 transition-colors">{t('footer.privacyLink')}</Link>
+            <Link to={lp('/aviso-legal')} className="hover:text-background/60 transition-colors">{t('footer.legalLink')}</Link>
+            <Link to={lp('/cookies')} className="hover:text-background/60 transition-colors">{t('footer.cookiesLink')}</Link>
           </div>
         </div>
       </div>
