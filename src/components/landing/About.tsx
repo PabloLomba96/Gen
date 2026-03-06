@@ -33,9 +33,9 @@ const About = () => {
               Hola, soy Patricia Martínez Díaz
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Psicóloga especializada en infancia y adolescencia con años de experiencia en Valencia. 
-              Trabajo con ansiedad, neurodivergencia, altas capacidades y regulación emocional, 
-              creando un espacio seguro desde el juego y la creatividad.
+              Psicóloga General Sanitaria (CV16625) especializada en infancia y adolescencia. 
+              Trabajo con altas capacidades, TDAH, TEA, ansiedad y regulación emocional 
+              desde Valencia, con terapia presencial y online.
             </p>
           </div>
 
