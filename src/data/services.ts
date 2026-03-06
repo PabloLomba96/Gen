@@ -116,7 +116,7 @@ export const services: ServiceData[] = [
     title: 'Regulación Emocional',
     shortTitle: 'Regulación Emocional',
     description: 'Herramientas para que los pequeños aprendan a entender, expresar y gestionar sus emociones de forma saludable.',
-    longDescription: 'La regulación emocional es una habilidad fundamental que se desarrolla durante la infancia. En Gen Psicología, ayudamos a niños y adolescentes a identificar, comprender y gestionar sus emociones de forma saludable, utilizando técnicas de mindfulness, relajación y juego terapéutico adaptadas a cada edad y situación.',
+    longDescription: 'La regulación emocional es una habilidad fundamental que se desarrolla durante la infancia. En Gen ayudamos a niños y adolescentes a identificar, comprender y gestionar sus emociones de forma saludable, utilizando técnicas de mindfulness, relajación y juego terapéutico adaptadas a cada edad y situación.',
     details: [
       'Identificación de emociones',
       'Gestión de la ira y frustración',
