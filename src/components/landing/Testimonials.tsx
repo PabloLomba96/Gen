@@ -16,7 +16,7 @@ const testimonials = [
   {
     name: 'María J.',
     role: 'Madre de Daniel (10 años)',
-    content: 'Con la ayuda de Gen Psicología, Daniel ha aprendido estrategias que le funcionan y ha mejorado mucho en el cole y en casa.',
+    content: 'Con la ayuda de Gen Centro de Psicología, Daniel ha aprendido estrategias que le funcionan y ha mejorado mucho en el cole y en casa.',
     highlight: 'TDAH',
   },
   {

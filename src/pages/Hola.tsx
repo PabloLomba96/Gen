@@ -1,5 +1,5 @@
 import { ArrowRight, BookOpen, Calendar, Download, Heart, Instagram, ShoppingBag } from 'lucide-react';
-import logoPatricia from '@/assets/logo-patricia.png';
+import OverlappingCircles from '@/components/OverlappingCircles';
 
 const links = [
   {
@@ -46,11 +46,11 @@ const Hola = () => {
     <div className="min-h-screen bg-background flex flex-col items-center px-4 py-10">
       {/* Profile */}
       <div className="text-center mb-8 animate-fade-up">
-        <div className="w-28 h-28 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-          <img src={logoPatricia} alt="Gen Psicología" className="w-full h-full object-contain" />
+        <div className="mx-auto mb-4 flex items-center justify-center">
+          <OverlappingCircles size="lg" />
         </div>
         <h1 className="text-xl font-display font-bold text-foreground">Gen Psicología</h1>
-        <p className="text-sm text-muted-foreground mt-1">Psicología Infantojuvenil 🧠💛</p>
+        <p className="text-sm text-muted-foreground mt-1">Centro de Psicología Infantojuvenil 🧠💛</p>
         <p className="text-xs text-muted-foreground mt-0.5">Valencia & Online</p>
       </div>
 
@@ -119,7 +119,7 @@ const Hola = () => {
       </div>
 
       <p className="text-[10px] text-muted-foreground/50 mt-6">
-        © {new Date().getFullYear()} Gen Psicología — Patricia Martínez Díaz
+        © {new Date().getFullYear()} Gen Centro de Psicología — Patricia Martínez Díaz
       </p>
     </div>
   );

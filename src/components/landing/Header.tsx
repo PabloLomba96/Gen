@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.png';
+import OverlappingCircles from '@/components/OverlappingCircles';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +23,11 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-display font-bold text-foreground tracking-tight">
-              Gen <span className="text-primary">Psicología</span>
+          <Link to="/" className="flex items-center gap-2.5">
+            <OverlappingCircles size="sm" />
+            <span className="text-lg md:text-xl font-display font-bold text-foreground tracking-tight">
+              GEN <span className="text-muted-foreground font-normal">|</span>{' '}
+              <span className="text-primary font-semibold text-base md:text-lg">Centro de Psicología</span>
             </span>
           </Link>
 
