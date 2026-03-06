@@ -1,9 +1,11 @@
 import { CheckCircle } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
   service: {
     icon: LucideIcon;
+    slug: string;
     title: string;
     description: string;
     details: string[];
@@ -13,8 +15,9 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
-    <div
-      className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl"
+    <Link
+      to={`/servicios/${service.slug}`}
+      className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl block"
       style={{ boxShadow: 'var(--shadow-soft)' }}
     >
       <div
@@ -40,7 +43,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           </li>
         ))}
       </ul>
-    </div>
+    </Link>
   );
 };
 
