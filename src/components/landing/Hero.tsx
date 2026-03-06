@@ -20,7 +20,7 @@ const Hero = () => {
           <div className="space-y-7 animate-fade-up">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-accent/10 border border-accent/15">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-sm font-medium text-muted-foreground">Psicóloga Infantojuvenil en Valencia</span>
+              <span className="text-sm font-medium text-muted-foreground">Gen Centro de Psicología Infantojuvenil en Valencia</span>
             </div>
 
             <div className="space-y-5">
@@ -94,7 +94,7 @@ const Hero = () => {
               <div className="relative w-80 h-80 flex items-center justify-center">
                 <img
                   src={logoPatricia}
-                  alt="Gen Psicología — Las manos que ayudan, el punto medio entre entendimiento, escucha activa y ayuda"
+                  alt="Gen Centro de Psicología — Psicología Infantojuvenil en Valencia"
                   className="w-full h-full object-contain drop-shadow-lg" />
                 
               </div>

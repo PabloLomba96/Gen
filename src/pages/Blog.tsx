@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, Clock, TrendingUp, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.png';
+import OverlappingCircles from '@/components/OverlappingCircles';
 
 const blogPosts = [
   {
@@ -69,30 +69,29 @@ const Blog = () => {
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={logoPatricia} 
-              alt="Patricia Martínez Díaz" 
-              className="h-10 w-10 rounded-full object-cover"
-            />
-            <span className="font-display font-semibold text-foreground">Patricia Martínez</span>
+          <Link to="/" className="flex items-center gap-2.5">
+            <OverlappingCircles size="sm" />
+            <span className="font-display font-bold text-foreground">
+              GEN <span className="text-muted-foreground font-normal text-sm">|</span>{' '}
+              <span className="text-primary font-semibold text-sm">Centro de Psicología</span>
+            </span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">
             <Link to="/" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Inicio
             </Link>
-            <Link to="/#servicios" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/servicios" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Servicios
             </Link>
             <Link to="/blog" className="text-sm font-medium text-primary transition-colors">
               Blog
             </Link>
-            <Link to="/#contacto" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/contacto" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               Contacto
             </Link>
           </nav>
           <Button asChild className="hidden md:inline-flex">
-            <Link to="/#contacto">Reservar Cita</Link>
+            <Link to="/contacto">Reservar Cita</Link>
           </Button>
         </div>
       </header>
@@ -113,7 +112,7 @@ const Blog = () => {
           
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6">
-              Blog de Psicología Infantil
+              Blog de Gen Psicología
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Artículos y recursos basados en evidencia para ayudarte a entender y acompañar 
@@ -160,7 +159,6 @@ const Blog = () => {
                 className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl"
                 style={{ boxShadow: 'var(--shadow-soft)' }}
               >
-                {/* Image Placeholder */}
                 <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="text-6xl opacity-50">🧠</span>
@@ -206,7 +204,6 @@ const Blog = () => {
             ))}
           </div>
 
-          {/* Load More */}
           <div className="text-center mt-12">
             <Button 
               variant="outline"
@@ -227,18 +224,18 @@ const Blog = () => {
             ¿Necesitas ayuda profesional?
           </h2>
           <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-            Si tienes dudas sobre el desarrollo emocional de tu hijo, no dudes en contactarme. 
-            La primera consulta es para conocernos y entender cómo puedo ayudaros.
+            Si tienes dudas sobre el desarrollo emocional de tu hijo, no dudes en contactarnos. 
+            La primera consulta es para conocernos y entender cómo podemos ayudaros.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="h-14 px-8">
-              <Link to="/#contacto">
+              <Link to="/contacto">
                 Reservar Primera Consulta
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="h-14 px-8">
-              <Link to="/#servicios">
+              <Link to="/servicios">
                 Ver Servicios
               </Link>
             </Button>
@@ -250,23 +247,19 @@ const Blog = () => {
       <footer className="py-8 border-t border-border bg-card">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img 
-              src={logoPatricia} 
-              alt="Patricia Martínez Díaz" 
-              className="h-8 w-8 rounded-full object-cover"
-            />
+            <OverlappingCircles size="sm" />
             <span className="text-sm text-muted-foreground">
-              © 2026 Patricia Martínez Díaz. Todos los derechos reservados.
+              © {new Date().getFullYear()} Gen Centro de Psicología. Todos los derechos reservados.
             </span>
           </div>
           <div className="flex items-center gap-6">
             <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Inicio
             </Link>
-            <Link to="/#servicios" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/servicios" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Servicios
             </Link>
-            <Link to="/#contacto" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/contacto" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Contacto
             </Link>
           </div>

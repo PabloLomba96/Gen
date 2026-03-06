@@ -1,6 +1,6 @@
 import { Mail, MapPin, Instagram, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.png';
+import OverlappingCircles from '@/components/OverlappingCircles';
 
 const Footer = () => {
   return (
@@ -8,15 +8,15 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-block">
-              <img
-                src={logoPatricia}
-                alt="Gen Psicología"
-                className="h-14 w-auto object-contain bg-background/90 rounded-xl p-1.5"
-              />
+            <Link to="/" className="inline-flex items-center gap-2.5">
+              <OverlappingCircles size="md" />
+              <span className="text-xl font-display font-bold text-background tracking-tight">
+                GEN <span className="text-background/40 font-normal">|</span>{' '}
+                <span className="font-semibold text-lg text-background/80">Centro de Psicología</span>
+              </span>
             </Link>
             <p className="text-background/55 max-w-sm leading-relaxed text-sm">
-              Gen Psicología — Psicología Infantojuvenil fundada por Patricia Martínez Díaz. 
+              Gen Centro de Psicología — Psicología Infantojuvenil fundada por Patricia Martínez Díaz. 
               Entendimiento, escucha activa y ayuda.
             </p>
             <div className="flex items-center gap-3 pt-1">
@@ -92,7 +92,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-background/35">
-          <p>© {new Date().getFullYear()} Gen Psicología — Patricia Martínez Díaz · Colegiada CV16625</p>
+          <p>© {new Date().getFullYear()} Gen Centro de Psicología — Patricia Martínez Díaz · Colegiada CV16625</p>
           <div className="flex items-center gap-5">
             <span className="text-background/25 cursor-default">Privacidad — Próximamente</span>
             <span className="text-background/25 cursor-default">Aviso Legal — Próximamente</span>
