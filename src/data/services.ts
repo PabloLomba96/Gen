@@ -78,7 +78,7 @@ export const services: ServiceData[] = [
     title: 'TDAH y TEA',
     shortTitle: 'TDAH y TEA',
     description: 'Diagnóstico e intervención especializada en trastornos del neurodesarrollo con enfoque personalizado.',
-    longDescription: 'El TDAH y el TEA son trastornos del neurodesarrollo que requieren una evaluación rigurosa y una intervención adaptada a cada niño. En Gen Centro de Psicología, Patricia Martínez Díaz ofrece diagnóstico especializado, intervención conductual y coordinación con colegios para garantizar un abordaje integral que mejore la calidad de vida del niño y su familia.',
+    longDescription: 'El TDAH y el TEA son trastornos del neurodesarrollo que requieren una evaluación rigurosa y una intervención adaptada a cada niño. En Gen ofrecemos diagnóstico especializado, intervención conductual y coordinación con colegios para garantizar un abordaje integral que mejore la calidad de vida del niño y su familia.',
     details: [
       'Evaluación y diagnóstico',
       'Intervención conductual',
