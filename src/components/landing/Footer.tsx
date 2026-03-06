@@ -38,7 +38,7 @@ const Footer = () => {
                 aria-label="Instagram Patri Psicología"
               >
                 <Instagram className="w-4 h-4" />
-                <span className="opacity-80 group-hover:opacity-100">patri</span>
+                <span className="opacity-80 group-hover:opacity-100">📷 Patri Psicología</span>
               </a>
               <a
                 href="mailto:patricia@genpsicologia.com"
