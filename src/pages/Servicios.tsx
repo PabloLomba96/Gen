@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Baby, Brain, Heart, Sparkles, Users, Puzzle, Video, MapPin, CheckCircle, BookOpen, UserCheck, HeartHandshake, ShieldCheck, Lightbulb } from 'lucide-react';
+import { ArrowRight, Video, MapPin, UserCheck, Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import ServiceCard from '@/components/servicios/ServiceCard';
 import ModalityCard from '@/components/servicios/ModalityCard';
+import { services } from '@/data/services';
 
 const services = [
   {
