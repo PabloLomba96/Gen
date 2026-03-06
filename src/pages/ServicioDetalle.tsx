@@ -23,8 +23,33 @@ const ServicioDetalle = () => {
 
   const otherServices = services.filter((s) => s.slug !== slug);
 
+  const serviceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    description: service.longDescription,
+    url: `https://genpsicologia.com/servicios/${service.slug}`,
+    provider: {
+      '@type': 'ProfessionalService',
+      name: 'Gen Centro de Psicología',
+      url: 'https://genpsicologia.com',
+      telephone: '+34611889209',
+      email: 'patricia@genpsicologia.com',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Valencia' },
+      { '@type': 'Country', name: 'España' },
+    ],
+    serviceType: service.title,
+    availableChannel: [
+      { '@type': 'ServiceChannel', serviceLocation: { '@type': 'Place', name: 'Valencia, España' }, name: 'Presencial' },
+      { '@type': 'ServiceChannel', name: 'Online (Videollamada)' },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd data={serviceJsonLd} />
       <Header />
       <main className="pt-20">
         {/* Breadcrumb + Hero */}
