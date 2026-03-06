@@ -21,7 +21,7 @@ export const services: ServiceData[] = [
     title: 'Terapia Infantil',
     shortTitle: 'Terapia Infantil',
     description: 'Acompañamiento emocional para niños en cada etapa de su desarrollo. Trabajamos desde el juego, la creatividad y el vínculo.',
-    longDescription: 'La infancia es una etapa fundamental en la construcción de la personalidad y el bienestar emocional. En Gen Psicología ofrecemos terapia infantil basada en el juego terapéutico, la creatividad y el vínculo seguro. Trabajamos con niños que presentan dificultades emocionales, conductuales o relacionales, acompañándoles con respeto y profesionalidad en cada paso de su desarrollo.',
+    longDescription: 'La infancia es una etapa fundamental en la construcción de la personalidad y el bienestar emocional. En Gen ofrecemos terapia infantil basada en el juego terapéutico, la creatividad y el vínculo seguro. Trabajamos con niños que presentan dificultades emocionales, conductuales o relacionales, acompañándoles con respeto y profesionalidad en cada paso de su desarrollo.',
     details: [
       'Gestión emocional y rabietas',
       'Ansiedad por separación',
