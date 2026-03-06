@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video } from 'lucide-react';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
+import JsonLd from '@/components/JsonLd';
 import { services } from '@/data/services';
 import { useEffect } from 'react';
 
