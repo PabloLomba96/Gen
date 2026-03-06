@@ -94,8 +94,9 @@ const Footer = () => {
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-background/35">
           <p>© {new Date().getFullYear()} Gen Centro de Psicología — Patricia Martínez Díaz · Colegiada CV16625</p>
           <div className="flex items-center gap-5">
-            <span className="text-background/25 cursor-default">Privacidad — Próximamente</span>
-            <span className="text-background/25 cursor-default">Aviso Legal — Próximamente</span>
+            <Link to="/privacidad" className="hover:text-background/60 transition-colors">Política de Privacidad</Link>
+            <Link to="/aviso-legal" className="hover:text-background/60 transition-colors">Aviso Legal</Link>
+            <Link to="/cookies" className="hover:text-background/60 transition-colors">Política de Cookies</Link>
           </div>
         </div>
       </div>
