@@ -16,7 +16,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-background/55 max-w-sm leading-relaxed text-sm">
-              Gen Centro de Psicología — Psicología Infantojuvenil fundada por Patricia Martínez Díaz. 
+              Gen Psicología — Psicología Infantojuvenil fundada por Patricia Martínez Díaz. 
               Entendimiento, escucha activa y ayuda.
             </p>
             <div className="flex items-center gap-3 pt-1">
@@ -92,7 +92,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-background/35">
-          <p>© {new Date().getFullYear()} Gen Centro de Psicología — Patricia Martínez Díaz · Colegiada CV16625</p>
+          <p>© {new Date().getFullYear()} Gen Psicología — Patricia Martínez Díaz · Colegiada CV16625</p>
           <div className="flex items-center gap-5">
             <span className="text-background/25 cursor-default">Privacidad — Próximamente</span>
             <span className="text-background/25 cursor-default">Aviso Legal — Próximamente</span>
