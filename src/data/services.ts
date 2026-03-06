@@ -97,7 +97,7 @@ export const services: ServiceData[] = [
     title: 'Dificultades del Aprendizaje',
     shortTitle: 'Aprendizaje',
     description: 'Intervención en dificultades de lectura, escritura, comprensión y atención adaptada al ritmo de cada niño.',
-    longDescription: 'Las dificultades del aprendizaje como la dislexia, la disgrafía o la discalculia pueden afectar significativamente al rendimiento escolar y la autoestima del niño. Patricia Martínez Díaz interviene de forma personalizada, adaptando las estrategias al ritmo y las necesidades de cada niño, y coordinándose con los centros educativos para un abordaje completo.',
+    longDescription: 'Las dificultades del aprendizaje como la dislexia, la disgrafía o la discalculia pueden afectar significativamente al rendimiento escolar y la autoestima del niño. En Gen Psicología intervenimos de forma personalizada, adaptando las estrategias al ritmo y las necesidades de cada niño, y coordinándonos con los centros educativos para un abordaje completo.',
     details: [
       'Dificultades de lectoescritura',
       'Disgrafía y discalculia',
