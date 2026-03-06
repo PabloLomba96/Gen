@@ -177,11 +177,19 @@ const Contact = () => {
 
             {/* Quick Contact */}
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 border border-primary/20">
-              <p className="font-medium text-foreground mb-2">¿Prefieres contactar por teléfono?</p>
+              <p className="font-medium text-foreground mb-2">¿Prefieres contactar directamente?</p>
               <p className="text-sm text-muted-foreground mb-4">
-                Puedes contactarme a través de Instagram para consultas rápidas.
+                Escríbeme por WhatsApp o sígueme en Instagram para consultas rápidas.
               </p>
               <div className="flex flex-col gap-2">
+                <a 
+                  href="https://wa.me/34611889209"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all"
+                >
+                  📱 +34 611 889 209
+                </a>
                 <a 
                   href="https://instagram.com/genpsicologia"
                   target="_blank"
