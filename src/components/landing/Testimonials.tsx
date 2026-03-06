@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: 'Laura M.',
     role: 'Madre de Hugo (8 años)',
-    content: 'Gen Psicología ha sido un antes y un después para mi hijo. La forma de trabajar desde el juego ha ayudado a Hugo a gestionar su ansiedad de forma increíble.',
+    content: 'Gen Centro de Psicología ha sido un antes y un después para mi hijo. La forma de trabajar desde el juego ha ayudado a Hugo a gestionar su ansiedad de forma increíble.',
     highlight: 'Ansiedad infantil',
   },
   {
