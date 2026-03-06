@@ -154,7 +154,7 @@ export const services: ServiceData[] = [
     title: 'Creatividad y Talento',
     shortTitle: 'Creatividad y Talento',
     description: 'Estimulamos el pensamiento divergente y desarrollamos el potencial único de cada niño.',
-    longDescription: 'Cada niño tiene un potencial único que merece ser descubierto y desarrollado. En Gen Psicología, estimulamos el pensamiento divergente, la creatividad y la autoexpresión, especialmente en niños introvertidos o con sobrecarga social, ayudándoles a encontrar su espacio y desarrollar sus talentos individuales.',
+    longDescription: 'Cada niño tiene un potencial único que merece ser descubierto y desarrollado. En Gen estimulamos el pensamiento divergente, la creatividad y la autoexpresión, especialmente en niños introvertidos o con sobrecarga social, ayudándoles a encontrar su espacio y desarrollar sus talentos individuales.',
     details: [
       'Pensamiento divergente',
       'Habilidades creativas',
