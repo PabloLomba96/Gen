@@ -11,7 +11,6 @@ const Hero = () => {
       {/* Decorative circles echoing the logo */}
       <div className="absolute top-24 right-[-8%] w-80 h-80 rounded-full bg-accent/8 blur-3xl" />
       <div className="absolute bottom-16 left-[-6%] w-72 h-72 rounded-full bg-primary/6 blur-3xl" />
-      {/* Subtle overlap circle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-overlap opacity-[0.04] blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -20,20 +19,19 @@ const Hero = () => {
           <div className="space-y-7 animate-fade-up">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-accent/10 border border-accent/15">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-sm font-medium text-muted-foreground">Centro de Psicología Infantojuvenil en Valencia</span>
+              <span className="text-sm font-medium text-muted-foreground">Psicóloga Infantil y de Adolescentes en Valencia</span>
             </div>
 
             <div className="space-y-5">
               <h1 className="text-4xl sm:text-5xl lg:text-[3.3rem] font-display font-bold text-foreground leading-[1.13]">
-                Del agotamiento{' '}
+                Psicóloga infantil{' '}
                 <br className="hidden sm:block" />
-                a la calma:{' '}
+                en Valencia:{' '}
                 <span className="text-gradient">herramientas reales</span>{' '}
-                para mentes jóvenes
+                para tu hijo/a
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                Especialista en neurodivergencia e infantojuvenil. Acompaño a familias desde el entendimiento, la escucha activa y la ayuda.
-              
+                Especialista en TDAH, altas capacidades y neurodivergencia. Ayudo a niños y adolescentes con ansiedad, rabietas, miedos y dificultades escolares. Presencial y online.
               </p>
             </div>
 
@@ -88,19 +86,15 @@ const Hero = () => {
           {/* Right: Logo showcase */}
           <div className="relative animate-scale-in hidden lg:flex justify-center" style={{ animationDelay: '0.15s' }}>
             <div className="relative">
-              {/* Soft glow behind logo */}
               <div className="absolute inset-0 rounded-full bg-overlap opacity-10 blur-2xl scale-110" />
               
               <div className="relative w-80 h-80 flex items-center justify-center">
                 <img
                   src={logoPatricia}
-                  alt="Gen Psicología — Las manos que ayudan, el punto medio entre entendimiento, escucha activa y ayuda"
+                  alt="Gen Psicología — Psicóloga infantil en Valencia especializada en TDAH, altas capacidades y neurodivergencia"
                   className="w-full h-full object-contain drop-shadow-lg" />
-                
               </div>
 
-              {/* Floating cards — outside logo bounds */}
-              {/* Top-right: above the logo */}
               <div className="absolute -top-14 left-1/2 -translate-x-1/4 glass rounded-2xl p-3 shadow-lg animate-float">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
@@ -113,7 +107,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Bottom-left */}
               <div className="absolute -bottom-16 -left-4 glass rounded-2xl p-3 shadow-lg animate-float" style={{ animationDelay: '2.5s' }}>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-primary/12 flex items-center justify-center shrink-0">
@@ -126,7 +119,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Bottom-right */}
               <div className="absolute -bottom-16 right-0 glass rounded-2xl p-3 shadow-lg animate-float" style={{ animationDelay: '5s' }}>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-overlap/20 flex items-center justify-center shrink-0">

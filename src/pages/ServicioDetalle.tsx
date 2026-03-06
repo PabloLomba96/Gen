@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle } from 'lucide-react';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
@@ -78,6 +78,38 @@ const ServicioDetalle = () => {
             </div>
           </div>
         </section>
+
+        {/* Symptoms - "Deberías consultar si..." */}
+        {service.symptoms && service.symptoms.length > 0 && (
+          <section className="py-16 bg-accent/5">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                    <AlertCircle className="w-5 h-5 text-accent" />
+                  </div>
+                  <h2 className="text-2xl font-display font-bold text-foreground">
+                    Deberías consultar si notas que tu hijo/a...
+                  </h2>
+                </div>
+                <ul className="space-y-3">
+                  {service.symptoms.map((symptom) => (
+                    <li key={symptom} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border">
+                      <span className="text-accent mt-0.5 shrink-0">•</span>
+                      <span className="text-muted-foreground">{symptom}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-sm text-muted-foreground text-center">
+                  ¿Reconoces alguna de estas señales?{' '}
+                  <Link to="/contacto" className="text-primary font-medium hover:underline">
+                    Hablemos sin compromiso
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Details */}
         <section className="py-24">

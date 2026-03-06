@@ -14,18 +14,28 @@ const faqJsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: '¿Para qué edades trabajáis?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Trabajamos con niños a partir de 3 años, adolescentes y también ofrecemos orientación a familias y centros educativos.' },
+      name: '¿Cómo sé si mi hijo necesita un psicólogo?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Si notas cambios bruscos de comportamiento, rabietas muy intensas, miedos que le impiden hacer vida normal, problemas de sueño, dificultades en el colegio o tristeza persistente, es buen momento para consultar.' },
     },
     {
       '@type': 'Question',
-      name: '¿Las sesiones son presenciales u online?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Ofrecemos ambas modalidades. Las sesiones presenciales se realizan en Valencia y las online por videollamada segura.' },
+      name: '¿A partir de qué edad se puede llevar a un niño al psicólogo?',
+      acceptedAnswer: { '@type': 'Answer', text: 'A partir de los 3 años ya se pueden realizar intervenciones adaptadas a su edad a través del juego terapéutico. También ofrezco orientación a padres de niños más pequeños.' },
     },
     {
       '@type': 'Question',
-      name: '¿Cómo es la primera consulta?',
-      acceptedAnswer: { '@type': 'Answer', text: 'La primera consulta es una sesión de evaluación donde nos conocemos, exploras tu motivo de consulta y valoramos juntos el plan de intervención más adecuado.' },
+      name: '¿Mi hijo tiene ansiedad? ¿Cuáles son las señales?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Algunos signos de ansiedad infantil son: preocupación excesiva, miedos desproporcionados, dolor de barriga o cabeza sin causa médica, dificultad para dormir, negarse a ir al colegio, irritabilidad o llanto frecuente.' },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Se puede hacer terapia infantil online?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sí, ofrezco sesiones online igual de efectivas y con mayor flexibilidad horaria para familias que no pueden desplazarse a Valencia.' },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cómo funciona la primera consulta?',
+      acceptedAnswer: { '@type': 'Answer', text: 'La primera consulta es para conocernos: me cuentas qué os preocupa, evalúo la situación y os explico cómo puedo ayudaros. Es sin compromiso y con total confidencialidad.' },
     },
   ],
 };
