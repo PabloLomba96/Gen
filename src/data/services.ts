@@ -21,7 +21,7 @@ export const services: ServiceData[] = [
     title: 'Terapia Infantil',
     shortTitle: 'Terapia Infantil',
     description: 'Acompañamiento emocional para niños en cada etapa de su desarrollo. Trabajamos desde el juego, la creatividad y el vínculo.',
-    longDescription: 'La infancia es una etapa fundamental en la construcción de la personalidad y el bienestar emocional. En Gen Centro de Psicología, Patricia Martínez Díaz ofrece terapia infantil basada en el juego terapéutico, la creatividad y el vínculo seguro. Trabajamos con niños que presentan dificultades emocionales, conductuales o relacionales, acompañándoles con respeto y profesionalidad en cada paso de su desarrollo.',
+    longDescription: 'La infancia es una etapa fundamental en la construcción de la personalidad y el bienestar emocional. En Gen Psicología ofrecemos terapia infantil basada en el juego terapéutico, la creatividad y el vínculo seguro. Trabajamos con niños que presentan dificultades emocionales, conductuales o relacionales, acompañándoles con respeto y profesionalidad en cada paso de su desarrollo.',
     details: [
       'Gestión emocional y rabietas',
       'Ansiedad por separación',
@@ -40,7 +40,7 @@ export const services: ServiceData[] = [
     title: 'Terapia para Adolescentes',
     shortTitle: 'Adolescentes',
     description: 'La adolescencia es una etapa de transformación profunda. Acompañamos a tu hijo/a a entender y gestionar lo que está viviendo.',
-    longDescription: 'La adolescencia es un periodo de cambios profundos donde la identidad, las relaciones y las emociones se transforman. En Gen Psicología, Patricia Martínez Díaz acompaña a adolescentes ofreciendo un espacio seguro, moderno y sin juicios donde pueden expresarse libremente. Trabajamos la autoestima, el acoso escolar, la ansiedad y los conflictos propios de esta etapa.',
+    longDescription: 'La adolescencia es un periodo de cambios profundos donde la identidad, las relaciones y las emociones se transforman. En Gen Psicología acompañamos a adolescentes ofreciendo un espacio seguro, moderno y sin juicios donde pueden expresarse libremente. Trabajamos la autoestima, el acoso escolar, la ansiedad y los conflictos propios de esta etapa.',
     details: [
       'Crisis de identidad y autoconcepto',
       'Acoso escolar (bullying)',
@@ -59,7 +59,7 @@ export const services: ServiceData[] = [
     title: 'Altas Capacidades Intelectuales (AACC)',
     shortTitle: 'Altas Capacidades',
     description: 'Evaluación y apoyo integral para niños con altas capacidades intelectuales y sus familias.',
-    longDescription: 'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. Patricia Martínez Díaz colabora con el Centro Divergentes de Valencia, referente en altas capacidades y neurodiversidad. Ofrecemos evaluación completa, orientación familiar y asesoramiento escolar para que cada niño con AACC pueda desarrollar todo su potencial sin sentirse diferente.',
+    longDescription: 'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. Desde Gen colaboramos con el Centro Divergentes de Valencia, referente en altas capacidades y neurodiversidad. Ofrecemos evaluación completa, orientación familiar y asesoramiento escolar para que cada niño con AACC pueda desarrollar todo su potencial sin sentirse diferente.',
     details: [
       'Evaluación de altas capacidades',
       'Gestión de la disincronía',
@@ -78,7 +78,7 @@ export const services: ServiceData[] = [
     title: 'TDAH y TEA',
     shortTitle: 'TDAH y TEA',
     description: 'Diagnóstico e intervención especializada en trastornos del neurodesarrollo con enfoque personalizado.',
-    longDescription: 'El TDAH y el TEA son trastornos del neurodesarrollo que requieren una evaluación rigurosa y una intervención adaptada a cada niño. En Gen Centro de Psicología, Patricia Martínez Díaz ofrece diagnóstico especializado, intervención conductual y coordinación con colegios para garantizar un abordaje integral que mejore la calidad de vida del niño y su familia.',
+    longDescription: 'El TDAH y el TEA son trastornos del neurodesarrollo que requieren una evaluación rigurosa y una intervención adaptada a cada niño. En Gen ofrecemos diagnóstico especializado, intervención conductual y coordinación con colegios para garantizar un abordaje integral que mejore la calidad de vida del niño y su familia.',
     details: [
       'Evaluación y diagnóstico',
       'Intervención conductual',
@@ -97,7 +97,7 @@ export const services: ServiceData[] = [
     title: 'Dificultades del Aprendizaje',
     shortTitle: 'Aprendizaje',
     description: 'Intervención en dificultades de lectura, escritura, comprensión y atención adaptada al ritmo de cada niño.',
-    longDescription: 'Las dificultades del aprendizaje como la dislexia, la disgrafía o la discalculia pueden afectar significativamente al rendimiento escolar y la autoestima del niño. Patricia Martínez Díaz interviene de forma personalizada, adaptando las estrategias al ritmo y las necesidades de cada niño, y coordinándose con los centros educativos para un abordaje completo.',
+    longDescription: 'Las dificultades del aprendizaje como la dislexia, la disgrafía o la discalculia pueden afectar significativamente al rendimiento escolar y la autoestima del niño. En Gen Psicología intervenimos de forma personalizada, adaptando las estrategias al ritmo y las necesidades de cada niño, y coordinándonos con los centros educativos para un abordaje completo.',
     details: [
       'Dificultades de lectoescritura',
       'Disgrafía y discalculia',
@@ -135,7 +135,7 @@ export const services: ServiceData[] = [
     title: 'Terapia Familiar',
     shortTitle: 'Terapia Familiar',
     description: 'Acompañamos a la familia para mejorar la comunicación, resolver conflictos y fortalecer los vínculos.',
-    longDescription: 'La familia es el pilar del bienestar emocional del niño. En Gen Centro de Psicología, Patricia Martínez Díaz acompaña a las familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas de crianza basadas en la disciplina positiva y la evidencia científica.',
+    longDescription: 'La familia es el pilar del bienestar emocional del niño. En el centro Gen acompañamos a las familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas de crianza basadas en la disciplina positiva y la evidencia científica.',
     details: [
       'Dificultades de comunicación',
       'Conflictos familiares',
@@ -173,7 +173,7 @@ export const services: ServiceData[] = [
     title: 'Trauma y Apego',
     shortTitle: 'Trauma y Apego',
     description: 'Intervención especializada en experiencias traumáticas y dificultades vinculares desde una mirada integradora.',
-    longDescription: 'Las experiencias traumáticas y las dificultades de apego pueden dejar una huella profunda en el desarrollo emocional del niño. Patricia Martínez Díaz interviene desde una mirada integradora, ofreciendo un espacio seguro donde el niño pueda procesar sus vivencias y reconstruir vínculos seguros con su entorno.',
+    longDescription: 'Las experiencias traumáticas y las dificultades de apego pueden dejar una huella profunda en el desarrollo emocional del niño. En Gen intervenimos desde una mirada integradora, ofreciendo un espacio seguro donde el niño pueda procesar sus vivencias y reconstruir vínculos seguros con su entorno.',
     details: [
       'Abuso sexual infantil (ASI)',
       'Experiencias traumáticas',
