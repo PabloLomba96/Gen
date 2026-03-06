@@ -4,19 +4,19 @@ const testimonials = [
   {
     name: 'Laura M.',
     role: 'Madre de Hugo (8 años)',
-    content: 'Patricia ha sido un antes y un después para mi hijo. Su forma de trabajar desde el juego ha ayudado a Hugo a gestionar su ansiedad de forma increíble.',
+    content: 'Gen Psicología ha sido un antes y un después para mi hijo. La forma de trabajar desde el juego ha ayudado a Hugo a gestionar su ansiedad de forma increíble.',
     highlight: 'Ansiedad infantil',
   },
   {
     name: 'Carlos y Ana',
     role: 'Padres de Lucía (12 años)',
-    content: 'Cuando nos dijeron que Lucía tenía altas capacidades no sabíamos cómo ayudarla. Patricia nos ha guiado a entenderla y acompañarla.',
+    content: 'Cuando nos dijeron que Lucía tenía altas capacidades no sabíamos cómo ayudarla. En Gen Psicología nos han guiado a entenderla y acompañarla.',
     highlight: 'Altas capacidades',
   },
   {
     name: 'María J.',
     role: 'Madre de Daniel (10 años)',
-    content: 'Con la ayuda de Patricia, Daniel ha aprendido estrategias que le funcionan y ha mejorado mucho en el cole y en casa.',
+    content: 'Con la ayuda de Gen Psicología, Daniel ha aprendido estrategias que le funcionan y ha mejorado mucho en el cole y en casa.',
     highlight: 'TDAH',
   },
   {

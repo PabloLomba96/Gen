@@ -229,7 +229,7 @@ const Servicios = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-14 px-8">
-                <a href="https://instagram.com/patri_psicologia" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/genpsicologia" target="_blank" rel="noopener noreferrer">
                   Contactar por Instagram
                 </a>
               </Button>

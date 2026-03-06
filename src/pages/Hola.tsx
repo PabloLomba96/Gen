@@ -47,10 +47,10 @@ const Hola = () => {
       {/* Profile */}
       <div className="text-center mb-8 animate-fade-up">
         <div className="w-28 h-28 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
-          <img src={logoPatricia} alt="Patricia Martínez Psicología" className="w-full h-full object-contain" />
+          <img src={logoPatricia} alt="Gen Psicología" className="w-full h-full object-contain" />
         </div>
-        <h1 className="text-xl font-display font-bold text-foreground">Patricia Martínez</h1>
-        <p className="text-sm text-muted-foreground mt-1">Psicóloga Infantojuvenil 🧠💛</p>
+        <h1 className="text-xl font-display font-bold text-foreground">Gen Psicología</h1>
+        <p className="text-sm text-muted-foreground mt-1">Psicología Infantojuvenil 🧠💛</p>
         <p className="text-xs text-muted-foreground mt-0.5">Valencia & Online</p>
       </div>
 
@@ -98,17 +98,17 @@ const Hola = () => {
       </div>
 
       <a
-        href="https://instagram.com/patri_psicologia"
+        href="https://instagram.com/genpsicologia"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
       >
         <Instagram className="w-4 h-4" />
-        @patri_psicologia
+        @genpsicologia
       </a>
 
       <p className="text-[10px] text-muted-foreground/50 mt-6">
-        © {new Date().getFullYear()} Patricia Martínez Díaz
+        © {new Date().getFullYear()} Gen Psicología — Patricia Martínez Díaz
       </p>
     </div>
   );

@@ -175,8 +175,8 @@ const Recursos = () => {
                 crianza respetuosa y desarrollo emocional. ¡Sígueme para no perderte nada!
               </p>
               <Button asChild size="lg" className="h-14 px-8">
-                <a href="https://instagram.com/patri_psicologia" target="_blank" rel="noopener noreferrer">
-                  Seguir @patri_psicologia
+                <a href="https://instagram.com/genpsicologia" target="_blank" rel="noopener noreferrer">
+                  Seguir @genpsicologia
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>

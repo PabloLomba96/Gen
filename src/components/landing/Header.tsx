@@ -25,7 +25,7 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-3">
             <img 
               src={logoPatricia} 
-              alt="Patricia Martínez Psicología — Las manos que ayudan" 
+              alt="Gen Psicología — Psicología Infantojuvenil" 
               className="h-11 md:h-13 w-auto object-contain"
             />
           </Link>

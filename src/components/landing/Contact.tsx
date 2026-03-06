@@ -156,8 +156,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <a href="mailto:patri.psicologia29@gmail.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                      patri.psicologia29@gmail.com
+                    <a href="mailto:patricia@genpsicologia.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                      patricia@genpsicologia.com
                     </a>
                   </div>
                 </div>
@@ -182,12 +182,12 @@ const Contact = () => {
                 Puedes contactarme a través de Instagram para consultas rápidas.
               </p>
               <a 
-                href="https://instagram.com/patri_psicologia"
+                href="https://instagram.com/genpsicologia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all"
               >
-                @patri_psicologia
+                @genpsicologia
               </a>
             </div>
           </div>

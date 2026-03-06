@@ -73,7 +73,7 @@ const SobreMi = () => {
                   >
                     <img 
                       src={logoPatricia} 
-                      alt="Patricia Martínez Díaz - Psicóloga Infantil" 
+                      alt="Gen Psicología — Patricia Martínez Díaz" 
                       className="w-full h-full object-contain"
                     />
                   </div>
