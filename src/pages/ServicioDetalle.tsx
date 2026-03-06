@@ -5,11 +5,16 @@ import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
 import { services } from '@/data/services';
+import { servicesEn } from '@/data/services-en';
+import { useLanguage } from '@/i18n/context';
 import { useEffect } from 'react';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
-  const service = services.find((s) => s.slug === slug);
+  const { t, lp, lang } = useLanguage();
+  const s = t('servicioDetalle') as any;
+  const serviceData = lang === 'en' ? servicesEn : services;
+  const service = serviceData.find((sv) => sv.slug === slug);
 
   useEffect(() => {
     if (service) {
@@ -19,9 +24,9 @@ const ServicioDetalle = () => {
     }
   }, [service]);
 
-  if (!service) return <Navigate to="/servicios" replace />;
+  if (!service) return <Navigate to={lp('/servicios')} replace />;
 
-  const otherServices = services.filter((s) => s.slug !== slug);
+  const otherServices = serviceData.filter((sv) => sv.slug !== slug);
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
@@ -41,10 +46,6 @@ const ServicioDetalle = () => {
       { '@type': 'Country', name: 'España' },
     ],
     serviceType: service.title,
-    availableChannel: [
-      { '@type': 'ServiceChannel', serviceLocation: { '@type': 'Place', name: 'Valencia, España' }, name: 'Presencial' },
-      { '@type': 'ServiceChannel', name: 'Online (Videollamada)' },
-    ],
   };
 
   return (
@@ -56,9 +57,9 @@ const ServicioDetalle = () => {
         <section className="py-16 bg-gradient-to-b from-secondary/50 to-background">
           <div className="container mx-auto px-4">
             <div className="flex items-center gap-2 mb-6 flex-wrap text-sm">
-              <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Inicio</Link>
+              <Link to={lp('/')} className="text-muted-foreground hover:text-primary transition-colors">{t('common.breadcrumbHome')}</Link>
               <span className="text-muted-foreground">/</span>
-              <Link to="/servicios" className="text-muted-foreground hover:text-primary transition-colors">Servicios</Link>
+              <Link to={lp('/servicios')} className="text-muted-foreground hover:text-primary transition-colors">{t('nav.services')}</Link>
               <span className="text-muted-foreground">/</span>
               <span className="text-foreground">{service.title}</span>
             </div>
@@ -69,17 +70,13 @@ const ServicioDetalle = () => {
               }`}>
                 <service.icon className="w-8 h-8" />
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">
-                {service.title}
-              </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                {service.longDescription}
-              </p>
+              <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">{service.title}</h1>
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">{service.longDescription}</p>
             </div>
           </div>
         </section>
 
-        {/* Symptoms - "Deberías consultar si..." */}
+        {/* Symptoms */}
         {service.symptoms && service.symptoms.length > 0 && (
           <section className="py-16 bg-accent/5">
             <div className="container mx-auto px-4">
@@ -88,9 +85,7 @@ const ServicioDetalle = () => {
                   <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
                     <AlertCircle className="w-5 h-5 text-accent" />
                   </div>
-                  <h2 className="text-2xl font-display font-bold text-foreground">
-                    Deberías consultar si notas que tu hijo/a...
-                  </h2>
+                  <h2 className="text-2xl font-display font-bold text-foreground">{s.symptomsTitle}</h2>
                 </div>
                 <ul className="space-y-3">
                   {service.symptoms.map((symptom) => (
@@ -101,10 +96,8 @@ const ServicioDetalle = () => {
                   ))}
                 </ul>
                 <p className="mt-6 text-sm text-muted-foreground text-center">
-                  ¿Reconoces alguna de estas señales?{' '}
-                  <Link to="/contacto" className="text-primary font-medium hover:underline">
-                    Hablemos sin compromiso
-                  </Link>
+                  {s.symptomsFooter}{' '}
+                  <Link to={lp('/contacto')} className="text-primary font-medium hover:underline">{s.symptomsLink}</Link>
                 </p>
               </div>
             </div>
@@ -116,9 +109,7 @@ const ServicioDetalle = () => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 max-w-5xl mx-auto">
               <div>
-                <h2 className="text-2xl font-display font-bold text-foreground mb-8">
-                  ¿En qué te puedo ayudar?
-                </h2>
+                <h2 className="text-2xl font-display font-bold text-foreground mb-8">{s.detailsTitle}</h2>
                 <ul className="space-y-4">
                   {service.details.map((detail) => (
                     <li key={detail} className="flex items-start gap-3">
@@ -131,15 +122,15 @@ const ServicioDetalle = () => {
 
               <div className="space-y-6">
                 <div className="bg-card rounded-2xl p-8 border border-border" style={{ boxShadow: 'var(--shadow-soft)' }}>
-                  <h3 className="text-lg font-display font-semibold text-foreground mb-4">Modalidades disponibles</h3>
+                  <h3 className="text-lg font-display font-semibold text-foreground mb-4">{s.modalitiesTitle}</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                         <MapPin className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium text-foreground text-sm">Presencial</p>
-                        <p className="text-xs text-muted-foreground">Valencia, España</p>
+                        <p className="font-medium text-foreground text-sm">{s.inPerson}</p>
+                        <p className="text-xs text-muted-foreground">{s.inPersonLocation}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -147,16 +138,16 @@ const ServicioDetalle = () => {
                         <Video className="w-5 h-5 text-accent" />
                       </div>
                       <div>
-                        <p className="font-medium text-foreground text-sm">Online</p>
-                        <p className="text-xs text-muted-foreground">Videollamada segura</p>
+                        <p className="font-medium text-foreground text-sm">{s.online}</p>
+                        <p className="text-xs text-muted-foreground">{s.onlineLocation}</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <Button asChild size="lg" className="w-full h-14">
-                  <Link to="/contacto">
-                    Reservar Primera Consulta
+                  <Link to={lp('/contacto')}>
+                    {s.bookCta}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -168,25 +159,21 @@ const ServicioDetalle = () => {
         {/* Other services */}
         <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-display font-bold text-foreground mb-10 text-center">
-              Otros servicios
-            </h2>
+            <h2 className="text-2xl font-display font-bold text-foreground mb-10 text-center">{s.otherServicesTitle}</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {otherServices.map((s) => (
+              {otherServices.map((sv) => (
                 <Link
-                  key={s.slug}
-                  to={`/servicios/${s.slug}`}
+                  key={sv.slug}
+                  to={lp(`/servicios/${sv.slug}`)}
                   className="group bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-all text-center"
                   style={{ boxShadow: 'var(--shadow-soft)' }}
                 >
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center mx-auto mb-3 ${
-                    s.color === 'primary' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'
+                    sv.color === 'primary' ? 'bg-primary/10 text-primary' : 'bg-accent/10 text-accent'
                   }`}>
-                    <s.icon className="w-5 h-5" />
+                    <sv.icon className="w-5 h-5" />
                   </div>
-                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    {s.shortTitle}
-                  </p>
+                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{sv.shortTitle}</p>
                 </Link>
               ))}
             </div>
@@ -196,23 +183,19 @@ const ServicioDetalle = () => {
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">
-              ¿Quieres que hablemos?
-            </h2>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              La primera consulta es para conocernos. Sin compromiso y con total confidencialidad.
-            </p>
+            <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-4">{s.ctaTitle}</h2>
+            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{s.ctaSubtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="h-14 px-8">
-                <Link to="/contacto">
-                  Contactar
+                <Link to={lp('/contacto')}>
+                  {s.ctaContact}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="h-14 px-8">
-                <Link to="/servicios">
+                <Link to={lp('/servicios')}>
                   <ArrowLeft className="w-5 h-5 mr-2" />
-                  Ver Todos los Servicios
+                  {s.ctaAllServices}
                 </Link>
               </Button>
             </div>
