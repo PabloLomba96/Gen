@@ -25,7 +25,16 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
-                aria-label="Instagram"
+                aria-label="Instagram Gen Psicología"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://instagram.com/patri_psicologia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
+                aria-label="Instagram Patri Psicología"
               >
                 <Instagram className="w-4 h-4" />
               </a>
