@@ -40,7 +40,7 @@ export const services: ServiceData[] = [
     title: 'Terapia para Adolescentes',
     shortTitle: 'Adolescentes',
     description: 'La adolescencia es una etapa de transformación profunda. Acompañamos a tu hijo/a a entender y gestionar lo que está viviendo.',
-    longDescription: 'La adolescencia es un periodo de cambios profundos donde la identidad, las relaciones y las emociones se transforman. En Gen Psicología, Patricia Martínez Díaz acompaña a adolescentes ofreciendo un espacio seguro, moderno y sin juicios donde pueden expresarse libremente. Trabajamos la autoestima, el acoso escolar, la ansiedad y los conflictos propios de esta etapa.',
+    longDescription: 'La adolescencia es un periodo de cambios profundos donde la identidad, las relaciones y las emociones se transforman. En Gen Psicología acompañamos a adolescentes ofreciendo un espacio seguro, moderno y sin juicios donde pueden expresarse libremente. Trabajamos la autoestima, el acoso escolar, la ansiedad y los conflictos propios de esta etapa.',
     details: [
       'Crisis de identidad y autoconcepto',
       'Acoso escolar (bullying)',
