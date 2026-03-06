@@ -113,8 +113,8 @@ Deno.serve(async (req) => {
             Authorization: `Bearer ${resendKey}`,
           },
           body: JSON.stringify({
-            from: "Formulario Web <onboarding@resend.dev>",
-            to: ["patri.psicologia29@gmail.com"],
+            from: "Gen Psicología <no-reply@genpsicologia.com>",
+            to: ["patricia@genpsicologia.com"],
             subject: `Nueva consulta: ${escapeHtml(motivo)} - ${escapeHtml(nombre)}`,
             html: htmlBody,
           }),

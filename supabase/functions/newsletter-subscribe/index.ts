@@ -73,7 +73,7 @@ Deno.serve(async (req) => {
       throw dbError;
     }
 
-    // Notify Patricia
+    // Notify team
     const idiomaLabel = safeIdioma === 'en' ? '🇬🇧 Inglés' : '🇪🇸 Español';
     const resendKey = Deno.env.get("RESEND_API_KEY");
     if (resendKey) {
@@ -85,8 +85,8 @@ Deno.serve(async (req) => {
             Authorization: `Bearer ${resendKey}`,
           },
           body: JSON.stringify({
-            from: "Píldoras de Bienestar <onboarding@resend.dev>",
-            to: ["patri.psicologia29@gmail.com"],
+            from: "Gen Psicología <no-reply@genpsicologia.com>",
+            to: ["patricia@genpsicologia.com"],
             subject: `Nueva suscripción newsletter: ${escapeHtml(email.trim())}`,
             html: `
               <h2>🎉 Nueva suscripción a Píldoras de Bienestar</h2>

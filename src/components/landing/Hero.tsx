@@ -94,7 +94,7 @@ const Hero = () => {
               <div className="relative w-80 h-80 flex items-center justify-center">
                 <img
                   src={logoPatricia}
-                  alt="Patricia Martínez Psicología — Las manos que ayudan, el punto medio entre entendimiento, escucha activa y ayuda"
+                  alt="Gen Psicología — Las manos que ayudan, el punto medio entre entendimiento, escucha activa y ayuda"
                   className="w-full h-full object-contain drop-shadow-lg" />
                 
               </div>

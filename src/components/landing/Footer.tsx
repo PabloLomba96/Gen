@@ -11,17 +11,17 @@ const Footer = () => {
             <Link to="/" className="inline-block">
               <img
                 src={logoPatricia}
-                alt="Patricia Martínez Psicología"
+                alt="Gen Psicología"
                 className="h-14 w-auto object-contain bg-background/90 rounded-xl p-1.5"
               />
             </Link>
             <p className="text-background/55 max-w-sm leading-relaxed text-sm">
-              Patricia Martínez Díaz — Psicóloga Infantojuvenil. 
-              Las manos que ayudan: entendimiento, escucha activa y ayuda.
+              Gen Psicología — Psicología Infantojuvenil fundada por Patricia Martínez Díaz. 
+              Entendimiento, escucha activa y ayuda.
             </p>
             <div className="flex items-center gap-3 pt-1">
               <a
-                href="https://instagram.com/patri_psicologia"
+                href="https://instagram.com/genpsicologia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
@@ -30,7 +30,7 @@ const Footer = () => {
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="mailto:patri.psicologia29@gmail.com"
+                href="mailto:patricia@genpsicologia.com"
                 className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
                 aria-label="Email"
               >
@@ -64,8 +64,8 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-background/55">
                 <Mail className="w-3.5 h-3.5 text-primary" />
-                <a href="mailto:patri.psicologia29@gmail.com" className="hover:text-background transition-colors">
-                  patri.psicologia29@gmail.com
+                <a href="mailto:patricia@genpsicologia.com" className="hover:text-background transition-colors">
+                  patricia@genpsicologia.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-background/55">
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-background/35">
-          <p>© {new Date().getFullYear()} Patricia Martínez Díaz — Psicología Infantil</p>
+          <p>© {new Date().getFullYear()} Gen Psicología — Patricia Martínez Díaz</p>
           <div className="flex items-center gap-5">
             <span className="text-background/25 cursor-default">Privacidad — Próximamente</span>
             <span className="text-background/25 cursor-default">Aviso Legal — Próximamente</span>
