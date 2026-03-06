@@ -1,18 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Brain, Heart, Sparkles, Users, Puzzle, Baby, BookOpen, HeartHandshake, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const services = [
-  { icon: Baby, title: 'Terapia Infantil', description: 'Desarrollo emocional, conducta, miedos, rabietas y autoestima.' },
-  { icon: Users, title: 'Adolescentes', description: 'Identidad, bullying, relaciones sociales y gestión emocional.' },
-  { icon: Brain, title: 'Altas Capacidades', description: 'Evaluación, orientación y apoyo integral para niños y familias.' },
-  { icon: Puzzle, title: 'TDAH y TEA', description: 'Diagnóstico e intervención especializada en neurodesarrollo.' },
-  { icon: BookOpen, title: 'Dificultades del Aprendizaje', description: 'Lectoescritura, TEL, disgrafía, discalculia y atención.' },
-  { icon: Heart, title: 'Regulación Emocional', description: 'Herramientas para entender y gestionar emociones.' },
-  { icon: HeartHandshake, title: 'Terapia Familiar', description: 'Comunicación, crianza, conflictos y vínculos familiares.' },
-  { icon: ShieldCheck, title: 'Trauma y Apego', description: 'Experiencias traumáticas, duelo y dificultades vinculares.' },
-  { icon: Sparkles, title: 'Creatividad y Talento', description: 'Pensamiento divergente, introversión y límites saludables.' },
-];
+import { services } from '@/data/services';
 
 const Services = () => {
   return (
@@ -31,21 +20,22 @@ const Services = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="glass rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group animate-fade-up"
+            <Link
+              key={service.slug}
+              to={`/servicios/${service.slug}`}
+              className="glass rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group animate-fade-up block"
               style={{ animationDelay: `${index * 0.08}s` }}
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
                 <service.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-lg font-display font-semibold text-foreground mb-2">
-                {service.title}
+                {service.shortTitle}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
 
