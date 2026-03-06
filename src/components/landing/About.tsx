@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 const credentials = [
   {
     icon: GraduationCap,
-    title: 'Formación Especializada',
-    description: 'Dos Másteres en Psicología: infancia, adolescencia y desarrollo cognitivo.',
+    title: 'Psicóloga General Sanitaria',
+    description: 'Colegiada CV16625. Máster en Tratamiento Psicológico con Niños y Adolescentes y Máster en Psicología General Sanitaria.',
   },
   {
     icon: Award,
     title: 'Divergentes & Pausa Salud',
-    description: 'Colaboro con centros referentes. Atención particular presencial y online.',
+    description: 'Colaboro con centros referentes en Valencia. Atención particular presencial y online.',
   },
   {
     icon: Heart,
-    title: 'Enfoque Humanista',
-    description: 'Cada niño es único. Acompaño respetando su ritmo y necesidades.',
+    title: 'Enfoque basado en evidencia',
+    description: 'Terapia cognitivo-conductual, disciplina positiva y juego terapéutico. +22 opiniones verificadas.',
   },
 ];
 
