@@ -24,19 +24,21 @@ const Footer = () => {
                 href="https://instagram.com/genpsicologia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
+                className="group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 hover:bg-background/20 transition-colors text-xs"
                 aria-label="Instagram Gen Psicología"
               >
                 <Instagram className="w-4 h-4" />
+                <span className="opacity-80 group-hover:opacity-100">gen</span>
               </a>
               <a
                 href="https://instagram.com/patri_psicologia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
+                className="group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 hover:bg-background/20 transition-colors text-xs"
                 aria-label="Instagram Patri Psicología"
               >
                 <Instagram className="w-4 h-4" />
+                <span className="opacity-80 group-hover:opacity-100">patri</span>
               </a>
               <a
                 href="mailto:patricia@genpsicologia.com"
