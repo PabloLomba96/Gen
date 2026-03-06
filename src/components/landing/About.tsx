@@ -30,7 +30,7 @@ const About = () => {
               Sobre Mí
             </span>
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground">
-              Hola, soy Patricia
+              Hola, soy Patricia Martínez Díaz
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Psicóloga especializada en infancia y adolescencia con años de experiencia en Valencia. 
