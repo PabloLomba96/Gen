@@ -43,8 +43,8 @@ const links = [
 ];
 
 const socialLinks = [
-  { handle: '@genpsicologia', href: 'https://instagram.com/genpsicologia', followers: '6.2K' },
-  { handle: '@patri_psicologia', href: 'https://instagram.com/patri_psicologia' },
+  { handle: '@genpsicologia', href: 'https://instagram.com/genpsicologia' },
+  { handle: '@patri_psicologia', href: 'https://instagram.com/patri_psicologia', followers: '9.5K' },
 ];
 
 const Hola = () => {
