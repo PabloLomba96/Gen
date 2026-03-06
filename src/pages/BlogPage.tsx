@@ -3,34 +3,37 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import Newsletter from '@/components/landing/Newsletter';
+import JsonLd from '@/components/JsonLd';
+import { blogArticles } from '@/data/blogArticles';
 
-const posts = [
-  {
-    title: 'Qué es la batería social y por qué tu hijo la necesita',
-    excerpt: 'Descubre el concepto de batería social, cómo afecta a niños introvertidos y estrategias para recargarla sin culpa.',
-    category: 'Batería Social',
-    readTime: '5 min',
-    date: '15 Mar 2025',
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Blog de Gen Psicología — Psicóloga Infantil Valencia',
+  description: 'Artículos sobre psicología infantil, ansiedad en niños, rabietas, TDAH, altas capacidades y crianza. Contenido basado en evidencia.',
+  url: 'https://genpsicologia.com/blog',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Gen Psicología',
+    url: 'https://genpsicologia.com',
   },
-  {
-    title: 'Ansiedad vs Introversión: cómo diferenciarlas en la infancia',
-    excerpt: 'No todo niño callado tiene ansiedad. Aprende a distinguir rasgos de personalidad de señales de alerta.',
-    category: 'Ansiedad',
-    readTime: '7 min',
-    date: '8 Mar 2025',
-  },
-  {
-    title: 'Límites en la era digital: guía práctica para familias',
-    excerpt: 'Pantallas, redes sociales y videojuegos. Pautas realistas para establecer límites sin conflicto.',
-    category: 'Crianza Digital',
-    readTime: '6 min',
-    date: '1 Mar 2025',
-  },
-];
+  blogPost: blogArticles.map((a) => ({
+    '@type': 'BlogPosting',
+    headline: a.title,
+    description: a.excerpt,
+    url: `https://genpsicologia.com/blog/${a.slug}`,
+    datePublished: a.date,
+    author: {
+      '@type': 'Person',
+      name: 'Patricia Martínez Díaz',
+    },
+  })),
+};
 
 const BlogPage = () => {
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd data={blogJsonLd} />
       <Header />
       <main className="pt-24">
         {/* Hero */}
@@ -39,52 +42,48 @@ const BlogPage = () => {
             <div className="max-w-2xl mx-auto text-center space-y-4">
               <span className="text-sm font-semibold text-accent uppercase tracking-widest">Blog</span>
               <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground">
-                Píldoras de <span className="text-gradient">bienestar</span>
+                Psicología infantil para <span className="text-gradient">padres</span>
               </h1>
               <p className="text-lg text-muted-foreground">
-                Artículos sobre psicología infantil, crianza respetuosa y desarrollo emocional.
+                Artículos prácticos sobre ansiedad infantil, rabietas, TDAH, altas capacidades y crianza. Basados en evidencia y escritos para ti.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Posts */}
+        {/* Articles */}
         <section className="pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-6">
-              {posts.map((post, index) => (
-                <article
-                  key={post.title}
-                  className="glass rounded-2xl p-7 hover:shadow-lg transition-all duration-300 group animate-fade-up cursor-pointer"
+              {blogArticles.map((article, index) => (
+                <Link
+                  key={article.slug}
+                  to={`/blog/${article.slug}`}
+                  className="glass rounded-2xl p-7 hover:shadow-lg transition-all duration-300 group animate-fade-up block"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs px-2.5 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                      {post.category}
+                      {article.category}
                     </span>
                     <div className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="w-3 h-3" />
-                      {post.readTime}
+                      {article.readTime}
                     </div>
-                    <span className="text-xs text-muted-foreground">{post.date}</span>
+                    <span className="text-xs text-muted-foreground">{article.date}</span>
                   </div>
                   <h2 className="text-xl font-display font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                    {post.title}
+                    {article.title}
                   </h2>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                    {post.excerpt}
+                    {article.excerpt}
                   </p>
-                  <span className="inline-flex items-center text-sm text-muted-foreground font-medium">
-                    📌 Próximamente
+                  <span className="inline-flex items-center text-sm text-primary font-medium group-hover:gap-2 transition-all">
+                    Leer artículo
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </span>
-                </article>
+                </Link>
               ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <p className="text-sm text-muted-foreground">
-                Más artículos próximamente ✨
-              </p>
             </div>
           </div>
         </section>

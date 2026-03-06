@@ -12,10 +12,12 @@ import Contacto from "./pages/Contacto";
 import Hola from "./pages/Hola";
 import Tienda from "./pages/Tienda";
 import BlogPage from "./pages/BlogPage";
+import BlogArticle from "./pages/BlogArticle";
 import AvisoLegal from "./pages/AvisoLegal";
 import Privacidad from "./pages/Privacidad";
 import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
+import ServiceRedirect from "./components/ServiceRedirect";
 
 const queryClient = new QueryClient();
 
@@ -30,11 +32,22 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/sobre-mi" element={<SobreMi />} />
           <Route path="/servicios" element={<Servicios />} />
+          {/* Old service slugs redirect to new ones */}
+          <Route path="/servicios/terapia-infantil" element={<ServiceRedirect />} />
+          <Route path="/servicios/terapia-adolescentes" element={<ServiceRedirect />} />
+          <Route path="/servicios/altas-capacidades" element={<ServiceRedirect />} />
+          <Route path="/servicios/tdah-tea" element={<ServiceRedirect />} />
+          <Route path="/servicios/dificultades-aprendizaje" element={<ServiceRedirect />} />
+          <Route path="/servicios/regulacion-emocional" element={<ServiceRedirect />} />
+          <Route path="/servicios/terapia-familiar" element={<ServiceRedirect />} />
+          <Route path="/servicios/creatividad-talento" element={<ServiceRedirect />} />
+          <Route path="/servicios/trauma-apego" element={<ServiceRedirect />} />
           <Route path="/servicios/:slug" element={<ServicioDetalle />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/hola" element={<Hola />} />
           <Route path="/tienda" element={<Tienda />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogArticle />} />
           <Route path="/aviso-legal" element={<AvisoLegal />} />
           <Route path="/privacidad" element={<Privacidad />} />
           <Route path="/cookies" element={<Cookies />} />
