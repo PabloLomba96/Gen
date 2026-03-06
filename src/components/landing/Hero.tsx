@@ -1,17 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.png';
+import OverlappingCircles from '@/components/OverlappingCircles';
 
 const Hero = () => {
   return (
     <section className="relative min-h-[92vh] flex items-center pt-20 overflow-hidden">
       <div className="absolute inset-0" style={{ background: 'var(--gradient-hero)' }} />
-      
-      {/* Decorative circles echoing the logo */}
+
+      {/* Decorative ambient */}
       <div className="absolute top-24 right-[-8%] w-80 h-80 rounded-full bg-accent/8 blur-3xl" />
       <div className="absolute bottom-16 left-[-6%] w-72 h-72 rounded-full bg-primary/6 blur-3xl" />
-      {/* Subtle overlap circle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-overlap opacity-[0.04] blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -20,20 +19,19 @@ const Hero = () => {
           <div className="space-y-7 animate-fade-up">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-accent/10 border border-accent/15">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-sm font-medium text-muted-foreground">Psicóloga Infantojuvenil en Valencia</span>
+              <span className="text-sm font-medium text-muted-foreground">Psicología Infantojuvenil en Valencia</span>
             </div>
 
             <div className="space-y-5">
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.3rem] font-display font-bold text-foreground leading-[1.13]">
-                Del agotamiento{' '}
-                <br className="hidden sm:block" />
-                a la calma:{' '}
-                <span className="text-gradient">herramientas reales</span>{' '}
-                para mentes jóvenes
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-display font-bold text-foreground leading-[1.1]">
+                <span className="tracking-wide">GEN</span>
+                <span className="text-primary mx-3 font-light">|</span>
+                <span className="text-gradient">Centro de Psicología</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                Especialista en neurodivergencia e infantojuvenil. Acompaño a familias desde el entendimiento, la escucha activa y la ayuda.
-              
+                Del agotamiento a la calma: herramientas reales para mentes jóvenes.
+                Especialistas en neurodivergencia e infantojuvenil. Acompañamos a familias
+                desde el entendimiento, la escucha activa y la ayuda.
               </p>
             </div>
 
@@ -51,8 +49,8 @@ const Hero = () => {
                 asChild
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 h-14 rounded-full group"
-                style={{ boxShadow: 'var(--shadow-glow-primary)' }}>
-                
+                style={{ boxShadow: 'var(--shadow-glow-primary)' }}
+              >
                 <Link to="/contacto">
                   Reserva Sesión Informativa
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -62,22 +60,22 @@ const Hero = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-base px-8 h-14 border-2 border-border hover:bg-secondary/80 rounded-full">
-                
+                className="text-base px-8 h-14 border-2 border-border hover:bg-secondary/80 rounded-full"
+              >
                 <Link to="/tienda">Ver Recursos Gratuitos</Link>
               </Button>
             </div>
 
             <div className="flex items-center gap-4 pt-3">
               <div className="flex -space-x-2.5">
-                {['LM', 'CA', 'MJ', 'PR'].map((initials, i) =>
-                <div
-                  key={i}
-                  className="w-9 h-9 rounded-full bg-secondary border-2 border-background flex items-center justify-center">
-                  
+                {['LM', 'CA', 'MJ', 'PR'].map((initials, i) => (
+                  <div
+                    key={i}
+                    className="w-9 h-9 rounded-full bg-secondary border-2 border-background flex items-center justify-center"
+                  >
                     <span className="text-[10px] font-semibold text-muted-foreground">{initials}</span>
                   </div>
-                )}
+                ))}
               </div>
               <p className="text-sm text-muted-foreground">
                 <span className="font-semibold text-foreground">+500 familias</span> confían en nosotros
@@ -85,23 +83,16 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: Logo showcase */}
-          <div className="relative animate-scale-in hidden lg:flex justify-center" style={{ animationDelay: '0.15s' }}>
-            <div className="relative">
-              {/* Soft glow behind logo */}
+          {/* Right: Animated Overlapping Circles */}
+          <div className="relative animate-scale-in hidden lg:flex justify-center items-center" style={{ animationDelay: '0.15s' }}>
+            <div className="relative w-96 h-96">
+              {/* Soft glow behind */}
               <div className="absolute inset-0 rounded-full bg-overlap opacity-10 blur-2xl scale-110" />
-              
-              <div className="relative w-80 h-80 flex items-center justify-center">
-                <img
-                  src={logoPatricia}
-                  alt="Gen Psicología — Las manos que ayudan, el punto medio entre entendimiento, escucha activa y ayuda"
-                  className="w-full h-full object-contain drop-shadow-lg" />
-                
-              </div>
 
-              {/* Floating cards — outside logo bounds */}
-              {/* Top-right: above the logo */}
-              <div className="absolute -top-14 left-1/2 -translate-x-1/4 glass rounded-2xl p-3 shadow-lg animate-float">
+              <OverlappingCircles className="w-full h-full" />
+
+              {/* Floating cards */}
+              <div className="absolute -top-14 left-1/2 -translate-x-1/4 glass rounded-2xl p-3 shadow-lg animate-float z-10">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
                     <span className="text-xs">💬</span>
@@ -113,8 +104,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Bottom-left */}
-              <div className="absolute -bottom-16 -left-4 glass rounded-2xl p-3 shadow-lg animate-float" style={{ animationDelay: '2.5s' }}>
+              <div className="absolute -bottom-16 -left-4 glass rounded-2xl p-3 shadow-lg animate-float z-10" style={{ animationDelay: '2.5s' }}>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-primary/12 flex items-center justify-center shrink-0">
                     <span className="text-xs">🏠</span>
@@ -126,8 +116,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Bottom-right */}
-              <div className="absolute -bottom-16 right-0 glass rounded-2xl p-3 shadow-lg animate-float" style={{ animationDelay: '5s' }}>
+              <div className="absolute -bottom-16 right-0 glass rounded-2xl p-3 shadow-lg animate-float z-10" style={{ animationDelay: '5s' }}>
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-overlap/20 flex items-center justify-center shrink-0">
                     <span className="text-xs">🌿</span>
@@ -142,8 +131,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default Hero;
