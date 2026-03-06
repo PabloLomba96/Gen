@@ -1,14 +1,17 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Brain, Heart, Sparkles, Users, Puzzle, Baby } from 'lucide-react';
+import { ArrowRight, Brain, Heart, Sparkles, Users, Puzzle, Baby, BookOpen, HeartHandshake, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
-  { icon: Baby, title: 'Psicología Infantil', description: 'Desarrollo emocional, conducta, miedos y autoestima.' },
-  { icon: Users, title: 'Adolescentes', description: 'Identidad, relaciones sociales y gestión emocional.' },
-  { icon: Brain, title: 'Altas Capacidades', description: 'Evaluación y apoyo integral para niños y familias.' },
-  { icon: Puzzle, title: 'TDAH y TEA', description: 'Diagnóstico e intervención en neurodesarrollo.' },
+  { icon: Baby, title: 'Terapia Infantil', description: 'Desarrollo emocional, conducta, miedos, rabietas y autoestima.' },
+  { icon: Users, title: 'Adolescentes', description: 'Identidad, bullying, relaciones sociales y gestión emocional.' },
+  { icon: Brain, title: 'Altas Capacidades', description: 'Evaluación, orientación y apoyo integral para niños y familias.' },
+  { icon: Puzzle, title: 'TDAH y TEA', description: 'Diagnóstico e intervención especializada en neurodesarrollo.' },
+  { icon: BookOpen, title: 'Dificultades del Aprendizaje', description: 'Lectoescritura, TEL, disgrafía, discalculia y atención.' },
   { icon: Heart, title: 'Regulación Emocional', description: 'Herramientas para entender y gestionar emociones.' },
-  { icon: Sparkles, title: 'Batería Social', description: 'Introversión, sobrecarga social y límites saludables.' },
+  { icon: HeartHandshake, title: 'Terapia Familiar', description: 'Comunicación, crianza, conflictos y vínculos familiares.' },
+  { icon: ShieldCheck, title: 'Trauma y Apego', description: 'Experiencias traumáticas, duelo y dificultades vinculares.' },
+  { icon: Sparkles, title: 'Creatividad y Talento', description: 'Pensamiento divergente, introversión y límites saludables.' },
 ];
 
 const Services = () => {
