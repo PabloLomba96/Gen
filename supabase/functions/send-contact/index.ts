@@ -77,6 +77,21 @@ Deno.serve(async (req) => {
       );
     }
 
+    const allowedMotivos = ['Primera consulta', 'Información sobre tarifas', 'Consulta sobre servicios', 'Terapia online', 'Otro'];
+    if (typeof motivo !== "string" || !allowedMotivos.includes(motivo)) {
+      return new Response(
+        JSON.stringify({ error: "Motivo inválido" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
+    if (telefono !== undefined && telefono !== null && (typeof telefono !== "string" || telefono.length > 20)) {
+      return new Response(
+        JSON.stringify({ error: "Teléfono inválido" }),
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
     const { error: dbError } = await supabase.from("contact_messages").insert({
       nombre,
       email,
