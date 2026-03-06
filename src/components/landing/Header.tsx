@@ -1,33 +1,40 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import OverlappingCircles from '@/components/OverlappingCircles';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useLanguage } from '@/i18n/context';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const { t, lp, lang } = useLanguage();
 
   const navLinks = [
-    { href: '/', label: 'Inicio' },
-    { href: '/sobre-mi', label: 'Sobre Mí' },
-    { href: '/servicios', label: 'Servicios' },
-    { href: '/tienda', label: 'Recursos' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contacto', label: 'Contacto' },
+    { href: '/', label: t('nav.home') },
+    { href: '/sobre-mi', label: t('nav.about') },
+    { href: '/servicios', label: t('nav.services') },
+    { href: '/tienda', label: t('nav.resources') },
+    { href: '/blog', label: t('nav.blog') },
+    { href: '/contacto', label: t('nav.contact') },
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: string) => {
+    const localizedHref = lp(href);
+    return location.pathname === localizedHref;
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2.5">
+          <Link to={lp('/')} className="flex items-center gap-2.5">
             <OverlappingCircles size="sm" />
             <span className="text-lg md:text-xl font-display font-bold text-foreground tracking-tight">
               GEN <span className="text-muted-foreground font-normal">|</span>{' '}
-              <span className="text-primary font-semibold text-base md:text-lg">Centro de Psicología</span>
+              <span className="text-primary font-semibold text-base md:text-lg">
+                {lang === 'es' ? 'Centro de Psicología' : 'Psychology Centre'}
+              </span>
             </span>
           </Link>
 
@@ -35,7 +42,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.href}
-                to={link.href}
+                to={lp(link.href)}
                 className={`text-sm font-medium transition-colors ${
                   isActive(link.href)
                     ? 'text-primary'
@@ -47,22 +54,26 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex">
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageSwitcher />
             <Button
               asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all rounded-full px-6"
             >
-              <Link to="/contacto">Reservar Sesión</Link>
+              <Link to={lp('/contacto')}>{t('nav.bookSession')}</Link>
             </Button>
           </div>
 
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-foreground"
-            aria-label="Abrir menú"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-foreground"
+              aria-label="Abrir menú"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {isMenuOpen && (
@@ -71,7 +82,7 @@ const Header = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
-                  to={link.href}
+                  to={lp(link.href)}
                   onClick={() => setIsMenuOpen(false)}
                   className={`text-base font-medium py-3 px-4 rounded-xl transition-colors ${
                     isActive(link.href)
@@ -86,7 +97,9 @@ const Header = () => {
                 asChild
                 className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full"
               >
-                <Link to="/contacto" onClick={() => setIsMenuOpen(false)}>Reservar Sesión</Link>
+                <Link to={lp('/contacto')} onClick={() => setIsMenuOpen(false)}>
+                  {t('nav.bookSession')}
+                </Link>
               </Button>
             </nav>
           </div>
