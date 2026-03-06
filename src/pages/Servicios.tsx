@@ -44,6 +44,7 @@ const modalities = [
 const Servicios = () => {
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd data={serviciosJsonLd} />
       <Header />
       <main className="pt-20">
         {/* Hero */}
