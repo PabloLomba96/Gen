@@ -5,7 +5,26 @@ import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import ServiceCard from '@/components/servicios/ServiceCard';
 import ModalityCard from '@/components/servicios/ModalityCard';
+import JsonLd from '@/components/JsonLd';
 import { services } from '@/data/services';
+
+const serviciosJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Servicios de Psicología Infantojuvenil — Gen Psicología',
+  url: 'https://genpsicologia.com/servicios',
+  numberOfItems: services.length,
+  itemListElement: services.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Service',
+      name: s.title,
+      description: s.description,
+      url: `https://genpsicologia.com/servicios/${s.slug}`,
+    },
+  })),
+};
 
 
 
@@ -25,6 +44,7 @@ const modalities = [
 const Servicios = () => {
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd data={serviciosJsonLd} />
       <Header />
       <main className="pt-20">
         {/* Hero */}
