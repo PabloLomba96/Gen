@@ -6,27 +6,19 @@ import { Send, Phone, Mail, MapPin, Clock, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { z } from 'zod';
+import { useLanguage } from '@/i18n/context';
 
-const contactSchema = z.object({
-  nombre: z.string().trim().min(2, { message: "El nombre debe tener al menos 2 caracteres" }).max(100),
-  email: z.string().trim().email({ message: "Por favor, introduce un email válido" }).max(255),
-  telefono: z.string().trim().optional(),
-  motivo: z.string().trim().min(1, { message: "Por favor, selecciona un motivo" }),
-  mensaje: z.string().trim().min(10, { message: "El mensaje debe tener al menos 10 caracteres" }).max(1000),
-});
-
-type ContactForm = z.infer<typeof contactSchema>;
-
-const motivos = [
-  'Primera consulta',
-  'Información sobre tarifas',
-  'Consulta sobre servicios',
-  'Terapia online',
-  'Otro',
-];
+type ContactForm = {
+  nombre: string;
+  email: string;
+  telefono: string;
+  motivo: string;
+  mensaje: string;
+};
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t, lang } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   
@@ -39,10 +31,19 @@ const Contact = () => {
     mensaje: '',
   });
 
+  const motivos = t('contact.formReasons') as string[];
+
+  const contactSchema = z.object({
+    nombre: z.string().trim().min(2, { message: t('contact.validation.nameMin') as string }).max(100),
+    email: z.string().trim().email({ message: t('contact.validation.emailInvalid') as string }).max(255),
+    telefono: z.string().trim().optional(),
+    motivo: z.string().trim().min(1, { message: t('contact.validation.reasonRequired') as string }),
+    mensaje: z.string().trim().min(10, { message: t('contact.validation.messageMin') as string }).max(1000),
+  });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
     if (errors[name as keyof ContactForm]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
@@ -64,8 +65,8 @@ const Contact = () => {
       
       setIsSubmitted(true);
       toast({
-        title: "¡Mensaje enviado!",
-        description: "Te responderemos lo antes posible. Gracias por contactar.",
+        title: t('contact.toastSuccessTitle') as string,
+        description: t('contact.toastSuccessText') as string,
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -91,11 +92,10 @@ const Contact = () => {
               <CheckCircle className="w-10 h-10 text-accent" />
             </div>
             <h2 className="text-3xl font-display font-bold text-foreground mb-4">
-              ¡Gracias por tu mensaje!
+              {t('contact.successTitle')}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              He recibido tu consulta y me pondré en contacto contigo lo antes posible, 
-              normalmente en un plazo de 24-48 horas.
+              {t('contact.successText')}
             </p>
             <Button
               onClick={() => {
@@ -105,7 +105,7 @@ const Contact = () => {
               variant="outline"
               className="border-2"
             >
-              Enviar otro mensaje
+              {t('contact.successCta')}
             </Button>
           </div>
         </div>
@@ -116,26 +116,23 @@ const Contact = () => {
   return (
     <section id="contacto" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
-        {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-            Contacto
+            {t('contact.label')}
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground">
-            ¿Hablamos?
+            {t('contact.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Si tienes dudas o quieres concertar una primera cita, 
-            rellena el formulario y te responderé lo antes posible.
+            {t('contact.subtitle')}
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
-          {/* Contact Info */}
           <div className="lg:col-span-2 space-y-8">
             <div className="bg-card rounded-2xl p-8 border border-border" style={{ boxShadow: 'var(--shadow-soft)' }}>
               <h3 className="text-xl font-display font-semibold text-foreground mb-6">
-                Información de contacto
+                {t('contact.infoTitle')}
               </h3>
               
               <div className="space-y-6">
@@ -144,9 +141,9 @@ const Contact = () => {
                     <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Consulta Presencial</p>
-                    <p className="text-muted-foreground text-sm">Valencia, España</p>
-                    <p className="text-muted-foreground text-sm">También disponible online</p>
+                    <p className="font-medium text-foreground">{t('contact.inPersonLabel')}</p>
+                    <p className="text-muted-foreground text-sm">{t('contact.location')}</p>
+                    <p className="text-muted-foreground text-sm">{t('contact.alsoOnline')}</p>
                   </div>
                 </div>
 
@@ -155,7 +152,7 @@ const Contact = () => {
                     <Mail className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
+                    <p className="font-medium text-foreground">{t('contact.emailLabel')}</p>
                     <a href="mailto:patricia@genpsicologia.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
                       patricia@genpsicologia.com
                     </a>
@@ -167,19 +164,18 @@ const Contact = () => {
                     <Clock className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Horario de atención</p>
-                    <p className="text-muted-foreground text-sm">Lunes a Viernes</p>
-                    <p className="text-muted-foreground text-sm">9:00 - 20:00</p>
+                    <p className="font-medium text-foreground">{t('contact.hoursLabel')}</p>
+                    <p className="text-muted-foreground text-sm">{t('contact.hoursWeekdays')}</p>
+                    <p className="text-muted-foreground text-sm">{t('contact.hoursRange')}</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Quick Contact */}
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 border border-primary/20">
-              <p className="font-medium text-foreground mb-2">¿Prefieres contactar directamente?</p>
+              <p className="font-medium text-foreground mb-2">{t('contact.directTitle')}</p>
               <p className="text-sm text-muted-foreground mb-4">
-                Escríbeme por WhatsApp o sígueme en Instagram para consultas rápidas.
+                {t('contact.directSubtitle')}
               </p>
               <div className="flex flex-col gap-2">
                 <a 
@@ -211,30 +207,27 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="lg:col-span-3">
             <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 border border-border" style={{ boxShadow: 'var(--shadow-soft)' }}>
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="nombre" className="text-sm font-medium text-foreground">
-                    Nombre completo *
+                    {t('contact.formNameLabel')}
                   </label>
                   <Input
                     id="nombre"
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleChange}
-                    placeholder="Tu nombre"
+                    placeholder={t('contact.formNamePlaceholder') as string}
                     className={errors.nombre ? 'border-destructive' : ''}
                   />
-                  {errors.nombre && (
-                    <p className="text-xs text-destructive">{errors.nombre}</p>
-                  )}
+                  {errors.nombre && <p className="text-xs text-destructive">{errors.nombre}</p>}
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium text-foreground">
-                    Email *
+                    {t('contact.formEmailLabel')}
                   </label>
                   <Input
                     id="email"
@@ -242,19 +235,17 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="tu@email.com"
+                    placeholder={t('contact.formEmailPlaceholder') as string}
                     className={errors.email ? 'border-destructive' : ''}
                   />
-                  {errors.email && (
-                    <p className="text-xs text-destructive">{errors.email}</p>
-                  )}
+                  {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="telefono" className="text-sm font-medium text-foreground">
-                    Teléfono (opcional)
+                    {t('contact.formPhoneLabel')}
                   </label>
                   <Input
                     id="telefono"
@@ -262,13 +253,13 @@ const Contact = () => {
                     type="tel"
                     value={formData.telefono}
                     onChange={handleChange}
-                    placeholder="+34 600 000 000"
+                    placeholder={t('contact.formPhonePlaceholder') as string}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="motivo" className="text-sm font-medium text-foreground">
-                    Motivo de consulta *
+                    {t('contact.formReasonLabel')}
                   </label>
                   <select
                     id="motivo"
@@ -279,46 +270,41 @@ const Contact = () => {
                       errors.motivo ? 'border-destructive' : 'border-input'
                     }`}
                   >
-                    <option value="">Selecciona un motivo</option>
+                    <option value="">{t('contact.formReasonPlaceholder')}</option>
                     {motivos.map(motivo => (
                       <option key={motivo} value={motivo}>{motivo}</option>
                     ))}
                   </select>
-                  {errors.motivo && (
-                    <p className="text-xs text-destructive">{errors.motivo}</p>
-                  )}
+                  {errors.motivo && <p className="text-xs text-destructive">{errors.motivo}</p>}
                 </div>
               </div>
 
               <div className="space-y-2 mb-6">
                 <label htmlFor="mensaje" className="text-sm font-medium text-foreground">
-                  Tu mensaje *
+                  {t('contact.formMessageLabel')}
                 </label>
                 <Textarea
                   id="mensaje"
                   name="mensaje"
                   value={formData.mensaje}
                   onChange={handleChange}
-                  placeholder="Cuéntame brevemente tu situación o qué tipo de ayuda necesitas..."
+                  placeholder={t('contact.formMessagePlaceholder') as string}
                   rows={5}
                   className={errors.mensaje ? 'border-destructive' : ''}
                 />
-                {errors.mensaje && (
-                  <p className="text-xs text-destructive">{errors.mensaje}</p>
-                )}
+                {errors.mensaje && <p className="text-xs text-destructive">{errors.mensaje}</p>}
               </div>
-
 
               <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
                 <p className="text-xs text-muted-foreground">
-                  Tus datos serán tratados de forma confidencial.
+                  {t('contact.formDisclaimer')}
                 </p>
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 h-12"
                 >
-                  {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                  {isSubmitting ? t('contact.formSubmitting') : t('contact.formSubmit')}
                   <Send className="w-4 h-4 ml-2" />
                 </Button>
               </div>

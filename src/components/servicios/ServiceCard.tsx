@@ -1,6 +1,7 @@
 import { CheckCircle } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/i18n/context';
 
 interface ServiceCardProps {
   service: {
@@ -14,9 +15,11 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
+  const { lp } = useLanguage();
+
   return (
     <Link
-      to={`/servicios/${service.slug}`}
+      to={lp(`/servicios/${service.slug}`)}
       className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl block"
       style={{ boxShadow: 'var(--shadow-soft)' }}
     >
