@@ -23,12 +23,10 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={logoPatricia} 
-              alt="Gen Psicología — Psicología Infantojuvenil" 
-              className="h-11 md:h-13 w-auto object-contain"
-            />
+          <Link to="/" className="flex items-center gap-2">
+            <span className="text-xl md:text-2xl font-display font-bold text-foreground tracking-tight">
+              Gen <span className="text-primary">Psicología</span>
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-7">
