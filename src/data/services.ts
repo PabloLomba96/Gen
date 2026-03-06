@@ -59,7 +59,7 @@ export const services: ServiceData[] = [
     title: 'Altas Capacidades Intelectuales (AACC)',
     shortTitle: 'Altas Capacidades',
     description: 'Evaluación y apoyo integral para niños con altas capacidades intelectuales y sus familias.',
-    longDescription: 'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. Desde Gen colaboramos con el Centro Divergentes de Valencia, referente en altas capacidades y neurodiversidad. Ofrecemos evaluación completa, orientación familiar y asesoramiento escolar para que cada niño con AACC pueda desarrollar todo su potencial sin sentirse diferente.',
+    longDescription: 'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. Desde Gen Psicología colaboramos con el Centro Divergentes de Valencia, referente en altas capacidades y neurodiversidad. Ofrecemos evaluación completa, orientación familiar y asesoramiento escolar para que cada niño con AACC pueda desarrollar todo su potencial sin sentirse diferente.',
     details: [
       'Evaluación de altas capacidades',
       'Gestión de la disincronía',
