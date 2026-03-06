@@ -173,7 +173,7 @@ export const services: ServiceData[] = [
     title: 'Trauma y Apego',
     shortTitle: 'Trauma y Apego',
     description: 'Intervención especializada en experiencias traumáticas y dificultades vinculares desde una mirada integradora.',
-    longDescription: 'Las experiencias traumáticas y las dificultades de apego pueden dejar una huella profunda en el desarrollo emocional del niño. Patricia Martínez Díaz interviene desde una mirada integradora, ofreciendo un espacio seguro donde el niño pueda procesar sus vivencias y reconstruir vínculos seguros con su entorno.',
+    longDescription: 'Las experiencias traumáticas y las dificultades de apego pueden dejar una huella profunda en el desarrollo emocional del niño. En Gen intervenimos desde una mirada integradora, ofreciendo un espacio seguro donde el niño pueda procesar sus vivencias y reconstruir vínculos seguros con su entorno.',
     details: [
       'Abuso sexual infantil (ASI)',
       'Experiencias traumáticas',
