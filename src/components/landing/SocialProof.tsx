@@ -30,7 +30,7 @@ const SocialProof = () => {
           <div className="text-center mb-16 space-y-4">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
               <Instagram className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-foreground">@genpsicologia</span>
+              <span className="text-sm font-medium text-foreground">@genpsicologia · @patri_psicologia</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground">
               Psicología cercana en redes
@@ -107,14 +107,23 @@ const SocialProof = () => {
               ))}
             </div>
 
-            <div className="text-center mt-8">
+            <div className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
               <a 
                 href="https://instagram.com/genpsicologia"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
               >
-                Síguenos en Instagram
+                @genpsicologia
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://instagram.com/patri_psicologia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+              >
+                @patri_psicologia
                 <Instagram className="w-5 h-5" />
               </a>
             </div>

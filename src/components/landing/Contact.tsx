@@ -181,14 +181,24 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Puedes contactarme a través de Instagram para consultas rápidas.
               </p>
-              <a 
-                href="https://instagram.com/genpsicologia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all"
-              >
-                @genpsicologia
-              </a>
+              <div className="flex flex-col gap-2">
+                <a 
+                  href="https://instagram.com/genpsicologia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all"
+                >
+                  @genpsicologia
+                </a>
+                <a 
+                  href="https://instagram.com/patri_psicologia"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-3 transition-all"
+                >
+                  @patri_psicologia
+                </a>
+              </div>
             </div>
           </div>
 

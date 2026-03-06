@@ -97,15 +97,26 @@ const Hola = () => {
         })}
       </div>
 
-      <a
-        href="https://instagram.com/genpsicologia"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-8 flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-      >
-        <Instagram className="w-4 h-4" />
-        @genpsicologia
-      </a>
+      <div className="mt-8 flex items-center gap-5">
+        <a
+          href="https://instagram.com/genpsicologia"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+        >
+          <Instagram className="w-4 h-4" />
+          @genpsicologia
+        </a>
+        <a
+          href="https://instagram.com/patri_psicologia"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
+        >
+          <Instagram className="w-4 h-4" />
+          @patri_psicologia
+        </a>
+      </div>
 
       <p className="text-[10px] text-muted-foreground/50 mt-6">
         © {new Date().getFullYear()} Gen Psicología — Patricia Martínez Díaz
