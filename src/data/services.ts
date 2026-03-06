@@ -135,7 +135,7 @@ export const services: ServiceData[] = [
     title: 'Terapia Familiar',
     shortTitle: 'Terapia Familiar',
     description: 'Acompañamos a la familia para mejorar la comunicación, resolver conflictos y fortalecer los vínculos.',
-    longDescription: 'La familia es el pilar del bienestar emocional del niño. En Gen Centro de Psicología, Patricia Martínez Díaz acompaña a las familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas de crianza basadas en la disciplina positiva y la evidencia científica.',
+    longDescription: 'La familia es el pilar del bienestar emocional del niño. En el centro Gen acompañamos a las familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas de crianza basadas en la disciplina positiva y la evidencia científica.',
     details: [
       'Dificultades de comunicación',
       'Conflictos familiares',
