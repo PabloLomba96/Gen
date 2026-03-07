@@ -95,7 +95,7 @@ const Hero = () => {
                       {lang === 'es' ? 'Psicología Infantojuvenil' : 'Child & Adolescent'}
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      {lang === 'es' ? 'Horarios de tarde' : 'Afternoon sessions'}
+                      {lang === 'es' ? 'Presencial y online' : 'In-person & online'}
                     </p>
                   </div>
                 </div>

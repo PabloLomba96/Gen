@@ -20,8 +20,8 @@ const Servicios = () => {
 
   const adultLabel = lang === 'es' ? 'Adultos' : 'Adults';
   const childLabel = lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent';
-  const morningLabel = lang === 'es' ? 'Horarios de mañana' : 'Morning sessions';
-  const afternoonLabel = lang === 'es' ? 'Horarios de tarde' : 'Afternoon sessions';
+  const morningLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
+  const afternoonLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
 
   const serviciosJsonLd = {
     '@context': 'https://schema.org',
