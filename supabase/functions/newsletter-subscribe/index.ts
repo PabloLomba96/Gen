@@ -47,7 +47,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { email, idioma } = await req.json();
+    const { email, idioma, origen } = await req.json();
 
     if (!email || typeof email !== "string" || !EMAIL_REGEX.test(email) || email.length > 255) {
       return new Response(
@@ -57,11 +57,12 @@ Deno.serve(async (req) => {
     }
 
     const safeIdioma = idioma === 'en' ? 'en' : 'es';
+    const safeName = origen === 'blog_en_fallback' ? 'Blog EN – Quiere blog en inglés' : null;
 
     // Insert subscriber
     const { error: dbError } = await supabase
       .from("newsletter_subscribers")
-      .insert({ email: email.trim(), idioma: safeIdioma });
+      .insert({ email: email.trim(), idioma: safeIdioma, nombre: safeName });
 
     if (dbError) {
       if (dbError.code === "23505") {

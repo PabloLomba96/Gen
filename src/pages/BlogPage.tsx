@@ -45,17 +45,16 @@ const BlogPage = () => {
     if (!email) return;
     setSubscribing(true);
     try {
-      const { error } = await supabase.from('newsletter_subscribers').insert({
-        email,
-        nombre: 'Blog EN notify',
-        idioma: 'en',
+      const { data, error } = await supabase.functions.invoke('newsletter-subscribe', {
+        body: { email: email.trim(), idioma: 'en', origen: 'blog_en_fallback' },
       });
-      if (error && error.code === '23505') {
+      if (error) throw error;
+      if (data?.error === 'duplicate') {
         toast({ title: '✓', description: fallback.subscribeSuccess });
-      } else if (error) {
-        throw error;
-      } else {
+      } else if (data?.success) {
         toast({ title: '✓', description: fallback.subscribeSuccess });
+      } else if (data?.error) {
+        throw new Error(data.error);
       }
       setSubscribed(true);
     } catch {
