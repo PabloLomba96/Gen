@@ -8,6 +8,8 @@ export interface BlogArticle {
   metaTitle: string;
   metaDescription: string;
   content: string[];
+  /** Slug of the related service page for the CTA */
+  relatedServiceSlug?: string;
 }
 
 export const blogArticles: BlogArticle[] = [

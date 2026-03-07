@@ -12,8 +12,9 @@ export const blogArticlesFromServices: BlogArticle[] = [
     category: 'Terapia infantil',
     readTime: '7 min',
     date: '7 Mar 2026',
-    metaTitle: 'Psicología Infantil: Miedos, Ansiedad y Rabietas en Niños | Gen Psicología Valencia',
+    metaTitle: 'Psicología Infantil: Miedos, Ansiedad y Rabietas | Gen Psicología Valencia',
     metaDescription: 'Guía sobre terapia infantil para miedos, ansiedad y rabietas. Cómo funciona el juego terapéutico y cuándo buscar ayuda profesional. Psicóloga infantil Valencia.',
+    relatedServiceSlug: 'regulacion-emocional-autoestima',
     content: [
       '## ¿Tu hijo tiene miedos, ansiedad o rabietas?',
       'La infancia es una etapa fundamental en la construcción de la personalidad y el bienestar emocional. En Gen ofrecemos terapia infantil basada en el juego terapéutico, la creatividad y el vínculo seguro. Trabajamos con niños que presentan dificultades emocionales, conductuales o relacionales, acompañándoles con respeto y profesionalidad en cada paso de su desarrollo.',
@@ -46,6 +47,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'Psicología para Adolescentes: Ansiedad, Bullying y Autoestima | Gen Psicología',
     metaDescription: 'Terapia para adolescentes en Valencia. Ansiedad, bullying, baja autoestima y crisis de identidad. Espacio seguro sin juicios. Psicóloga CV16625.',
+    relatedServiceSlug: 'regulacion-emocional-autoestima',
     content: [
       '## La adolescencia: una etapa de cambios profundos',
       'La adolescencia es un periodo donde la identidad, las relaciones y las emociones se transforman. En Gen acompañamos a adolescentes ofreciendo un espacio seguro, moderno y sin juicios donde pueden expresarse libremente.',
@@ -78,6 +80,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'Altas Capacidades en Niños: Evaluación y Apoyo | Gen Psicología Valencia',
     metaDescription: 'Evaluación de altas capacidades intelectuales (AACC) en niños. Señales, proceso de diagnóstico y orientación familiar. Colaboradora Divergentes. CV16625.',
+    relatedServiceSlug: 'evaluaciones-psicologicas',
     content: [
       '## ¿Tu hijo/a podría tener altas capacidades?',
       'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. Desde Gen Psicología colaboramos con el Centro Divergentes de Valencia, referente en altas capacidades y neurodiversidad.',
@@ -110,6 +113,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'TDAH y TEA en Niños: Diagnóstico y Terapia | Gen Psicología Valencia',
     metaDescription: 'Diagnóstico y terapia para TDAH y autismo (TEA) en niños. Señales, evaluación y tratamiento. Psicóloga infantil Valencia CV16625.',
+    relatedServiceSlug: 'neurodivergencias',
     content: [
       '## TDAH y TEA: ¿qué necesitas saber?',
       'El TDAH y el TEA son trastornos del neurodesarrollo que requieren una evaluación rigurosa y una intervención adaptada a cada niño. En Gen ofrecemos diagnóstico especializado, intervención conductual y coordinación con colegios.',
@@ -141,6 +145,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'Dificultades de Aprendizaje en Niños: Dislexia y Más | Gen Psicología Valencia',
     metaDescription: 'Guía sobre dificultades de aprendizaje: dislexia, disgrafía, discalculia. Señales, diagnóstico y terapia. Psicóloga infantil Valencia CV16625.',
+    relatedServiceSlug: 'dificultades-aprendizaje',
     content: [
       '## ¿Tu hijo tiene dificultades en el colegio?',
       'Las dificultades del aprendizaje como la dislexia, la disgrafía o la discalculia pueden afectar significativamente al rendimiento escolar y la autoestima del niño. En Gen intervenimos de forma personalizada.',
@@ -172,6 +177,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'Rabietas y Regulación Emocional en Niños: Guía para Padres | Gen Psicología',
     metaDescription: 'Cómo gestionar rabietas y emociones intensas en niños. Técnicas de regulación emocional, mindfulness infantil y cuándo consultar. Valencia CV16625.',
+    relatedServiceSlug: 'regulacion-emocional-autoestima',
     content: [
       '## ¿Las rabietas de tu hijo te desbordan?',
       'La regulación emocional es una habilidad fundamental que se desarrolla durante la infancia. En Gen ayudamos a niños y adolescentes a identificar, comprender y gestionar sus emociones de forma saludable.',
@@ -204,6 +210,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'Terapia Familiar: Conflictos y Crianza | Gen Psicología Valencia',
     metaDescription: 'Terapia familiar en Valencia para conflictos, separación y crianza. Cuándo buscar ayuda y qué esperar. Psicóloga especializada CV16625.',
+    relatedServiceSlug: 'terapia-familiar',
     content: [
       '## ¿Tu familia necesita ayuda?',
       'La familia es el pilar del bienestar emocional del niño. En Gen acompañamos a las familias para mejorar la comunicación, resolver conflictos y fortalecer los vínculos afectivos.',
@@ -234,6 +241,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'Creatividad y Talento en Niños Introvertidos | Gen Psicología Valencia',
     metaDescription: 'Cómo potenciar creatividad y talento en niños introvertidos. Pensamiento divergente y autoexpresión. Psicóloga infantil Valencia CV16625.',
+    relatedServiceSlug: 'desarrollo-y-creatividad',
     content: [
       '## ¿Tu hijo es creativo pero se siente diferente?',
       'Cada niño tiene un potencial único que merece ser descubierto y desarrollado. En Gen estimulamos el pensamiento divergente, la creatividad y la autoexpresión, especialmente en niños introvertidos o con sobrecarga social.',
@@ -265,6 +273,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     date: '7 Mar 2026',
     metaTitle: 'Trauma Infantil y Apego: Terapia Especializada | Gen Psicología Valencia',
     metaDescription: 'Terapia para trauma infantil, duelo y dificultades de apego en niños. Señales, intervención y espacio seguro. Psicóloga Valencia CV16625.',
+    relatedServiceSlug: 'regulacion-emocional-autoestima',
     content: [
       '## ¿Tu hijo ha vivido una experiencia traumática?',
       'Las experiencias traumáticas y las dificultades de apego pueden dejar una huella profunda en el desarrollo emocional del niño. En Gen intervenimos desde una mirada integradora, ofreciendo un espacio seguro.',
@@ -279,13 +288,13 @@ export const blogArticlesFromServices: BlogArticle[] = [
       '- Ha vivido una experiencia difícil y ha cambiado su comportamiento',
       '- Tiene pesadillas frecuentes o terrores nocturnos',
       '- Se muestra muy apegado/a a ti o tiene mucho miedo a la separación',
-      '- Ha sufrido una pérdida importante y no sabe gestionarla',
-      '- Evita hablar de lo que le pasó o reacciona con angustia',
-      '- Tiene dificultades para confiar en los adultos o en otros niños',
-      '- Muestra conductas regresivas (vuelve a hacerse pis, chuparse el dedo)',
+      '- Tiene reacciones muy intensas ante estímulos que antes no le afectaban',
+      '- Se ha vuelto agresivo/a o muy retraído/a',
+      '- Ha dejado de hacer cosas que antes disfrutaba',
+      '- Muestra conductas regresivas (chuparse el dedo, hacerse pis)',
       '## Nuestro enfoque',
-      'Ofrecemos un espacio seguro donde el niño pueda procesar sus vivencias y reconstruir vínculos seguros con su entorno. **No hay prisa: respetamos el ritmo de cada niño.**',
-      'Si tu hijo/a ha vivido una situación difícil, contacta conmigo. La primera consulta es sin compromiso.',
+      'Intervenimos desde la seguridad, el respeto y el ritmo del niño. **El trauma se puede trabajar, y los niños tienen una enorme capacidad de recuperación** cuando se les ofrece el acompañamiento adecuado.',
+      'Si tu hijo/a ha vivido algo difícil y notas cambios en su comportamiento, contacta conmigo.',
     ],
   },
 ];
