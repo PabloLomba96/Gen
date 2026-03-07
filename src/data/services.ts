@@ -44,7 +44,7 @@ export const services: ServiceData[] = [
     ],
     color: 'primary',
     metaTitle: 'Terapia Individual para Adultos en Valencia | Gen Psicología',
-    metaDescription: 'Psicoterapia para adultos en Valencia: ansiedad, estrés, autoestima, duelo y crecimiento personal. Horarios de mañana. Presencial y online. CV16625.',
+    metaDescription: 'Psicoterapia para adultos en Valencia: ansiedad, estrés, autoestima, duelo y crecimiento personal. Presencial y online. CV16625.',
     category: 'adultos',
   },
   {
