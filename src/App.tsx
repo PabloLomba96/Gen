@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/i18n/context";
 import ScrollToTop from "./components/ScrollToTop";
+import HrefLang from "./components/HrefLang";
 import Index from "./pages/Index";
 import SobreMi from "./pages/SobreMi";
 import Servicios from "./pages/Servicios";
