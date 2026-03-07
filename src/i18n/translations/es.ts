@@ -51,7 +51,7 @@ export const es = {
   servicesSection: {
     label: 'Servicios',
     title: '¿Cómo puedo ayudarte?',
-    subtitle: 'Cada familia es diferente. Trabajamos juntos para encontrar el camino.',
+    subtitle: 'Terapia para adultos por la mañana y psicología infantojuvenil por la tarde. Cada intervención es personalizada y basada en evidencia.',
     cta: 'Ver Todos los Servicios',
   },
   testimonials: {
