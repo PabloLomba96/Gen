@@ -211,7 +211,7 @@ export const es = {
     breadcrumbServices: 'Servicios',
     title: '¿Cómo puedo',
     titleHighlight: 'ayudarte',
-    subtitle: 'Trabajo desde el juego, la creatividad y el vínculo, haciendo del aprendizaje una experiencia única para cada niño. Cada intervención es personalizada, basada en evidencia y adaptada al momento vital de tu hijo/a y tu familia.',
+    subtitle: 'Psicología integrativa para adultos (mañanas) y terapia infantojuvenil (tardes). Cada intervención es personalizada, basada en evidencia y adaptada a tu momento vital.',
     schoolCoordTitle: 'Coordinación con Colegios',
     schoolCoordText: 'Creo en la importancia de que todos los entornos del niño trabajen en la misma dirección. Por ello, mantengo comunicación con los centros educativos (cuando la familia lo autoriza) para compartir información relevante, unificar criterios y favorecer su adaptación escolar. Esta coordinación permite que el niño reciba un apoyo más completo y coherente tanto en casa como en el aula.',
     minorNote: 'Para comenzar a trabajar con un menor de edad, es imprescindible que ambos progenitores o tutores legales estén de acuerdo y den su consentimiento firmado.',
