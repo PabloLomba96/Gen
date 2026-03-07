@@ -5,14 +5,17 @@ import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
 import { blogArticles } from '@/data/blogArticles';
+import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
 import { useEffect } from 'react';
+
+const allArticles = [...blogArticlesFromServices, ...blogArticles];
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
   const { t, lp } = useLanguage();
   const s = t('blog') as any;
-  const article = blogArticles.find((a) => a.slug === slug);
+  const article = allArticles.find((a) => a.slug === slug);
 
   useEffect(() => {
     if (article) {
@@ -24,7 +27,7 @@ const BlogArticle = () => {
 
   if (!article) return <Navigate to={lp('/blog')} replace />;
 
-  const otherArticles = blogArticles.filter((a) => a.slug !== slug).slice(0, 3);
+  const otherArticles = allArticles.filter((a) => a.slug !== slug).slice(0, 3);
 
   const articleJsonLd = {
     '@context': 'https://schema.org',

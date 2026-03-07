@@ -1,11 +1,11 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, MapPin, Video } from 'lucide-react';
+import { ArrowRight, MapPin, Video, Sun, Moon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.png';
 import { useLanguage } from '@/i18n/context';
 
 const Hero = () => {
-  const { t, lp } = useLanguage();
+  const { t, lp, lang } = useLanguage();
 
   return (
     <section className="relative min-h-[92vh] flex items-center pt-20 overflow-hidden">
@@ -20,19 +20,31 @@ const Hero = () => {
           <div className="space-y-7 animate-fade-up">
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-accent/10 border border-accent/15">
               <span className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-sm font-medium text-muted-foreground">{t('hero.badge')}</span>
+              <span className="text-sm font-medium text-muted-foreground">
+                {lang === 'es' ? 'Psicología integrativa en Valencia' : 'Integrative psychology in Valencia'}
+              </span>
             </div>
 
             <div className="space-y-5">
               <h1 className="text-4xl sm:text-5xl lg:text-[3.3rem] font-display font-bold text-foreground leading-[1.13]">
-                {t('hero.titleLine1')}{' '}
-                <br className="hidden sm:block" />
-                {t('hero.titleLine2')}{' '}
-                <span className="text-gradient">{t('hero.titleHighlight')}</span>{' '}
-                {t('hero.titleEnd')}
+                {lang === 'es' ? (
+                  <>
+                    Psicología integrativa en Valencia.{' '}
+                    <br className="hidden sm:block" />
+                    <span className="text-gradient">Espacios seguros</span> para adultos, adolescentes y niños.
+                  </>
+                ) : (
+                  <>
+                    Integrative psychology in Valencia.{' '}
+                    <br className="hidden sm:block" />
+                    <span className="text-gradient">Safe spaces</span> for adults, adolescents and children.
+                  </>
+                )}
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-                {t('hero.subtitle')}
+                {lang === 'es'
+                  ? 'Especialista en neurodivergencia, ansiedad, regulación emocional y terapia de pareja. Presencial y online.'
+                  : 'Specialist in neurodivergence, anxiety, emotional regulation and couples therapy. In-person and online.'}
               </p>
             </div>
 
@@ -45,24 +57,53 @@ const Hero = () => {
               </span>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-1">
-              <Button
-                asChild
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground text-base px-8 h-14 rounded-full group"
-                style={{ boxShadow: 'var(--shadow-glow-primary)' }}>
-                <Link to={lp('/contacto')}>
-                  {t('hero.ctaPrimary')}
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="text-base px-8 h-14 border-2 border-border hover:bg-secondary/80 rounded-full">
-                <Link to={lp('/tienda')}>{t('hero.ctaSecondary')}</Link>
-              </Button>
+            {/* Dual CTA cards */}
+            <div className="grid sm:grid-cols-2 gap-4 pt-1">
+              <Link
+                to={lp('/servicios')}
+                className="group glass rounded-2xl p-5 hover:shadow-lg transition-all duration-300 block border border-primary/20 hover:border-primary/40"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Sun className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-base font-display font-semibold text-foreground group-hover:text-primary transition-colors">
+                      {lang === 'es' ? 'Terapia para Adultos' : 'Adult Therapy'}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {lang === 'es' ? 'Horarios de mañana' : 'Morning sessions'}
+                    </p>
+                  </div>
+                </div>
+                <span className="inline-flex items-center text-sm text-primary font-medium">
+                  {lang === 'es' ? 'Ver servicios' : 'View services'}
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+
+              <Link
+                to={lp('/servicios')}
+                className="group glass rounded-2xl p-5 hover:shadow-lg transition-all duration-300 block border border-accent/20 hover:border-accent/40"
+              >
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                    <Moon className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-base font-display font-semibold text-foreground group-hover:text-accent transition-colors">
+                      {lang === 'es' ? 'Psicología Infantojuvenil' : 'Child & Adolescent'}
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      {lang === 'es' ? 'Horarios de tarde' : 'Afternoon sessions'}
+                    </p>
+                  </div>
+                </div>
+                <span className="inline-flex items-center text-sm text-accent font-medium">
+                  {lang === 'es' ? 'Ver servicios' : 'View services'}
+                  <ArrowRight className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
             </div>
 
             <div className="flex items-center gap-4 pt-3">
@@ -88,7 +129,7 @@ const Hero = () => {
               <div className="relative w-80 h-80 flex items-center justify-center">
                 <img
                   src={logoPatricia}
-                  alt="Gen Psicología — Child psychologist in Valencia specialised in ADHD, giftedness and neurodivergence"
+                  alt="Gen Psicología — Psicología integrativa en Valencia para adultos, adolescentes y niños"
                   className="w-full h-full object-contain drop-shadow-lg" />
               </div>
 

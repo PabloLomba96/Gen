@@ -51,7 +51,7 @@ export const en = {
   servicesSection: {
     label: 'Services',
     title: 'How can I help you?',
-    subtitle: 'Every family is different. We work together to find the way.',
+    subtitle: 'Adult therapy in the morning and child & adolescent psychology in the afternoon. Every intervention is personalised and evidence-based.',
     cta: 'View All Services',
   },
   testimonials: {
@@ -211,7 +211,7 @@ export const en = {
     breadcrumbServices: 'Services',
     title: 'How can I',
     titleHighlight: 'help you',
-    subtitle: 'I work through play, creativity and bonding, making learning a unique experience for each child. Every intervention is personalised, evidence-based and adapted to your child\'s stage and your family.',
+    subtitle: 'Integrative psychology for adults (mornings) and child & adolescent therapy (afternoons). Every intervention is personalised, evidence-based and adapted to your stage in life.',
     schoolCoordTitle: 'School Coordination',
     schoolCoordText: 'I believe in the importance of all the child\'s environments working in the same direction. That\'s why I maintain communication with schools (when authorised by the family) to share relevant information, unify criteria and support their school adaptation. This coordination ensures the child receives more complete and consistent support both at home and in the classroom.',
     minorNote: 'To begin working with a minor, it is essential that both parents or legal guardians agree and provide signed consent.',

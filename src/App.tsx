@@ -23,7 +23,6 @@ import ServiceRedirect from "./components/ServiceRedirect";
 
 const queryClient = new QueryClient();
 
-// Helper to generate routes for both languages
 const LocalizedRoutes = () => (
   <Routes>
     {/* Spanish routes (default) */}
@@ -32,14 +31,21 @@ const LocalizedRoutes = () => (
     <Route path="/servicios" element={<Servicios />} />
     {/* Old service slugs redirect to new ones */}
     <Route path="/servicios/terapia-infantil" element={<ServiceRedirect />} />
+    <Route path="/servicios/psicologia-infantil-valencia" element={<ServiceRedirect />} />
     <Route path="/servicios/terapia-adolescentes" element={<ServiceRedirect />} />
+    <Route path="/servicios/psicologo-adolescentes-valencia" element={<ServiceRedirect />} />
     <Route path="/servicios/altas-capacidades" element={<ServiceRedirect />} />
+    <Route path="/servicios/altas-capacidades-valencia" element={<ServiceRedirect />} />
     <Route path="/servicios/tdah-tea" element={<ServiceRedirect />} />
-    <Route path="/servicios/dificultades-aprendizaje" element={<ServiceRedirect />} />
+    <Route path="/servicios/tdah-tea-valencia" element={<ServiceRedirect />} />
+    <Route path="/servicios/dificultades-aprendizaje-valencia" element={<ServiceRedirect />} />
     <Route path="/servicios/regulacion-emocional" element={<ServiceRedirect />} />
-    <Route path="/servicios/terapia-familiar" element={<ServiceRedirect />} />
+    <Route path="/servicios/terapia-rabietas-regulacion-emocional-ninos" element={<ServiceRedirect />} />
+    <Route path="/servicios/terapia-familiar-valencia" element={<ServiceRedirect />} />
     <Route path="/servicios/creatividad-talento" element={<ServiceRedirect />} />
+    <Route path="/servicios/creatividad-talento-ninos-valencia" element={<ServiceRedirect />} />
     <Route path="/servicios/trauma-apego" element={<ServiceRedirect />} />
+    <Route path="/servicios/trauma-infantil-apego-valencia" element={<ServiceRedirect />} />
     <Route path="/servicios/:slug" element={<ServicioDetalle />} />
     <Route path="/contacto" element={<Contacto />} />
     <Route path="/hola" element={<Hola />} />

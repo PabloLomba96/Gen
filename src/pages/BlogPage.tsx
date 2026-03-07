@@ -8,9 +8,12 @@ import Footer from '@/components/landing/Footer';
 import Newsletter from '@/components/landing/Newsletter';
 import JsonLd from '@/components/JsonLd';
 import { blogArticles } from '@/data/blogArticles';
+import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+
+const allArticles = [...blogArticlesFromServices, ...blogArticles];
 
 const blogJsonLd = {
   '@context': 'https://schema.org',
@@ -19,7 +22,7 @@ const blogJsonLd = {
   description: 'Artículos sobre psicología infantil, ansiedad en niños, rabietas, TDAH, altas capacidades y crianza.',
   url: 'https://genpsicologia.com/blog',
   publisher: { '@type': 'Organization', name: 'Gen Psicología', url: 'https://genpsicologia.com' },
-  blogPost: blogArticles.map((a) => ({
+  blogPost: allArticles.map((a) => ({
     '@type': 'BlogPosting',
     headline: a.title,
     description: a.excerpt,
@@ -141,7 +144,7 @@ const BlogPage = () => {
         <section className="pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto space-y-6">
-              {blogArticles.map((article, index) => (
+              {allArticles.map((article, index) => (
                 <Link
                   key={article.slug}
                   to={lp(`/blog/${article.slug}`)}
