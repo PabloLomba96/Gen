@@ -1,19 +1,27 @@
 import { Navigate, useParams } from 'react-router-dom';
 
 /**
- * Redirects old service slugs to the new location-based slugs.
- * This preserves SEO juice from any existing backlinks or Google indexing.
+ * Redirects old service slugs to new ones or to /servicios.
+ * Preserves SEO from old backlinks.
  */
 const slugRedirects: Record<string, string> = {
-  'terapia-infantil': 'psicologia-infantil-valencia',
-  'terapia-adolescentes': 'psicologo-adolescentes-valencia',
-  'altas-capacidades': 'altas-capacidades-valencia',
-  'tdah-tea': 'tdah-tea-valencia',
-  'dificultades-aprendizaje': 'dificultades-aprendizaje-valencia',
-  'regulacion-emocional': 'terapia-rabietas-regulacion-emocional-ninos',
-  'terapia-familiar': 'terapia-familiar-valencia',
-  'creatividad-talento': 'creatividad-talento-ninos-valencia',
-  'trauma-apego': 'trauma-infantil-apego-valencia',
+  // Old slugs → new slugs
+  'terapia-infantil': 'neurodivergencias',
+  'psicologia-infantil-valencia': 'neurodivergencias',
+  'terapia-adolescentes': 'regulacion-emocional-autoestima',
+  'psicologo-adolescentes-valencia': 'regulacion-emocional-autoestima',
+  'altas-capacidades': 'neurodivergencias',
+  'altas-capacidades-valencia': 'neurodivergencias',
+  'tdah-tea': 'neurodivergencias',
+  'tdah-tea-valencia': 'neurodivergencias',
+  'dificultades-aprendizaje-valencia': 'dificultades-aprendizaje',
+  'regulacion-emocional': 'regulacion-emocional-autoestima',
+  'terapia-rabietas-regulacion-emocional-ninos': 'regulacion-emocional-autoestima',
+  'terapia-familiar-valencia': 'terapia-familiar',
+  'creatividad-talento': 'desarrollo-y-creatividad',
+  'creatividad-talento-ninos-valencia': 'desarrollo-y-creatividad',
+  'trauma-apego': 'regulacion-emocional-autoestima',
+  'trauma-infantil-apego-valencia': 'regulacion-emocional-autoestima',
 };
 
 const ServiceRedirect = () => {
@@ -24,8 +32,7 @@ const ServiceRedirect = () => {
     return <Navigate to={`/servicios/${newSlug}`} replace />;
   }
 
-  // If no redirect match, this will be handled by ServicioDetalle
-  return null;
+  return <Navigate to="/servicios" replace />;
 };
 
 export { slugRedirects };

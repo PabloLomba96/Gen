@@ -1,28 +1,35 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Video, MapPin, UserCheck, Lightbulb } from 'lucide-react';
+import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Sun, Moon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import ServiceCard from '@/components/servicios/ServiceCard';
 import ModalityCard from '@/components/servicios/ModalityCard';
 import JsonLd from '@/components/JsonLd';
-import { services } from '@/data/services';
-import { servicesEn } from '@/data/services-en';
+import { services, adultServices, childServices } from '@/data/services';
+import { servicesEn, adultServicesEn, childServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
 
 const Servicios = () => {
   const { t, lp, lang } = useLanguage();
   const s = t('serviciosPage') as any;
-  const serviceData = lang === 'en' ? servicesEn : services;
+  const adults = lang === 'en' ? adultServicesEn : adultServices;
+  const children = lang === 'en' ? childServicesEn : childServices;
+  const allServices = lang === 'en' ? servicesEn : services;
   const modalityIcons = [MapPin, Video];
+
+  const adultLabel = lang === 'es' ? 'Adultos' : 'Adults';
+  const childLabel = lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent';
+  const morningLabel = lang === 'es' ? 'Horarios de mañana' : 'Morning sessions';
+  const afternoonLabel = lang === 'es' ? 'Horarios de tarde' : 'Afternoon sessions';
 
   const serviciosJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Servicios de Psicología Infantojuvenil — Gen Psicología',
+    name: 'Servicios de Psicología — Gen Psicología',
     url: 'https://genpsicologia.com/servicios',
-    numberOfItems: serviceData.length,
-    itemListElement: serviceData.map((sv, i) => ({
+    numberOfItems: allServices.length,
+    itemListElement: allServices.map((sv, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       item: { '@type': 'Service', name: sv.title, description: sv.description, url: `https://genpsicologia.com/servicios/${sv.slug}` },
@@ -51,11 +58,40 @@ const Servicios = () => {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-24">
+        {/* Adults */}
+        <section className="py-16">
           <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
+                <Sun className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-display font-bold text-foreground">{adultLabel}</h2>
+                <p className="text-sm text-muted-foreground">{morningLabel}</p>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {adults.map((service) => (
+                <ServiceCard key={service.slug} service={service} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Children */}
+        <section className="py-16 bg-secondary/20">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
+                <Moon className="w-6 h-6 text-accent" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-display font-bold text-foreground">{childLabel}</h2>
+                <p className="text-sm text-muted-foreground">{afternoonLabel}</p>
+              </div>
+            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {serviceData.map((service) => (
+              {children.map((service) => (
                 <ServiceCard key={service.slug} service={service} />
               ))}
             </div>
@@ -63,7 +99,7 @@ const Servicios = () => {
         </section>
 
         {/* School coordination */}
-        <section className="py-16 bg-secondary/20">
+        <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto bg-card rounded-2xl p-8 md:p-12 border border-border" style={{ boxShadow: 'var(--shadow-soft)' }}>
               <div className="flex items-start gap-6">
