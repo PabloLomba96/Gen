@@ -72,7 +72,7 @@ const Hero = () => {
                       {lang === 'es' ? 'Terapia para Adultos' : 'Adult Therapy'}
                     </p>
                     <p className="text-xs text-muted-foreground">
-                      {lang === 'es' ? 'Horarios de mañana' : 'Morning sessions'}
+                      {lang === 'es' ? 'Presencial y online' : 'In-person & online'}
                     </p>
                   </div>
                 </div>
