@@ -76,6 +76,7 @@ const App = () => (
       <BrowserRouter>
         <LanguageProvider>
           <ScrollToTop />
+          <HrefLang />
           <LocalizedRoutes />
         </LanguageProvider>
       </BrowserRouter>
