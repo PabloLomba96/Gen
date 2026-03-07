@@ -51,7 +51,7 @@ export const en = {
   servicesSection: {
     label: 'Services',
     title: 'How can I help you?',
-    subtitle: 'Every family is different. We work together to find the way.',
+    subtitle: 'Adult therapy in the morning and child & adolescent psychology in the afternoon. Every intervention is personalised and evidence-based.',
     cta: 'View All Services',
   },
   testimonials: {
