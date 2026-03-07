@@ -1,95 +1,272 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
   <url>
     <loc>https://genpsicologia.com/</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://genpsicologia.com/" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://genpsicologia.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://genpsicologia.com/" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sobre mí / About -->
+  <url>
     <loc>https://genpsicologia.com/sobre-mi</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/sobre-mi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/about" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://genpsicologia.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/sobre-mi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/about" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Servicios / Services -->
+  <url>
     <loc>https://genpsicologia.com/servicios</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://genpsicologia.com/servicios/psicologia-infantil-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <loc>https://genpsicologia.com/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Service subpages (shared slugs) -->
+  <url>
+    <loc>https://genpsicologia.com/servicios/psicologia-infantil-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/psicologia-infantil-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/psicologia-infantil-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/psicologia-infantil-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/psicologia-infantil-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/psicologia-infantil-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/psicologo-adolescentes-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/psicologo-adolescentes-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/psicologo-adolescentes-valencia" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/psicologo-adolescentes-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/psicologo-adolescentes-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/psicologo-adolescentes-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/altas-capacidades-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/altas-capacidades-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/altas-capacidades-valencia" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/altas-capacidades-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/altas-capacidades-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/altas-capacidades-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/tdah-tea-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/tdah-tea-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/tdah-tea-valencia" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/tdah-tea-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/tdah-tea-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/tdah-tea-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/dificultades-aprendizaje-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/dificultades-aprendizaje-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/dificultades-aprendizaje-valencia" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/dificultades-aprendizaje-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/dificultades-aprendizaje-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/dificultades-aprendizaje-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/terapia-rabietas-regulacion-emocional-ninos</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/terapia-rabietas-regulacion-emocional-ninos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/terapia-rabietas-regulacion-emocional-ninos" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/terapia-rabietas-regulacion-emocional-ninos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/terapia-rabietas-regulacion-emocional-ninos" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/terapia-rabietas-regulacion-emocional-ninos" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/terapia-familiar-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/terapia-familiar-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/terapia-familiar-valencia" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/terapia-familiar-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/terapia-familiar-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/terapia-familiar-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/creatividad-talento-ninos-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/creatividad-talento-ninos-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/creatividad-talento-ninos-valencia" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/services/creatividad-talento-ninos-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/creatividad-talento-ninos-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/creatividad-talento-ninos-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/servicios/trauma-infantil-apego-valencia</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/trauma-infantil-apego-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/trauma-infantil-apego-valencia" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://genpsicologia.com/en/services/trauma-infantil-apego-valencia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/servicios/trauma-infantil-apego-valencia" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/services/trauma-infantil-apego-valencia" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contacto / Contact -->
+  <url>
     <loc>https://genpsicologia.com/contacto</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/contact" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://genpsicologia.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/contact" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tienda / Shop -->
+  <url>
     <loc>https://genpsicologia.com/tienda</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/tienda" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/shop" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://genpsicologia.com/en/shop</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/tienda" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/shop" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog -->
+  <url>
     <loc>https://genpsicologia.com/blog</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/blog" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/blog" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog articles (Spanish only, EN links to fallback) -->
   <url>
     <loc>https://genpsicologia.com/blog/como-saber-hijo-necesita-psicologo</loc>
     <lastmod>2026-03-06</lastmod>
@@ -120,28 +297,75 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Hola / Hello (link-in-bio) -->
   <url>
     <loc>https://genpsicologia.com/hola</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/hola" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/hello" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://genpsicologia.com/en/hello</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/hola" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/hello" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Legal pages -->
+  <url>
     <loc>https://genpsicologia.com/aviso-legal</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/aviso-legal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/legal" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/legal</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/aviso-legal" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/legal" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
   <url>
     <loc>https://genpsicologia.com/privacidad</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/privacidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/privacy" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://genpsicologia.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/privacidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/privacy" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
     <loc>https://genpsicologia.com/cookies</loc>
-    <lastmod>2026-03-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/cookies" />
+    <lastmod>2026-03-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://genpsicologia.com/en/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://genpsicologia.com/cookies" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://genpsicologia.com/en/cookies" />
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
 </urlset>
