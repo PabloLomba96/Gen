@@ -132,7 +132,7 @@ const BlogArticle = () => {
             <span className="text-accent mt-1.5 shrink-0">•</span>
             <span className="text-muted-foreground leading-relaxed">
               <strong className="text-foreground">{match[1]}</strong>
-              {match[2] ? `: ${match[2]}` : ''}
+              {match[2] ? <>{': '}{renderInline(match[2])}</> : ''}
             </span>
           </li>
         );
@@ -142,7 +142,7 @@ const BlogArticle = () => {
       return (
         <li className="flex items-start gap-2 ml-4">
           <span className="text-accent mt-1.5 shrink-0">•</span>
-          <span className="text-muted-foreground leading-relaxed">{block.replace('- ', '')}</span>
+          <span className="text-muted-foreground leading-relaxed">{renderInline(block.replace('- ', ''))}</span>
         </li>
       );
     // Paragraph with inline bold and links
