@@ -118,7 +118,7 @@ export const services: ServiceData[] = [
     slug: 'desarrollo-y-creatividad',
     title: 'Desarrollo Infantil y Creatividad',
     shortTitle: 'Desarrollo y Creatividad',
-    description: 'Estimulamos el desarrollo integral del niño a través del juego terapéutico, el pensamiento divergente y la creatividad.',
+    description: 'Estimulamos el desarrollo integral del niño a través del juego terapéutico, el pensamiento divergente y la creatividad, potenciando habilidades emocionales, sociales y cognitivas de forma respetuosa.',
     longDescription: 'Cada niño tiene un potencial único que merece ser descubierto. En Gen estimulamos el desarrollo infantil a través del juego, la creatividad y la autoexpresión. Trabajamos habilidades emocionales, sociales y cognitivas de forma natural y respetuosa, adaptándonos al momento evolutivo de cada niño.',
     details: [
       'Juego terapéutico',
