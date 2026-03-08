@@ -118,7 +118,7 @@ export const services: ServiceData[] = [
       'Pensamiento divergente y creativo',
       'Habilidades sociales y emocionales',
       'Desarrollo de la autonomía',
-      'Autoexpresión y confianza',
+      'Autoestima y autoconcepto',
       'Introversión y gestión de la energía social',
     ],
     symptoms: [
