@@ -1,4 +1,4 @@
-import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck } from 'lucide-react';
+import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck, Globe } from 'lucide-react';
 import { ServiceData } from './services';
 
 export const servicesEn: ServiceData[] = [
@@ -234,7 +234,72 @@ export const servicesEn: ServiceData[] = [
     metaDescription: 'Psychological evaluations for giftedness, ADHD and ASD in Valencia. Comprehensive reports and guidance. Licensed psychologist CV16625.',
     category: 'infantojuvenil',
   },
+
+  // ─── EXPATS ───
+  {
+    icon: Globe,
+    slug: 'therapy-expats-adults',
+    title: 'English-Speaking Therapy for Expat Adults',
+    shortTitle: 'Expat Adults',
+    description: 'Therapy in English for adults living abroad. Support with cultural adjustment, migratory grief and emotional well-being.',
+    longDescription: 'Moving to another country is a transformative experience that can trigger intense emotions: loneliness, disorientation, workplace stress in an unfamiliar environment, or relationship difficulties due to relocation. At Gen we offer therapy in English for expat adults who need a safe space to feel understood, without language barriers. We work from an integrative, culturally sensitive approach, tailored to your unique experience as an expatriate.',
+    details: [
+      'Cultural adjustment stress',
+      'Migratory grief and homesickness',
+      'Loneliness and social isolation',
+      'Workplace anxiety in a new environment',
+      'Relationship difficulties due to relocation',
+      'Bicultural identity building',
+      'Emotional management of culture shock',
+    ],
+    symptoms: [
+      'You feel lonely and disconnected from your surroundings',
+      'You miss your home country and feel constant homesickness',
+      'You struggle to adapt to the pace of life in Spain',
+      'Your relationship has suffered because of the move',
+      'You feel anxious or insecure at work due to cultural barriers',
+      'You\'ve lost your support network and don\'t know how to rebuild it',
+      'You feel like you don\'t belong here or back home',
+      'You struggle with bureaucracy and daily life in another language',
+    ],
+    color: 'primary',
+    metaTitle: 'English Therapy for Expat Adults in Valencia | Gen Psychology',
+    metaDescription: 'English-speaking therapy for expat adults in Valencia: cultural adjustment, migratory grief, loneliness and anxiety. In-person and online. CV16625.',
+    category: 'expats',
+  },
+  {
+    icon: Globe,
+    slug: 'therapy-expats-children',
+    title: 'English-Speaking Therapy for Expat Children & Adolescents',
+    shortTitle: 'Expat Children',
+    description: 'Therapy in English for children and adolescents who have moved to Spain. Support with school adaptation, social skills and emotional regulation.',
+    longDescription: 'Children and adolescents who move to another country face unique challenges: a new language, a different educational system, the loss of friends and the need to fit in an unfamiliar environment. At Gen we offer therapy in English for expat children and adolescents, supporting them through their adjustment process with a respectful, culturally sensitive approach. We also work with families and coordinate with schools to ensure comprehensive support.',
+    details: [
+      'School adaptation in a new language',
+      'Social and integration difficulties',
+      'Emotional regulation during transition',
+      'Neurodivergence in a new educational system',
+      'Coordination with international schools',
+      'Guidance for expat families',
+      'Grief over lost friendships and previous environment',
+    ],
+    symptoms: [
+      'Your child struggles to adapt to the new school',
+      'They isolate themselves or find it hard to make friends',
+      'They show anxiety, sadness or irritability since the move',
+      'Their academic performance has dropped in the new system',
+      'They have tantrums or intense emotional reactions they didn\'t have before',
+      'They struggle to express themselves in the new language',
+      'You suspect neurodivergence (ADHD, ASD, giftedness) and don\'t know how to navigate it here',
+      'They deeply miss their friends and previous life',
+    ],
+    color: 'accent',
+    metaTitle: 'English Therapy for Expat Children in Valencia | Gen Psychology',
+    metaDescription: 'English-speaking therapy for expat children and adolescents in Valencia: school adaptation, social skills, emotional regulation. CV16625.',
+    category: 'expats',
+  },
 ];
 
 export const adultServicesEn = servicesEn.filter(s => s.category === 'adultos');
 export const childServicesEn = servicesEn.filter(s => s.category === 'infantojuvenil');
+export const expatServicesEn = servicesEn.filter(s => s.category === 'expats');

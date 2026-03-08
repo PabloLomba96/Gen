@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import ServiceCard from '@/components/servicios/ServiceCard';
-import ModalityCard from '@/components/servicios/ModalityCard';
+
 import JsonLd from '@/components/JsonLd';
 import SEO from '@/components/SEO';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
+
 import { Badge } from '@/components/ui/badge';
-import { services, adultServices, childServices } from '@/data/services';
-import { servicesEn, adultServicesEn, childServicesEn } from '@/data/services-en';
+import { services, adultServices, childServices, expatServices } from '@/data/services';
+import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
 import { useLocation } from 'react-router-dom';
 
@@ -32,6 +32,7 @@ const Servicios = () => {
   const s = t('serviciosPage') as any;
   const adults = lang === 'en' ? adultServicesEn : adultServices;
   const children = lang === 'en' ? childServicesEn : childServices;
+  const expats = lang === 'en' ? expatServicesEn : expatServices;
   const allServices = lang === 'en' ? servicesEn : services;
   const modalityIcons = [MapPin, Video];
 
@@ -222,24 +223,9 @@ const Servicios = () => {
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-8 mb-10">
-                    <Card className="border-primary/20">
-                      <CardContent className="p-8">
-                        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                          <Sun className="w-5 h-5 text-primary" />
-                        </div>
-                        <h3 className="text-lg font-display font-semibold text-foreground mb-3">{expatsContent.adultsTitle}</h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{expatsContent.adultsDesc}</p>
-                      </CardContent>
-                    </Card>
-                    <Card className="border-accent/20">
-                      <CardContent className="p-8">
-                        <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                          <Moon className="w-5 h-5 text-accent" />
-                        </div>
-                        <h3 className="text-lg font-display font-semibold text-foreground mb-3">{expatsContent.childrenTitle}</h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{expatsContent.childrenDesc}</p>
-                      </CardContent>
-                    </Card>
+                    {expats.map((service) => (
+                      <ServiceCard key={service.slug} service={service} />
+                    ))}
                   </div>
 
                   <Button asChild size="lg" className="rounded-full">
