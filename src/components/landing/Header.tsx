@@ -158,6 +158,24 @@ const Header = () => {
                         </Link>
                       ))}
                     </div>
+
+                    <div className="border-t border-border" />
+
+                    {/* For Everyone */}
+                    <div>
+                      <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-1.5">{todosLabel}</p>
+                      <p className="text-[10px] text-muted-foreground mb-2">{allAgesLabel}</p>
+                      {todosItems.map(item => (
+                        <Link
+                          key={item.href}
+                          to={lp(item.href)}
+                          onClick={() => setIsServicesOpen(false)}
+                          className="block text-sm text-muted-foreground hover:text-primary py-1 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
