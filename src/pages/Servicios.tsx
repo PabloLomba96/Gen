@@ -9,7 +9,7 @@ import ServiceCard from '@/components/servicios/ServiceCard';
 import JsonLd from '@/components/JsonLd';
 import SEO from '@/components/SEO';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Card, CardContent } from '@/components/ui/card';
+
 import { Badge } from '@/components/ui/badge';
 import { services, adultServices, childServices, expatServices } from '@/data/services';
 import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn } from '@/data/services-en';
