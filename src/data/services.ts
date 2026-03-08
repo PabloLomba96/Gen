@@ -197,7 +197,7 @@ export const services: ServiceData[] = [
     color: 'accent',
     metaTitle: 'Terapia Familiar Valencia — Conflictos y Crianza | Gen Psicología',
     metaDescription: 'Terapia familiar en Valencia: conflictos, separación, pautas de crianza positiva y orientación parental. Psicóloga especializada. CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'Si buscas ayuda para ti',
       items: [
