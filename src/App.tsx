@@ -86,6 +86,7 @@ const App = () => (
         <LanguageProvider>
           <ScrollToTop />
           <HrefLang />
+          <MobileBookingCta />
           <LocalizedRoutes />
         </LanguageProvider>
       </BrowserRouter>
