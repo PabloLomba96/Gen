@@ -77,7 +77,10 @@ Deno.serve(async (req) => {
       );
     }
 
-    const allowedMotivos = ['Primera consulta', 'Información sobre tarifas', 'Consulta sobre servicios', 'Terapia online', 'Otro'];
+    const allowedMotivos = [
+      'Primera consulta', 'Información sobre tarifas', 'Consulta sobre servicios', 'Terapia online', 'Otro',
+      'First consultation', 'Pricing information', 'Service enquiry', 'Online therapy', 'Other',
+    ];
     if (typeof motivo !== "string" || !allowedMotivos.includes(motivo)) {
       return new Response(
         JSON.stringify({ error: "Motivo inválido" }),
