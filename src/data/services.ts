@@ -122,7 +122,7 @@ export const services: ServiceData[] = [
       'Fortalecimiento de funciones ejecutivas',
     ],
     symptoms: [
-      'Tu hijo/a es muy creativo/a pero se siente incomprendido/a',
+      'Tu hijo/a es muy creativo/a y tiene talentos sin desarrollar',
       'Es introvertido/a y le cuesta encontrar su lugar en el grupo',
       'Se agota en entornos sociales (colegio, cumpleaños)',
       'Necesita un espacio donde se sienta libre para ser diferente',
