@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-accent/10 border border-accent/15">
               <span className="w-2 h-2 rounded-full bg-accent" />
               <span className="text-sm font-medium text-muted-foreground">
-                {lang === 'es' ? 'Psicología integrativa en Valencia' : 'Integrative psychology in Valencia'}
+                {lang === 'es' ? 'Psicología en Valencia' : 'Psychology in Valencia'}
               </span>
             </div>
 
