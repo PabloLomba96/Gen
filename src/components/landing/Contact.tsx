@@ -29,10 +29,12 @@ const Contact = () => {
     email: '',
     telefono: '',
     motivo: '',
+    contactMethod: '',
     mensaje: '',
   });
 
   const motivos = t('contact.formReasons') as string[];
+  const contactMethods = t('contact.formContactMethods') as string[];
 
   const contactSchema = z.object({
     nombre: z.string().trim().min(2, { message: t('contact.validation.nameMin') as string }).max(100),
