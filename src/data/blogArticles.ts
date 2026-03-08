@@ -289,7 +289,7 @@ export const blogArticles: BlogArticle[] = [
       'Que la terapia sea online no significa que dejes al niño frente al ordenador y te olvides. **El trabajo en equipo es fundamental.**',
       'Especialmente en las primeras sesiones y con niños menores de 10 años, necesitaré que estés cerca. Al principio, puede que te pida que te sientes con nosotros frente a la cámara. Poco a poco, a medida que establecemos el vínculo terapéutico, podréis ir dándoles más intimidad, pero siempre tendremos reuniones de seguimiento (feedbacks) para que sepáis cómo avanzar y reforzar lo aprendido durante la semana.',
       '## Entonces, ¿es la opción adecuada para mi familia?',
-      'La terapia online es altamente efectiva para tratar **ansiedad, fobias, miedos, baja autoestima, problemas de conducta, gestión de rabietas, TDAH y TEA leve.**',
+      'La terapia online es altamente efectiva para tratar **ansiedad, fobias, miedos, baja autoestima, problemas de conducta, [gestión de rabietas](/servicios/regulacion-emocional-autoestima), TDAH y TEA leve.**',
       'Sin embargo, hay excepciones. No recomiendo la terapia online en casos de autolesiones graves, ideación suicida, trastornos de la conducta alimentaria (TCA) severos o violencia intrafamiliar grave. En estos escenarios, el contacto presencial en nuestra clínica de Valencia es necesario.',
       '## Da el paso desde la comodidad de tu casa',
       'Entiendo que todavía puedas tener reservas. Precisamente por eso, la primera toma de contacto la hacemos sin compromiso. Nos conectamos tú y yo, me cuentas qué le pasa a tu hijo/a, te enseño la plataforma y valoramos juntos si esta modalidad encaja con vosotros.',
