@@ -83,8 +83,8 @@ const ServicioDetalle = () => {
           </div>
         </section>
 
-        {/* Symptoms */}
-        {service.symptoms && service.symptoms.length > 0 && (
+        {/* Symptoms — only when there's NO dual-focus */}
+        {service.symptoms && service.symptoms.length > 0 && !(service.adultApproach && service.childApproach) && (
           <section className="py-16 bg-accent/5">
             <div className="container mx-auto px-4">
               <div className="max-w-3xl mx-auto">
