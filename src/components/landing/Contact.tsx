@@ -13,6 +13,7 @@ type ContactForm = {
   email: string;
   telefono: string;
   motivo: string;
+  contactMethod: string;
   mensaje: string;
 };
 
@@ -28,10 +29,12 @@ const Contact = () => {
     email: '',
     telefono: '',
     motivo: '',
+    contactMethod: '',
     mensaje: '',
   });
 
   const motivos = t('contact.formReasons') as string[];
+  const contactMethods = t('contact.formContactMethods') as string[];
 
   const contactSchema = z.object({
     nombre: z.string().trim().min(2, { message: t('contact.validation.nameMin') as string }).max(100),
@@ -100,7 +103,7 @@ const Contact = () => {
             <Button
               onClick={() => {
                 setIsSubmitted(false);
-                setFormData({ nombre: '', email: '', telefono: '', motivo: '', mensaje: '' });
+                setFormData({ nombre: '', email: '', telefono: '', motivo: '', contactMethod: '', mensaje: '' });
               }}
               variant="outline"
               className="border-2"
@@ -277,6 +280,24 @@ const Contact = () => {
                   </select>
                   {errors.motivo && <p className="text-xs text-destructive">{errors.motivo}</p>}
                 </div>
+              </div>
+
+              <div className="space-y-2 mb-6">
+                <label htmlFor="contactMethod" className="text-sm font-medium text-foreground">
+                  {t('contact.formContactMethodLabel')}
+                </label>
+                <select
+                  id="contactMethod"
+                  name="contactMethod"
+                  value={formData.contactMethod}
+                  onChange={handleChange}
+                  className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="">{t('contact.formContactMethodPlaceholder')}</option>
+                  {contactMethods.map(method => (
+                    <option key={method} value={method}>{method}</option>
+                  ))}
+                </select>
               </div>
 
               <div className="space-y-2 mb-6">
