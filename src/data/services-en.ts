@@ -154,7 +154,7 @@ export const servicesEn: ServiceData[] = [
     title: 'Family Therapy',
     shortTitle: 'Family Therapy',
     description: 'Therapy for families with communication problems, conflicts, separation or parenting difficulties.',
-    longDescription: 'The family is the pillar of a child\'s emotional well-being. At Gen we support families to improve communication, resolve conflicts, manage separations and strengthen emotional bonds. We work with parenting guidelines based on positive discipline and scientific evidence.',
+    longDescription: 'Whether you\'re seeking support for yourself or your family, at Gen we help improve communication, resolve conflicts, manage separations and strengthen emotional bonds. We work with guidelines based on positive discipline and scientific evidence.',
     details: [
       'Communication difficulties',
       'Family conflicts',
