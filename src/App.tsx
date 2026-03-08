@@ -89,6 +89,7 @@ const App = () => (
         </LanguageProvider>
       </BrowserRouter>
     </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 
