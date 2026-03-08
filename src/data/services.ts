@@ -247,6 +247,26 @@ export const services: ServiceData[] = [
     metaTitle: 'Regulación Emocional y Autoestima en Niños Valencia | Gen Psicología',
     metaDescription: 'Terapia para regulación emocional, autoestima y habilidades sociales en niños y adolescentes en Valencia. Psicóloga infantil CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'Si buscas ayuda para ti',
+      items: [
+        'Estrés crónico y desborde emocional',
+        'Baja autoestima o autoconcepto negativo',
+        'Dificultad para poner límites en relaciones',
+        'Patrones emocionales repetitivos que quieres cambiar',
+        'Autoconocimiento y crecimiento personal',
+      ],
+    },
+    childApproach: {
+      title: 'Si buscas ayuda para tu hijo/a',
+      items: [
+        'Rabietas intensas o que duran demasiado',
+        'Baja autoestima o inseguridad',
+        'Dificultades para relacionarse con otros niños',
+        'Ansiedad, miedos o reacciones agresivas',
+        'Se desborda emocionalmente y no sabe calmarse',
+      ],
+    },
   },
   {
     icon: ClipboardCheck,
