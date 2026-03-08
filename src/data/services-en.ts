@@ -175,7 +175,7 @@ export const servicesEn: ServiceData[] = [
     color: 'accent',
     metaTitle: 'Family Therapy Valencia — Conflicts & Parenting | Gen Psychology',
     metaDescription: 'Family therapy in Valencia: conflicts, separation, positive parenting and guidance. Specialised psychologist CV16625. In-person and online.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'If you\'re seeking help for yourself',
       items: [
@@ -228,7 +228,7 @@ export const servicesEn: ServiceData[] = [
     color: 'primary',
     metaTitle: 'Emotional Regulation & Self-Esteem for Children Valencia | Gen Psychology',
     metaDescription: 'Therapy for emotional regulation, self-esteem and social skills in children and adolescents in Valencia. Child psychologist CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'If you\'re seeking help for yourself',
       items: [
@@ -282,7 +282,7 @@ export const servicesEn: ServiceData[] = [
     color: 'accent',
     metaTitle: 'Psychological Evaluations Valencia — Giftedness, ADHD, ASD | Gen Psychology',
     metaDescription: 'Psychological evaluations for giftedness, ADHD and ASD in Valencia. Comprehensive reports and guidance. Licensed psychologist CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'If you\'re seeking an evaluation for yourself',
       items: [
@@ -377,3 +377,4 @@ export const servicesEn: ServiceData[] = [
 export const adultServicesEn = servicesEn.filter(s => s.category === 'adultos');
 export const childServicesEn = servicesEn.filter(s => s.category === 'infantojuvenil');
 export const expatServicesEn = servicesEn.filter(s => s.category === 'expats');
+export const todosServicesEn = servicesEn.filter(s => s.category === 'todos');

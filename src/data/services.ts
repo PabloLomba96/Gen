@@ -18,7 +18,7 @@ export interface ServiceData {
   color: 'primary' | 'accent';
   metaTitle: string;
   metaDescription: string;
-  category: 'adultos' | 'infantojuvenil' | 'expats';
+  category: 'adultos' | 'infantojuvenil' | 'expats' | 'todos';
   adultApproach?: DualApproach;
   childApproach?: DualApproach;
 }
@@ -197,7 +197,7 @@ export const services: ServiceData[] = [
     color: 'accent',
     metaTitle: 'Terapia Familiar Valencia — Conflictos y Crianza | Gen Psicología',
     metaDescription: 'Terapia familiar en Valencia: conflictos, separación, pautas de crianza positiva y orientación parental. Psicóloga especializada. CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'Si buscas ayuda para ti',
       items: [
@@ -250,7 +250,7 @@ export const services: ServiceData[] = [
     color: 'primary',
     metaTitle: 'Regulación Emocional y Autoestima en Niños Valencia | Gen Psicología',
     metaDescription: 'Terapia para regulación emocional, autoestima y habilidades sociales en niños y adolescentes en Valencia. Psicóloga infantil CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'Si buscas ayuda para ti',
       items: [
@@ -304,7 +304,7 @@ export const services: ServiceData[] = [
     color: 'accent',
     metaTitle: 'Evaluaciones Psicológicas Valencia — AACC, TDAH, TEA | Gen Psicología',
     metaDescription: 'Evaluaciones psicológicas para altas capacidades, TDAH y TEA en Valencia. Informes completos y orientación. Psicóloga colegiada CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'Si buscas una evaluación para ti',
       items: [
@@ -399,3 +399,4 @@ export const services: ServiceData[] = [
 export const adultServices = services.filter(s => s.category === 'adultos');
 export const childServices = services.filter(s => s.category === 'infantojuvenil');
 export const expatServices = services.filter(s => s.category === 'expats');
+export const todosServices = services.filter(s => s.category === 'todos');

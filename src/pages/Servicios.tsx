@@ -11,8 +11,8 @@ import SEO from '@/components/SEO';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 import { Badge } from '@/components/ui/badge';
-import { services, adultServices, childServices, expatServices } from '@/data/services';
-import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn } from '@/data/services-en';
+import { services, adultServices, childServices, expatServices, todosServices } from '@/data/services';
+import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn, todosServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
 import { useLocation } from 'react-router-dom';
 
@@ -30,9 +30,10 @@ const Servicios = () => {
 
   const { t, lp, lang } = useLanguage();
   const s = t('serviciosPage') as any;
-  const adults = lang === 'en' ? adultServicesEn : adultServices;
-  const children = lang === 'en' ? childServicesEn : childServices;
-  const expats = lang === 'en' ? expatServicesEn : expatServices;
+  const todos = lang === 'en' ? todosServicesEn : todosServices;
+  const adults = [...(lang === 'en' ? adultServicesEn : adultServices), ...todos];
+  const children = [...(lang === 'en' ? childServicesEn : childServices), ...todos];
+  const expats = [...(lang === 'en' ? expatServicesEn : expatServices), ...todos];
   const allServices = lang === 'en' ? servicesEn : services;
   const modalityIcons = [MapPin, Video];
 

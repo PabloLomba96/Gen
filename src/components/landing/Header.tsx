@@ -28,14 +28,20 @@ const Header = () => {
         { href: '/servicios/neurodivergencias', label: 'Neurodivergencias' },
         { href: '/servicios/desarrollo-y-creatividad', label: 'Desarrollo y Creatividad' },
         { href: '/servicios/dificultades-aprendizaje', label: 'Dificultades de Aprendizaje' },
-        { href: '/servicios/terapia-familiar', label: 'Terapia Familiar' },
-        { href: '/servicios/regulacion-emocional-autoestima', label: 'Emociones y Autoestima' },
-        { href: '/servicios/evaluaciones-psicologicas', label: 'Evaluaciones Psicológicas' },
       ]
     : [
         { href: '/servicios/neurodivergence', label: 'Neurodivergence' },
         { href: '/servicios/development-creativity', label: 'Development & Creativity' },
         { href: '/servicios/learning-difficulties', label: 'Learning Difficulties' },
+      ];
+
+  const todosItems = lang === 'es'
+    ? [
+        { href: '/servicios/terapia-familiar', label: 'Terapia Familiar' },
+        { href: '/servicios/regulacion-emocional-autoestima', label: 'Emociones y Autoestima' },
+        { href: '/servicios/evaluaciones-psicologicas', label: 'Evaluaciones Psicológicas' },
+      ]
+    : [
         { href: '/servicios/family-therapy', label: 'Family Therapy' },
         { href: '/servicios/emotional-regulation-self-esteem', label: 'Emotions & Self-Esteem' },
         { href: '/servicios/psychological-evaluations', label: 'Evaluations' },
@@ -64,8 +70,10 @@ const Header = () => {
 
   const adultLabel = lang === 'es' ? 'Adultos' : 'Adults';
   const childLabel = lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent';
+  const todosLabel = lang === 'es' ? 'Para todos' : 'For Everyone';
   const morningLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
   const afternoonLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
+  const allAgesLabel = lang === 'es' ? 'Todas las edades' : 'All ages';
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
@@ -150,6 +158,24 @@ const Header = () => {
                         </Link>
                       ))}
                     </div>
+
+                    <div className="border-t border-border" />
+
+                    {/* For Everyone */}
+                    <div>
+                      <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-1.5">{todosLabel}</p>
+                      <p className="text-[10px] text-muted-foreground mb-2">{allAgesLabel}</p>
+                      {todosItems.map(item => (
+                        <Link
+                          key={item.href}
+                          to={lp(item.href)}
+                          onClick={() => setIsServicesOpen(false)}
+                          className="block text-sm text-muted-foreground hover:text-primary py-1 transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -216,6 +242,11 @@ const Header = () => {
                   ))}
                   <p className="text-xs font-semibold text-foreground uppercase tracking-wider px-4 pt-2">{childLabel}</p>
                   {childItems.map(item => (
+                    <Link key={item.href} to={lp(item.href)} onClick={() => setIsMenuOpen(false)}
+                      className="block text-sm text-muted-foreground py-2 px-4 hover:text-primary">{item.label}</Link>
+                  ))}
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider px-4 pt-2">{todosLabel}</p>
+                  {todosItems.map(item => (
                     <Link key={item.href} to={lp(item.href)} onClick={() => setIsMenuOpen(false)}
                       className="block text-sm text-muted-foreground py-2 px-4 hover:text-primary">{item.label}</Link>
                   ))}
