@@ -53,8 +53,19 @@ const faqJsonLd = {
 };
 
 const Index = () => {
+  const { lang } = useLanguage();
+
+  const seoTitle = lang === 'es'
+    ? 'Gen Psicología | Terapia para Adultos, Adolescentes y Niños en Valencia'
+    : 'Gen Psychology | Therapy for Adults, Adolescents & Children in Valencia';
+  const seoDesc = lang === 'es'
+    ? 'Centro de Psicología en Valencia: terapia para adultos, adolescentes y niños. Neurodivergencias, regulación emocional, terapia de pareja. Presencial y online. Patricia Martínez Díaz (CV16625).'
+    : 'Psychology Centre in Valencia: therapy for adults, adolescents and children. Neurodivergence, emotional regulation, couples therapy. In-person and online. Patricia Martínez Díaz (CV16625).';
+  const canonical = lang === 'es' ? 'https://genpsicologia.com/' : 'https://genpsicologia.com/en';
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO title={seoTitle} description={seoDesc} lang={lang} canonical={canonical} />
       <JsonLd data={faqJsonLd} />
       <Header />
       <main>
