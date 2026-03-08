@@ -33,12 +33,14 @@ const ServicioDetalle = () => {
     adultos: lang === 'es' ? 'Psicología para Adultos' : 'Adult Psychology',
     infantojuvenil: lang === 'es' ? 'Psicología Infantojuvenil' : 'Child & Adolescent Psychology',
     expats: lang === 'es' ? 'Terapia para Expats' : 'Expat Therapy',
+    todos: lang === 'es' ? 'Psicología para Todos' : 'Psychology for Everyone',
   };
 
   const audienceMap: Record<string, Record<string, unknown>> = {
     adultos: { '@type': 'PeopleAudience', suggestedMinAge: 18, audienceType: 'Adults' },
     infantojuvenil: { '@type': 'PeopleAudience', suggestedMinAge: 3, suggestedMaxAge: 17, audienceType: 'Children & Adolescents' },
     expats: { '@type': 'PeopleAudience', audienceType: 'Expats / English speakers' },
+    todos: { '@type': 'PeopleAudience', suggestedMinAge: 0, audienceType: 'All ages' },
   };
 
   const serviceUrl = `https://genpsicologia.com${lp(`/servicios/${service.slug}`)}`;
