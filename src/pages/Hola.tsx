@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, BookOpen, Calendar, Heart, Instagram, ShoppingBag, Sparkles, Mail, CheckCircle } from 'lucide-react';
+import { ArrowRight, BookOpen, Calendar, Instagram, ShoppingBag, Sparkles, Mail, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import OverlappingCircles from '@/components/OverlappingCircles';
 import logoPatricia from '@/assets/logo-patricia.jpg';
