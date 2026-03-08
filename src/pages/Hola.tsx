@@ -169,24 +169,6 @@ const Hola = () => {
         <div className="w-full max-w-sm space-y-2.5 relative z-10">
           {secondaryLinks.map((link, index) => {
             const Icon = link.icon;
-            if (link.disabled) {
-              return (
-                <div
-                  key={link.label}
-                  className="flex items-center gap-4 w-full p-4 rounded-2xl glass opacity-60 cursor-default animate-fade-up min-h-[56px]"
-                  style={{ animationDelay: `${0.24 + index * 0.08}s`, boxShadow: 'var(--shadow-soft)' }}
-                >
-                  <div className="w-11 h-11 rounded-xl flex items-center justify-center shrink-0 bg-primary/10">
-                    <Icon className="w-5 h-5 text-primary" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-sm text-foreground leading-tight">{link.label}</p>
-                    <p className="text-xs mt-0.5 text-muted-foreground leading-snug">{link.sublabel}</p>
-                  </div>
-                  <span className="text-[10px] font-semibold uppercase tracking-wider shrink-0 px-2 py-1 rounded-full bg-muted text-muted-foreground">{s.soon}</span>
-                </div>
-              );
-            }
             return (
               <Link
                 key={link.label}
