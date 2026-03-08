@@ -11,8 +11,8 @@ import SEO from '@/components/SEO';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 import { Badge } from '@/components/ui/badge';
-import { services, adultServices, childServices, expatServices } from '@/data/services';
-import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn } from '@/data/services-en';
+import { services, adultServices, childServices, expatServices, todosServices } from '@/data/services';
+import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn, todosServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
 import { useLocation } from 'react-router-dom';
 
