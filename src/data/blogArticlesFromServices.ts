@@ -77,7 +77,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Todo lo que necesitas saber sobre la evaluación de altas capacidades en niños: señales, proceso de diagnóstico y cómo apoyar a tu hijo.',
     category: 'Altas capacidades',
     readTime: '8 min',
-    date: '7 Mar 2026',
+    date: '25 Feb 2026',
     metaTitle: 'Altas Capacidades en Niños: Evaluación y Apoyo | Gen Psicología Valencia',
     metaDescription: 'Evaluación de altas capacidades intelectuales (AACC) en niños. Señales, proceso de diagnóstico y orientación familiar. Psicóloga infantil CV16625.',
     relatedServiceSlug: 'evaluaciones-psicologicas',
