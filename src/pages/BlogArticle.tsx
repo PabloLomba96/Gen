@@ -86,6 +86,23 @@ const BlogArticle = () => {
     image: 'https://genpsicologia.com/og-image.png',
   };
 
+  /* ── Inline renderer: bold + links ── */
+  const renderInline = (text: string) => {
+    const tokens = text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
+    return tokens.map((token, i) => {
+      if (token.startsWith('**') && token.endsWith('**'))
+        return <strong key={i} className="text-foreground">{token.slice(2, -2)}</strong>;
+      const linkMatch = token.match(/^\[(.+?)\]\((.+?)\)$/);
+      if (linkMatch) {
+        const [, linkText, href] = linkMatch;
+        if (href.startsWith('/'))
+          return <Link key={i} to={lp(href)} className="text-primary font-medium hover:underline">{linkText}</Link>;
+        return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">{linkText}</a>;
+      }
+      return <span key={i}>{token}</span>;
+    });
+  };
+
   /* ── Render a content block to semantic HTML ── */
   const renderContent = (block: string, idx: number) => {
     // H2
@@ -115,7 +132,7 @@ const BlogArticle = () => {
             <span className="text-accent mt-1.5 shrink-0">•</span>
             <span className="text-muted-foreground leading-relaxed">
               <strong className="text-foreground">{match[1]}</strong>
-              {match[2] ? `: ${match[2]}` : ''}
+              {match[2] ? <>{': '}{renderInline(match[2])}</> : ''}
             </span>
           </li>
         );
@@ -125,22 +142,13 @@ const BlogArticle = () => {
       return (
         <li className="flex items-start gap-2 ml-4">
           <span className="text-accent mt-1.5 shrink-0">•</span>
-          <span className="text-muted-foreground leading-relaxed">{block.replace('- ', '')}</span>
+          <span className="text-muted-foreground leading-relaxed">{renderInline(block.replace('- ', ''))}</span>
         </li>
       );
-    // Paragraph with inline bold
-    const parts = block.split(/(\*\*.*?\*\*)/g);
+    // Paragraph with inline bold and links
     return (
       <p className="text-muted-foreground leading-relaxed">
-        {parts.map((part, i) => {
-          if (part.startsWith('**') && part.endsWith('**'))
-            return (
-              <strong key={i} className="text-foreground">
-                {part.slice(2, -2)}
-              </strong>
-            );
-          return <span key={i}>{part}</span>;
-        })}
+        {renderInline(block)}
       </p>
     );
   };
