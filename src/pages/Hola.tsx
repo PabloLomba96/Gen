@@ -39,9 +39,14 @@ const Hola = () => {
         style={{ background: 'radial-gradient(circle, hsl(var(--accent)) 0%, transparent 70%)' }}
       />
 
+      {/* Language Switcher */}
+      <div className="absolute top-4 right-4 z-20">
+        <LanguageSwitcher />
+      </div>
+
       {/* Profile */}
       <div className="text-center mb-8 animate-fade-up relative z-10">
-        <div className="relative mx-auto mb-5 w-24 h-24">
+        <Link to={lp('/')} className="inline-block relative mx-auto mb-5 w-24 h-24">
           <div className="absolute inset-0 rounded-full p-[3px]"
             style={{ background: 'linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)))' }}
           >
@@ -52,7 +57,7 @@ const Hola = () => {
           <div className="absolute -bottom-1 -right-1">
             <OverlappingCircles size="sm" />
           </div>
-        </div>
+        </Link>
 
         <h1 className="text-xl font-display font-bold text-foreground">{s.profileTitle}</h1>
         <p className="text-sm text-muted-foreground mt-1.5 flex items-center justify-center gap-1.5">
