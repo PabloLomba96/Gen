@@ -225,7 +225,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: 'No todas las rabietas son iguales. Aprende a distinguir las rabietas evolutivas de las que necesitan atención profesional.',
     category: 'Regulación emocional',
     readTime: '8 min',
-    date: '2 Mar 2026',
+    date: '18 Ene 2026',
     metaTitle: 'Rabietas en Niños: ¿Normales o Problema? Guía para Padres | Gen Psicología Valencia',
     metaDescription: 'Guía para padres sobre rabietas infantiles: cuándo son normales, cuándo preocuparse y qué hacer. Estrategias de regulación emocional. Psicóloga infantil Valencia.',
     content: [
