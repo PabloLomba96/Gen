@@ -147,11 +147,11 @@ const Servicios = () => {
               <div className="flex justify-center mb-10">
                 <TabsList className="h-12 p-1 bg-secondary/60">
                   <TabsTrigger value="adultos" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Sun className="w-4 h-4 mr-2" />
+                    <Brain className="w-4 h-4 mr-2" />
                     {lang === 'es' ? 'Adultos' : 'Adults'}
                   </TabsTrigger>
                   <TabsTrigger value="infantojuvenil" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Moon className="w-4 h-4 mr-2" />
+                    <Sparkles className="w-4 h-4 mr-2" />
                     {lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent'}
                   </TabsTrigger>
                   <TabsTrigger value="expats" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
