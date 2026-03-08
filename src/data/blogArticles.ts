@@ -277,7 +277,7 @@ export const blogArticles: BlogArticle[] = [
       'En nuestras sesiones de tarde, utilizo recursos interactivos como:',
       '- **Pizarras digitales compartidas**: Donde dibujamos sus miedos, creamos mapas emocionales o hacemos juegos de asociación.',
       '- **Cuentos interactivos y vídeos**: Que nos sirven de puente para hablar de temas complicados como el bullying o la ansiedad.',
-      '- **Juegos de rol y retos en pantalla**: Especialmente útiles para trabajar el control de impulsos o la frustración en casos de TDAH y neurodivergencias.',
+      '- **Juegos de rol y retos en pantalla**: Especialmente útiles para trabajar el control de impulsos o la frustración en casos de [TDAH y neurodivergencias](/servicios/neurodivergencias).',
       '- **El entorno físico del niño**: ¡El hecho de que estén en casa es una ventaja! A menudo les pido: "Tráeme tu juguete favorito y cuéntame cómo se siente hoy" o "Enséñame ese dibujo que hiciste ayer". Esto nos da muchísima información clínica valiosa.',
       '## 4 Beneficios exclusivos de la modalidad online para tu hijo (y para ti)',
       'Más allá de la eficacia clínica, la terapia a distancia ofrece ventajas prácticas que las familias agradecen enormemente:',
