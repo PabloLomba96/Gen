@@ -202,8 +202,8 @@ export const servicesEn: ServiceData[] = [
     slug: 'emotional-regulation-self-esteem',
     title: 'Emotional Regulation & Self-Esteem',
     shortTitle: 'Emotions & Self-Esteem',
-    description: 'We help children and adolescents understand and manage emotions, build self-esteem and develop social skills.',
-    longDescription: 'Emotional regulation and self-esteem are pillars of well-being in childhood and adolescence. At Gen we work with children and adolescents to help them identify, understand and manage their emotions in a healthy way, using therapeutic play, mindfulness and social skills techniques.',
+    description: 'Whether you\'re seeking support for yourself or your child, we work on emotional regulation and self-esteem with a personalised, evidence-based approach.',
+    longDescription: 'Emotional regulation and self-esteem are pillars of well-being at any age. At Gen we work with both adults and children to help them identify, understand and manage emotions in a healthy way, using techniques adapted to each life stage.',
     details: [
       'Emotion identification and management',
       'Anger, frustration and tantrum management',
