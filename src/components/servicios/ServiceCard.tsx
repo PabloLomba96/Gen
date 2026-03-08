@@ -20,7 +20,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
     <Link
       to={lp(`/servicios/${service.slug}`)}
-      className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl block"
+      className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl block h-full flex flex-col"
       style={{ boxShadow: 'var(--shadow-soft)' }}
     >
       <div
@@ -35,10 +35,10 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       <h3 className="text-xl font-display font-semibold text-foreground mb-3">
         {service.title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed mb-4">
+      <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3 flex-grow">
         {service.description}
       </p>
-      <ul className="space-y-2">
+      <ul className="space-y-2 mt-auto">
         {service.details.map((detail) => (
           <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
             <CheckCircle className="w-4 h-4 text-accent shrink-0" />
