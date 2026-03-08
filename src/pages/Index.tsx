@@ -35,7 +35,17 @@ const faqJsonLd = {
     {
       '@type': 'Question',
       name: '¿Cómo funciona la primera consulta?',
-      acceptedAnswer: { '@type': 'Answer', text: 'La primera consulta es para conocernos: me cuentas qué os preocupa, evalúo la situación y os explico cómo puedo ayudaros. Es sin compromiso y con total confidencialidad.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'La primera consulta es una toma de contacto para conocernos: me cuentas qué os preocupa, evalúo la situación y os explico cómo puedo ayudaros. Es sin compromiso y con total confidencialidad.' },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cómo sé si necesito ir a terapia?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Si sientes que la ansiedad, la tristeza o el estrés interfieren en tu día a día, o simplemente buscas un espacio de autoconocimiento, la terapia es para ti. No hace falta estar "al límite" para pedir ayuda.' },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Tratáis ansiedad laboral o crisis vitales?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Sí, en nuestras sesiones de mañana para adultos trabajamos específicamente la gestión del estrés, burnout, autoestima y transiciones vitales.' },
     },
   ],
 };
