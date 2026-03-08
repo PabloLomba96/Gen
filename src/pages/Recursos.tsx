@@ -3,6 +3,7 @@ import { ArrowRight, BookOpen, Headphones, FileText, Star, ShoppingBag, Download
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
+import SEO from '@/components/SEO';
 
 const products = [
   {
