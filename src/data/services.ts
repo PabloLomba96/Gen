@@ -83,7 +83,7 @@ export const services: ServiceData[] = [
     title: 'Neurodivergencias: Altas Capacidades, TEA y TDAH',
     shortTitle: 'Neurodivergencias',
     description: 'Evaluación, diagnóstico y acompañamiento para niños y adolescentes con altas capacidades intelectuales, TEA y TDAH.',
-    longDescription: 'En Gen acompañamos a niños y adolescentes neurodivergentes y a sus familias. Ofrecemos evaluación y diagnóstico de altas capacidades intelectuales (AACC), trastorno del espectro autista (TEA) y TDAH. Trabajamos la comprensión de la neurodivergencia, el desarrollo de estrategias adaptativas y la coordinación con centros educativos. Colaboramos con el Centro Divergentes de Valencia.',
+    longDescription: 'En Gen acompañamos a niños y adolescentes neurodivergentes y a sus familias. Ofrecemos evaluación y diagnóstico de altas capacidades intelectuales (AACC), trastorno del espectro autista (TEA) y TDAH. Trabajamos la comprensión de la neurodivergencia, el desarrollo de estrategias adaptativas y la coordinación con centros educativos.',
     details: [
       'Evaluación de altas capacidades (AACC)',
       'Diagnóstico de TDAH y TEA',
