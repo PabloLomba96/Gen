@@ -349,4 +349,4 @@ const BlogArticle = () => {
   );
 };
 
-export default BlogPage;
+export default BlogArticle;
