@@ -228,7 +228,7 @@ export const servicesEn: ServiceData[] = [
     color: 'primary',
     metaTitle: 'Emotional Regulation & Self-Esteem for Children Valencia | Gen Psychology',
     metaDescription: 'Therapy for emotional regulation, self-esteem and social skills in children and adolescents in Valencia. Child psychologist CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'If you\'re seeking help for yourself',
       items: [
