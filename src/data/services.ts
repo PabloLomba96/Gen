@@ -304,7 +304,7 @@ export const services: ServiceData[] = [
     color: 'accent',
     metaTitle: 'Evaluaciones Psicológicas Valencia — AACC, TDAH, TEA | Gen Psicología',
     metaDescription: 'Evaluaciones psicológicas para altas capacidades, TDAH y TEA en Valencia. Informes completos y orientación. Psicóloga colegiada CV16625.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'Si buscas una evaluación para ti',
       items: [
