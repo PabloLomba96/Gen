@@ -126,6 +126,7 @@ const Hola = () => {
         {(s.copyright as string).replace('{year}', new Date().getFullYear().toString())}
       </p>
     </div>
+    </>
   );
 };
 

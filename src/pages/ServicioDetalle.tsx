@@ -51,6 +51,12 @@ const ServicioDetalle = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={service.metaTitle}
+        description={service.metaDescription}
+        lang={lang}
+        canonical={`https://genpsicologia.com${lp(`/servicios/${service.slug}`)}`}
+      />
       <JsonLd data={serviceJsonLd} />
       <Header />
       <main className="pt-20">
