@@ -1,6 +1,11 @@
 import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck, Globe } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
+export interface DualApproach {
+  title: string;
+  items: string[];
+}
+
 export interface ServiceData {
   icon: LucideIcon;
   slug: string;
@@ -14,6 +19,8 @@ export interface ServiceData {
   metaTitle: string;
   metaDescription: string;
   category: 'adultos' | 'infantojuvenil' | 'expats';
+  adultApproach?: DualApproach;
+  childApproach?: DualApproach;
 }
 
 export const services: ServiceData[] = [
