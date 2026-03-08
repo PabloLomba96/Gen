@@ -21,6 +21,8 @@ type ContactForm = {
 const Contact = () => {
   const { toast } = useToast();
   const { t, lang } = useLanguage();
+  const [searchParams] = useSearchParams();
+  const fromExpats = searchParams.get('from') === 'expats';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   
