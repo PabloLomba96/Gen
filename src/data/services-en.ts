@@ -175,7 +175,7 @@ export const servicesEn: ServiceData[] = [
     color: 'accent',
     metaTitle: 'Family Therapy Valencia — Conflicts & Parenting | Gen Psychology',
     metaDescription: 'Family therapy in Valencia: conflicts, separation, positive parenting and guidance. Specialised psychologist CV16625. In-person and online.',
-    category: 'infantojuvenil',
+    category: 'todos',
     adultApproach: {
       title: 'If you\'re seeking help for yourself',
       items: [
