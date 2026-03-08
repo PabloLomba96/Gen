@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Sun, Moon, Globe } from 'lucide-react';
+import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Brain, Sparkles, Users, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
@@ -31,9 +31,9 @@ const Servicios = () => {
   const { t, lp, lang } = useLanguage();
   const s = t('serviciosPage') as any;
   const todos = lang === 'en' ? todosServicesEn : todosServices;
-  const adults = [...(lang === 'en' ? adultServicesEn : adultServices), ...todos];
-  const children = [...(lang === 'en' ? childServicesEn : childServices), ...todos];
-  const expats = [...(lang === 'en' ? expatServicesEn : expatServices), ...todos];
+  const adultsOnly = lang === 'en' ? adultServicesEn : adultServices;
+  const childrenOnly = lang === 'en' ? childServicesEn : childServices;
+  const expatsOnly = lang === 'en' ? expatServicesEn : expatServices;
   const allServices = lang === 'en' ? servicesEn : services;
   const modalityIcons = [MapPin, Video];
 
@@ -147,11 +147,11 @@ const Servicios = () => {
               <div className="flex justify-center mb-10">
                 <TabsList className="h-12 p-1 bg-secondary/60">
                   <TabsTrigger value="adultos" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Sun className="w-4 h-4 mr-2" />
+                    <Brain className="w-4 h-4 mr-2" />
                     {lang === 'es' ? 'Adultos' : 'Adults'}
                   </TabsTrigger>
                   <TabsTrigger value="infantojuvenil" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Moon className="w-4 h-4 mr-2" />
+                    <Sparkles className="w-4 h-4 mr-2" />
                     {lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent'}
                   </TabsTrigger>
                   <TabsTrigger value="expats" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
@@ -166,7 +166,7 @@ const Servicios = () => {
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Sun className="w-6 h-6 text-primary" />
+                      <Brain className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-display font-bold text-foreground">
@@ -178,7 +178,22 @@ const Servicios = () => {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 gap-8">
-                    {adults.map((service) => (
+                    {adultsOnly.map((service) => (
+                      <ServiceCard key={service.slug} service={service} />
+                    ))}
+                  </div>
+
+                  {/* Separator + transversal services */}
+                  <div className="flex items-center gap-3 mt-12 mb-8">
+                    <div className="flex-1 h-px bg-border" />
+                    <Badge variant="secondary" className="text-xs px-3 py-1 flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" />
+                      {lang === 'es' ? 'Para todos' : 'For Everyone'}
+                    </Badge>
+                    <div className="flex-1 h-px bg-border" />
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {todos.map((service) => (
                       <ServiceCard key={service.slug} service={service} />
                     ))}
                   </div>
@@ -190,7 +205,7 @@ const Servicios = () => {
                 <div className="max-w-6xl mx-auto">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
-                      <Moon className="w-6 h-6 text-accent" />
+                      <Sparkles className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-display font-bold text-foreground">
@@ -202,7 +217,22 @@ const Servicios = () => {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {children.map((service) => (
+                    {childrenOnly.map((service) => (
+                      <ServiceCard key={service.slug} service={service} />
+                    ))}
+                  </div>
+
+                  {/* Separator + transversal services */}
+                  <div className="flex items-center gap-3 mt-12 mb-8">
+                    <div className="flex-1 h-px bg-border" />
+                    <Badge variant="secondary" className="text-xs px-3 py-1 flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" />
+                      {lang === 'es' ? 'Para todos' : 'For Everyone'}
+                    </Badge>
+                    <div className="flex-1 h-px bg-border" />
+                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {todos.map((service) => (
                       <ServiceCard key={service.slug} service={service} />
                     ))}
                   </div>
@@ -228,8 +258,23 @@ const Servicios = () => {
                     ))}
                   </div>
 
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {expatsOnly.map((service) => (
+                      <ServiceCard key={service.slug} service={service} />
+                    ))}
+                  </div>
+
+                  {/* Separator + transversal services */}
+                  <div className="flex items-center gap-3 mt-12 mb-8">
+                    <div className="flex-1 h-px bg-border" />
+                    <Badge variant="secondary" className="text-xs px-3 py-1 flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" />
+                      {lang === 'es' ? 'Para todos' : 'For Everyone'}
+                    </Badge>
+                    <div className="flex-1 h-px bg-border" />
+                  </div>
                   <div className="grid md:grid-cols-2 gap-8 mb-10">
-                    {expats.map((service) => (
+                    {todos.map((service) => (
                       <ServiceCard key={service.slug} service={service} />
                     ))}
                   </div>

@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sun, Moon } from 'lucide-react';
+import { ArrowRight, Brain, Sparkles, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { adultServices, childServices, todosServices } from '@/data/services';
 import { adultServicesEn, childServicesEn, todosServicesEn } from '@/data/services-en';
@@ -36,7 +36,7 @@ const Services = () => {
         <div className="max-w-5xl mx-auto mb-12">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-              <Sun className="w-5 h-5 text-primary" />
+              <Brain className="w-5 h-5 text-primary" />
             </div>
             <div>
               <h3 className="text-lg font-display font-semibold text-foreground">{adultLabel}</h3>
@@ -69,7 +69,7 @@ const Services = () => {
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center">
-              <Moon className="w-5 h-5 text-accent" />
+              <Sparkles className="w-5 h-5 text-accent" />
             </div>
             <div>
               <h3 className="text-lg font-display font-semibold text-foreground">{childLabel}</h3>
@@ -102,7 +102,7 @@ const Services = () => {
         <div className="max-w-5xl mx-auto mt-12">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-9 h-9 rounded-lg bg-overlap/20 flex items-center justify-center">
-              <Sun className="w-5 h-5 text-primary" />
+              <Users className="w-5 h-5 text-primary" />
             </div>
             <div>
               <h3 className="text-lg font-display font-semibold text-foreground">{todosLabel}</h3>
