@@ -249,7 +249,72 @@ export const services: ServiceData[] = [
     metaDescription: 'Evaluaciones psicológicas para altas capacidades, TDAH y TEA en Valencia. Informes completos y orientación. Psicóloga colegiada CV16625.',
     category: 'infantojuvenil',
   },
+
+  // ─── EXPATS ───
+  {
+    icon: Globe,
+    slug: 'terapia-expats-adultos',
+    title: 'Terapia en Inglés para Adultos Expats',
+    shortTitle: 'Expats Adultos',
+    description: 'Terapia en inglés para adultos que viven fuera de su país de origen. Acompañamiento en adaptación cultural, duelo migratorio y bienestar emocional.',
+    longDescription: 'Mudarse a otro país es una experiencia transformadora que puede generar emociones intensas: soledad, desorientación, estrés laboral en un entorno desconocido o dificultades de pareja por el cambio de contexto. En Gen ofrecemos terapia en inglés para adultos expats que necesitan un espacio seguro donde sentirse comprendidos, sin barreras lingüísticas. Trabajamos desde un enfoque integrativo y culturalmente sensible, adaptándonos a tu experiencia única como persona expatriada.',
+    details: [
+      'Estrés por adaptación cultural',
+      'Duelo migratorio y nostalgia',
+      'Soledad y aislamiento social',
+      'Ansiedad laboral en un entorno nuevo',
+      'Dificultades de pareja por la reubicación',
+      'Construcción de identidad bicultural',
+      'Gestión emocional del choque cultural',
+    ],
+    symptoms: [
+      'Te sientes solo/a y desconectado/a de tu entorno',
+      'Echas de menos tu país y sientes nostalgia constante',
+      'Te cuesta adaptarte al ritmo de vida en España',
+      'Tu relación de pareja se ha resentido por la mudanza',
+      'Sientes ansiedad o inseguridad en el trabajo por la barrera cultural',
+      'Has perdido tu red de apoyo y no sabes cómo reconstruirla',
+      'Sientes que no encajas ni aquí ni en tu país de origen',
+      'Tienes dificultades para gestionar trámites, burocracia y el día a día en otro idioma',
+    ],
+    color: 'primary',
+    metaTitle: 'Terapia en Inglés para Expats Adultos en Valencia | Gen Psicología',
+    metaDescription: 'Terapia en inglés para adultos expats en Valencia: adaptación cultural, duelo migratorio, soledad y ansiedad. Presencial y online. CV16625.',
+    category: 'expats',
+  },
+  {
+    icon: Globe,
+    slug: 'terapia-expats-infantojuvenil',
+    title: 'Terapia en Inglés para Niños y Adolescentes Expats',
+    shortTitle: 'Expats Infantojuvenil',
+    description: 'Terapia en inglés para niños y adolescentes que se han mudado a España. Apoyo en adaptación escolar, habilidades sociales y regulación emocional.',
+    longDescription: 'Los niños y adolescentes que se mudan a otro país afrontan retos únicos: un nuevo idioma, un sistema educativo diferente, la pérdida de amigos y la necesidad de encajar en un entorno desconocido. En Gen ofrecemos terapia en inglés para niños y adolescentes expats, acompañándoles en su proceso de adaptación desde un enfoque respetuoso y culturalmente sensible. También trabajamos con familias y coordinamos con centros escolares para garantizar un apoyo integral.',
+    details: [
+      'Adaptación escolar en un nuevo idioma',
+      'Dificultades sociales y de integración',
+      'Regulación emocional ante el cambio',
+      'Neurodivergencia en un nuevo sistema educativo',
+      'Coordinación con centros escolares internacionales',
+      'Orientación a familias expats',
+      'Duelo por la pérdida de amigos y entorno anterior',
+    ],
+    symptoms: [
+      'Tu hijo/a tiene dificultades para adaptarse al nuevo colegio',
+      'Se aísla o le cuesta hacer amigos en el nuevo entorno',
+      'Muestra ansiedad, tristeza o irritabilidad desde la mudanza',
+      'Ha bajado su rendimiento académico en el nuevo sistema educativo',
+      'Tiene rabietas o reacciones emocionales intensas que antes no tenía',
+      'Le cuesta expresarse en el nuevo idioma y se frustra',
+      'Sospechas de neurodivergencia (TDAH, TEA, AACC) y no sabes cómo gestionarlo aquí',
+      'Echa mucho de menos a sus amigos y su vida anterior',
+    ],
+    color: 'accent',
+    metaTitle: 'Terapia en Inglés para Niños Expats en Valencia | Gen Psicología',
+    metaDescription: 'Terapia en inglés para niños y adolescentes expats en Valencia: adaptación escolar, habilidades sociales, regulación emocional. CV16625.',
+    category: 'expats',
+  },
 ];
 
 export const adultServices = services.filter(s => s.category === 'adultos');
 export const childServices = services.filter(s => s.category === 'infantojuvenil');
+export const expatServices = services.filter(s => s.category === 'expats');
