@@ -1,13 +1,15 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpen } from 'lucide-react';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
 import { services } from '@/data/services';
 import { servicesEn } from '@/data/services-en';
+import { blogArticles } from '@/data/blogArticles';
+import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
