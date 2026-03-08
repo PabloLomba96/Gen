@@ -205,7 +205,7 @@ const Servicios = () => {
                 <div className="max-w-6xl mx-auto">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
-                      <Sparkles className="w-6 h-6 text-accent" />
+                      <Moon className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-display font-bold text-foreground">
