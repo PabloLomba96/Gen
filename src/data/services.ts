@@ -273,8 +273,8 @@ export const services: ServiceData[] = [
     slug: 'evaluaciones-psicologicas',
     title: 'Evaluaciones Psicológicas',
     shortTitle: 'Evaluaciones',
-    description: 'Diagnóstico profesional de altas capacidades, TDAH y TEA. Informes completos para orientación familiar y escolar.',
-    longDescription: 'Las evaluaciones psicológicas son el primer paso para comprender las necesidades de tu hijo/a. En Gen realizamos evaluaciones completas para el diagnóstico de altas capacidades intelectuales (AACC), TDAH y TEA, con informes detallados que incluyen orientación para la familia y recomendaciones para el centro educativo.',
+    description: 'Tanto si buscas una evaluación para ti como para tu hijo/a, realizamos diagnósticos profesionales con informes completos y orientación personalizada.',
+    longDescription: 'Las evaluaciones psicológicas son el primer paso para comprender tus necesidades o las de tu hijo/a. En Gen realizamos evaluaciones completas para el diagnóstico de altas capacidades intelectuales (AACC), TDAH y TEA, tanto en adultos como en la infancia, con informes detallados y orientación personalizada.',
     details: [
       'Evaluación de altas capacidades intelectuales',
       'Evaluación de TDAH',
