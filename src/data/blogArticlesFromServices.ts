@@ -238,7 +238,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Descubre cómo potenciar la creatividad y el talento de tu hijo/a, especialmente si es introvertido o se siente diferente.',
     category: 'Creatividad',
     readTime: '6 min',
-    date: '7 Mar 2026',
+    date: '8 Feb 2026',
     metaTitle: 'Creatividad y Talento en Niños Introvertidos | Gen Psicología Valencia',
     metaDescription: 'Cómo potenciar creatividad y talento en niños introvertidos. Pensamiento divergente y autoexpresión. Psicóloga infantil Valencia CV16625.',
     relatedServiceSlug: 'desarrollo-y-creatividad',
