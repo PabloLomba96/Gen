@@ -352,7 +352,7 @@ export const blogArticles: BlogArticle[] = [
       'Si es necesario, coge a tu hijo en brazos (si se deja) y llévalo a un lugar más tranquilo, como el coche o una calle menos transitada, para que termine de descargar la emoción sin la sobreestimulación del entorno.',
       '## ¿Cómo trabajamos las rabietas en Gen Psicología?',
       'Si sientes que la situación en casa es insostenible, no tienes por qué pasar por esto a solas. En nuestra consulta en Valencia (y también en formato online), abordamos las desregulaciones emocionales desde dos frentes:',
-      '- **Con el niño/a**: A través del juego terapéutico, le enseñamos a identificar sus emociones en el cuerpo antes de explotar y le damos herramientas adaptadas a su edad para volver a la calma.',
+      '- **Con el niño/a**: A través del juego terapéutico, le enseñamos a identificar sus emociones en el cuerpo antes de explotar y le damos herramientas adaptadas a su edad para volver a la calma. (Conoce más sobre nuestro servicio de [Regulación Emocional y Autoestima](/servicios/regulacion-emocional-autoestima))',
       '- **Con los padres**: Hacemos sesiones de orientación donde os daremos pautas específicas, sin juicios, para que sepáis exactamente cómo actuar en casa, cómo prevenir las explosiones y cómo fomentar un apego seguro.',
       '## ¿Sientes que vuestra familia necesita recuperar la calma?',
       'Las tardes están pensadas para vosotros. Reserva una primera sesión de valoración y encontraremos juntos el camino para ayudar a tu hijo a entenderse mejor.',
