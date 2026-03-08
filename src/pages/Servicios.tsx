@@ -240,7 +240,8 @@ const Servicios = () => {
           </div>
         </section>
 
-        {/* School coordination */}
+        {/* School coordination - only for infantojuvenil and expats */}
+        {activeTab !== 'adultos' && (
         <section className="py-16 bg-secondary/20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto bg-card rounded-2xl p-8 md:p-12 border border-border" style={{ boxShadow: 'var(--shadow-soft)' }}>
@@ -256,6 +257,7 @@ const Servicios = () => {
             </div>
           </div>
         </section>
+        )}
 
         {/* Minor note */}
         <section className="py-8">
