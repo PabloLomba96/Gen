@@ -174,7 +174,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Aprende qué hay detrás de las rabietas, cómo ayudar a tu hijo a regular sus emociones y cuándo buscar ayuda profesional.',
     category: 'Regulación emocional',
     readTime: '7 min',
-    date: '7 Mar 2026',
+    date: '15 Feb 2026',
     metaTitle: 'Rabietas y Regulación Emocional en Niños: Guía para Padres | Gen Psicología',
     metaDescription: 'Cómo gestionar rabietas y emociones intensas en niños. Técnicas de regulación emocional, mindfulness infantil y cuándo consultar. Valencia CV16625.',
     relatedServiceSlug: 'regulacion-emocional-autoestima',
