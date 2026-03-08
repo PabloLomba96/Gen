@@ -262,32 +262,37 @@ const BlogArticle = () => {
           </div>
         </section>
 
-        {/* ── Smart CTA → related service ── */}
-        <section className="py-12 bg-accent/5">
+        {/* ── Conversion Card CTA ── */}
+        <section className="py-12">
           <div className="container mx-auto px-4">
             <div
-              className="max-w-3xl mx-auto bg-card rounded-2xl p-8 border border-border text-center"
+              className="max-w-3xl mx-auto glass rounded-2xl p-8 sm:p-10 text-center relative overflow-hidden"
               style={{ boxShadow: 'var(--shadow-soft)' }}
             >
-              <h3 className="text-xl font-display font-semibold text-foreground mb-3">
+              {/* Decorative gradient blob */}
+              <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full opacity-[0.08] pointer-events-none" style={{ background: 'radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)' }} />
+
+              <h3 className="text-xl sm:text-2xl font-display font-semibold text-foreground mb-3">
                 {s.articleCtaTitle}
               </h3>
-              <p className="text-muted-foreground mb-6">{s.articleCtaText}</p>
+              <p className="text-muted-foreground leading-relaxed mb-8 max-w-xl mx-auto">
+                {s.articleCtaText}
+              </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <Button asChild size="lg" className="h-12 px-8 animate-pulse-subtle">
+                  <Link to={lp('/contacto')}>
+                    <Calendar className="w-4 h-4 mr-2" />
+                    {s.articleCtaPrimary}
+                  </Link>
+                </Button>
                 {relatedService && (
-                  <Button asChild size="lg" className="h-12 px-8">
+                  <Button asChild size="lg" variant="outline" className="h-12 px-8">
                     <Link to={lp(`/servicios/${relatedService.slug}`)}>
-                      {s.articleCtaServiceButton ?? 'Ver servicio relacionado'}
+                      {s.articleCtaServiceButton}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </Button>
                 )}
-                <Button asChild size="lg" variant={relatedService ? 'outline' : 'default'} className="h-12 px-8">
-                  <Link to={lp('/contacto')}>
-                    {s.articleCtaButton}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </Button>
               </div>
             </div>
           </div>
