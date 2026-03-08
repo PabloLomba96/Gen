@@ -53,7 +53,7 @@ export const services: ServiceData[] = [
     title: 'Terapia de Pareja',
     shortTitle: 'Terapia de Pareja',
     description: 'Acompañamiento terapéutico para parejas que quieren mejorar su comunicación, resolver conflictos o fortalecer su vínculo.',
-    longDescription: 'La terapia de pareja ofrece un espacio seguro y neutral donde ambos miembros pueden expresarse y ser escuchados. Trabajamos la comunicación, la gestión de conflictos, la reconexión emocional y la toma de decisiones conjunta. Las sesiones se realizan en horario de mañana.',
+    longDescription: 'La terapia de pareja ofrece un espacio seguro y neutral donde ambos miembros pueden expresarse y ser escuchados. Trabajamos la comunicación, la gestión de conflictos, la reconexión emocional y la toma de decisiones conjunta. Las sesiones se realizan de manera presencial u online.',
     details: [
       'Dificultades de comunicación',
       'Gestión de conflictos recurrentes',
