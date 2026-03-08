@@ -198,6 +198,26 @@ export const services: ServiceData[] = [
     metaTitle: 'Terapia Familiar Valencia — Conflictos y Crianza | Gen Psicología',
     metaDescription: 'Terapia familiar en Valencia: conflictos, separación, pautas de crianza positiva y orientación parental. Psicóloga especializada. CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'Si buscas ayuda para ti',
+      items: [
+        'Conflictos de pareja que afectan al entorno familiar',
+        'Desborde emocional y estrés parental',
+        'Dificultades de comunicación con tu pareja o familiares',
+        'Gestión de una separación o divorcio',
+        'Necesitas herramientas de crianza basadas en evidencia',
+      ],
+    },
+    childApproach: {
+      title: 'Si buscas ayuda para tu hijo/a',
+      items: [
+        'Problemas de conducta o desafío constante',
+        'Tu hijo/a rechaza a uno de los progenitores',
+        'Celos por la llegada de un hermano/a',
+        'Dificultades de adaptación tras una separación',
+        'Conflictos frecuentes entre hermanos',
+      ],
+    },
   },
   {
     icon: Heart,
