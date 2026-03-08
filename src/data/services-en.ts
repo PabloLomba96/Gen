@@ -176,6 +176,26 @@ export const servicesEn: ServiceData[] = [
     metaTitle: 'Family Therapy Valencia — Conflicts & Parenting | Gen Psychology',
     metaDescription: 'Family therapy in Valencia: conflicts, separation, positive parenting and guidance. Specialised psychologist CV16625. In-person and online.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'If you\'re seeking help for yourself',
+      items: [
+        'Relationship conflicts affecting the family environment',
+        'Emotional overwhelm and parental stress',
+        'Communication difficulties with your partner or family',
+        'Managing a separation or divorce',
+        'Need evidence-based parenting tools',
+      ],
+    },
+    childApproach: {
+      title: 'If you\'re seeking help for your child',
+      items: [
+        'Behavioural problems or constant defiance',
+        'Your child rejects one parent',
+        'Jealousy after the arrival of a sibling',
+        'Adjustment difficulties after a separation',
+        'Frequent conflicts between siblings',
+      ],
+    },
   },
   {
     icon: Heart,
