@@ -116,6 +116,7 @@ Deno.serve(async (req) => {
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
         <p><strong>Teléfono:</strong> ${escapeHtml(telefono || "No proporcionado")}</p>
         <p><strong>Motivo:</strong> ${escapeHtml(motivo)}</p>
+        <p><strong>Preferencia de contacto:</strong> ${escapeHtml(contactMethod || "No indicada")}</p>
         <p><strong>Mensaje:</strong></p>
         <p>${escapeHtml(mensaje)}</p>
       `;
