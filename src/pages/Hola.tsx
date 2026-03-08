@@ -1,6 +1,7 @@
 import { ArrowRight, BookOpen, Calendar, Download, Heart, Instagram, ShoppingBag, Sparkles } from 'lucide-react';
 import OverlappingCircles from '@/components/OverlappingCircles';
 import logoPatricia from '@/assets/logo-patricia.jpg';
+import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
 
 const linkIcons = [Download, Calendar, ShoppingBag, BookOpen, Heart];
