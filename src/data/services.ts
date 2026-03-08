@@ -18,7 +18,7 @@ export interface ServiceData {
   color: 'primary' | 'accent';
   metaTitle: string;
   metaDescription: string;
-  category: 'adultos' | 'infantojuvenil' | 'expats';
+  category: 'adultos' | 'infantojuvenil' | 'expats' | 'todos';
   adultApproach?: DualApproach;
   childApproach?: DualApproach;
 }
