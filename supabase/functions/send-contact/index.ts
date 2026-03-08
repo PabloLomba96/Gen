@@ -47,7 +47,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { nombre, email, telefono, motivo, mensaje } = await req.json();
+    const { nombre, email, telefono, motivo, contactMethod, mensaje } = await req.json();
 
     if (!nombre || !email || !motivo || !mensaje) {
       return new Response(
