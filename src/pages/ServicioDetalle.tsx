@@ -29,24 +29,60 @@ const ServicioDetalle = () => {
 
   if (!service) return <Navigate to={lp('/servicios')} replace />;
 
+  const categoryLabels: Record<string, string> = {
+    adultos: lang === 'es' ? 'Psicología para Adultos' : 'Adult Psychology',
+    infantojuvenil: lang === 'es' ? 'Psicología Infantojuvenil' : 'Child & Adolescent Psychology',
+    expats: lang === 'es' ? 'Terapia para Expats' : 'Expat Therapy',
+  };
+
+  const audienceMap: Record<string, Record<string, unknown>> = {
+    adultos: { '@type': 'PeopleAudience', suggestedMinAge: 18, audienceType: 'Adults' },
+    infantojuvenil: { '@type': 'PeopleAudience', suggestedMinAge: 3, suggestedMaxAge: 17, audienceType: 'Children & Adolescents' },
+    expats: { '@type': 'PeopleAudience', audienceType: 'Expats / English speakers' },
+  };
+
+  const serviceUrl = `https://genpsicologia.com${lp(`/servicios/${service.slug}`)}`;
+
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: service.title,
     description: service.longDescription,
-    url: `https://genpsicologia.com/servicios/${service.slug}`,
+    url: serviceUrl,
+    category: categoryLabels[service.category] || service.category,
+    audience: audienceMap[service.category],
     provider: {
       '@type': 'ProfessionalService',
       name: 'Gen Centro de Psicología',
       url: 'https://genpsicologia.com',
       telephone: '+34611889209',
       email: 'patricia@genpsicologia.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Valencia',
+        addressCountry: 'ES',
+      },
+      priceRange: '€€',
     },
     areaServed: [
       { '@type': 'City', name: 'Valencia' },
       { '@type': 'Country', name: 'España' },
     ],
+    availableChannel: [
+      { '@type': 'ServiceChannel', serviceType: lang === 'es' ? 'Presencial' : 'In-person', serviceLocation: { '@type': 'Place', name: 'Valencia' } },
+      { '@type': 'ServiceChannel', serviceType: 'Online' },
+    ],
     serviceType: service.title,
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: lang === 'es' ? 'Inicio' : 'Home', item: `https://genpsicologia.com${lp('/')}` },
+      { '@type': 'ListItem', position: 2, name: lang === 'es' ? 'Servicios' : 'Services', item: `https://genpsicologia.com${lp('/servicios')}` },
+      { '@type': 'ListItem', position: 3, name: service.title, item: serviceUrl },
+    ],
   };
 
   return (
