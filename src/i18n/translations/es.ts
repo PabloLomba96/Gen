@@ -266,6 +266,8 @@ export const es = {
     onlineLocation: 'Videollamada segura',
     bookCta: 'Reservar Primera Consulta',
     otherServicesTitle: 'Otros servicios',
+    relatedArticlesTitle: 'Artículos relacionados',
+    relatedArticlesReadMore: 'Leer artículo',
     ctaTitle: '¿Quieres que hablemos?',
     ctaSubtitle: 'La primera consulta es para conocernos. Sin compromiso y con total confidencialidad.',
     ctaContact: 'Contactar',
