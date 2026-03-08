@@ -224,8 +224,8 @@ export const services: ServiceData[] = [
     slug: 'regulacion-emocional-autoestima',
     title: 'Regulación Emocional y Autoestima',
     shortTitle: 'Emociones y Autoestima',
-    description: 'Ayudamos a niños y adolescentes a entender y gestionar sus emociones, fortalecer su autoestima y desarrollar habilidades sociales.',
-    longDescription: 'La regulación emocional y la autoestima son pilares del bienestar en la infancia y la adolescencia. En Gen trabajamos con niños y adolescentes para que aprendan a identificar, comprender y gestionar sus emociones de forma saludable, utilizando técnicas de juego terapéutico, mindfulness y habilidades sociales.',
+    description: 'Tanto si buscas apoyo para ti como para tu hijo/a, trabajamos la regulación emocional y la autoestima desde un enfoque personalizado y basado en evidencia.',
+    longDescription: 'La regulación emocional y la autoestima son pilares del bienestar a cualquier edad. En Gen trabajamos tanto con adultos como con niños y adolescentes para aprender a identificar, comprender y gestionar las emociones de forma saludable, utilizando técnicas adaptadas a cada etapa vital.',
     details: [
       'Identificación y gestión de emociones',
       'Gestión de la ira, frustración y rabietas',
