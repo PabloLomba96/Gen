@@ -260,6 +260,7 @@ const Servicios = () => {
         )}
 
         {/* Minor note */}
+        {activeTab !== 'adultos' && (
         <section className="py-8">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto bg-accent/5 border border-accent/20 rounded-2xl p-6 text-center">
@@ -269,6 +270,7 @@ const Servicios = () => {
             </div>
           </div>
         </section>
+        )}
 
         {/* Process */}
         <section className="py-24">
