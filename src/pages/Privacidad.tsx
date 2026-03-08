@@ -1,18 +1,20 @@
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
 
 const Privacidad = () => {
-  const { t, lp } = useLanguage();
-
-  useEffect(() => {
-    document.title = `${t('privacidad.title')} — Gen Centro de Psicología`;
-  }, [t]);
+  const { t, lp, lang } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}
+        description="Política de privacidad de Gen Centro de Psicología. Información sobre el tratamiento de datos personales conforme al RGPD."
+        lang={lang}
+        canonical={`https://genpsicologia.com${lp('/privacidad')}`}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-16 bg-gradient-to-b from-secondary/50 to-background">

@@ -1,18 +1,20 @@
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
 
 const AvisoLegal = () => {
-  const { t, lp } = useLanguage();
-
-  useEffect(() => {
-    document.title = `${t('avisoLegal.title')} — Gen Centro de Psicología`;
-  }, [t]);
+  const { t, lp, lang } = useLanguage();
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={lang === 'en' ? 'Legal Notice' : 'Aviso Legal'}
+        description="Aviso legal de Gen Centro de Psicología. Datos identificativos, condiciones de uso y propiedad intelectual."
+        lang={lang}
+        canonical={`https://genpsicologia.com${lp('/aviso-legal')}`}
+      />
       <Header />
       <main className="pt-20">
         <section className="py-16 bg-gradient-to-b from-secondary/50 to-background">

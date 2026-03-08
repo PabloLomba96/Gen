@@ -1,6 +1,7 @@
 import { ArrowRight, BookOpen, Calendar, Download, Heart, Instagram, ShoppingBag, Sparkles } from 'lucide-react';
 import OverlappingCircles from '@/components/OverlappingCircles';
 import logoPatricia from '@/assets/logo-patricia.jpg';
+import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
 
 const linkIcons = [Download, Calendar, ShoppingBag, BookOpen, Heart];
@@ -14,11 +15,18 @@ const socialLinks = [
 ];
 
 const Hola = () => {
-  const { t, lp } = useLanguage();
+  const { t, lp, lang } = useLanguage();
   const s = t('hola') as any;
   const linksData = s.links as any[];
 
   return (
+    <>
+    <SEO
+      title={lang === 'en' ? 'Hello — Gen Psicología Links' : 'Hola — Enlaces Gen Psicología'}
+      description={lang === 'en' ? 'All links from Gen Psicología: book a session, blog, shop and social media.' : 'Todos los enlaces de Gen Psicología: reserva sesión, blog, tienda y redes sociales.'}
+      lang={lang}
+      canonical={`https://genpsicologia.com${lp('/hola')}`}
+    />
     <div className="min-h-screen flex flex-col items-center px-4 py-10 relative overflow-hidden"
       style={{ background: 'var(--gradient-hero)' }}
     >
@@ -118,6 +126,7 @@ const Hola = () => {
         {(s.copyright as string).replace('{year}', new Date().getFullYear().toString())}
       </p>
     </div>
+    </>
   );
 };
 

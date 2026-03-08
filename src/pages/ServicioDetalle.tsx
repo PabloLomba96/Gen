@@ -4,12 +4,13 @@ import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpe
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
+import SEO from '@/components/SEO';
 import { services } from '@/data/services';
 import { servicesEn } from '@/data/services-en';
 import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -25,13 +26,6 @@ const ServicioDetalle = () => {
     [slug, allArticles]
   );
 
-  useEffect(() => {
-    if (service) {
-      document.title = service.metaTitle;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', service.metaDescription);
-    }
-  }, [service]);
 
   if (!service) return <Navigate to={lp('/servicios')} replace />;
 
@@ -57,6 +51,12 @@ const ServicioDetalle = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={service.metaTitle}
+        description={service.metaDescription}
+        lang={lang}
+        canonical={`https://genpsicologia.com${lp(`/servicios/${service.slug}`)}`}
+      />
       <JsonLd data={serviceJsonLd} />
       <Header />
       <main className="pt-20">

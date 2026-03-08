@@ -4,13 +4,14 @@ import { Button } from '@/components/ui/button';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
+import SEO from '@/components/SEO';
 import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { blogArticlesEn } from '@/data/blogArticles-en';
 import { blogArticlesFromServicesEn } from '@/data/blogArticlesFromServices-en';
 import { services } from '@/data/services';
 import { useLanguage } from '@/i18n/context';
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 const allArticlesEs = [...blogArticlesFromServices, ...blogArticles];
 const allArticlesEn = [...blogArticlesFromServicesEn, ...blogArticlesEn];
@@ -42,13 +43,7 @@ const BlogArticle = () => {
   const allArticles = lang === 'en' ? allArticlesEn : allArticlesEs;
   const article = allArticles.find((a) => a.slug === slug);
 
-  useEffect(() => {
-    if (article) {
-      document.title = article.metaTitle;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', article.metaDescription);
-    }
-  }, [article]);
+  const articleCanonical = article ? `https://genpsicologia.com${lp(`/blog/${article.slug}`)}` : undefined;
 
   const headings = useMemo(() => (article ? extractHeadings(article.content) : []), [article]);
 
@@ -174,6 +169,12 @@ const BlogArticle = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={article.metaTitle}
+        description={article.metaDescription}
+        lang={lang}
+        canonical={articleCanonical}
+      />
       <JsonLd data={articleJsonLd} />
       <Header />
 

@@ -3,6 +3,7 @@ import { ArrowRight, BookOpen, Headphones, FileText, Star, ShoppingBag, Download
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
+import SEO from '@/components/SEO';
 
 const products = [
   {
@@ -60,6 +61,11 @@ const recommendations = [
 const Recursos = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Recursos — Herramientas de Bienestar Emocional"
+        description="Recursos gratuitos y accesibles para familias: guías de regulación emocional, cuentos, kits imprimibles y recomendaciones."
+        canonical="https://genpsicologia.com/recursos"
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}
