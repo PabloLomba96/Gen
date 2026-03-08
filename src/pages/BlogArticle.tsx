@@ -6,11 +6,14 @@ import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
 import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
+import { blogArticlesEn } from '@/data/blogArticles-en';
+import { blogArticlesFromServicesEn } from '@/data/blogArticlesFromServices-en';
 import { services } from '@/data/services';
 import { useLanguage } from '@/i18n/context';
 import React, { useEffect, useMemo } from 'react';
 
-const allArticles = [...blogArticlesFromServices, ...blogArticles];
+const allArticlesEs = [...blogArticlesFromServices, ...blogArticles];
+const allArticlesEn = [...blogArticlesFromServicesEn, ...blogArticlesEn];
 
 /* ── helpers ── */
 
@@ -19,7 +22,7 @@ const toAnchorId = (text: string) =>
   text
     .toLowerCase()
     .replace(/[¿?¡!]/g, '')
-    .replace(/[^a-záéíóúüñ0-9]+/g, '-')
+    .replace(/[^a-záéíóúüña-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
 
 /** Extract h2 headings from content blocks for the TOC */
@@ -33,8 +36,10 @@ const extractHeadings = (content: string[]) =>
 
 const BlogArticle = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t, lp } = useLanguage();
+  const { t, lp, lang } = useLanguage();
   const s = t('blog') as any;
+
+  const allArticles = lang === 'en' ? allArticlesEn : allArticlesEs;
   const article = allArticles.find((a) => a.slug === slug);
 
   useEffect(() => {
@@ -67,14 +72,16 @@ const BlogArticle = () => {
     datePublished: article.date,
     dateModified: article.date,
     wordCount: article.content.join(' ').split(/\s+/).length,
-    inLanguage: 'es',
+    inLanguage: lang === 'en' ? 'en' : 'es',
     author: {
       '@type': 'Person',
       name: 'Patricia Martínez Díaz',
       jobTitle: 'Psicóloga General Sanitaria',
       url: 'https://genpsicologia.com/sobre-mi',
       sameAs: ['https://www.instagram.com/genpsicologia/'],
-      description: 'Psicóloga Sanitaria colegiada CV16625 especializada en infancia, adolescencia y neurodivergencia en Valencia.',
+      description: lang === 'en'
+        ? 'Registered Health Psychologist (CV16625) specialising in child, adolescent and neurodivergence psychology in Valencia.'
+        : 'Psicóloga Sanitaria colegiada CV16625 especializada en infancia, adolescencia y neurodivergencia en Valencia.',
     },
     publisher: {
       '@type': 'Organization',
