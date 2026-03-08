@@ -124,7 +124,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: 'Resolvemos la duda más común entre padres: ¿a partir de qué edad tiene sentido la terapia infantil? Te lo explicamos por etapas.',
     category: 'Orientación a padres',
     readTime: '7 min',
-    date: '4 Mar 2026',
+    date: '25 Ene 2026',
     metaTitle: '¿A qué edad llevar a un niño al psicólogo? Guía por edades | Gen Psicología Valencia',
     metaDescription: '¿A partir de qué edad puede ir un niño al psicólogo? Guía por etapas (0-3, 3-6, 6-12 y adolescencia) con ejemplos prácticos. Psicóloga infantil Valencia.',
     content: [
