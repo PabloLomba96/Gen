@@ -94,6 +94,7 @@ const ServicioDetalle = () => {
         canonical={`https://genpsicologia.com${lp(`/servicios/${service.slug}`)}`}
       />
       <JsonLd data={serviceJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <Header />
       <main className="pt-20">
         {/* Breadcrumb + Hero */}
