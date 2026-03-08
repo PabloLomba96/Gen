@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Sun, Moon, Globe } from 'lucide-react';
+import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Brain, Sparkles, Users, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
