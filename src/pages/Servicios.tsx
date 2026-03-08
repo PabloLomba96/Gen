@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Brain, Sparkles, Users, Globe } from 'lucide-react';
+import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Sun, Moon, Users, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
@@ -147,11 +147,11 @@ const Servicios = () => {
               <div className="flex justify-center mb-10">
                 <TabsList className="h-12 p-1 bg-secondary/60">
                   <TabsTrigger value="adultos" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Brain className="w-4 h-4 mr-2" />
+                    <Sun className="w-4 h-4 mr-2" />
                     {lang === 'es' ? 'Adultos' : 'Adults'}
                   </TabsTrigger>
                   <TabsTrigger value="infantojuvenil" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Sparkles className="w-4 h-4 mr-2" />
+                    <Moon className="w-4 h-4 mr-2" />
                     {lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent'}
                   </TabsTrigger>
                   <TabsTrigger value="expats" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
@@ -166,7 +166,7 @@ const Servicios = () => {
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Brain className="w-6 h-6 text-primary" />
+                      <Sun className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-display font-bold text-foreground">
@@ -205,7 +205,7 @@ const Servicios = () => {
                 <div className="max-w-6xl mx-auto">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
-                      <Sparkles className="w-6 h-6 text-accent" />
+                      <Moon className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-display font-bold text-foreground">
