@@ -228,6 +228,13 @@ const Servicios = () => {
                     ))}
                   </div>
 
+                  <div className="mb-8 p-4 rounded-xl bg-secondary/40 border border-border text-sm text-muted-foreground">
+                    <span className="font-semibold text-foreground">💶 {lang === 'es' ? 'Pagos' : 'Payments'}:</span>{' '}
+                    {lang === 'es'
+                      ? 'Las tarifas están en EUR. Con indicación previa, también aceptamos pagos en USD, GBP y CNY.'
+                      : 'Fees are in EUR. With prior notice, we also accept payments in USD, GBP and CNY.'}
+                  </div>
+
                   <Button asChild size="lg" className="rounded-full">
                     <Link to={lp('/contacto')}>
                       {expatsContent.cta}
