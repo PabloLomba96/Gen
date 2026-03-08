@@ -103,7 +103,7 @@ const Contact = () => {
             <Button
               onClick={() => {
                 setIsSubmitted(false);
-                setFormData({ nombre: '', email: '', telefono: '', motivo: '', mensaje: '' });
+                setFormData({ nombre: '', email: '', telefono: '', motivo: '', contactMethod: '', mensaje: '' });
               }}
               variant="outline"
               className="border-2"
