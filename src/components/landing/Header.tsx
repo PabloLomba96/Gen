@@ -28,14 +28,20 @@ const Header = () => {
         { href: '/servicios/neurodivergencias', label: 'Neurodivergencias' },
         { href: '/servicios/desarrollo-y-creatividad', label: 'Desarrollo y Creatividad' },
         { href: '/servicios/dificultades-aprendizaje', label: 'Dificultades de Aprendizaje' },
-        { href: '/servicios/terapia-familiar', label: 'Terapia Familiar' },
-        { href: '/servicios/regulacion-emocional-autoestima', label: 'Emociones y Autoestima' },
-        { href: '/servicios/evaluaciones-psicologicas', label: 'Evaluaciones Psicológicas' },
       ]
     : [
         { href: '/servicios/neurodivergence', label: 'Neurodivergence' },
         { href: '/servicios/development-creativity', label: 'Development & Creativity' },
         { href: '/servicios/learning-difficulties', label: 'Learning Difficulties' },
+      ];
+
+  const todosItems = lang === 'es'
+    ? [
+        { href: '/servicios/terapia-familiar', label: 'Terapia Familiar' },
+        { href: '/servicios/regulacion-emocional-autoestima', label: 'Emociones y Autoestima' },
+        { href: '/servicios/evaluaciones-psicologicas', label: 'Evaluaciones Psicológicas' },
+      ]
+    : [
         { href: '/servicios/family-therapy', label: 'Family Therapy' },
         { href: '/servicios/emotional-regulation-self-esteem', label: 'Emotions & Self-Esteem' },
         { href: '/servicios/psychological-evaluations', label: 'Evaluations' },
