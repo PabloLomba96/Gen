@@ -142,7 +142,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Todo lo que los padres necesitan saber sobre las dificultades de aprendizaje: dislexia, disgrafía, discalculia y cómo intervenir.',
     category: 'Aprendizaje',
     readTime: '7 min',
-    date: '7 Mar 2026',
+    date: '18 Feb 2026',
     metaTitle: 'Dificultades de Aprendizaje en Niños: Dislexia y Más | Gen Psicología Valencia',
     metaDescription: 'Guía sobre dificultades de aprendizaje: dislexia, disgrafía, discalculia. Señales, diagnóstico y terapia. Psicóloga infantil Valencia CV16625.',
     relatedServiceSlug: 'dificultades-aprendizaje',
