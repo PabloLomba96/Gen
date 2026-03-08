@@ -225,6 +225,26 @@ export const servicesEn: ServiceData[] = [
     metaTitle: 'Emotional Regulation & Self-Esteem for Children Valencia | Gen Psychology',
     metaDescription: 'Therapy for emotional regulation, self-esteem and social skills in children and adolescents in Valencia. Child psychologist CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'If you\'re seeking help for yourself',
+      items: [
+        'Chronic stress and emotional overwhelm',
+        'Low self-esteem or negative self-image',
+        'Difficulty setting boundaries in relationships',
+        'Repetitive emotional patterns you want to change',
+        'Self-discovery and personal growth',
+      ],
+    },
+    childApproach: {
+      title: 'If you\'re seeking help for your child',
+      items: [
+        'Intense or prolonged tantrums',
+        'Low self-esteem or insecurity',
+        'Difficulty relating to other children',
+        'Anxiety, fears or aggressive reactions',
+        'Gets emotionally overwhelmed and can\'t self-regulate',
+      ],
+    },
   },
   {
     icon: ClipboardCheck,
