@@ -169,6 +169,12 @@ const BlogArticle = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={article.metaTitle}
+        description={article.metaDescription}
+        lang={lang}
+        canonical={articleCanonical}
+      />
       <JsonLd data={articleJsonLd} />
       <Header />
 
