@@ -13,7 +13,7 @@ export interface ServiceData {
   color: 'primary' | 'accent';
   metaTitle: string;
   metaDescription: string;
-  category: 'adultos' | 'infantojuvenil';
+  category: 'adultos' | 'infantojuvenil' | 'expats';
 }
 
 export const services: ServiceData[] = [
