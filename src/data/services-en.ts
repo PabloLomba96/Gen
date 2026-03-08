@@ -107,7 +107,7 @@ export const servicesEn: ServiceData[] = [
       'Introversion and social energy management',
     ],
     symptoms: [
-      'Your child is very creative but feels misunderstood',
+      'Your child is very creative and has undeveloped talents',
       'Is introverted and struggles to find their place in the group',
       'Gets drained in social settings (school, parties)',
       'Needs a space where they feel free to be different',
