@@ -176,7 +176,7 @@ export const services: ServiceData[] = [
     title: 'Terapia Familiar',
     shortTitle: 'Terapia Familiar',
     description: 'Terapia para familias con problemas de comunicación, conflictos, separación o dificultades de crianza.',
-    longDescription: 'La familia es el pilar del bienestar emocional del niño. En Gen acompañamos a las familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas de crianza basadas en la disciplina positiva y la evidencia científica.',
+    longDescription: 'Tanto si buscas apoyo para ti como para tu familia, en Gen acompañamos a personas y familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas basadas en la disciplina positiva y la evidencia científica.',
     details: [
       'Dificultades de comunicación',
       'Conflictos familiares',
