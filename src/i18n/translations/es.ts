@@ -59,6 +59,18 @@ export const es = {
     title: 'Lo que dicen las familias',
     items: [
       {
+        name: 'Elena V.',
+        role: 'Terapia Individual',
+        content: 'Empezar terapia con Patricia ha sido la mejor decisión. Me ha dado herramientas reales para gestionar mi ansiedad y el estrés del día a día. Las sesiones de mañana me vienen genial.',
+        highlight: 'Ansiedad adultos',
+      },
+      {
+        name: 'David y Marta',
+        role: 'Terapia de Pareja',
+        content: 'Acudimos a Gen Psicología en un momento difícil y encontramos un espacio seguro, sin juicios, donde pudimos volver a comunicarnos.',
+        highlight: 'Terapia de pareja',
+      },
+      {
         name: 'Laura M.',
         role: 'Madre de Hugo (8 años)',
         content: 'Patricia ha sido un antes y un después para mi hijo. Su forma de trabajar desde el juego ha ayudado a Hugo a gestionar su ansiedad de forma increíble. Se nota que ama lo que hace.',
@@ -69,18 +81,6 @@ export const es = {
         role: 'Padres de Lucía (12 años)',
         content: 'Cuando nos dijeron que Lucía tenía altas capacidades no sabíamos cómo ayudarla. Patricia nos guió desde el primer momento a entenderla y acompañarla. Estamos muy agradecidos con todo el equipo de Gen.',
         highlight: 'Altas capacidades',
-      },
-      {
-        name: 'María J.',
-        role: 'Madre de Daniel (10 años)',
-        content: 'Gracias a Patricia, Daniel ha aprendido estrategias que le funcionan de verdad. Ha mejorado mucho en el cole y en casa. Su cercanía y profesionalidad nos dieron mucha confianza.',
-        highlight: 'TDAH',
-      },
-      {
-        name: 'Sofía G.',
-        role: 'Madre de Martina (6 años)',
-        content: 'Mi hija tenía muchos miedos y no sabíamos cómo ayudarla. Desde que empezamos con Patricia en Gen Psicología, Martina está mucho más tranquila y segura de sí misma.',
-        highlight: 'Miedos infantiles',
       },
     ],
     trustRating: '5.0',
