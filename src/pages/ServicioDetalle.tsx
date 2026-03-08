@@ -92,7 +92,7 @@ const ServicioDetalle = () => {
                   <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
                     <AlertCircle className="w-5 h-5 text-accent" />
                   </div>
-                  <h2 className="text-2xl font-display font-bold text-foreground">{service.category === 'infantojuvenil' ? s.symptomsTitle : s.symptomsTitleAdults}</h2>
+                  <h2 className="text-2xl font-display font-bold text-foreground">{(service.category === 'infantojuvenil' || service.slug.includes('infantojuvenil') || service.slug.includes('children')) ? s.symptomsTitle : s.symptomsTitleAdults}</h2>
                 </div>
                 <ul className="space-y-3">
                   {service.symptoms.map((symptom) => (
