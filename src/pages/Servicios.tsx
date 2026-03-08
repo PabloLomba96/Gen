@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Sun, Moon, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,8 +14,20 @@ import { Badge } from '@/components/ui/badge';
 import { services, adultServices, childServices } from '@/data/services';
 import { servicesEn, adultServicesEn, childServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
+import { useLocation } from 'react-router-dom';
 
 const Servicios = () => {
+  const location = useLocation();
+  const validTabs = ['adultos', 'infantojuvenil', 'expats'];
+  const hashTab = location.hash.replace('#', '');
+  const initialTab = validTabs.includes(hashTab) ? hashTab : 'adultos';
+  const [activeTab, setActiveTab] = useState(initialTab);
+
+  useEffect(() => {
+    const h = location.hash.replace('#', '');
+    if (validTabs.includes(h)) setActiveTab(h);
+  }, [location.hash]);
+
   const { t, lp, lang } = useLanguage();
   const s = t('serviciosPage') as any;
   const adults = lang === 'en' ? adultServicesEn : adultServices;
@@ -123,7 +136,7 @@ const Servicios = () => {
         {/* Tabs section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <Tabs defaultValue="adultos" className="w-full">
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
               <div className="flex justify-center mb-10">
                 <TabsList className="h-12 p-1 bg-secondary/60">
                   <TabsTrigger value="adultos" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
