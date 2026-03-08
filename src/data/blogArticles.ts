@@ -218,7 +218,7 @@ export const blogArticles: BlogArticle[] = [
       'A los adultos nos cuesta imaginar una terapia que no consista en sentarse a hablar en un sillón. Pero la mente de un niño procesa el mundo de otra manera: **a través de la acción, el apego y el juego.**',
       '## De 0 a 3 años: Intervención centrada en los padres y el vínculo',
       'A estas edades tempranas, el cerebro del bebé o niño pequeño está fusionado emocionalmente con sus figuras de apego (tú). Por lo tanto, el trabajo rara vez se hace a solas con el niño.',
-      '**¿Cómo trabajamos?** La terapia a esta edad es, en gran medida, Terapia Familiar y Orientación a Padres. Nos reunimos para entender qué nos está diciendo el niño a través de su llanto, sus problemas de sueño, de alimentación o su rechazo extremo a separarse de vosotros.',
+      '**¿Cómo trabajamos?** La terapia a esta edad es, en gran medida, [Terapia Familiar](/servicios/terapia-familiar) y Orientación a Padres. Nos reunimos para entender qué nos está diciendo el niño a través de su llanto, sus problemas de sueño, de alimentación o su rechazo extremo a separarse de vosotros.',
       '**¿Cuándo consultar?** Si notas un retraso significativo en el desarrollo (no señala, no balbucea, no mantiene contacto visual), problemas severos para dormir o comer que os desbordan, o si sentís que la crianza os está superando emocionalmente.',
       '## De 4 a 6 años: La etapa del juego terapéutico',
       'Aquí el niño ya tiene lenguaje, pero su vía principal de comunicación sigue siendo el juego. No le preguntamos "¿Por qué estás triste?", porque su cerebro inmaduro no sabe responder a eso.',
