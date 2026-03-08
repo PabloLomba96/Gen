@@ -30,6 +30,12 @@ const ServicioDetalle = () => {
 
   const otherServices = serviceData.filter((sv) => sv.slug !== slug);
 
+  const allArticles = useMemo(() => [...blogArticles, ...blogArticlesFromServices], []);
+  const relatedArticles = useMemo(
+    () => allArticles.filter((a) => a.relatedServiceSlug === slug).slice(0, 3),
+    [slug, allArticles]
+  );
+
   const serviceJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Service',
