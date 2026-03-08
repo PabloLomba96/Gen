@@ -11,7 +11,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Descubre cómo la terapia infantil basada en el juego puede ayudar a tu hijo con miedos, ansiedad por separación, rabietas y problemas de conducta.',
     category: 'Terapia infantil',
     readTime: '7 min',
-    date: '7 Mar 2026',
+    date: '4 Mar 2026',
     metaTitle: 'Psicología Infantil: Miedos, Ansiedad y Rabietas | Gen Psicología Valencia',
     metaDescription: 'Guía sobre terapia infantil para miedos, ansiedad y rabietas. Cómo funciona el juego terapéutico y cuándo buscar ayuda profesional. Psicóloga infantil Valencia.',
     relatedServiceSlug: 'regulacion-emocional-autoestima',
