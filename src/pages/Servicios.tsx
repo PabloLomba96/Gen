@@ -17,6 +17,17 @@ import { useLanguage } from '@/i18n/context';
 import { useLocation } from 'react-router-dom';
 
 const Servicios = () => {
+  const location = useLocation();
+  const validTabs = ['adultos', 'infantojuvenil', 'expats'];
+  const hashTab = location.hash.replace('#', '');
+  const initialTab = validTabs.includes(hashTab) ? hashTab : 'adultos';
+  const [activeTab, setActiveTab] = useState(initialTab);
+
+  useEffect(() => {
+    const h = location.hash.replace('#', '');
+    if (validTabs.includes(h)) setActiveTab(h);
+  }, [location.hash]);
+
   const { t, lp, lang } = useLanguage();
   const s = t('serviciosPage') as any;
   const adults = lang === 'en' ? adultServicesEn : adultServices;
