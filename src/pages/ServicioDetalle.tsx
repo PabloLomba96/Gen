@@ -111,6 +111,54 @@ const ServicioDetalle = () => {
           </section>
         )}
 
+        {/* Dual-Focus Section */}
+        {service.adultApproach && service.childApproach && (
+          <section className="py-16 bg-secondary/30">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-2xl font-display font-bold text-foreground text-center mb-2">{s.dualFocusTitle}</h2>
+                <p className="text-muted-foreground text-center mb-10">{s.dualFocusSubtitle}</p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {/* Adult column */}
+                  <div className="glass rounded-2xl p-6 border border-primary/20">
+                    <div className="flex items-center gap-3 mb-5">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <User className="w-5 h-5 text-primary" />
+                      </div>
+                      <h3 className="text-lg font-display font-semibold text-foreground">{service.adultApproach.title}</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {service.adultApproach.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                          <span className="text-sm text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {/* Child column */}
+                  <div className="glass rounded-2xl p-6 border border-accent/20">
+                    <div className="flex items-center gap-3 mb-5">
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                        <Baby className="w-5 h-5 text-accent" />
+                      </div>
+                      <h3 className="text-lg font-display font-semibold text-foreground">{service.childApproach.title}</h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {service.childApproach.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <CheckCircle className="w-4 h-4 text-accent mt-0.5 shrink-0" />
+                          <span className="text-sm text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Details */}
         <section className="py-24">
           <div className="container mx-auto px-4">

@@ -267,6 +267,8 @@ export const en = {
     ctaSubtitle: 'The first consultation is to get to know each other. No commitment, fully confidential.',
     ctaContact: 'Contact',
     ctaAllServices: 'View All Services',
+    dualFocusTitle: 'This service adapts to you',
+    dualFocusSubtitle: 'Choose the focus that best fits your situation:',
   },
   sobreMi: {
     breadcrumb: 'About Me',

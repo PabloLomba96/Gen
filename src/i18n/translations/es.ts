@@ -275,6 +275,8 @@ export const es = {
     ctaSubtitle: 'La primera consulta es para conocernos. Sin compromiso y con total confidencialidad.',
     ctaContact: 'Contactar',
     ctaAllServices: 'Ver Todos los Servicios',
+    dualFocusTitle: 'Este servicio se adapta a ti',
+    dualFocusSubtitle: 'Selecciona el enfoque que mejor se ajuste a tu situación:',
   },
   sobreMi: {
     breadcrumb: 'Sobre Mí',

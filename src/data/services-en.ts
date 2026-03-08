@@ -273,6 +273,26 @@ export const servicesEn: ServiceData[] = [
     metaTitle: 'Psychological Evaluations Valencia — Giftedness, ADHD, ASD | Gen Psychology',
     metaDescription: 'Psychological evaluations for giftedness, ADHD and ASD in Valencia. Comprehensive reports and guidance. Licensed psychologist CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'If you\'re seeking an evaluation for yourself',
+      items: [
+        'You suspect you may have undiagnosed ADHD',
+        'You want to explore whether you\'re gifted',
+        'You need a professional psychological report',
+        'Diagnostic doubts affecting your well-being',
+        'Seeking self-knowledge backed by clinical evaluation',
+      ],
+    },
+    childApproach: {
+      title: 'If you\'re seeking an evaluation for your child',
+      items: [
+        'You suspect giftedness, ADHD or ASD',
+        'Teachers have suggested an evaluation',
+        'You need a psychological report for school',
+        'You\'ve noticed a gap between ability and performance',
+        'Seeking guidance on supporting them at home and school',
+      ],
+    },
   },
 
   // ─── EXPATS ───
