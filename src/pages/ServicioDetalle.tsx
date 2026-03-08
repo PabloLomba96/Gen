@@ -10,7 +10,7 @@ import { servicesEn } from '@/data/services-en';
 import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();

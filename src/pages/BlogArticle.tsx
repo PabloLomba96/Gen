@@ -11,7 +11,7 @@ import { blogArticlesEn } from '@/data/blogArticles-en';
 import { blogArticlesFromServicesEn } from '@/data/blogArticlesFromServices-en';
 import { services } from '@/data/services';
 import { useLanguage } from '@/i18n/context';
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 const allArticlesEs = [...blogArticlesFromServices, ...blogArticles];
 const allArticlesEn = [...blogArticlesFromServicesEn, ...blogArticlesEn];
