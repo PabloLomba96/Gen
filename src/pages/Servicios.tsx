@@ -236,7 +236,7 @@ const Servicios = () => {
                   </div>
 
                   <Button asChild size="lg" className="rounded-full">
-                    <Link to={lp('/contacto')}>
+                    <Link to={`${lp('/contacto')}?from=expats`}>
                       {expatsContent.cta}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>

@@ -7,6 +7,7 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { z } from 'zod';
 import { useLanguage } from '@/i18n/context';
+import { useSearchParams } from 'react-router-dom';
 
 type ContactForm = {
   nombre: string;
@@ -20,6 +21,8 @@ type ContactForm = {
 const Contact = () => {
   const { toast } = useToast();
   const { t, lang } = useLanguage();
+  const [searchParams] = useSearchParams();
+  const fromExpats = searchParams.get('from') === 'expats';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   
@@ -61,7 +64,7 @@ const Contact = () => {
       const validated = contactSchema.parse(formData);
       
       const { data, error } = await supabase.functions.invoke('send-contact', {
-        body: validated,
+        body: { ...validated, lang, fromExpats },
       });
 
       if (error) throw error;
