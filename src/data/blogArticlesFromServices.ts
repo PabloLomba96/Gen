@@ -207,7 +207,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Guía sobre terapia familiar: cuándo es necesaria, qué se trabaja y cómo puede mejorar la comunicación y el bienestar en casa.',
     category: 'Terapia familiar',
     readTime: '6 min',
-    date: '7 Mar 2026',
+    date: '11 Feb 2026',
     metaTitle: 'Terapia Familiar: Conflictos y Crianza | Gen Psicología Valencia',
     metaDescription: 'Terapia familiar en Valencia para conflictos, separación y crianza. Cuándo buscar ayuda y qué esperar. Psicóloga especializada CV16625.',
     relatedServiceSlug: 'terapia-familiar',
