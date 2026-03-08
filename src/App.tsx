@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/i18n/context";
 import ScrollToTop from "./components/ScrollToTop";
+import MobileBookingCta from "./components/MobileBookingCta";
 import HrefLang from "./components/HrefLang";
 import Index from "./pages/Index";
 import SobreMi from "./pages/SobreMi";
@@ -85,6 +86,7 @@ const App = () => (
         <LanguageProvider>
           <ScrollToTop />
           <HrefLang />
+          <MobileBookingCta />
           <LocalizedRoutes />
         </LanguageProvider>
       </BrowserRouter>
