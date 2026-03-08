@@ -83,7 +83,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     relatedServiceSlug: 'evaluaciones-psicologicas',
     content: [
       '## ¿Tu hijo/a podría tener altas capacidades?',
-      'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. Desde Gen Psicología colaboramos con el Centro Divergentes de Valencia, referente en altas capacidades y neurodiversidad.',
+      'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. En Gen Psicología ofrecemos evaluación integral y acompañamiento para niños y adolescentes con altas capacidades.',
       '## ¿Qué ofrecemos?',
       '- Evaluación completa de altas capacidades',
       '- Regulación emocional',
