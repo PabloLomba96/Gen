@@ -13,6 +13,7 @@ type ContactForm = {
   email: string;
   telefono: string;
   motivo: string;
+  contactMethod: string;
   mensaje: string;
 };
 
