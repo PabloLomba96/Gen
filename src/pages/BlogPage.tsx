@@ -1,19 +1,18 @@
-import { ArrowRight, Clock, Globe, Bell } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import Newsletter from '@/components/landing/Newsletter';
 import JsonLd from '@/components/JsonLd';
 import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
+import { blogArticlesEn } from '@/data/blogArticles-en';
+import { blogArticlesFromServicesEn } from '@/data/blogArticlesFromServices-en';
 import { useLanguage } from '@/i18n/context';
-import { supabase } from '@/integrations/supabase/client';
-import { useToast } from '@/hooks/use-toast';
 
-const allArticles = [...blogArticlesFromServices, ...blogArticles];
+const allArticlesEs = [...blogArticlesFromServices, ...blogArticles];
+const allArticlesEn = [...blogArticlesFromServicesEn, ...blogArticlesEn];
 
 const blogJsonLd = {
   '@context': 'https://schema.org',
@@ -22,7 +21,7 @@ const blogJsonLd = {
   description: 'Artículos sobre psicología infantil, ansiedad en niños, rabietas, TDAH, altas capacidades y crianza.',
   url: 'https://genpsicologia.com/blog',
   publisher: { '@type': 'Organization', name: 'Gen Psicología', url: 'https://genpsicologia.com' },
-  blogPost: allArticles.map((a) => ({
+  blogPost: allArticlesEs.map((a) => ({
     '@type': 'BlogPosting',
     headline: a.title,
     description: a.excerpt,
@@ -35,92 +34,8 @@ const blogJsonLd = {
 const BlogPage = () => {
   const { t, lp, lang } = useLanguage();
   const s = t('blog') as any;
-  const fallback = t('blogEnFallback') as any;
-  const { toast } = useToast();
 
-  const [showArticles, setShowArticles] = useState(lang === 'es');
-  const [email, setEmail] = useState('');
-  const [subscribing, setSubscribing] = useState(false);
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleNotify = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    setSubscribing(true);
-    try {
-      const { data, error } = await supabase.functions.invoke('newsletter-subscribe', {
-        body: { email: email.trim(), idioma: 'en', origen: 'blog_en_fallback' },
-      });
-      if (error) throw error;
-      if (data?.error === 'duplicate') {
-        toast({ title: '✓', description: fallback.subscribeSuccess });
-      } else if (data?.success) {
-        toast({ title: '✓', description: fallback.subscribeSuccess });
-      } else if (data?.error) {
-        throw new Error(data.error);
-      }
-      setSubscribed(true);
-    } catch {
-      toast({ title: 'Error', description: 'Could not subscribe. Please try again.', variant: 'destructive' });
-    } finally {
-      setSubscribing(false);
-    }
-  };
-
-  // English fallback screen
-  if (lang === 'en' && !showArticles) {
-    return (
-      <div className="min-h-screen bg-background">
-        <Header />
-        <main className="pt-24">
-          <section className="py-24">
-            <div className="container mx-auto px-4">
-              <div className="max-w-lg mx-auto text-center space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto">
-                  <Globe className="w-8 h-8 text-primary" />
-                </div>
-                <h1 className="text-3xl sm:text-4xl font-display font-bold text-foreground">{fallback.title}</h1>
-                <p className="text-muted-foreground">{fallback.subtitle}</p>
-
-                <Button
-                  variant="outline"
-                  className="rounded-full"
-                  onClick={() => setShowArticles(true)}
-                >
-                  {fallback.continueEs} →
-                </Button>
-
-                <div className="pt-6 border-t border-border">
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <Bell className="w-4 h-4 text-accent" />
-                    <p className="text-sm font-medium text-foreground">{fallback.subscribeTitle}</p>
-                  </div>
-                  {subscribed ? (
-                    <p className="text-sm text-primary font-medium">{fallback.subscribeSuccess}</p>
-                  ) : (
-                    <form onSubmit={handleNotify} className="flex gap-2 max-w-sm mx-auto">
-                      <Input
-                        type="email"
-                        placeholder={fallback.subscribePlaceholder}
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="flex-1"
-                      />
-                      <Button type="submit" disabled={subscribing} className="shrink-0">
-                        {subscribing ? fallback.subscribing : fallback.subscribeButton}
-                      </Button>
-                    </form>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    );
-  }
+  const allArticles = lang === 'en' ? allArticlesEn : allArticlesEs;
 
   return (
     <div className="min-h-screen bg-background">
