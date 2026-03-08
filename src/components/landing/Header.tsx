@@ -70,8 +70,10 @@ const Header = () => {
 
   const adultLabel = lang === 'es' ? 'Adultos' : 'Adults';
   const childLabel = lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent';
+  const todosLabel = lang === 'es' ? 'Para todos' : 'For Everyone';
   const morningLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
   const afternoonLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
+  const allAgesLabel = lang === 'es' ? 'Todas las edades' : 'All ages';
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-strong">
