@@ -2,34 +2,28 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Clock, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/context';
+import { blogArticles } from '@/data/blogArticles';
+import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
+import { useMemo } from 'react';
 
 const Blog = () => {
   const { lang, lp } = useLanguage();
   const isEn = lang === 'en';
 
-  const blogPosts = [
-    {
-      title: isEn ? 'How to help your child manage frustration' : 'Cómo ayudar a tu hijo a gestionar la frustración',
-      excerpt: isEn ? 'Practical strategies to support children when things don\'t go as expected.' : 'Estrategias prácticas para acompañar a los niños cuando las cosas no salen como esperaban.',
-      category: isEn ? 'Emotions' : 'Emociones',
-      readTime: '5 min',
-      trending: true,
-    },
-    {
-      title: isEn ? 'Giftedness: how to identify it?' : 'Altas capacidades: ¿cómo identificarlas?',
-      excerpt: isEn ? 'Signs that may indicate your child is gifted and how to act.' : 'Señales que pueden indicar que tu hijo tiene altas capacidades intelectuales y cómo actuar.',
-      category: isEn ? 'Giftedness' : 'Altas Capacidades',
-      readTime: '6 min',
-      trending: true,
-    },
-    {
-      title: isEn ? 'ADHD in children: beyond the "hyperactive kid"' : 'TDAH en niños: más allá del "niño movido"',
-      excerpt: isEn ? 'Debunking myths about ADHD and how to truly support children who have it.' : 'Desmontando mitos sobre el TDAH y cómo apoyar realmente a los niños que lo tienen.',
-      category: 'TDAH',
-      readTime: '7 min',
-      trending: false,
-    },
-  ];
+  // Filter articles related to transversal services (todos category)
+  const transversalServiceSlugs = ['terapia-familiar', 'regulacion-emocional-autoestima', 'evaluaciones-psicologicas'];
+  
+  const allArticles = useMemo(() => [...blogArticles, ...blogArticlesFromServices], []);
+  
+  const featuredArticles = useMemo(() => {
+    // Get articles linked to transversal services
+    const transversalArticles = allArticles.filter(
+      (a) => a.relatedServiceSlug && transversalServiceSlugs.includes(a.relatedServiceSlug)
+    );
+    
+    // Take first 3 for display
+    return transversalArticles.slice(0, 3);
+  }, [allArticles]);
 
   return (
     <section id="blog" className="py-24">
