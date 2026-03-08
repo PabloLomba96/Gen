@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Video, MapPin, UserCheck, Lightbulb, Sun, Moon, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
