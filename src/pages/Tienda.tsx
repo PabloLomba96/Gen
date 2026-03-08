@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import Newsletter from '@/components/landing/Newsletter';
+import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
 
 const productIcons = [FileText, Headphones, Sparkles];
