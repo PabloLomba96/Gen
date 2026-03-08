@@ -251,8 +251,8 @@ export const servicesEn: ServiceData[] = [
     slug: 'psychological-evaluations',
     title: 'Psychological Evaluations',
     shortTitle: 'Evaluations',
-    description: 'Professional diagnosis of giftedness, ADHD and ASD. Comprehensive reports for family and school guidance.',
-    longDescription: 'Psychological evaluations are the first step to understanding your child\'s needs. At Gen we carry out comprehensive evaluations for the diagnosis of intellectual giftedness, ADHD and ASD, with detailed reports that include family guidance and school recommendations.',
+    description: 'Whether you\'re seeking an evaluation for yourself or your child, we provide professional diagnoses with comprehensive reports and personalised guidance.',
+    longDescription: 'Psychological evaluations are the first step to understanding your needs or your child\'s needs. At Gen we carry out comprehensive evaluations for the diagnosis of intellectual giftedness, ADHD and ASD, for both adults and children, with detailed reports and personalised guidance.',
     details: [
       'Intellectual giftedness evaluation',
       'ADHD evaluation',
