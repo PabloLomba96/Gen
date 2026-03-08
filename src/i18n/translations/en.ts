@@ -258,6 +258,8 @@ export const en = {
     onlineLocation: 'Secure video call',
     bookCta: 'Book First Consultation',
     otherServicesTitle: 'Other services',
+    relatedArticlesTitle: 'Related articles',
+    relatedArticlesReadMore: 'Read article',
     ctaTitle: 'Want to talk?',
     ctaSubtitle: 'The first consultation is to get to know each other. No commitment, fully confidential.',
     ctaContact: 'Contact',
