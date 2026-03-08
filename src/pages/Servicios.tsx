@@ -258,8 +258,23 @@ const Servicios = () => {
                     ))}
                   </div>
 
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {expatsOnly.map((service) => (
+                      <ServiceCard key={service.slug} service={service} />
+                    ))}
+                  </div>
+
+                  {/* Separator + transversal services */}
+                  <div className="flex items-center gap-3 mt-12 mb-8">
+                    <div className="flex-1 h-px bg-border" />
+                    <Badge variant="secondary" className="text-xs px-3 py-1 flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" />
+                      {lang === 'es' ? 'Para todos' : 'For Everyone'}
+                    </Badge>
+                    <div className="flex-1 h-px bg-border" />
+                  </div>
                   <div className="grid md:grid-cols-2 gap-8 mb-10">
-                    {expats.map((service) => (
+                    {todos.map((service) => (
                       <ServiceCard key={service.slug} service={service} />
                     ))}
                   </div>
