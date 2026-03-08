@@ -119,7 +119,7 @@ export const services: ServiceData[] = [
       'Habilidades sociales y emocionales',
       'Desarrollo de la autonomía',
       'Autoestima y autoconcepto',
-      'Introversión y gestión de la energía social',
+      'Fortalecimiento de funciones ejecutivas',
     ],
     symptoms: [
       'Tu hijo/a es muy creativo/a pero se siente incomprendido/a',
