@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import ServiceCard from '@/components/servicios/ServiceCard';
-import ModalityCard from '@/components/servicios/ModalityCard';
+
 import JsonLd from '@/components/JsonLd';
 import SEO from '@/components/SEO';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
