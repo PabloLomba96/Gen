@@ -86,6 +86,23 @@ const BlogArticle = () => {
     image: 'https://genpsicologia.com/og-image.png',
   };
 
+  /* ── Inline renderer: bold + links ── */
+  const renderInline = (text: string) => {
+    const tokens = text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
+    return tokens.map((token, i) => {
+      if (token.startsWith('**') && token.endsWith('**'))
+        return <strong key={i} className="text-foreground">{token.slice(2, -2)}</strong>;
+      const linkMatch = token.match(/^\[(.+?)\]\((.+?)\)$/);
+      if (linkMatch) {
+        const [, linkText, href] = linkMatch;
+        if (href.startsWith('/'))
+          return <Link key={i} to={lp(href)} className="text-primary font-medium hover:underline">{linkText}</Link>;
+        return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">{linkText}</a>;
+      }
+      return <span key={i}>{token}</span>;
+    });
+  };
+
   /* ── Render a content block to semantic HTML ── */
   const renderContent = (block: string, idx: number) => {
     // H2
