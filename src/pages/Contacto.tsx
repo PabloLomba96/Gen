@@ -2,7 +2,10 @@ import Header from '@/components/landing/Header';
 import Contact from '@/components/landing/Contact';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
+import SEO from '@/components/SEO';
+import { useLanguage } from '@/i18n/context';
 
+const BASE = 'https://genpsicologia.com';
 const contactJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
