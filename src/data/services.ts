@@ -94,7 +94,7 @@ export const services: ServiceData[] = [
     ],
     symptoms: [
       'Aprende mucho más rápido que otros niños de su edad',
-      'Se aburre en clase o saca notas por debajo de su potencial',
+      'Se aburre en clase o se encuentra desmotivado/a',
       'Le cuesta mantener la atención o es muy impulsivo/a',
       'Tiene dificultades para entender normas sociales',
       'Muestra conductas repetitivas o intereses muy específicos',
