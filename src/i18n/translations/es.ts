@@ -91,7 +91,7 @@ export const es = {
   },
   faq: {
     label: 'Preguntas Frecuentes',
-    title: 'Lo que más nos preguntan los padres',
+    title: 'Resolvemos tus dudas antes de empezar',
     moreQuestions: '¿Más preguntas?',
     contactLink: 'Escríbeme directamente',
     items: [
