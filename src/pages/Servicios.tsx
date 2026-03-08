@@ -47,13 +47,18 @@ const Servicios = () => {
   const serviciosJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Servicios de Psicología — Gen Psicología',
-    url: 'https://genpsicologia.com/servicios',
+    name: lang === 'es' ? 'Servicios de Psicología — Gen Psicología' : 'Psychology Services — Gen Psychology',
+    url: canonical,
     numberOfItems: allServices.length,
     itemListElement: allServices.map((sv, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      item: { '@type': 'Service', name: sv.title, description: sv.description, url: `https://genpsicologia.com/servicios/${sv.slug}` },
+      item: {
+        '@type': 'Service',
+        name: sv.title,
+        description: sv.description,
+        url: `https://genpsicologia.com${lp(`/servicios/${sv.slug}`)}`,
+      },
     })),
   };
 
