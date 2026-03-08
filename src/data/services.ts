@@ -399,3 +399,4 @@ export const services: ServiceData[] = [
 export const adultServices = services.filter(s => s.category === 'adultos');
 export const childServices = services.filter(s => s.category === 'infantojuvenil');
 export const expatServices = services.filter(s => s.category === 'expats');
+export const todosServices = services.filter(s => s.category === 'todos');

@@ -245,6 +245,11 @@ const Header = () => {
                     <Link key={item.href} to={lp(item.href)} onClick={() => setIsMenuOpen(false)}
                       className="block text-sm text-muted-foreground py-2 px-4 hover:text-primary">{item.label}</Link>
                   ))}
+                  <p className="text-xs font-semibold text-foreground uppercase tracking-wider px-4 pt-2">{todosLabel}</p>
+                  {todosItems.map(item => (
+                    <Link key={item.href} to={lp(item.href)} onClick={() => setIsMenuOpen(false)}
+                      className="block text-sm text-muted-foreground py-2 px-4 hover:text-primary">{item.label}</Link>
+                  ))}
                 </div>
               )}
 

@@ -98,6 +98,39 @@ const Services = () => {
           </div>
         </div>
 
+        {/* For Everyone section */}
+        <div className="max-w-5xl mx-auto mt-12">
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-9 h-9 rounded-lg bg-overlap/20 flex items-center justify-center">
+              <Sun className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h3 className="text-lg font-display font-semibold text-foreground">{todosLabel}</h3>
+              <p className="text-xs text-muted-foreground">{allAgesLabel}</p>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {todos.map((service, index) => (
+              <Link
+                key={service.slug}
+                to={lp(`/servicios/${service.slug}`)}
+                className="glass rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group animate-fade-up block"
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
+                  {service.shortTitle}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <div className="text-center mt-12">
           <Button 
             asChild

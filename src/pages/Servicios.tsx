@@ -30,9 +30,10 @@ const Servicios = () => {
 
   const { t, lp, lang } = useLanguage();
   const s = t('serviciosPage') as any;
-  const adults = lang === 'en' ? adultServicesEn : adultServices;
-  const children = lang === 'en' ? childServicesEn : childServices;
-  const expats = lang === 'en' ? expatServicesEn : expatServices;
+  const todos = lang === 'en' ? todosServicesEn : todosServices;
+  const adults = [...(lang === 'en' ? adultServicesEn : adultServices), ...todos];
+  const children = [...(lang === 'en' ? childServicesEn : childServices), ...todos];
+  const expats = [...(lang === 'en' ? expatServicesEn : expatServices), ...todos];
   const allServices = lang === 'en' ? servicesEn : services;
   const modalityIcons = [MapPin, Video];
 
