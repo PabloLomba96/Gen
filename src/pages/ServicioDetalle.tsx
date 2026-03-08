@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpen } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpen, User, Baby } from 'lucide-react';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
