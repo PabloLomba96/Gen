@@ -110,7 +110,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Guía completa sobre TDAH y autismo en niños: señales de alerta, proceso de diagnóstico y opciones de tratamiento.',
     category: 'Neurodesarrollo',
     readTime: '8 min',
-    date: '7 Mar 2026',
+    date: '22 Feb 2026',
     metaTitle: 'TDAH y TEA en Niños: Diagnóstico y Terapia | Gen Psicología Valencia',
     metaDescription: 'Diagnóstico y terapia para TDAH y autismo (TEA) en niños. Señales, evaluación y tratamiento. Psicóloga infantil Valencia CV16625.',
     relatedServiceSlug: 'neurodivergencias',
