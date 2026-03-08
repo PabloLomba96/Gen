@@ -1,13 +1,15 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle } from 'lucide-react';
+import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpen } from 'lucide-react';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
 import { services } from '@/data/services';
 import { servicesEn } from '@/data/services-en';
+import { blogArticles } from '@/data/blogArticles';
+import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,6 +17,13 @@ const ServicioDetalle = () => {
   const s = t('servicioDetalle') as any;
   const serviceData = lang === 'en' ? servicesEn : services;
   const service = serviceData.find((sv) => sv.slug === slug);
+  const otherServices = serviceData.filter((sv) => sv.slug !== slug);
+
+  const allArticles = useMemo(() => [...blogArticles, ...blogArticlesFromServices], []);
+  const relatedArticles = useMemo(
+    () => allArticles.filter((a) => a.relatedServiceSlug === slug).slice(0, 3),
+    [slug, allArticles]
+  );
 
   useEffect(() => {
     if (service) {
@@ -25,8 +34,6 @@ const ServicioDetalle = () => {
   }, [service]);
 
   if (!service) return <Navigate to={lp('/servicios')} replace />;
-
-  const otherServices = serviceData.filter((sv) => sv.slug !== slug);
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
@@ -179,6 +186,38 @@ const ServicioDetalle = () => {
             </div>
           </div>
         </section>
+
+        {/* Related articles */}
+        {relatedArticles.length > 0 && (
+          <section className="py-24">
+            <div className="container mx-auto px-4">
+              <div className="flex items-center gap-3 mb-10 justify-center">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                </div>
+                <h2 className="text-2xl font-display font-bold text-foreground">{s.relatedArticlesTitle}</h2>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {relatedArticles.map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={lp(`/blog/${article.slug}`)}
+                    className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 transition-all"
+                    style={{ boxShadow: 'var(--shadow-soft)' }}
+                  >
+                    <span className="text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1">{article.category}</span>
+                    <h3 className="text-base font-display font-semibold text-foreground mt-3 mb-2 group-hover:text-primary transition-colors line-clamp-2">{article.title}</h3>
+                    <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{article.excerpt}</p>
+                    <span className="text-sm font-medium text-primary inline-flex items-center gap-1">
+                      {s.relatedArticlesReadMore}
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
