@@ -86,7 +86,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
       'Las altas capacidades intelectuales requieren una detección temprana y un acompañamiento especializado. Desde Gen Psicología colaboramos con el Centro Divergentes de Valencia, referente en altas capacidades y neurodiversidad.',
       '## ¿Qué ofrecemos?',
       '- Evaluación completa de altas capacidades',
-      '- Gestión de la disincronía (desarrollo desigual)',
+      '- Regulación emocional',
       '- Orientación a familias',
       '- Asesoramiento escolar',
       '- Desarrollo del talento',

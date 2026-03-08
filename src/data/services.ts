@@ -87,7 +87,7 @@ export const services: ServiceData[] = [
     details: [
       'Evaluación de altas capacidades (AACC)',
       'Diagnóstico de TDAH y TEA',
-      'Gestión de la disincronía',
+      'Regulación emocional',
       'Funciones ejecutivas',
       'Coordinación escolar',
       'Orientación a familias',
