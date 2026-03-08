@@ -121,7 +121,7 @@ export const es = {
       },
       {
         question: '¿Cómo funciona la primera consulta?',
-        answer: 'La primera consulta es para conocernos: me cuentas qué os preocupa, evalúo la situación y os explico cómo puedo ayudaros. Es sin compromiso y con total confidencialidad. Podéis venir los padres solos o con el niño/a.',
+        answer: 'La primera consulta es una toma de contacto para conocernos: me cuentas qué os preocupa, evalúo la situación y os explico cómo puedo ayudaros. Es sin compromiso y con total confidencialidad.',
       },
     ],
   },
