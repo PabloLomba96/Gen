@@ -8,7 +8,7 @@ import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { services } from '@/data/services';
 import { useLanguage } from '@/i18n/context';
-import { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 const allArticles = [...blogArticlesFromServices, ...blogArticles];
 
