@@ -270,7 +270,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'Cómo afectan las experiencias traumáticas al desarrollo emocional del niño y qué puede hacer la terapia para ayudarle.',
     category: 'Trauma y apego',
     readTime: '7 min',
-    date: '7 Mar 2026',
+    date: '4 Feb 2026',
     metaTitle: 'Trauma Infantil y Apego: Terapia Especializada | Gen Psicología Valencia',
     metaDescription: 'Terapia para trauma infantil, duelo y dificultades de apego en niños. Señales, intervención y espacio seguro. Psicóloga Valencia CV16625.',
     relatedServiceSlug: 'regulacion-emocional-autoestima',
