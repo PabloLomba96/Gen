@@ -67,7 +67,7 @@ export const servicesEn: ServiceData[] = [
     slug: 'neurodivergence',
     title: 'Neurodivergence: Giftedness, ASD & ADHD',
     shortTitle: 'Neurodivergence',
-    description: 'Assessment, diagnosis and support for children and adolescents with giftedness, ASD and ADHD.',
+    description: 'Assessment, diagnosis and therapeutic support for children and adolescents with giftedness, ASD or ADHD. We help them understand their unique way of functioning and develop adaptive strategies.',
     longDescription: 'At Gen we support neurodivergent children and adolescents and their families. We offer assessment and diagnosis of intellectual giftedness, autism spectrum disorder (ASD) and ADHD. We work on understanding neurodivergence, developing adaptive strategies and coordinating with schools.',
     details: [
       'Giftedness assessment',
@@ -96,7 +96,7 @@ export const servicesEn: ServiceData[] = [
     slug: 'development-creativity',
     title: 'Child Development & Creativity',
     shortTitle: 'Development & Creativity',
-    description: 'We stimulate holistic child development through therapeutic play, divergent thinking and creativity.',
+    description: 'We stimulate holistic child development through therapeutic play, divergent thinking and creativity, nurturing emotional, social and cognitive skills in a respectful way.',
     longDescription: 'Every child has a unique potential that deserves to be discovered. At Gen we stimulate child development through play, creativity and self-expression. We work on emotional, social and cognitive skills in a natural and respectful way, adapting to each child\'s developmental stage.',
     details: [
       'Therapeutic play',
@@ -124,7 +124,7 @@ export const servicesEn: ServiceData[] = [
     slug: 'learning-difficulties',
     title: 'Learning Difficulties',
     shortTitle: 'Learning Difficulties',
-    description: 'Therapy for children with dyslexia, dysgraphia, dyscalculia or other learning difficulties. Adapted to each child\'s pace.',
+    description: 'Specialised intervention for children with dyslexia, dysgraphia, dyscalculia or other learning difficulties. We work at each child\'s pace, building their self-esteem and coordinating with their school.',
     longDescription: 'Learning difficulties such as dyslexia, dysgraphia or dyscalculia can significantly affect a child\'s school performance and self-esteem. At Gen we intervene in a personalised way, adapting strategies to each child\'s pace and needs, and coordinating with schools.',
     details: [
       'Dyslexia and reading/writing difficulties',

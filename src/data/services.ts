@@ -89,7 +89,7 @@ export const services: ServiceData[] = [
     slug: 'neurodivergencias',
     title: 'Neurodivergencias: Altas Capacidades, TEA y TDAH',
     shortTitle: 'Neurodivergencias',
-    description: 'Evaluación, diagnóstico y acompañamiento para niños y adolescentes con altas capacidades intelectuales, TEA y TDAH.',
+    description: 'Evaluación, diagnóstico y acompañamiento terapéutico para niños y adolescentes con altas capacidades intelectuales, TEA o TDAH. Ayudamos a entender su forma única de funcionar y a desarrollar estrategias adaptativas.',
     longDescription: 'En Gen acompañamos a niños y adolescentes neurodivergentes y a sus familias. Ofrecemos evaluación y diagnóstico de altas capacidades intelectuales (AACC), trastorno del espectro autista (TEA) y TDAH. Trabajamos la comprensión de la neurodivergencia, el desarrollo de estrategias adaptativas y la coordinación con centros educativos.',
     details: [
       'Evaluación de altas capacidades (AACC)',
@@ -118,7 +118,7 @@ export const services: ServiceData[] = [
     slug: 'desarrollo-y-creatividad',
     title: 'Desarrollo Infantil y Creatividad',
     shortTitle: 'Desarrollo y Creatividad',
-    description: 'Estimulamos el desarrollo integral del niño a través del juego terapéutico, el pensamiento divergente y la creatividad.',
+    description: 'Estimulamos el desarrollo integral del niño a través del juego terapéutico, el pensamiento divergente y la creatividad, potenciando habilidades emocionales, sociales y cognitivas de forma respetuosa.',
     longDescription: 'Cada niño tiene un potencial único que merece ser descubierto. En Gen estimulamos el desarrollo infantil a través del juego, la creatividad y la autoexpresión. Trabajamos habilidades emocionales, sociales y cognitivas de forma natural y respetuosa, adaptándonos al momento evolutivo de cada niño.',
     details: [
       'Juego terapéutico',
@@ -146,7 +146,7 @@ export const services: ServiceData[] = [
     slug: 'dificultades-aprendizaje',
     title: 'Dificultades del Aprendizaje',
     shortTitle: 'Dificultades de Aprendizaje',
-    description: 'Terapia para niños con dislexia, disgrafía, discalculia u otras dificultades del aprendizaje. Adaptada al ritmo de cada niño.',
+    description: 'Intervención especializada para niños con dislexia, disgrafía, discalculia u otras dificultades del aprendizaje. Trabajamos al ritmo de cada niño, fortaleciendo su autoestima y coordinándonos con el centro escolar.',
     longDescription: 'Las dificultades del aprendizaje como la dislexia, la disgrafía o la discalculia pueden afectar significativamente al rendimiento escolar y la autoestima del niño. En Gen intervenimos de forma personalizada, adaptando las estrategias al ritmo y necesidades de cada niño, y coordinándonos con los centros educativos.',
     details: [
       'Dislexia y dificultades de lectoescritura',
