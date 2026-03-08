@@ -8,7 +8,7 @@ import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { services } from '@/data/services';
 import { useLanguage } from '@/i18n/context';
-import { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 const allArticles = [...blogArticlesFromServices, ...blogArticles];
 
@@ -86,12 +86,24 @@ const BlogArticle = () => {
     image: 'https://genpsicologia.com/og-image.png',
   };
 
-  /* ── Inline renderer: bold + links ── */
-  const renderInline = (text: string) => {
-    const tokens = text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
+  /* ── Inline renderer: bold + links (supports nesting) ── */
+  const renderInline = (text: string): React.ReactNode[] => {
+    const tokens = text.split(/(\*\*[\s\S]*?\*\*|\[.*?\]\(.*?\))/g);
     return tokens.map((token, i) => {
-      if (token.startsWith('**') && token.endsWith('**'))
-        return <strong key={i} className="text-foreground">{token.slice(2, -2)}</strong>;
+      if (token.startsWith('**') && token.endsWith('**')) {
+        const inner = token.slice(2, -2);
+        const innerLinkMatch = inner.match(/^\[(.+?)\]\((.+?)\)$/);
+        if (innerLinkMatch) {
+          const [, linkText, href] = innerLinkMatch;
+          if (href.startsWith('/'))
+            return <Link key={i} to={lp(href)} className="text-primary font-semibold hover:underline">{linkText}</Link>;
+          return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:underline">{linkText}</a>;
+        }
+        if (inner.includes('](')) {
+          return <strong key={i} className="text-foreground">{renderInline(inner)}</strong>;
+        }
+        return <strong key={i} className="text-foreground">{inner}</strong>;
+      }
       const linkMatch = token.match(/^\[(.+?)\]\((.+?)\)$/);
       if (linkMatch) {
         const [, linkText, href] = linkMatch;
