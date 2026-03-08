@@ -12,8 +12,16 @@ const Tienda = () => {
   const { t, lp } = useLanguage();
   const s = t('tienda') as any;
 
+  const canonical = `https://genpsicologia.com${lp('/tienda')}`;
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={lang === 'en' ? 'Shop — Emotional Wellness Resources' : 'Tienda — Recursos de Bienestar Emocional'}
+        description={lang === 'en' ? 'Downloadable guides, audio stories and printable kits for emotional regulation in children.' : 'Guías descargables, cuentos en audio y kits imprimibles para la regulación emocional infantil.'}
+        lang={lang}
+        canonical={canonical}
+      />
       <Header />
       <main className="pt-24">
         {/* Hero */}
