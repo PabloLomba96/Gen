@@ -247,6 +247,7 @@ export const es = {
   },
   servicioDetalle: {
     symptomsTitle: 'Deberías consultar si notas que tu hijo/a...',
+    symptomsTitleAdults: 'Deberías consultar si notas que...',
     symptomsFooter: '¿Reconoces alguna de estas señales?',
     symptomsLink: 'Hablemos sin compromiso',
     detailsTitle: '¿En qué te puedo ayudar?',
