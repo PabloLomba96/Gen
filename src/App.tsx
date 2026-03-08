@@ -77,6 +77,7 @@ const LocalizedRoutes = () => (
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <HelmetProvider>
     <TooltipProvider>
       <Toaster />
       <Sonner />
