@@ -67,7 +67,7 @@ export const servicesEn: ServiceData[] = [
     slug: 'neurodivergence',
     title: 'Neurodivergence: Giftedness, ASD & ADHD',
     shortTitle: 'Neurodivergence',
-    description: 'Assessment, diagnosis and support for children and adolescents with giftedness, ASD and ADHD.',
+    description: 'Assessment, diagnosis and therapeutic support for children and adolescents with giftedness, ASD or ADHD. We help them understand their unique way of functioning and develop adaptive strategies.',
     longDescription: 'At Gen we support neurodivergent children and adolescents and their families. We offer assessment and diagnosis of intellectual giftedness, autism spectrum disorder (ASD) and ADHD. We work on understanding neurodivergence, developing adaptive strategies and coordinating with schools.',
     details: [
       'Giftedness assessment',
