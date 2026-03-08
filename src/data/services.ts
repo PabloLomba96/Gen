@@ -1,4 +1,4 @@
-import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck } from 'lucide-react';
+import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck, Globe } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
 export interface ServiceData {

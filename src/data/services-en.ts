@@ -1,4 +1,4 @@
-import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck } from 'lucide-react';
+import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck, Globe } from 'lucide-react';
 import { ServiceData } from './services';
 
 export const servicesEn: ServiceData[] = [
