@@ -48,11 +48,10 @@ const Hola = () => {
     }
   };
 
-  // Secondary links: Tienda, Blog, Amazon
+  // Secondary links: Tienda, Blog
   const secondaryLinks = [
     { icon: ShoppingBag, label: s.linkShop, sublabel: s.linkShopSub, href: lp('/tienda') },
     { icon: BookOpen, label: s.linkBlog, sublabel: s.linkBlogSub, href: lp('/blog') },
-    { icon: Heart, label: s.linkAmazon, sublabel: s.linkAmazonSub, href: '#amazon', disabled: true },
   ];
 
   return (
