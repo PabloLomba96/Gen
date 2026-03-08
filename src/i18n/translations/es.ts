@@ -135,7 +135,7 @@ export const es = {
   },
   newsletter: {
     title: 'Píldoras de Bienestar',
-    subtitle: 'Herramientas prácticas sobre ansiedad infantil, regulación emocional y crianza respetuosa. Directo a tu email, sin spam.',
+    subtitle: 'Estrategias prácticas para tu bienestar emocional, gestión del estrés y crianza respetuosa. Directo a tu email, sin spam.',
     placeholder: 'tu@email.com',
     submit: 'Suscribirme gratis',
     submitting: 'Suscribiendo...',
