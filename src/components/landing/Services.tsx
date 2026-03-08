@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sun, Moon } from 'lucide-react';
+import { ArrowRight, Brain, Sparkles, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { adultServices, childServices, todosServices } from '@/data/services';
 import { adultServicesEn, childServicesEn, todosServicesEn } from '@/data/services-en';
