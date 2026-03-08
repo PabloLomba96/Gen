@@ -87,7 +87,7 @@ const Hero = () => {
               </Link>
 
               <Link
-                to={lp('/servicios')}
+                to={`${lp('/servicios')}#infantojuvenil`}
                 className="group glass rounded-2xl p-5 hover:shadow-lg transition-all duration-300 block border border-accent/20 hover:border-accent/40"
               >
                 <div className="flex items-center gap-3 mb-2">

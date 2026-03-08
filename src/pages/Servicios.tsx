@@ -136,7 +136,7 @@ const Servicios = () => {
         {/* Tabs section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <Tabs defaultValue="adultos" className="w-full">
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
               <div className="flex justify-center mb-10">
                 <TabsList className="h-12 p-1 bg-secondary/60">
                   <TabsTrigger value="adultos" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
