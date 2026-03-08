@@ -66,7 +66,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: 'Aprende a identificar los signos de ansiedad en niños y adolescentes. Guía completa con estrategias prácticas para ayudar a tu hijo.',
     category: 'Ansiedad infantil',
     readTime: '9 min',
-    date: '5 Mar 2026',
+    date: '28 Ene 2026',
     metaTitle: 'Ansiedad Infantil: Síntomas y Señales en Niños | Gen Psicología Valencia',
     metaDescription: 'Guía completa sobre ansiedad infantil: señales, síntomas físicos y emocionales, y qué hacer si tu hijo tiene ansiedad. Psicóloga infantil en Valencia.',
     content: [
