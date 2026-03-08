@@ -49,13 +49,16 @@ const Hero = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <span className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary text-sm text-muted-foreground">
-                <MapPin className="w-3.5 h-3.5 text-primary" />{t('hero.tagValencia')}
-              </span>
-              <span className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary text-sm text-muted-foreground">
-                <Video className="w-3.5 h-3.5 text-accent" />{t('hero.tagOnline')}
-              </span>
+            <div className="flex flex-wrap gap-2.5">
+              <Badge variant="secondary" className="text-sm font-medium px-4 py-2 rounded-full gap-1.5">
+                📍 {lang === 'es' ? 'Presencial en Valencia' : 'In-person in Valencia'}
+              </Badge>
+              <Badge variant="secondary" className="text-sm font-medium px-4 py-2 rounded-full gap-1.5">
+                💻 {lang === 'es' ? 'Terapia Online' : 'Online Therapy'}
+              </Badge>
+              <Badge variant="secondary" className="text-sm font-medium px-4 py-2 rounded-full gap-1.5">
+                🌍 English Speaking
+              </Badge>
             </div>
 
             {/* Dual CTA cards */}
