@@ -1,6 +1,11 @@
 import { User, Heart, Brain, Sparkles, BookOpen, HeartHandshake, Users, ClipboardCheck, Globe } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 
+export interface DualApproach {
+  title: string;
+  items: string[];
+}
+
 export interface ServiceData {
   icon: LucideIcon;
   slug: string;
@@ -14,6 +19,8 @@ export interface ServiceData {
   metaTitle: string;
   metaDescription: string;
   category: 'adultos' | 'infantojuvenil' | 'expats';
+  adultApproach?: DualApproach;
+  childApproach?: DualApproach;
 }
 
 export const services: ServiceData[] = [
@@ -169,7 +176,7 @@ export const services: ServiceData[] = [
     title: 'Terapia Familiar',
     shortTitle: 'Terapia Familiar',
     description: 'Terapia para familias con problemas de comunicación, conflictos, separación o dificultades de crianza.',
-    longDescription: 'La familia es el pilar del bienestar emocional del niño. En Gen acompañamos a las familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas de crianza basadas en la disciplina positiva y la evidencia científica.',
+    longDescription: 'Tanto si buscas apoyo para ti como para tu familia, en Gen acompañamos a personas y familias para mejorar la comunicación, resolver conflictos, gestionar separaciones y fortalecer los vínculos afectivos. Trabajamos con pautas basadas en la disciplina positiva y la evidencia científica.',
     details: [
       'Dificultades de comunicación',
       'Conflictos familiares',
@@ -191,14 +198,34 @@ export const services: ServiceData[] = [
     metaTitle: 'Terapia Familiar Valencia — Conflictos y Crianza | Gen Psicología',
     metaDescription: 'Terapia familiar en Valencia: conflictos, separación, pautas de crianza positiva y orientación parental. Psicóloga especializada. CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'Si buscas ayuda para ti',
+      items: [
+        'Conflictos de pareja que afectan al entorno familiar',
+        'Desborde emocional y estrés parental',
+        'Dificultades de comunicación con tu pareja o familiares',
+        'Gestión de una separación o divorcio',
+        'Necesitas herramientas de crianza basadas en evidencia',
+      ],
+    },
+    childApproach: {
+      title: 'Si buscas ayuda para tu hijo/a',
+      items: [
+        'Problemas de conducta o desafío constante',
+        'Tu hijo/a rechaza a uno de los progenitores',
+        'Celos por la llegada de un hermano/a',
+        'Dificultades de adaptación tras una separación',
+        'Conflictos frecuentes entre hermanos',
+      ],
+    },
   },
   {
     icon: Heart,
     slug: 'regulacion-emocional-autoestima',
     title: 'Regulación Emocional y Autoestima',
     shortTitle: 'Emociones y Autoestima',
-    description: 'Ayudamos a niños y adolescentes a entender y gestionar sus emociones, fortalecer su autoestima y desarrollar habilidades sociales.',
-    longDescription: 'La regulación emocional y la autoestima son pilares del bienestar en la infancia y la adolescencia. En Gen trabajamos con niños y adolescentes para que aprendan a identificar, comprender y gestionar sus emociones de forma saludable, utilizando técnicas de juego terapéutico, mindfulness y habilidades sociales.',
+    description: 'Tanto si buscas apoyo para ti como para tu hijo/a, trabajamos la regulación emocional y la autoestima desde un enfoque personalizado y basado en evidencia.',
+    longDescription: 'La regulación emocional y la autoestima son pilares del bienestar a cualquier edad. En Gen trabajamos tanto con adultos como con niños y adolescentes para aprender a identificar, comprender y gestionar las emociones de forma saludable, utilizando técnicas adaptadas a cada etapa vital.',
     details: [
       'Identificación y gestión de emociones',
       'Gestión de la ira, frustración y rabietas',
@@ -220,14 +247,34 @@ export const services: ServiceData[] = [
     metaTitle: 'Regulación Emocional y Autoestima en Niños Valencia | Gen Psicología',
     metaDescription: 'Terapia para regulación emocional, autoestima y habilidades sociales en niños y adolescentes en Valencia. Psicóloga infantil CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'Si buscas ayuda para ti',
+      items: [
+        'Estrés crónico y desborde emocional',
+        'Baja autoestima o autoconcepto negativo',
+        'Dificultad para poner límites en relaciones',
+        'Patrones emocionales repetitivos que quieres cambiar',
+        'Autoconocimiento y crecimiento personal',
+      ],
+    },
+    childApproach: {
+      title: 'Si buscas ayuda para tu hijo/a',
+      items: [
+        'Rabietas intensas o que duran demasiado',
+        'Baja autoestima o inseguridad',
+        'Dificultades para relacionarse con otros niños',
+        'Ansiedad, miedos o reacciones agresivas',
+        'Se desborda emocionalmente y no sabe calmarse',
+      ],
+    },
   },
   {
     icon: ClipboardCheck,
     slug: 'evaluaciones-psicologicas',
     title: 'Evaluaciones Psicológicas',
     shortTitle: 'Evaluaciones',
-    description: 'Diagnóstico profesional de altas capacidades, TDAH y TEA. Informes completos para orientación familiar y escolar.',
-    longDescription: 'Las evaluaciones psicológicas son el primer paso para comprender las necesidades de tu hijo/a. En Gen realizamos evaluaciones completas para el diagnóstico de altas capacidades intelectuales (AACC), TDAH y TEA, con informes detallados que incluyen orientación para la familia y recomendaciones para el centro educativo.',
+    description: 'Tanto si buscas una evaluación para ti como para tu hijo/a, realizamos diagnósticos profesionales con informes completos y orientación personalizada.',
+    longDescription: 'Las evaluaciones psicológicas son el primer paso para comprender tus necesidades o las de tu hijo/a. En Gen realizamos evaluaciones completas para el diagnóstico de altas capacidades intelectuales (AACC), TDAH y TEA, tanto en adultos como en la infancia, con informes detallados y orientación personalizada.',
     details: [
       'Evaluación de altas capacidades intelectuales',
       'Evaluación de TDAH',
@@ -248,6 +295,26 @@ export const services: ServiceData[] = [
     metaTitle: 'Evaluaciones Psicológicas Valencia — AACC, TDAH, TEA | Gen Psicología',
     metaDescription: 'Evaluaciones psicológicas para altas capacidades, TDAH y TEA en Valencia. Informes completos y orientación. Psicóloga colegiada CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'Si buscas una evaluación para ti',
+      items: [
+        'Sospechas que puedes tener TDAH no diagnosticado',
+        'Quieres explorar si tienes altas capacidades',
+        'Necesitas un informe psicológico profesional',
+        'Dudas diagnósticas que afectan a tu bienestar',
+        'Buscas autoconocimiento respaldado por evaluación clínica',
+      ],
+    },
+    childApproach: {
+      title: 'Si buscas una evaluación para tu hijo/a',
+      items: [
+        'Sospechas de altas capacidades, TDAH o TEA',
+        'Los profesores te han sugerido una evaluación',
+        'Necesitas un informe psicológico para el colegio',
+        'Has notado un desfase entre su capacidad y su rendimiento',
+        'Buscas orientación sobre cómo apoyarle en casa y en el aula',
+      ],
+    },
   },
 
   // ─── EXPATS ───

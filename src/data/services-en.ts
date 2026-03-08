@@ -154,7 +154,7 @@ export const servicesEn: ServiceData[] = [
     title: 'Family Therapy',
     shortTitle: 'Family Therapy',
     description: 'Therapy for families with communication problems, conflicts, separation or parenting difficulties.',
-    longDescription: 'The family is the pillar of a child\'s emotional well-being. At Gen we support families to improve communication, resolve conflicts, manage separations and strengthen emotional bonds. We work with parenting guidelines based on positive discipline and scientific evidence.',
+    longDescription: 'Whether you\'re seeking support for yourself or your family, at Gen we help improve communication, resolve conflicts, manage separations and strengthen emotional bonds. We work with guidelines based on positive discipline and scientific evidence.',
     details: [
       'Communication difficulties',
       'Family conflicts',
@@ -176,14 +176,34 @@ export const servicesEn: ServiceData[] = [
     metaTitle: 'Family Therapy Valencia — Conflicts & Parenting | Gen Psychology',
     metaDescription: 'Family therapy in Valencia: conflicts, separation, positive parenting and guidance. Specialised psychologist CV16625. In-person and online.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'If you\'re seeking help for yourself',
+      items: [
+        'Relationship conflicts affecting the family environment',
+        'Emotional overwhelm and parental stress',
+        'Communication difficulties with your partner or family',
+        'Managing a separation or divorce',
+        'Need evidence-based parenting tools',
+      ],
+    },
+    childApproach: {
+      title: 'If you\'re seeking help for your child',
+      items: [
+        'Behavioural problems or constant defiance',
+        'Your child rejects one parent',
+        'Jealousy after the arrival of a sibling',
+        'Adjustment difficulties after a separation',
+        'Frequent conflicts between siblings',
+      ],
+    },
   },
   {
     icon: Heart,
     slug: 'emotional-regulation-self-esteem',
     title: 'Emotional Regulation & Self-Esteem',
     shortTitle: 'Emotions & Self-Esteem',
-    description: 'We help children and adolescents understand and manage emotions, build self-esteem and develop social skills.',
-    longDescription: 'Emotional regulation and self-esteem are pillars of well-being in childhood and adolescence. At Gen we work with children and adolescents to help them identify, understand and manage their emotions in a healthy way, using therapeutic play, mindfulness and social skills techniques.',
+    description: 'Whether you\'re seeking support for yourself or your child, we work on emotional regulation and self-esteem with a personalised, evidence-based approach.',
+    longDescription: 'Emotional regulation and self-esteem are pillars of well-being at any age. At Gen we work with both adults and children to help them identify, understand and manage emotions in a healthy way, using techniques adapted to each life stage.',
     details: [
       'Emotion identification and management',
       'Anger, frustration and tantrum management',
@@ -205,14 +225,34 @@ export const servicesEn: ServiceData[] = [
     metaTitle: 'Emotional Regulation & Self-Esteem for Children Valencia | Gen Psychology',
     metaDescription: 'Therapy for emotional regulation, self-esteem and social skills in children and adolescents in Valencia. Child psychologist CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'If you\'re seeking help for yourself',
+      items: [
+        'Chronic stress and emotional overwhelm',
+        'Low self-esteem or negative self-image',
+        'Difficulty setting boundaries in relationships',
+        'Repetitive emotional patterns you want to change',
+        'Self-discovery and personal growth',
+      ],
+    },
+    childApproach: {
+      title: 'If you\'re seeking help for your child',
+      items: [
+        'Intense or prolonged tantrums',
+        'Low self-esteem or insecurity',
+        'Difficulty relating to other children',
+        'Anxiety, fears or aggressive reactions',
+        'Gets emotionally overwhelmed and can\'t self-regulate',
+      ],
+    },
   },
   {
     icon: ClipboardCheck,
     slug: 'psychological-evaluations',
     title: 'Psychological Evaluations',
     shortTitle: 'Evaluations',
-    description: 'Professional diagnosis of giftedness, ADHD and ASD. Comprehensive reports for family and school guidance.',
-    longDescription: 'Psychological evaluations are the first step to understanding your child\'s needs. At Gen we carry out comprehensive evaluations for the diagnosis of intellectual giftedness, ADHD and ASD, with detailed reports that include family guidance and school recommendations.',
+    description: 'Whether you\'re seeking an evaluation for yourself or your child, we provide professional diagnoses with comprehensive reports and personalised guidance.',
+    longDescription: 'Psychological evaluations are the first step to understanding your needs or your child\'s needs. At Gen we carry out comprehensive evaluations for the diagnosis of intellectual giftedness, ADHD and ASD, for both adults and children, with detailed reports and personalised guidance.',
     details: [
       'Intellectual giftedness evaluation',
       'ADHD evaluation',
@@ -233,6 +273,26 @@ export const servicesEn: ServiceData[] = [
     metaTitle: 'Psychological Evaluations Valencia — Giftedness, ADHD, ASD | Gen Psychology',
     metaDescription: 'Psychological evaluations for giftedness, ADHD and ASD in Valencia. Comprehensive reports and guidance. Licensed psychologist CV16625.',
     category: 'infantojuvenil',
+    adultApproach: {
+      title: 'If you\'re seeking an evaluation for yourself',
+      items: [
+        'You suspect you may have undiagnosed ADHD',
+        'You want to explore whether you\'re gifted',
+        'You need a professional psychological report',
+        'Diagnostic doubts affecting your well-being',
+        'Seeking self-knowledge backed by clinical evaluation',
+      ],
+    },
+    childApproach: {
+      title: 'If you\'re seeking an evaluation for your child',
+      items: [
+        'You suspect giftedness, ADHD or ASD',
+        'Teachers have suggested an evaluation',
+        'You need a psychological report for school',
+        'You\'ve noticed a gap between ability and performance',
+        'Seeking guidance on supporting them at home and school',
+      ],
+    },
   },
 
   // ─── EXPATS ───
