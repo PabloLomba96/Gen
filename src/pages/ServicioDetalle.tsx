@@ -17,6 +17,13 @@ const ServicioDetalle = () => {
   const s = t('servicioDetalle') as any;
   const serviceData = lang === 'en' ? servicesEn : services;
   const service = serviceData.find((sv) => sv.slug === slug);
+  const otherServices = serviceData.filter((sv) => sv.slug !== slug);
+
+  const allArticles = useMemo(() => [...blogArticles, ...blogArticlesFromServices], []);
+  const relatedArticles = useMemo(
+    () => allArticles.filter((a) => a.relatedServiceSlug === slug).slice(0, 3),
+    [slug, allArticles]
+  );
 
   useEffect(() => {
     if (service) {
@@ -27,14 +34,6 @@ const ServicioDetalle = () => {
   }, [service]);
 
   if (!service) return <Navigate to={lp('/servicios')} replace />;
-
-  const otherServices = serviceData.filter((sv) => sv.slug !== slug);
-
-  const allArticles = useMemo(() => [...blogArticles, ...blogArticlesFromServices], []);
-  const relatedArticles = useMemo(
-    () => allArticles.filter((a) => a.relatedServiceSlug === slug).slice(0, 3),
-    [slug, allArticles]
-  );
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
