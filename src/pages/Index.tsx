@@ -7,6 +7,8 @@ import FAQ from '@/components/landing/FAQ';
 import Newsletter from '@/components/landing/Newsletter';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
+import SEO from '@/components/SEO';
+import { useLanguage } from '@/i18n/context';
 
 const faqJsonLd = {
   '@context': 'https://schema.org',
