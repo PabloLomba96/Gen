@@ -229,10 +229,10 @@ const Servicios = () => {
                   </div>
 
                   <div className="mb-8 p-4 rounded-xl bg-secondary/40 border border-border text-sm text-muted-foreground">
-                    <span className="font-semibold text-foreground">💶 {lang === 'es' ? 'Pagos' : 'Payments'}:</span>{' '}
+                    <span className="font-semibold text-foreground">💶 {lang === 'es' ? 'Divisas' : 'Currency'}:</span>{' '}
                     {lang === 'es'
-                      ? 'Las tarifas están en EUR. Con indicación previa, también aceptamos pagos en USD, GBP y CNY.'
-                      : 'Fees are in EUR. With prior notice, we also accept payments in USD, GBP and CNY.'}
+                      ? 'Con indicación previa, aceptamos también pagos en USD, GBP y CNY. El importe se calculará según el tipo de cambio vigente y se comunicará antes de la prestación del servicio.'
+                      : 'With prior notice, we also accept payments in USD, GBP and CNY. The amount will be calculated based on the current exchange rate and communicated before the session.'}
                   </div>
 
                   <Button asChild size="lg" className="rounded-full">
