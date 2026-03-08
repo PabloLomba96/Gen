@@ -128,19 +128,10 @@ const BlogArticle = () => {
           <span className="text-muted-foreground leading-relaxed">{block.replace('- ', '')}</span>
         </li>
       );
-    // Paragraph with inline bold
-    const parts = block.split(/(\*\*.*?\*\*)/g);
+    // Paragraph with inline bold and links
     return (
       <p className="text-muted-foreground leading-relaxed">
-        {parts.map((part, i) => {
-          if (part.startsWith('**') && part.endsWith('**'))
-            return (
-              <strong key={i} className="text-foreground">
-                {part.slice(2, -2)}
-              </strong>
-            );
-          return <span key={i}>{part}</span>;
-        })}
+        {renderInline(block)}
       </p>
     );
   };
