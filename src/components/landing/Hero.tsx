@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-accent/10 border border-accent/15">
               <span className="w-2 h-2 rounded-full bg-accent" />
               <span className="text-sm font-medium text-muted-foreground">
-                {lang === 'es' ? 'Psicología integrativa en Valencia' : 'Integrative psychology in Valencia'}
+                {lang === 'es' ? 'Psicología en Valencia' : 'Psychology in Valencia'}
               </span>
             </div>
 
@@ -29,13 +29,13 @@ const Hero = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-[3.3rem] font-display font-bold text-foreground leading-[1.13]">
                 {lang === 'es' ? (
                   <>
-                    Psicología integrativa en Valencia.{' '}
+                    Psicología en Valencia.{' '}
                     <br className="hidden sm:block" />
                     <span className="text-gradient">Espacios seguros</span> para adultos, adolescentes y niños.
                   </>
                 ) : (
                   <>
-                    Integrative psychology in Valencia.{' '}
+                    Psychology in Valencia.{' '}
                     <br className="hidden sm:block" />
                     <span className="text-gradient">Safe spaces</span> for adults, adolescents and children.
                   </>
