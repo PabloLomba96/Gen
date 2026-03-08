@@ -110,7 +110,19 @@ Deno.serve(async (req) => {
 
     const resendKey = Deno.env.get("RESEND_API_KEY");
     if (resendKey) {
+      const isEnglish = lang === 'en';
+      const langNote = isEnglish
+        ? `<div style="background:#FEF3C7;border-left:4px solid #F59E0B;padding:12px 16px;margin-bottom:16px;border-radius:4px;">
+            <strong>🌐 Contacto en inglés</strong> — Este mensaje se ha enviado desde la versión en inglés de la web${fromExpats ? ' (sección Expats & English)' : ''}.
+           </div>`
+        : (fromExpats
+          ? `<div style="background:#FEF3C7;border-left:4px solid #F59E0B;padding:12px 16px;margin-bottom:16px;border-radius:4px;">
+              <strong>🌐 Sección Expats</strong> — Este mensaje se ha enviado desde la sección Expats & English.
+             </div>`
+          : '');
+
       const htmlBody = `
+        ${langNote}
         <h2>Nueva consulta desde tu web</h2>
         <p><strong>Nombre:</strong> ${escapeHtml(nombre)}</p>
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>

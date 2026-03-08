@@ -64,7 +64,7 @@ const Contact = () => {
       const validated = contactSchema.parse(formData);
       
       const { data, error } = await supabase.functions.invoke('send-contact', {
-        body: validated,
+        body: { ...validated, lang, fromExpats },
       });
 
       if (error) throw error;
