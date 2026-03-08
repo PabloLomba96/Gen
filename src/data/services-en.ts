@@ -96,7 +96,7 @@ export const servicesEn: ServiceData[] = [
     slug: 'development-creativity',
     title: 'Child Development & Creativity',
     shortTitle: 'Development & Creativity',
-    description: 'We stimulate holistic child development through therapeutic play, divergent thinking and creativity.',
+    description: 'We stimulate holistic child development through therapeutic play, divergent thinking and creativity, nurturing emotional, social and cognitive skills in a respectful way.',
     longDescription: 'Every child has a unique potential that deserves to be discovered. At Gen we stimulate child development through play, creativity and self-expression. We work on emotional, social and cognitive skills in a natural and respectful way, adapting to each child\'s developmental stage.',
     details: [
       'Therapeutic play',
