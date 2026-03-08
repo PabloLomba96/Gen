@@ -79,7 +79,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     readTime: '8 min',
     date: '7 Mar 2026',
     metaTitle: 'Altas Capacidades en Niños: Evaluación y Apoyo | Gen Psicología Valencia',
-    metaDescription: 'Evaluación de altas capacidades intelectuales (AACC) en niños. Señales, proceso de diagnóstico y orientación familiar. Colaboradora Divergentes. CV16625.',
+    metaDescription: 'Evaluación de altas capacidades intelectuales (AACC) en niños. Señales, proceso de diagnóstico y orientación familiar. Psicóloga infantil CV16625.',
     relatedServiceSlug: 'evaluaciones-psicologicas',
     content: [
       '## ¿Tu hijo/a podría tener altas capacidades?',
