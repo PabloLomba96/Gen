@@ -166,7 +166,7 @@ const Servicios = () => {
                 <div className="max-w-4xl mx-auto">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Brain className="w-6 h-6 text-primary" />
+                      <Sun className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-display font-bold text-foreground">
