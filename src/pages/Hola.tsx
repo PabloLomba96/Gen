@@ -12,7 +12,7 @@ const linkAccent = [true, false, false, false, false];
 const linkDisabled = [true, false, false, false, true];
 
 const socialLinks = [
-  { handle: '@genpsicologia', href: 'https://instagram.com/genpsicologia' },
+  { handle: '@genpsicologia', href: 'https://instagram.com/genpsicologia', followers: '9.8K' },
   { handle: '@patri_psicologia', href: 'https://instagram.com/patri_psicologia', followers: '9.5K' },
 ];
 
