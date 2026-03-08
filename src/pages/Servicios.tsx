@@ -14,6 +14,7 @@ import { Badge } from '@/components/ui/badge';
 import { services, adultServices, childServices } from '@/data/services';
 import { servicesEn, adultServicesEn, childServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
+import { useLocation } from 'react-router-dom';
 
 const Servicios = () => {
   const { t, lp, lang } = useLanguage();
