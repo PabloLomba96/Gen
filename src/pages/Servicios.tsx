@@ -205,7 +205,7 @@ const Servicios = () => {
                 <div className="max-w-6xl mx-auto">
                   <div className="flex items-center gap-3 mb-8">
                     <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center">
-                      <Moon className="w-6 h-6 text-accent" />
+                      <Sparkles className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <h2 className="text-2xl font-display font-bold text-foreground">
@@ -217,7 +217,22 @@ const Servicios = () => {
                     </div>
                   </div>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {children.map((service) => (
+                    {childrenOnly.map((service) => (
+                      <ServiceCard key={service.slug} service={service} />
+                    ))}
+                  </div>
+
+                  {/* Separator + transversal services */}
+                  <div className="flex items-center gap-3 mt-12 mb-8">
+                    <div className="flex-1 h-px bg-border" />
+                    <Badge variant="secondary" className="text-xs px-3 py-1 flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" />
+                      {lang === 'es' ? 'Para todos' : 'For Everyone'}
+                    </Badge>
+                    <div className="flex-1 h-px bg-border" />
+                  </div>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {todos.map((service) => (
                       <ServiceCard key={service.slug} service={service} />
                     ))}
                   </div>
