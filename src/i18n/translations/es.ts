@@ -109,7 +109,7 @@ export const es = {
       },
       {
         question: '¿Cuánto dura una sesión y cuántas se necesitan?',
-        answer: 'Las sesiones duran 45-50 minutos. El número de sesiones depende de cada caso — tras la evaluación inicial os daré una orientación del tiempo estimado. Siempre respetamos el ritmo de cada niño.',
+        answer: 'Las sesiones duran 45-60 minutos. El número de sesiones depende de cada caso — tras la evaluación inicial os daré una orientación del tiempo estimado. Siempre respetamos el ritmo de cada niño.',
       },
       {
         question: '¿Se puede hacer terapia infantil online?',
