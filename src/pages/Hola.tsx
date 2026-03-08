@@ -109,8 +109,8 @@ const Hola = () => {
         <div className="w-full max-w-sm relative z-10 mb-3 animate-fade-up" style={{ animationDelay: '0.08s' }}>
           <Link
             to={lp('/contacto')}
-            className="group flex items-center gap-4 w-full p-5 rounded-2xl bg-primary text-primary-foreground transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] relative overflow-hidden min-h-[60px]"
-            style={{ boxShadow: 'var(--shadow-glow-primary)' }}
+            className="group flex items-center gap-4 w-full p-6 rounded-2xl bg-primary text-primary-foreground transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] relative overflow-hidden min-h-[68px] animate-pulse-subtle"
+            style={{ boxShadow: '0 0 25px hsl(var(--primary) / 0.45), var(--shadow-glow-primary)' }}
           >
             {/* Subtle shine animation */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-foreground/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
