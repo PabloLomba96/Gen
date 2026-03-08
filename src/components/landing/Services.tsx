@@ -9,11 +9,14 @@ const Services = () => {
   const { t, lp, lang } = useLanguage();
   const adults = lang === 'es' ? adultServices : adultServicesEn;
   const children = lang === 'es' ? childServices : childServicesEn;
+  const todos = lang === 'es' ? todosServices : todosServicesEn;
 
   const adultLabel = lang === 'es' ? 'Adultos' : 'Adults';
   const childLabel = lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent';
+  const todosLabel = lang === 'es' ? 'Para todos' : 'For Everyone';
   const morningLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
   const afternoonLabel = lang === 'es' ? 'Presencial y online' : 'In-person & online';
+  const allAgesLabel = lang === 'es' ? 'Todas las edades' : 'All ages';
 
   return (
     <section className="py-24 relative overflow-hidden">
