@@ -117,7 +117,7 @@ export const es = {
       },
       {
         question: '¿Los padres participan en las sesiones?',
-        answer: 'Depende del caso y la edad. Generalmente las sesiones son individuales con el niño/a, pero mantengo comunicación regular con los padres para compartir avances, dar pautas y asegurar que el trabajo terapéutico se refuerce en casa.',
+        answer: 'Si. Los padres participan activamente en las sesiones cuando es necesario, colaborando en el diagnóstico y el plan de intervención para maximizar el bienestar del niño o el adolescente. Esta involucración fortalece los resultados terapéuticos.',
       },
       {
         question: '¿Cómo funciona la primera consulta?',
