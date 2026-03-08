@@ -146,7 +146,7 @@ export const services: ServiceData[] = [
     slug: 'dificultades-aprendizaje',
     title: 'Dificultades del Aprendizaje',
     shortTitle: 'Dificultades de Aprendizaje',
-    description: 'Terapia para niños con dislexia, disgrafía, discalculia u otras dificultades del aprendizaje. Adaptada al ritmo de cada niño.',
+    description: 'Intervención especializada para niños con dislexia, disgrafía, discalculia u otras dificultades del aprendizaje. Trabajamos al ritmo de cada niño, fortaleciendo su autoestima y coordinándonos con el centro escolar.',
     longDescription: 'Las dificultades del aprendizaje como la dislexia, la disgrafía o la discalculia pueden afectar significativamente al rendimiento escolar y la autoestima del niño. En Gen intervenimos de forma personalizada, adaptando las estrategias al ritmo y necesidades de cada niño, y coordinándonos con los centros educativos.',
     details: [
       'Dislexia y dificultades de lectoescritura',

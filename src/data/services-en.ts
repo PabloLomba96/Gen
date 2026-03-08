@@ -124,7 +124,7 @@ export const servicesEn: ServiceData[] = [
     slug: 'learning-difficulties',
     title: 'Learning Difficulties',
     shortTitle: 'Learning Difficulties',
-    description: 'Therapy for children with dyslexia, dysgraphia, dyscalculia or other learning difficulties. Adapted to each child\'s pace.',
+    description: 'Specialised intervention for children with dyslexia, dysgraphia, dyscalculia or other learning difficulties. We work at each child\'s pace, building their self-esteem and coordinating with their school.',
     longDescription: 'Learning difficulties such as dyslexia, dysgraphia or dyscalculia can significantly affect a child\'s school performance and self-esteem. At Gen we intervene in a personalised way, adapting strategies to each child\'s pace and needs, and coordinating with schools.',
     details: [
       'Dyslexia and reading/writing difficulties',
