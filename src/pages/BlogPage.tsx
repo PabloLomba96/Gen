@@ -38,8 +38,16 @@ const BlogPage = () => {
 
   const allArticles = lang === 'en' ? allArticlesEn : allArticlesEs;
 
+  const canonical = `https://genpsicologia.com${lp('/blog')}`;
+
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={lang === 'en' ? 'Blog — Child & Adult Psychology Articles' : 'Blog — Artículos de Psicología Infantil y Adultos'}
+        description={lang === 'en' ? 'Articles on child psychology, anxiety, ADHD, giftedness and parenting by Patricia Martínez Díaz.' : 'Artículos sobre psicología infantil, ansiedad, TDAH, altas capacidades y crianza por Patricia Martínez Díaz.'}
+        lang={lang}
+        canonical={canonical}
+      />
       <JsonLd data={blogJsonLd} />
       <Header />
       <main className="pt-24">

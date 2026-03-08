@@ -4,6 +4,7 @@ import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpe
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
+import SEO from '@/components/SEO';
 import { services } from '@/data/services';
 import { servicesEn } from '@/data/services-en';
 import { blogArticles } from '@/data/blogArticles';

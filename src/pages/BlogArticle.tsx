@@ -43,13 +43,7 @@ const BlogArticle = () => {
   const allArticles = lang === 'en' ? allArticlesEn : allArticlesEs;
   const article = allArticles.find((a) => a.slug === slug);
 
-  useEffect(() => {
-    if (article) {
-      document.title = article.metaTitle;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', article.metaDescription);
-    }
-  }, [article]);
+  const articleCanonical = article ? `https://genpsicologia.com${lp(`/blog/${article.slug}`)}` : undefined;
 
   const headings = useMemo(() => (article ? extractHeadings(article.content) : []), [article]);
 

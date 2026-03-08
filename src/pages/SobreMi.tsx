@@ -4,16 +4,24 @@ import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.png';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
+import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
 
+const BASE = 'https://genpsicologia.com';
 const credentialIcons = [GraduationCap, Award, Users, Heart];
 
 const SobreMi = () => {
-  const { t, lp } = useLanguage();
+  const { t, lp, lang } = useLanguage();
   const s = t('sobreMi') as any;
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={lang === 'en' ? 'About Me — Child & Adult Psychologist in Valencia' : 'Sobre Mí — Psicóloga Infantil y de Adultos en Valencia'}
+        description={lang === 'en' ? 'Meet Patricia Martínez Díaz, licensed psychologist in Valencia specialising in children, teens and adults. In-person & online therapy in English and Spanish.' : 'Conoce a Patricia Martínez Díaz, psicóloga colegiada en Valencia especializada en infancia, adolescencia y adultos. Terapia presencial y online.'}
+        lang={lang}
+        canonical={`${BASE}${lp('/sobre-mi')}`}
+      />
       <Header />
       <main className="pt-20">
         {/* Hero */}

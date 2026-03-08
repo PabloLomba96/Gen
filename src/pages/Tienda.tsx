@@ -10,7 +10,7 @@ import { useLanguage } from '@/i18n/context';
 const productIcons = [FileText, Headphones, Sparkles];
 
 const Tienda = () => {
-  const { t, lp } = useLanguage();
+  const { t, lp, lang } = useLanguage();
   const s = t('tienda') as any;
 
   const canonical = `https://genpsicologia.com${lp('/tienda')}`;

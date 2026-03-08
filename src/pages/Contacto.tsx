@@ -26,8 +26,15 @@ const contactJsonLd = {
 };
 
 const Contacto = () => {
+  const { lang, lp } = useLanguage();
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={lang === 'en' ? 'Contact — Book Your Appointment' : 'Contacto — Pide tu Cita'}
+        description={lang === 'en' ? 'Get in touch with Gen Psicología. Book an in-person session in Valencia or an online appointment. We reply within 24 h.' : 'Contacta con Gen Psicología. Reserva tu sesión presencial en Valencia o tu cita online. Respondemos en menos de 24 h.'}
+        lang={lang}
+        canonical={`${BASE}${lp('/contacto')}`}
+      />
       <JsonLd data={contactJsonLd} />
       <Header />
       <main className="pt-20">
