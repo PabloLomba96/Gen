@@ -24,7 +24,7 @@ export const services: ServiceData[] = [
     title: 'Terapia Individual para Adultos',
     shortTitle: 'Terapia Individual',
     description: 'Psicoterapia personalizada para adultos que buscan bienestar emocional, gestión del estrés, ansiedad o autoconocimiento.',
-    longDescription: 'En Gen ofrecemos un espacio terapéutico seguro y confidencial para adultos. Trabajamos la ansiedad, el estrés, la autoestima, las relaciones, los procesos de duelo y el crecimiento personal desde un enfoque integrativo basado en evidencia. Las sesiones se realizan en horario de mañana, presencial en Valencia u online.',
+    longDescription: 'En Gen ofrecemos un espacio terapéutico seguro y confidencial para adultos. Trabajamos la ansiedad, el estrés, la autoestima, las relaciones, los procesos de duelo y el crecimiento personal desde un enfoque integrativo basado en evidencia. Las sesiones se realizan de manera presencial en Valencia u online.',
     details: [
       'Ansiedad y estrés',
       'Autoestima y autoconocimiento',
