@@ -25,13 +25,6 @@ const ServicioDetalle = () => {
     [slug, allArticles]
   );
 
-  useEffect(() => {
-    if (service) {
-      document.title = service.metaTitle;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', service.metaDescription);
-    }
-  }, [service]);
 
   if (!service) return <Navigate to={lp('/servicios')} replace />;
 
