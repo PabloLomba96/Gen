@@ -10,8 +10,10 @@ const Cookies = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={lang === 'en' ? 'Cookie Policy' : 'Política de Cookies'}
-        description="Política de cookies de Gen Centro de Psicología. Información sobre las cookies utilizadas en este sitio web."
+        title={lang === 'en' ? 'Cookie Policy — Gen Psychology Centre Valencia' : 'Política de Cookies — Gen Centro de Psicología Valencia'}
+        description={lang === 'en'
+          ? 'Cookie policy for Gen Psychology Centre. Information about the cookies used on our psychology website in Valencia.'
+          : 'Política de cookies de Gen Centro de Psicología. Información sobre las cookies utilizadas en este sitio web de psicología en Valencia.'}
         lang={lang}
         canonical={`https://genpsicologia.com${lp('/cookies')}`}
       />

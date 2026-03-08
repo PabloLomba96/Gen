@@ -10,8 +10,10 @@ const Privacidad = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={lang === 'en' ? 'Privacy Policy' : 'Política de Privacidad'}
-        description="Política de privacidad de Gen Centro de Psicología. Información sobre el tratamiento de datos personales conforme al RGPD."
+        title={lang === 'en' ? 'Privacy Policy — Gen Psychology Centre Valencia' : 'Política de Privacidad — Gen Centro de Psicología Valencia'}
+        description={lang === 'en'
+          ? 'Privacy policy for Gen Psychology Centre. How we collect, use and protect your personal data in compliance with GDPR.'
+          : 'Política de privacidad de Gen Centro de Psicología. Información sobre el tratamiento de datos personales conforme al RGPD.'}
         lang={lang}
         canonical={`https://genpsicologia.com${lp('/privacidad')}`}
       />

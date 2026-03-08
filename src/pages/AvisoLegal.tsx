@@ -10,8 +10,10 @@ const AvisoLegal = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title={lang === 'en' ? 'Legal Notice' : 'Aviso Legal'}
-        description="Aviso legal de Gen Centro de Psicología. Datos identificativos, condiciones de uso y propiedad intelectual."
+        title={lang === 'en' ? 'Legal Notice — Gen Psychology Centre Valencia' : 'Aviso Legal — Gen Centro de Psicología Valencia'}
+        description={lang === 'en'
+          ? 'Legal notice for Gen Psychology Centre. Identification data, terms of use and intellectual property for our psychology services in Valencia.'
+          : 'Aviso legal de Gen Centro de Psicología. Datos identificativos, condiciones de uso y propiedad intelectual del centro de psicología en Valencia.'}
         lang={lang}
         canonical={`https://genpsicologia.com${lp('/aviso-legal')}`}
       />
