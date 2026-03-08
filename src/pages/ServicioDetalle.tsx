@@ -187,6 +187,38 @@ const ServicioDetalle = () => {
           </div>
         </section>
 
+        {/* Related articles */}
+        {relatedArticles.length > 0 && (
+          <section className="py-24">
+            <div className="container mx-auto px-4">
+              <div className="flex items-center gap-3 mb-10 justify-center">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                </div>
+                <h2 className="text-2xl font-display font-bold text-foreground">{s.relatedArticlesTitle}</h2>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {relatedArticles.map((article) => (
+                  <Link
+                    key={article.slug}
+                    to={lp(`/blog/${article.slug}`)}
+                    className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 transition-all"
+                    style={{ boxShadow: 'var(--shadow-soft)' }}
+                  >
+                    <span className="text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1">{article.category}</span>
+                    <h3 className="text-base font-display font-semibold text-foreground mt-3 mb-2 group-hover:text-primary transition-colors line-clamp-2">{article.title}</h3>
+                    <p className="text-sm text-muted-foreground line-clamp-2 mb-4">{article.excerpt}</p>
+                    <span className="text-sm font-medium text-primary inline-flex items-center gap-1">
+                      {s.relatedArticlesReadMore}
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* CTA */}
         <section className="py-16 bg-gradient-to-r from-primary/10 to-accent/10">
           <div className="container mx-auto px-4 text-center">
