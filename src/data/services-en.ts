@@ -79,7 +79,7 @@ export const servicesEn: ServiceData[] = [
     ],
     symptoms: [
       'Learns much faster than other children their age',
-      'Gets bored in class or underperforms compared to potential',
+      'Gets bored in class or feels unmotivated',
       'Struggles to maintain attention or is very impulsive',
       'Has difficulty understanding social rules',
       'Shows repetitive behaviours or very specific interests',
