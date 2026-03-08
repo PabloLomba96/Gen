@@ -68,7 +68,7 @@ export const servicesEn: ServiceData[] = [
     title: 'Neurodivergence: Giftedness, ASD & ADHD',
     shortTitle: 'Neurodivergence',
     description: 'Assessment, diagnosis and support for children and adolescents with giftedness, ASD and ADHD.',
-    longDescription: 'At Gen we support neurodivergent children and adolescents and their families. We offer assessment and diagnosis of intellectual giftedness, autism spectrum disorder (ASD) and ADHD. We work on understanding neurodivergence, developing adaptive strategies and coordinating with schools. We collaborate with Centro Divergentes in Valencia.',
+    longDescription: 'At Gen we support neurodivergent children and adolescents and their families. We offer assessment and diagnosis of intellectual giftedness, autism spectrum disorder (ASD) and ADHD. We work on understanding neurodivergence, developing adaptive strategies and coordinating with schools.',
     details: [
       'Giftedness assessment',
       'ADHD and ASD diagnosis',
@@ -79,7 +79,7 @@ export const servicesEn: ServiceData[] = [
     ],
     symptoms: [
       'Learns much faster than other children their age',
-      'Gets bored in class or underperforms compared to potential',
+      'Gets bored in class or feels unmotivated',
       'Struggles to maintain attention or is very impulsive',
       'Has difficulty understanding social rules',
       'Shows repetitive behaviours or very specific interests',
@@ -88,7 +88,7 @@ export const servicesEn: ServiceData[] = [
     ],
     color: 'primary',
     metaTitle: 'Neurodivergence Valencia — Giftedness, ASD, ADHD | Gen Psychology',
-    metaDescription: 'Assessment and therapy for giftedness, ASD and ADHD in Valencia. Divergentes collaborator. Child psychologist CV16625.',
+    metaDescription: 'Assessment and therapy for giftedness, ASD and ADHD in Valencia. Specialised child psychologist CV16625. In-person and online.',
     category: 'infantojuvenil',
   },
   {
@@ -107,7 +107,7 @@ export const servicesEn: ServiceData[] = [
       'Introversion and social energy management',
     ],
     symptoms: [
-      'Your child is very creative but feels misunderstood',
+      'Your child is very creative and has undeveloped talents',
       'Is introverted and struggles to find their place in the group',
       'Gets drained in social settings (school, parties)',
       'Needs a space where they feel free to be different',

@@ -103,7 +103,7 @@ export const services: ServiceData[] = [
     ],
     color: 'primary',
     metaTitle: 'Neurodivergencias Valencia — Altas Capacidades, TEA, TDAH | Gen Psicología',
-    metaDescription: 'Evaluación y terapia para altas capacidades, TEA y TDAH en Valencia. Colaboradora de Divergentes. Psicóloga infantil colegiada CV16625.',
+    metaDescription: 'Evaluación y terapia para altas capacidades, TEA y TDAH en Valencia. Psicóloga infantil especializada colegiada CV16625. Presencial y online.',
     category: 'infantojuvenil',
   },
   {
