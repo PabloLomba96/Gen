@@ -29,13 +29,13 @@ const Hero = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-[3.3rem] font-display font-bold text-foreground leading-[1.13]">
                 {lang === 'es' ? (
                   <>
-                    Psicología integrativa en Valencia.{' '}
+                    Psicología en Valencia.{' '}
                     <br className="hidden sm:block" />
                     <span className="text-gradient">Espacios seguros</span> para adultos, adolescentes y niños.
                   </>
                 ) : (
                   <>
-                    Integrative psychology in Valencia.{' '}
+                    Psychology in Valencia.{' '}
                     <br className="hidden sm:block" />
                     <span className="text-gradient">Safe spaces</span> for adults, adolescents and children.
                   </>
