@@ -180,7 +180,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: '¿Es efectiva la terapia online para niños? Analizamos los estudios, las ventajas y cuándo es mejor opción que la presencial.',
     category: 'Terapia online',
     readTime: '6 min',
-    date: '3 Mar 2026',
+    date: '21 Ene 2026',
     metaTitle: 'Terapia Infantil Online: ¿Funciona? Ventajas y Evidencia | Gen Psicología',
     metaDescription: '¿La terapia online para niños es efectiva? Descubre qué dice la investigación, cuándo es buena opción y cómo funciona. Psicóloga infantil online Valencia.',
     content: [
