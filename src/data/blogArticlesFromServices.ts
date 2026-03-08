@@ -253,7 +253,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
       '- Introversión y límites sociales',
       '- Sobrecarga social',
       '## Señales de un niño creativo que necesita apoyo',
-      '- Es muy creativo/a pero se siente incomprendido/a',
+      '- Es muy creativo/a y tiene talentos sin desarrollar',
       '- Es introvertido/a y le cuesta encontrar su lugar en el grupo',
       '- Se agota en entornos sociales (colegio, cumpleaños, extraescolares)',
       '- Tiene talentos que no se están trabajando en el colegio',

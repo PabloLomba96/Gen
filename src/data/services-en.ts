@@ -88,7 +88,7 @@ export const servicesEn: ServiceData[] = [
     ],
     color: 'primary',
     metaTitle: 'Neurodivergence Valencia — Giftedness, ASD, ADHD | Gen Psychology',
-    metaDescription: 'Assessment and therapy for giftedness, ASD and ADHD in Valencia. Divergentes collaborator. Child psychologist CV16625.',
+    metaDescription: 'Assessment and therapy for giftedness, ASD and ADHD in Valencia. Specialised child psychologist CV16625. In-person and online.',
     category: 'infantojuvenil',
   },
   {
