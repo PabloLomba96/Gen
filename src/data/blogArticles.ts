@@ -19,7 +19,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: 'Descubre las señales más comunes que indican que tu hijo podría beneficiarse de ayuda psicológica. Guía práctica para padres preocupados.',
     category: 'Orientación a padres',
     readTime: '8 min',
-    date: '6 Mar 2026',
+    date: '1 Feb 2026',
     metaTitle: '¿Cómo saber si mi hijo necesita un psicólogo? 7 Señales | Gen Psicología Valencia',
     metaDescription: 'Descubre las 7 señales que indican que tu hijo podría necesitar un psicólogo infantil. Guía para padres con ejemplos reales. Psicóloga infantil en Valencia.',
     content: [
