@@ -334,7 +334,7 @@ export const blogArticles: BlogArticle[] = [
       '- **Ocurren en contextos variados**: Pasan en el colegio, con los abuelos, o en la calle de forma descontrolada (no solo en el "espacio seguro" de casa).',
       '- **Afectan a su calidad de vida**: El niño vive en un estado de irritabilidad constante y no puede disfrutar de actividades normales porque se frustra de inmediato.',
       '- **No disminuyen con la edad**: Tiene 5, 6 o 7 años y sus reacciones son idénticas a las de un niño de 2 años.',
-      'En muchos casos, unas rabietas muy intensas y duraderas pueden ser un síntoma secundario de otros perfiles, como **Altas Capacidades, TDAH o neurodivergencias**, donde el procesamiento sensorial y emocional es diferente.',
+      'En muchos casos, unas rabietas muy intensas y duraderas pueden ser un síntoma secundario de otros perfiles, como **[Altas Capacidades, TDAH o neurodivergencias](/servicios/neurodivergencias)**, donde el procesamiento sensorial y emocional es diferente.',
       '## ¿Cómo actuar durante una rabieta? (Y qué NO hacer)',
       'Saber cómo reaccionar en el momento crítico puede marcar la diferencia entre que la rabieta dure 5 minutos o 45.',
       '### Lo que SÍ ayuda (La Co-regulación)',
