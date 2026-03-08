@@ -10,9 +10,12 @@ const MobileBookingCta = () => {
   const { lp, lang } = useLanguage();
   const { pathname } = useLocation();
 
-  // Hide on pages that already have prominent CTAs
-  const hiddenPaths = ['/hola', '/en/hello', '/contacto', '/en/contact'];
-  if (hiddenPaths.includes(pathname)) return null;
+  // Only show on Funnel A routes; hide on Funnel B, legal pages, and contact
+  const funnelAPatterns = ['/', '/en', '/sobre-mi', '/en/about', '/servicios', '/en/services', '/blog', '/en/blog'];
+  const isFunnelA = funnelAPatterns.some(
+    (p) => pathname === p || (p !== '/' && p !== '/en' && pathname.startsWith(p + '/'))
+  );
+  if (!isFunnelA) return null;
 
   return (
     <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden animate-fade-up">
