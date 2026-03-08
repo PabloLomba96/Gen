@@ -44,7 +44,7 @@ export const blogArticlesFromServices: BlogArticle[] = [
     excerpt: 'La adolescencia es un periodo de cambios profundos. Descubre cómo la terapia puede ayudar a tu hijo/a adolescente con ansiedad, acoso y baja autoestima.',
     category: 'Adolescentes',
     readTime: '6 min',
-    date: '7 Mar 2026',
+    date: '1 Mar 2026',
     metaTitle: 'Psicología para Adolescentes: Ansiedad, Bullying y Autoestima | Gen Psicología',
     metaDescription: 'Terapia para adolescentes en Valencia. Ansiedad, bullying, baja autoestima y crisis de identidad. Espacio seguro sin juicios. Psicóloga CV16625.',
     relatedServiceSlug: 'regulacion-emocional-autoestima',
