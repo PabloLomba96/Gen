@@ -267,7 +267,7 @@ export const blogArticles: BlogArticle[] = [
       'El formato de las sesiones cambia drásticamente dependiendo de la etapa evolutiva del niño. No hacemos lo mismo con un peque de 5 años que con una chica de 15.',
       '### Para menores de 6 años: Intervención centrada en los padres',
       'A estas edades, es muy difícil (y poco realista) esperar que un niño interactúe profundamente con una pantalla. Por eso, la terapia online para los más pequeños se enfoca en **asesoramiento a familias.**',
-      'Trabajamos juntos (tú y yo) para que te conviertas en el principal motor de cambio en casa. Hablamos de rutinas, límites, gestión de rabietas y pautas de desarrollo y creatividad.',
+      'Trabajamos juntos (tú y yo) para que te conviertas en el principal motor de cambio en casa. Hablamos de rutinas, límites, gestión de rabietas y pautas de [desarrollo y creatividad](/servicios/desarrollo-y-creatividad).',
       '### De 7 a 11 años: Terapia directa y lúdica',
       'A partir de los 7 años, la mayoría de los niños ya tienen la madurez cognitiva para interactuar a través de la pantalla. Aquí es donde entra en juego mi especialidad: **el juego terapéutico adaptado al mundo digital.** No nos pasamos la sesión "hablando"; jugamos, dibujamos juntos en pizarras virtuales y resolvemos acertijos que me permiten evaluar y trabajar su gestión emocional, autoestima o miedos.',
       '### Adolescentes (12+ años): Su entorno natural',
