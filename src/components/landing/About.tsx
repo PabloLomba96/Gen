@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n/context';
 const icons = [GraduationCap, Award, Heart];
 
 const About = () => {
-  const { t, lp } = useLanguage();
+  const { t, lp, lang } = useLanguage();
   const credentials = t('about.credentials') as Array<{ title: string; description: string }>;
 
   return (
@@ -20,6 +20,13 @@ const About = () => {
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-foreground">
               {t('about.title')}
             </h2>
+            <p className="text-base sm:text-lg font-display text-foreground/80 italic">
+              {lang === 'es' ? (
+                <>Una terapia basada en la conexión <span className="text-primary font-semibold italic">gen</span>uina.</>
+              ) : (
+                <>Therapy based on a <span className="text-primary font-semibold italic">gen</span>uine connection.</>
+              )}
+            </p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t('about.subtitle')}
             </p>

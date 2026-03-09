@@ -9,7 +9,7 @@ import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Newsletter = () => {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [email, setEmail] = useState('');
   const [idioma, setIdioma] = useState<'es' | 'en'>('es');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -66,6 +66,13 @@ const Newsletter = () => {
           <h3 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-3">
             {t('newsletter.title')}
           </h3>
+          <p className="text-base font-display text-foreground/80 italic mb-1">
+            {lang === 'es' ? (
+              <>Un soplo de oxí<span className="text-primary font-semibold italic">gen</span>o para tu mente.</>
+            ) : (
+              <>A breath of oxy<span className="text-primary font-semibold italic">gen</span> for your mind.</>
+            )}
+          </p>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto text-sm leading-relaxed">
             {t('newsletter.subtitle')}
           </p>

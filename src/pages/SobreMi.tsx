@@ -65,6 +65,13 @@ const SobreMi = () => {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground">
                   {s.title} <span className="text-gradient">{s.titleHighlight}</span>
                 </h1>
+                <p className="text-base sm:text-lg font-display text-foreground/80 italic">
+                  {lang === 'es' ? (
+                    <>Una terapia basada en la conexión <span className="text-primary font-semibold italic">gen</span>uina.</>
+                  ) : (
+                    <>Therapy based on a <span className="text-primary font-semibold italic">gen</span>uine connection.</>
+                  )}
+                </p>
                 <p className="text-lg text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: s.bio1 }} />
                 <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: s.bio2 }} />
                 <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: s.bio3 }} />

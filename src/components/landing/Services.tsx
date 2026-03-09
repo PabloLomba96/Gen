@@ -42,6 +42,13 @@ const Services = () => {
             <div>
               <h3 className="text-lg font-display font-semibold text-foreground">{adultLabel}</h3>
               <p className="text-xs text-muted-foreground">{morningLabel}</p>
+              <p className="text-sm font-display text-foreground/70 italic mt-1">
+                {lang === 'es' ? (
+                  <>Date un mar<span className="text-primary font-semibold italic">gen</span> para sentir y recupera la a<span className="text-primary font-semibold italic">gen</span>cia de tu vida.</>
+                ) : (
+                  <>Give yourself the space to feel and reclaim your a<span className="text-primary font-semibold italic">gen</span>cy.</>
+                )}
+              </p>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
@@ -76,6 +83,13 @@ const Services = () => {
             <div>
               <h3 className="text-lg font-display font-semibold text-foreground">{childLabel}</h3>
               <p className="text-xs text-muted-foreground">{afternoonLabel}</p>
+              <p className="text-sm font-display text-foreground/70 italic mt-1">
+                {lang === 'es' ? (
+                  <>Acompañamiento psicológico para cada <span className="text-primary font-semibold italic">gen</span>eración.</>
+                ) : (
+                  <>Psychological support for every <span className="text-primary font-semibold italic">gen</span>eration.</>
+                )}
+              </p>
             </div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
