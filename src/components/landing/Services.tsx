@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { adultServices, childServices, todosServices } from '@/data/services';
 import { adultServicesEn, childServicesEn, todosServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Services = () => {
   const { t, lp, lang } = useLanguage();
