@@ -35,7 +35,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       <h3 className="text-xl font-display font-semibold text-foreground mb-3">
         {service.title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-3 flex-grow">
+      <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-4 md:line-clamp-none flex-grow">
         {service.description}
       </p>
       <ul className="space-y-2 mt-auto">
