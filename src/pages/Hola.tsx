@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const socialLinks = [
   { handle: '@genpsicologia', href: 'https://instagram.com/genpsicologia' },
