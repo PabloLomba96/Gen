@@ -134,10 +134,10 @@ const ServicioDetalle = () => {
                   <h2 className="text-2xl font-display font-bold text-foreground">{(service.category === 'infantojuvenil' || service.slug.includes('infantojuvenil') || service.slug.includes('children')) ? s.symptomsTitle : s.symptomsTitleAdults}</h2>
                 </div>
                 <ul className="space-y-3">
-                  {service.symptoms.map((symptom) => (
-                    <li key={symptom} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border">
+                  {service.symptoms.map((symptom, idx) => (
+                    <li key={idx} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border">
                       <span className="text-accent mt-0.5 shrink-0">•</span>
-                      <span className="text-muted-foreground">{symptom}</span>
+                      <span className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: symptom }} />
                     </li>
                   ))}
                 </ul>

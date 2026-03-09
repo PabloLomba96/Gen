@@ -35,7 +35,7 @@ const FAQ = () => {
                   </span>
                 </AccordionTrigger>
                 <AccordionContent className="pb-5 text-muted-foreground leading-relaxed text-sm">
-                  {faq.answer}
+                  <span dangerouslySetInnerHTML={{ __html: faq.answer }} />
                 </AccordionContent>
               </AccordionItem>
             ))}

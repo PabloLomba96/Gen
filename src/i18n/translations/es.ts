@@ -125,7 +125,7 @@ export const es = {
       },
       {
         question: '¿Cómo sé si necesito ir a terapia?',
-        answer: 'Si sientes que la ansiedad, la tristeza o el estrés interfieren en tu día a día, o simplemente buscas un espacio de autoconocimiento, la terapia es para ti. No hace falta estar "al límite" para pedir ayuda.',
+        answer: 'Si sientes que la ansiedad, la tristeza o el estrés interfieren en tu día a día, o simplemente buscas un espacio de autoconocimiento, la terapia es para ti. No hace falta estar "al límite" para pedir ayuda. La terapia te da las herramientas para parar y re<span class="text-primary font-semibold italic">gen</span>erar tu mente.',
       },
       {
         question: '¿Tratáis ansiedad laboral o crisis vitales?',
