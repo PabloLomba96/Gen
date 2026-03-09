@@ -81,6 +81,7 @@ const Privacidad = () => {
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">6. Destinatarios</h2>
                 <p>Tus datos no serán cedidos a terceros salvo obligación legal. Utilizamos proveedores de servicios tecnológicos que actúan como encargados del tratamiento y que ofrecen garantías adecuadas de protección de datos.</p>
+                <p className="mt-3">En particular, utilizamos <strong className="text-foreground">Google Tag Manager</strong> (proveedor: Google Ireland Limited, Gordon House, Barrow Street, Dublín 4, Irlanda) para cargar scripts de medición y análisis de tráfico web. Este servicio solo se activa tras el consentimiento previo del usuario a través del banner de cookies. Google puede transferir datos a servidores fuera del EEE; en tal caso, se aplican las cláusulas contractuales tipo de la Comisión Europea como garantía adecuada.</p>
               </div>
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">7. Menores de edad</h2>
