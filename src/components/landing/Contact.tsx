@@ -9,6 +9,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { z } from 'zod';
 import { useLanguage } from '@/i18n/context';
 import { useSearchParams } from 'react-router-dom';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 type ContactForm = {
   nombre: string;
