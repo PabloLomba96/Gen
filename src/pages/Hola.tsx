@@ -110,6 +110,7 @@ const Hola = () => {
         <div className="w-full max-w-sm relative z-10 mb-3 animate-fade-up" style={{ animationDelay: '0.08s' }}>
           <Link
             to={lp('/contacto')}
+            onClick={() => pushToDataLayer('click_book_session', { location: 'hola_cta' })}
             className="group flex items-center gap-4 w-full p-6 rounded-2xl bg-primary text-primary-foreground transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] relative overflow-hidden min-h-[68px] animate-pulse-subtle"
             style={{ boxShadow: '0 0 25px hsl(var(--primary) / 0.45), var(--shadow-glow-primary)' }}
           >
