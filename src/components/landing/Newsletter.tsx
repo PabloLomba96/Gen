@@ -67,7 +67,7 @@ const Newsletter = () => {
             {t('newsletter.title')}
           </h3>
           <p className="text-base font-display text-foreground/80 italic mb-1">
-            {idioma === 'es' || true ? (
+            {lang === 'es' ? (
               <>Un soplo de oxí<span className="text-primary font-semibold italic">gen</span>o para tu mente.</>
             ) : (
               <>A breath of oxy<span className="text-primary font-semibold italic">gen</span> for your mind.</>
