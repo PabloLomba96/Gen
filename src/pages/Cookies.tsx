@@ -41,7 +41,7 @@ const Cookies = () => {
               </div>
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">2. Cookies que utilizamos</h2>
-                <p>Este sitio web utiliza únicamente las cookies estrictamente necesarias para su funcionamiento:</p>
+                <p>Este sitio web utiliza cookies propias (estrictamente necesarias) y cookies de terceros (analíticas, cargadas a través de Google Tag Manager) únicamente si el usuario otorga su consentimiento previo:</p>
                 <div className="mt-4 overflow-x-auto">
                   <table className="w-full text-left border-collapse">
                     <thead>
@@ -59,10 +59,16 @@ const Cookies = () => {
                         <td className="py-2 pr-4">Funcionamiento básico del sitio web</td>
                         <td className="py-2">Sesión</td>
                       </tr>
+                      <tr className="border-b border-border/50">
+                        <td className="py-2 pr-4">Google Tag Manager</td>
+                        <td className="py-2 pr-4">Analíticas (terceros)</td>
+                        <td className="py-2 pr-4">Medición del tráfico y análisis de uso del sitio web. Proveedor: Google Ireland Ltd.</td>
+                        <td className="py-2">Variable</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
-                <p className="mt-4">Actualmente, este sitio web <strong className="text-foreground">no utiliza cookies analíticas, publicitarias ni de terceros</strong>. Si en el futuro se incorporasen, esta política será actualizada y se solicitará tu consentimiento previo.</p>
+                <p className="mt-4">Las cookies analíticas de Google Tag Manager <strong className="text-foreground">solo se cargan tras el consentimiento expreso del usuario</strong> a través del banner de cookies. Puedes revocar tu consentimiento en cualquier momento.</p>
               </div>
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">3. Gestión de cookies</h2>
