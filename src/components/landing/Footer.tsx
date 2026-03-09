@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import OverlappingCircles from '@/components/OverlappingCircles';
 import { useLanguage } from '@/i18n/context';
 import { Instagram } from 'lucide-react';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Footer = () => {
   const { t, lp, lang } = useLanguage();
