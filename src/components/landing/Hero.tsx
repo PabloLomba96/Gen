@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.png';
 import { useLanguage } from '@/i18n/context';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Hero = () => {
   const { t, lp, lang } = useLanguage();
