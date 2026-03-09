@@ -109,6 +109,7 @@ export const services: ServiceData[] = [
       'Muestra conductas repetitivas o intereses muy específicos',
       'Reacciona de forma intensa a estímulos sensoriales',
       'Los profesores te han sugerido que consultes con un especialista',
+      'Entiende tu <span class="text-primary font-semibold italic">gen</span>io y abraza tu alta capacidad',
     ],
     color: 'primary',
     metaTitle: 'Neurodivergencias Valencia — Altas Capacidades, TEA, TDAH | Gen Psicología',

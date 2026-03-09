@@ -123,6 +123,10 @@ export const en = {
         question: 'How does the first consultation work?',
         answer: 'The first consultation is to get to know each other: you tell me what concerns you, I assess the situation and explain how I can help. It\'s without commitment and completely confidential. Parents can come alone or with the child.',
       },
+      {
+        question: 'How do I know if I need therapy?',
+        answer: 'If you feel that anxiety, sadness or stress interfere with your daily life, or you simply seek a space for self-discovery, therapy is for you. You don\'t need to be "at breaking point" to ask for help. Therapy gives you the tools to stop and re<span class="text-primary font-semibold italic">gen</span>erate your mind.',
+      },
     ],
   },
   newsletter: {
