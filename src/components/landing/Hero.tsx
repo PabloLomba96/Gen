@@ -48,6 +48,13 @@ const Hero = () => {
                   ? 'Especialista en neurodivergencia, infantojuvenil y regulación emocional. Presencial y online.'
                   : 'Specialist in neurodivergence, child & adolescent psychology and emotional regulation. In-person and online.'}
               </p>
+              <p className="text-base sm:text-lg font-display text-foreground/80 italic max-w-lg">
+                {lang === 'es' ? (
+                  <>Sanar empieza por entender el ori<span className="text-primary font-semibold italic">gen</span>.</>
+                ) : (
+                  <>Healing begins by understanding the ori<span className="text-primary font-semibold italic">gin</span>.</>
+                )}
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-2.5">
