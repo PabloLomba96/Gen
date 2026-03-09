@@ -39,6 +39,7 @@ const Hola = () => {
         toast({ title: s.waitlistDuplicate, description: s.waitlistDuplicateText });
       } else if (data?.success) {
         setIsSubscribed(true);
+        pushToDataLayer('generate_lead', { form_location: 'hola_waitlist' });
       } else if (data?.error) {
         toast({ title: s.waitlistError, description: data.error, variant: 'destructive' });
       }
