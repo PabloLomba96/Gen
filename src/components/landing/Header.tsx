@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import OverlappingCircles from '@/components/OverlappingCircles';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useLanguage } from '@/i18n/context';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
