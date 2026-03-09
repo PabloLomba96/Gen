@@ -20,6 +20,13 @@ declare global {
   }
 }
 
+const EEA_UK_CH_REGIONS = [
+  'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR',
+  'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL',
+  'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO',
+  'GB', 'CH',
+];
+
 const initConsentMode = () => {
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag() {
@@ -27,12 +34,22 @@ const initConsentMode = () => {
     window.dataLayer.push(arguments as unknown as Record<string, unknown>);
   };
 
+  // 1. Default: granted globally (LATAM, USA, etc.)
+  window.gtag('consent', 'default', {
+    analytics_storage: 'granted',
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+  } satisfies ConsentParams);
+
+  // 2. Override: denied for EEA + UK + Switzerland (GDPR)
   window.gtag('consent', 'default', {
     analytics_storage: 'denied',
     ad_storage: 'denied',
     ad_user_data: 'denied',
     ad_personalization: 'denied',
-  } satisfies ConsentParams);
+    region: EEA_UK_CH_REGIONS,
+  } as ConsentParams & { region: string[] });
 };
 
 const injectGTM = () => {
