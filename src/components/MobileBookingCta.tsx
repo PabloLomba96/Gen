@@ -1,6 +1,7 @@
 import { Calendar } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '@/i18n/context';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 /**
  * Floating bottom CTA visible only on mobile.
