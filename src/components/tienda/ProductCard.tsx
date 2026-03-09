@@ -2,6 +2,7 @@ import { ArrowRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/context';
 import { type LucideIcon } from 'lucide-react';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 interface ProductCardProps {
   icon: LucideIcon;
