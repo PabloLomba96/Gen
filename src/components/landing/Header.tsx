@@ -187,6 +187,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 to={lp(link.href)}
+                onClick={() => pushToDataLayer('click_navigation', { link_name: link.label, location: 'header' })}
                 className={`text-sm font-medium transition-colors ${isActive(link.href) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}
               >
                 {link.label}
