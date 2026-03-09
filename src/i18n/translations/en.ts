@@ -224,8 +224,8 @@ export const en = {
     modalitiesSubtitle: 'Choose the modality that best suits your family.',
     modalities: [
       {
-        title: 'In-Person Practice',
-        description: 'I offer in-person sessions in Valencia. A warm, safe space where your child will feel supported.',
+        title: 'In-person therapy in Valencia',
+        description: 'I offer in-person therapy sessions in Valencia. A warm, safe space where your child will feel supported.',
       },
       {
         title: 'Online Therapy',
