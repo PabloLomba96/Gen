@@ -29,6 +29,11 @@ const CookieBanner = () => {
   const handleAccept = (consent: CookieConsent) => {
     localStorage.setItem(COOKIE_CONSENT_KEY, consent);
     setVisible(false);
+
+    // Dynamically import to avoid circular deps
+    if (consent === 'all') {
+      import('@/hooks/useGTM').then(({ grantConsent }) => grantConsent());
+    }
   };
 
   if (!visible) return null;
