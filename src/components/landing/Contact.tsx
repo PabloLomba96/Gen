@@ -75,6 +75,7 @@ const Contact = () => {
       if (error) throw error;
 
       setIsSubmitted(true);
+      pushToDataLayer('contact_form_submit', { modality: formData.modalidad, reason: formData.motivo, lang });
       toast({
         title: t('contact.toastSuccessTitle') as string,
         description: t('contact.toastSuccessText') as string,
