@@ -99,10 +99,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <LanguageProvider>
-            <ScrollToTop />
-            <HrefLang />
-            <MobileBookingCta />
-            <LocalizedRoutes />
+            <AppInner />
           </LanguageProvider>
         </BrowserRouter>
       </TooltipProvider>

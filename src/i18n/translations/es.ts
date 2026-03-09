@@ -477,6 +477,11 @@ export const es = {
     soon: 'Pronto',
     copyright: '© {year} Gen Centro de Psicología — Patricia Martínez Díaz',
   },
+  cookieBanner: {
+    text: 'Utilizamos cookies propias y de terceros (Google Tag Manager) para analizar el tráfico y mejorar tu experiencia. Puedes aceptar todas o solo las esenciales.',
+    accept: 'Aceptar todas',
+    reject: 'Solo esenciales',
+  },
   common: {
     breadcrumbHome: 'Inicio',
   },

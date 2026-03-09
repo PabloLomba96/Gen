@@ -88,6 +88,18 @@ const Cookies = () => {
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">5. Contacto</h2>
                 <p>Si tienes dudas sobre nuestra política de cookies, puedes contactar con nosotros en <a href="mailto:patricia@genpsicologia.com" className="text-primary hover:underline">patricia@genpsicologia.com</a>.</p>
               </div>
+
+              <div className="pt-6 border-t border-border">
+                <h2 className="text-lg font-display font-semibold text-foreground mb-3">Gestionar tu consentimiento</h2>
+                <p className="mb-4">Puedes revocar tu consentimiento de cookies en cualquier momento. Al hacerlo, se eliminarán las preferencias almacenadas y se recargará la página para que puedas elegir de nuevo.</p>
+                <Button
+                  variant="secondary"
+                  onClick={revokeCookieConsent}
+                >
+                  Revocar el consentimiento de cookies
+                </Button>
+              </div>
+
               <p className="text-xs text-muted-foreground/60 pt-4 border-t border-border">{t('legal.lastUpdated')}</p>
             </div>
           </div>

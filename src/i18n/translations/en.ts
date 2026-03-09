@@ -463,6 +463,11 @@ export const en = {
     soon: 'Soon',
     copyright: '© {year} Gen Psychology Centre — Patricia Martínez Díaz',
   },
+  cookieBanner: {
+    text: 'We use our own and third-party cookies (Google Tag Manager) to analyse traffic and improve your experience. You can accept all or only essential cookies.',
+    accept: 'Accept all',
+    reject: 'Essential only',
+  },
   common: {
     breadcrumbHome: 'Home',
   },
