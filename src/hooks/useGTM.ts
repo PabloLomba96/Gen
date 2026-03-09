@@ -47,6 +47,12 @@ const injectGTM = () => {
   document.head.appendChild(script);
 };
 
+export const pushToDataLayer = (event: string, payload?: Record<string, unknown>) => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({ event, ...payload });
+  }
+};
+
 export const grantConsent = () => {
   window.gtag('consent', 'update', {
     analytics_storage: 'granted',

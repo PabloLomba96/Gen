@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import OverlappingCircles from '@/components/OverlappingCircles';
 import { useLanguage } from '@/i18n/context';
 import { Instagram } from 'lucide-react';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Footer = () => {
   const { t, lp, lang } = useLanguage();
@@ -30,6 +31,7 @@ const Footer = () => {
                 href="https://instagram.com/genpsicologia"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => pushToDataLayer('click_social', { network: 'instagram', handle: 'genpsicologia', location: 'footer' })}
                 className="group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 hover:bg-background/20 transition-colors text-xs"
                 aria-label="Instagram Gen Psicología"
               >
@@ -40,6 +42,7 @@ const Footer = () => {
                 href="https://instagram.com/patri_psicologia"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => pushToDataLayer('click_social', { network: 'instagram', handle: 'patri_psicologia', location: 'footer' })}
                 className="group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 hover:bg-background/20 transition-colors text-xs"
                 aria-label="Instagram Patri Psicología"
               >
@@ -50,6 +53,7 @@ const Footer = () => {
                 href="https://wa.me/34611889209"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => pushToDataLayer('click_social', { network: 'whatsapp', location: 'footer' })}
                 className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
                 aria-label="WhatsApp"
               >

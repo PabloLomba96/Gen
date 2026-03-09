@@ -5,6 +5,7 @@ import { CheckCircle, Sparkles } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { useLanguage } from '@/i18n/context';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Newsletter = () => {
   const { toast } = useToast();
@@ -30,6 +31,7 @@ const Newsletter = () => {
         toast({ title: t('newsletter.duplicateTitle'), description: t('newsletter.duplicateText') });
       } else if (data?.success) {
         setIsSubscribed(true);
+        pushToDataLayer('generate_lead', { form_location: 'newsletter' });
       } else if (data?.error) {
         toast({ title: t('newsletter.errorTitle'), description: data.error, variant: 'destructive' });
       }

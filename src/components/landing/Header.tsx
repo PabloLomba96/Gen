@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import OverlappingCircles from '@/components/OverlappingCircles';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { useLanguage } from '@/i18n/context';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,6 +95,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 to={lp(link.href)}
+                onClick={() => pushToDataLayer('click_navigation', { link_name: link.label, location: 'header' })}
                 className={`text-sm font-medium transition-colors ${isActive(link.href) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}
               >
                 {link.label}
@@ -185,6 +187,7 @@ const Header = () => {
               <Link
                 key={link.href}
                 to={lp(link.href)}
+                onClick={() => pushToDataLayer('click_navigation', { link_name: link.label, location: 'header' })}
                 className={`text-sm font-medium transition-colors ${isActive(link.href) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'}`}
               >
                 {link.label}
@@ -195,7 +198,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-3">
             <LanguageSwitcher />
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all rounded-full px-6">
-              <Link to={lp('/contacto')}>{t('nav.bookSession')}</Link>
+              <Link to={lp('/contacto')} onClick={() => pushToDataLayer('click_book_session', { location: 'header_cta' })}>{t('nav.bookSession')}</Link>
             </Button>
           </div>
 

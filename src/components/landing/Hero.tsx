@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.png';
 import { useLanguage } from '@/i18n/context';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Hero = () => {
   const { t, lp, lang } = useLanguage();
@@ -65,6 +66,7 @@ const Hero = () => {
             <div className="grid sm:grid-cols-2 gap-4 pt-1">
               <Link
                 to={lp('/servicios')}
+                onClick={() => pushToDataLayer('click_cta', { cta_name: lang === 'es' ? 'Terapia para Adultos' : 'Adult Therapy', location: 'home_hero' })}
                 className="group glass rounded-2xl p-5 hover:shadow-lg transition-all duration-300 block border border-primary/20 hover:border-primary/40"
               >
                 <div className="flex items-center gap-3 mb-2">
@@ -88,6 +90,7 @@ const Hero = () => {
 
               <Link
                 to={`${lp('/servicios')}#infantojuvenil`}
+                onClick={() => pushToDataLayer('click_cta', { cta_name: lang === 'es' ? 'Psicología Infantojuvenil' : 'Child & Adolescent', location: 'home_hero' })}
                 className="group glass rounded-2xl p-5 hover:shadow-lg transition-all duration-300 block border border-accent/20 hover:border-accent/40"
               >
                 <div className="flex items-center gap-3 mb-2">

@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const socialLinks = [
   { handle: '@genpsicologia', href: 'https://instagram.com/genpsicologia' },
@@ -38,6 +39,7 @@ const Hola = () => {
         toast({ title: s.waitlistDuplicate, description: s.waitlistDuplicateText });
       } else if (data?.success) {
         setIsSubscribed(true);
+        pushToDataLayer('generate_lead', { form_location: 'hola_waitlist' });
       } else if (data?.error) {
         toast({ title: s.waitlistError, description: data.error, variant: 'destructive' });
       }
@@ -108,6 +110,7 @@ const Hola = () => {
         <div className="w-full max-w-sm relative z-10 mb-3 animate-fade-up" style={{ animationDelay: '0.08s' }}>
           <Link
             to={lp('/contacto')}
+            onClick={() => pushToDataLayer('click_book_session', { location: 'hola_cta' })}
             className="group flex items-center gap-4 w-full p-6 rounded-2xl bg-primary text-primary-foreground transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] relative overflow-hidden min-h-[68px] animate-pulse-subtle"
             style={{ boxShadow: '0 0 25px hsl(var(--primary) / 0.45), var(--shadow-glow-primary)' }}
           >
@@ -198,6 +201,7 @@ const Hola = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => pushToDataLayer('click_social', { network: 'instagram', handle: social.handle, location: 'hola' })}
                 aria-label={`Ir a Instagram ${social.handle}`}
                 className="flex items-center gap-1.5 px-3 py-2 rounded-full glass text-sm text-muted-foreground hover:text-primary transition-colors min-h-[44px]"
                 style={{ boxShadow: 'var(--shadow-soft)' }}

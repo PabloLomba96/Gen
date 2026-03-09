@@ -2,6 +2,7 @@ import { ArrowRight, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/i18n/context';
 import { type LucideIcon } from 'lucide-react';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 interface ProductCardProps {
   icon: LucideIcon;
@@ -37,7 +38,7 @@ const ProductCard = ({ icon: Icon, type, title, description, price, popular, ext
         <span className="text-2xl font-bold text-primary">{price}</span>
         {externalUrl ? (
           <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-5">
-            <a href={externalUrl} target="_blank" rel="noopener noreferrer">
+            <a href={externalUrl} target="_blank" rel="noopener noreferrer" onClick={() => pushToDataLayer('click_external_product', { product_name: title, external_url: externalUrl })}>
               {buyLabel}
               <ArrowRight className="w-4 h-4 ml-1" />
             </a>
