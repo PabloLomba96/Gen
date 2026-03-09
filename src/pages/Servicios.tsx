@@ -145,17 +145,17 @@ const Servicios = () => {
           <div className="container mx-auto px-4">
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
               <div className="flex justify-center mb-10">
-                <TabsList className="h-12 p-1 bg-secondary/60">
-                  <TabsTrigger value="adultos" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Sun className="w-4 h-4 mr-2" />
+                <TabsList className="h-auto flex-wrap gap-1 p-1 bg-secondary/60">
+                  <TabsTrigger value="adultos" className="px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold data-[state=active]:bg-background">
+                    <Sun className="w-4 h-4 mr-1.5 sm:mr-2 shrink-0" />
                     {lang === 'es' ? 'Adultos' : 'Adults'}
                   </TabsTrigger>
-                  <TabsTrigger value="infantojuvenil" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Moon className="w-4 h-4 mr-2" />
+                  <TabsTrigger value="infantojuvenil" className="px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold data-[state=active]:bg-background">
+                    <Moon className="w-4 h-4 mr-1.5 sm:mr-2 shrink-0" />
                     {lang === 'es' ? 'Infantojuvenil' : 'Child & Adolescent'}
                   </TabsTrigger>
-                  <TabsTrigger value="expats" className="px-6 py-2.5 text-sm font-semibold data-[state=active]:bg-background">
-                    <Globe className="w-4 h-4 mr-2" />
+                  <TabsTrigger value="expats" className="px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold data-[state=active]:bg-background">
+                    <Globe className="w-4 h-4 mr-1.5 sm:mr-2 shrink-0" />
                     Expats & English
                   </TabsTrigger>
                 </TabsList>
