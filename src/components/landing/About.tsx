@@ -6,7 +6,7 @@ import { useLanguage } from '@/i18n/context';
 const icons = [GraduationCap, Award, Heart];
 
 const About = () => {
-  const { t, lp } = useLanguage();
+  const { t, lp, lang } = useLanguage();
   const credentials = t('about.credentials') as Array<{ title: string; description: string }>;
 
   return (
