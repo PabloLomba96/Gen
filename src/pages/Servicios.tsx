@@ -116,7 +116,7 @@ const Servicios = () => {
                 </div>
                 <div>
                   <h3 className="font-display font-semibold text-foreground">
-                    {lang === 'es' ? 'Consulta Presencial en Valencia' : 'In-Person Practice in Valencia'}
+                    {lang === 'es' ? 'Consulta Presencial en Valencia' : 'In-person therapy in Valencia'}
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {lang === 'es' ? 'Espacio cálido y seguro para ti y tu familia' : 'A warm, safe space for you and your family'}

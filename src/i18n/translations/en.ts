@@ -154,7 +154,7 @@ export const en = {
       { label: 'Contact', href: '/contacto' },
       { label: 'Link in Bio', href: '/hola' },
     ],
-    inPersonLabel: 'In-Person Practice',
+    inPersonLabel: 'In-person therapy in Valencia',
     locationDetail: 'Valencia, Spain',
     alsoOnline: 'Also available online',
     emailLabel: 'Email',
@@ -171,7 +171,7 @@ export const en = {
     title: 'Let\'s talk?',
     subtitle: 'If you have questions or want to schedule a first appointment, fill in the form and I\'ll get back to you as soon as possible.',
     infoTitle: 'Contact information',
-    inPersonLabel: 'In-Person Practice',
+    inPersonLabel: 'In-person therapy in Valencia',
     location: 'Valencia, Spain',
     alsoOnline: 'Also available online',
     emailLabel: 'Email',
@@ -224,8 +224,8 @@ export const en = {
     modalitiesSubtitle: 'Choose the modality that best suits your family.',
     modalities: [
       {
-        title: 'In-Person Practice',
-        description: 'I offer in-person sessions in Valencia. A warm, safe space where your child will feel supported.',
+        title: 'In-person therapy in Valencia',
+        description: 'I offer in-person therapy sessions in Valencia. A warm, safe space where your child will feel supported.',
       },
       {
         title: 'Online Therapy',
