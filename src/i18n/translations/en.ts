@@ -269,6 +269,8 @@ export const en = {
     ctaAllServices: 'View All Services',
     dualFocusTitle: 'This service adapts to you',
     dualFocusSubtitle: 'Choose the focus that best fits your situation:',
+    schoolCoordTitle: 'School Coordination',
+    schoolCoordText: 'As part of this service, I maintain direct communication with your child\'s school (when authorised by the family) to share relevant information, align approaches and support their adaptation. This coordination ensures more comprehensive and consistent support both at home and in the classroom, working together in the same direction.',
   },
   sobreMi: {
     breadcrumb: 'About Me',

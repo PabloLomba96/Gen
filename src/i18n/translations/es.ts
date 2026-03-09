@@ -277,6 +277,8 @@ export const es = {
     ctaAllServices: 'Ver Todos los Servicios',
     dualFocusTitle: 'Este servicio se adapta a ti',
     dualFocusSubtitle: 'Selecciona el enfoque que mejor se ajuste a tu situación:',
+    schoolCoordTitle: 'Coordinación con el Centro Escolar',
+    schoolCoordText: 'Como parte de este servicio, mantengo comunicación directa con el colegio de tu hijo/a (cuando la familia lo autoriza) para compartir información relevante, unificar criterios y favorecer su adaptación. Esta coordinación permite que reciba un apoyo más completo y coherente tanto en casa como en el aula, trabajando juntos en la misma dirección.',
   },
   sobreMi: {
     breadcrumb: 'Sobre Mí',
