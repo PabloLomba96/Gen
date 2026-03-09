@@ -79,18 +79,18 @@ const LocalizedRoutes = () => (
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <HelmetProvider>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <LanguageProvider>
-          <ScrollToTop />
-          <HrefLang />
-          <MobileBookingCta />
-          <LocalizedRoutes />
-        </LanguageProvider>
-      </BrowserRouter>
-    </TooltipProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <LanguageProvider>
+            <ScrollToTop />
+            <HrefLang />
+            <MobileBookingCta />
+            <LocalizedRoutes />
+          </LanguageProvider>
+        </BrowserRouter>
+      </TooltipProvider>
     </HelmetProvider>
   </QueryClientProvider>
 );
