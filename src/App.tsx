@@ -22,8 +22,23 @@ import Privacidad from "./pages/Privacidad";
 import Cookies from "./pages/Cookies";
 import NotFound from "./pages/NotFound";
 import ServiceRedirect from "./components/ServiceRedirect";
+import CookieBanner from "./components/CookieBanner";
+import useGTM from "./hooks/useGTM";
 
 const queryClient = new QueryClient();
+
+const AppInner = () => {
+  useGTM();
+  return (
+    <>
+      <ScrollToTop />
+      <HrefLang />
+      <MobileBookingCta />
+      <CookieBanner />
+      <LocalizedRoutes />
+    </>
+  );
+};
 
 const LocalizedRoutes = () => (
   <Routes>
