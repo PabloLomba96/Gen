@@ -9,7 +9,7 @@ import { pushToDataLayer } from '@/hooks/useGTM';
 
 const Newsletter = () => {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [email, setEmail] = useState('');
   const [idioma, setIdioma] = useState<'es' | 'en'>('es');
   const [isSubmitting, setIsSubmitting] = useState(false);
