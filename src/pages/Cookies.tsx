@@ -3,6 +3,8 @@ import Footer from '@/components/landing/Footer';
 import { Link } from 'react-router-dom';
 import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
+import { Button } from '@/components/ui/button';
+import { revokeCookieConsent, getCookieConsent } from '@/components/CookieBanner';
 
 const Cookies = () => {
   const { t, lp, lang } = useLanguage();
