@@ -31,6 +31,7 @@ const Footer = () => {
                 href="https://instagram.com/genpsicologia"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => pushToDataLayer('click_social', { network: 'instagram', handle: 'genpsicologia', location: 'footer' })}
                 className="group relative flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 hover:bg-background/20 transition-colors text-xs"
                 aria-label="Instagram Gen Psicología"
               >
