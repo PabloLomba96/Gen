@@ -49,6 +49,7 @@ const Services = () => {
               <Link
                 key={service.slug}
                 to={lp(`/servicios/${service.slug}`)}
+                onClick={() => pushToDataLayer('click_service_category', { category_name: service.shortTitle, section: adultLabel, location: 'home_services' })}
                 className="glass rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group animate-fade-up block"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
@@ -82,6 +83,7 @@ const Services = () => {
               <Link
                 key={service.slug}
                 to={lp(`/servicios/${service.slug}`)}
+                onClick={() => pushToDataLayer('click_service_category', { category_name: service.shortTitle, section: childLabel, location: 'home_services' })}
                 className="glass rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group animate-fade-up block"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
@@ -115,6 +117,7 @@ const Services = () => {
               <Link
                 key={service.slug}
                 to={lp(`/servicios/${service.slug}`)}
+                onClick={() => pushToDataLayer('click_service_category', { category_name: service.shortTitle, section: todosLabel, location: 'home_services' })}
                 className="glass rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group animate-fade-up block"
                 style={{ animationDelay: `${index * 0.08}s` }}
               >

@@ -31,6 +31,7 @@ const Newsletter = () => {
         toast({ title: t('newsletter.duplicateTitle'), description: t('newsletter.duplicateText') });
       } else if (data?.success) {
         setIsSubscribed(true);
+        pushToDataLayer('generate_lead', { form_location: 'newsletter' });
       } else if (data?.error) {
         toast({ title: t('newsletter.errorTitle'), description: data.error, variant: 'destructive' });
       }

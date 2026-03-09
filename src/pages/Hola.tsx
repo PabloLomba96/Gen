@@ -201,6 +201,7 @@ const Hola = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => pushToDataLayer('click_social', { network: 'instagram', handle: social.handle, location: 'hola' })}
                 aria-label={`Ir a Instagram ${social.handle}`}
                 className="flex items-center gap-1.5 px-3 py-2 rounded-full glass text-sm text-muted-foreground hover:text-primary transition-colors min-h-[44px]"
                 style={{ boxShadow: 'var(--shadow-soft)' }}

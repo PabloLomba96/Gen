@@ -198,7 +198,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-3">
             <LanguageSwitcher />
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all rounded-full px-6">
-              <Link to={lp('/contacto')}>{t('nav.bookSession')}</Link>
+              <Link to={lp('/contacto')} onClick={() => pushToDataLayer('click_book_session', { location: 'header_cta' })}>{t('nav.bookSession')}</Link>
             </Button>
           </div>
 

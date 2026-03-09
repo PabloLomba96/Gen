@@ -53,6 +53,7 @@ const Footer = () => {
                 href="https://wa.me/34611889209"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => pushToDataLayer('click_social', { network: 'whatsapp', location: 'footer' })}
                 className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-background/20 transition-colors"
                 aria-label="WhatsApp"
               >
