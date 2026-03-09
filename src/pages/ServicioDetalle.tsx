@@ -198,6 +198,27 @@ const ServicioDetalle = () => {
           </section>
         )}
 
+        {/* School Coordination - for infantojuvenil, todos, and expats children */}
+        {(service.category === 'infantojuvenil' || 
+          service.category === 'todos' || 
+          (service.category === 'expats' && (service.slug.includes('infantojuvenil') || service.slug.includes('children')))) && (
+          <section className="py-16 bg-secondary/20">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto bg-card rounded-2xl p-8 md:p-10 border border-primary/10" style={{ boxShadow: 'var(--shadow-soft)' }}>
+                <div className="flex items-start gap-5">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                    <UserCheck className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-display font-semibold text-foreground mb-3">{s.schoolCoordTitle}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{s.schoolCoordText}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Details */}
         <section className="py-24">
           <div className="container mx-auto px-4">
