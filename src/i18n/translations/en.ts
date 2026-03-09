@@ -154,7 +154,7 @@ export const en = {
       { label: 'Contact', href: '/contacto' },
       { label: 'Link in Bio', href: '/hola' },
     ],
-    inPersonLabel: 'In-Person Practice',
+    inPersonLabel: 'In-person therapy in Valencia',
     locationDetail: 'Valencia, Spain',
     alsoOnline: 'Also available online',
     emailLabel: 'Email',
