@@ -6,6 +6,7 @@
 
 @layer base {
   :root {
+    color-scheme: light;
     /* 
       Palette inspired by the logo:
       - Granate circle = warmth, embrace, closeness → primary actions
@@ -78,46 +79,6 @@
     --shadow-glow-accent: 0 8px 30px -6px hsl(180 45% 58% / 0.2);
   }
 
-  .dark {
-    --background: 345 15% 7%;
-    --foreground: 40 20% 90%;
-
-    --card: 345 12% 11%;
-    --card-foreground: 40 20% 90%;
-
-    --popover: 345 12% 11%;
-    --popover-foreground: 40 20% 90%;
-
-    --primary: 345 42% 55%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 345 10% 16%;
-    --secondary-foreground: 40 20% 85%;
-
-    --muted: 345 10% 16%;
-    --muted-foreground: 40 10% 52%;
-
-    --accent: 180 48% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    --overlap: 320 22% 50%;
-
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 345 10% 18%;
-    --input: 345 10% 18%;
-    --ring: 345 42% 55%;
-
-    --gradient-hero: linear-gradient(165deg, hsl(345 15% 7%) 0%, hsl(345 12% 10%) 40%, hsl(180 48% 50% / 0.04) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(345 42% 55% / 0.08) 0%, hsl(180 48% 50% / 0.08) 100%);
-    --gradient-glass: linear-gradient(145deg, hsl(345 12% 13% / 0.8) 0%, hsl(345 12% 11% / 0.5) 100%);
-    --gradient-overlap: linear-gradient(135deg, hsl(345 42% 55% / 0.1), hsl(320 22% 50% / 0.1), hsl(180 48% 50% / 0.1));
-    --shadow-soft: 0 2px 20px -4px hsl(0 0% 0% / 0.3);
-    --shadow-card: 0 6px 28px -6px hsl(0 0% 0% / 0.35);
-    --shadow-glow-primary: 0 8px 30px -6px hsl(345 42% 55% / 0.15);
-    --shadow-glow-accent: 0 8px 30px -6px hsl(180 48% 50% / 0.15);
-  }
 }
 
 @layer base {
