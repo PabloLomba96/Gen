@@ -171,7 +171,7 @@ export const en = {
     title: 'Let\'s talk?',
     subtitle: 'If you have questions or want to schedule a first appointment, fill in the form and I\'ll get back to you as soon as possible.',
     infoTitle: 'Contact information',
-    inPersonLabel: 'In-Person Practice',
+    inPersonLabel: 'In-person therapy in Valencia',
     location: 'Valencia, Spain',
     alsoOnline: 'Also available online',
     emailLabel: 'Email',
