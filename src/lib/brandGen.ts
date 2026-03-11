@@ -7,7 +7,7 @@
  * Render with dangerouslySetInnerHTML={{ __html: brandGen(text) }}
  */
 
-const GEN = '<span class="text-primary font-semibold italic">gen</span>';
+const GEN = '<span class="text-primary font-semibold">gen</span>';
 
 // Ordered longest-first to avoid partial replacements
 const BRAND_PATTERNS: RegExp[] = [
@@ -45,7 +45,7 @@ const BRAND_PATTERNS: RegExp[] = [
 ];
 
 export function brandGen(text: string): string {
-  if (!text || text.includes('font-semibold italic')) return text;
+  if (!text || text.includes('text-primary font-semibold">gen</span>')) return text;
 
   let result = text;
   for (const pattern of BRAND_PATTERNS) {
@@ -54,7 +54,7 @@ export function brandGen(text: string): string {
 
   // Exception: "Centro Divergentes" is a proper name — never brand it
   result = result.replace(
-    /Centro Diver<span class="text-primary font-semibold italic">gen<\/span>tes/g,
+    /Centro Diver<span class="text-primary font-semibold">gen<\/span>tes/g,
     'Centro Divergentes',
   );
 

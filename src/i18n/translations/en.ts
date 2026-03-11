@@ -125,7 +125,7 @@ export const en = {
       },
       {
         question: 'How do I know if I need therapy?',
-        answer: 'If you feel that anxiety, sadness or stress interfere with your daily life, or you simply seek a space for self-discovery, therapy is for you. You don\'t need to be "at breaking point" to ask for help. Therapy gives you the tools to stop and re<span class="text-primary font-semibold italic">gen</span>erate your mind.',
+        answer: 'If you feel that anxiety, sadness or stress interfere with your daily life, or you simply seek a space for self-discovery, therapy is for you. You don\'t need to be "at breaking point" to ask for help. Therapy gives you the tools to stop and re<span class="text-primary font-semibold">gen</span>erate your mind.',
       },
     ],
   },

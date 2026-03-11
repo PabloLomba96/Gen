@@ -68,9 +68,9 @@ const Newsletter = () => {
           </h3>
           <p className="text-base font-display text-foreground/80 italic mb-1">
             {lang === 'es' ? (
-              <>Un soplo de oxí<span className="text-primary font-semibold italic">gen</span>o para tu mente.</>
+              <>Un soplo de oxí<span className="text-primary font-semibold">gen</span>o para tu mente.</>
             ) : (
-              <>A breath of oxy<span className="text-primary font-semibold italic">gen</span> for your mind.</>
+              <>A breath of oxy<span className="text-primary font-semibold">gen</span> for your mind.</>
             )}
           </p>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto text-sm leading-relaxed">

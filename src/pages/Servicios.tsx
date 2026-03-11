@@ -70,7 +70,7 @@ const Servicios = () => {
     adultsTitle: 'Para adultos',
     adultsDesc: 'Estrés por adaptación cultural, soledad, ansiedad laboral en un entorno nuevo, dificultades de pareja por el cambio de país, duelo migratorio.',
     childrenTitle: 'Para niños y adolescentes',
-    childrenDesc: 'Adaptación escolar en un nuevo idioma, dificultades sociales, neurodiver<span class="text-primary font-semibold italic">gen</span>cia diagnosticada o sospechada en un nuevo sistema educativo, regulación emocional.',
+    childrenDesc: 'Adaptación escolar en un nuevo idioma, dificultades sociales, neurodiver<span class="text-primary font-semibold">gen</span>cia diagnosticada o sospechada en un nuevo sistema educativo, regulación emocional.',
     cta: 'Contactar en inglés',
     badges: ['Cultural adaptation', 'Bilingual therapy', 'School coordination', 'Online available'],
   } : {
@@ -79,7 +79,7 @@ const Servicios = () => {
     adultsTitle: 'For adults',
     adultsDesc: 'Cultural adjustment stress, loneliness, workplace anxiety in a new environment, relationship difficulties due to relocation, migratory grief.',
     childrenTitle: 'For children & adolescents',
-    childrenDesc: 'School adaptation in a new language, social difficulties, neurodiver<span class="text-primary font-semibold italic">gen</span>ce diagnosed or suspected in a new educational system, emotional regulation.',
+    childrenDesc: 'School adaptation in a new language, social difficulties, neurodiver<span class="text-primary font-semibold">gen</span>ce diagnosed or suspected in a new educational system, emotional regulation.',
     cta: 'Contact in English',
     badges: ['Cultural adaptation', 'Bilingual therapy', 'School coordination', 'Online available'],
   };

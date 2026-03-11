@@ -2,9 +2,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, GraduationCap, Heart, Award, Quote, MapPin, Video, Users, Star, CheckCircle, BookOpen, Shield, Brain, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.png';
+import cvBadge from '@/assets/cv16625-badge.png';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import { useLanguage } from '@/i18n/context';
 import { brandGen } from '@/lib/brandGen';
 
@@ -23,6 +25,41 @@ const SobreMi = () => {
         lang={lang}
         canonical={`${BASE}${lp('/sobre-mi')}`}
       />
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'MedicalBusiness',
+        name: 'Gen Centro de Psicología',
+        url: 'https://genpsicologia.com',
+        image: 'https://genpsicologia.com/og-image.png',
+        telephone: '+34611889209',
+        email: 'patricia@genpsicologia.com',
+        address: { '@type': 'PostalAddress', addressLocality: 'Valencia', addressCountry: 'ES' },
+        medicalSpecialty: 'Psychiatric',
+        isAcceptingNewPatients: true,
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Professional License',
+            recognizedBy: {
+              '@type': 'Organization',
+              name: 'Col·legi Oficial de Psicologia de la Comunitat Valenciana',
+              url: 'https://www.cop-cv.org',
+            },
+            name: 'Psicóloga General Sanitaria — CV16625',
+          },
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Health Authorization',
+            name: 'Clínica autorizada por la Conselleria de Sanidad',
+          },
+        ],
+        founder: {
+          '@type': 'Person',
+          name: 'Patricia Martínez Díaz',
+          jobTitle: 'Psicóloga General Sanitaria',
+          identifier: 'CV16625',
+        },
+      }} />
       <Header />
       <main className="pt-20">
         {/* Hero */}
@@ -68,16 +105,16 @@ const SobreMi = () => {
                 </h1>
                 <p className="text-base sm:text-lg font-display text-foreground/80 italic">
                   {lang === 'es' ? (
-                    <>Una terapia basada en la conexión <span className="text-primary font-semibold italic">gen</span>uina.</>
+                    <>Una terapia basada en la conexión <span className="text-primary font-semibold">gen</span>uina.</>
                   ) : (
-                    <>Therapy based on a <span className="text-primary font-semibold italic">gen</span>uine connection.</>
+                    <>Therapy based on a <span className="text-primary font-semibold">gen</span>uine connection.</>
                   )}
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(s.bio1) }} />
                 <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(s.bio2) }} />
                 <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(s.bio3) }} />
                 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 items-center">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Shield className="w-4 h-4 text-primary" />
                     <span className="text-sm">{s.badges.collegiate}</span>
@@ -97,6 +134,23 @@ const SobreMi = () => {
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Star className="w-4 h-4 text-primary" />
                     <span className="text-sm">{s.badges.reviews}</span>
+                  </div>
+                </div>
+
+                {/* Official credential badge */}
+                <div className="flex items-center gap-3 p-4 rounded-xl bg-secondary/50 border border-border mt-2">
+                  <img
+                    src={cvBadge}
+                    alt={lang === 'es' ? 'Col·legi Oficial de Psicologia de la Comunitat Valenciana — Colegiada CV16625' : 'Official College of Psychology of Valencia — Licensed CV16625'}
+                    className="w-14 h-auto rounded-sm"
+                    width={56}
+                    height={70}
+                    loading="lazy"
+                  />
+                  <div className="text-sm">
+                    <p className="font-semibold text-foreground">{lang === 'es' ? 'Colegiada CV16625' : 'Licensed CV16625'}</p>
+                    <p className="text-muted-foreground text-xs">{lang === 'es' ? 'Col·legi Oficial de Psicologia de la Comunitat Valenciana' : 'Official College of Psychology — Valencian Community'}</p>
+                    <p className="text-muted-foreground text-xs">{lang === 'es' ? 'Clínica autorizada por la Conselleria de Sanidad' : 'Health-authorized clinic'}</p>
                   </div>
                 </div>
               </div>

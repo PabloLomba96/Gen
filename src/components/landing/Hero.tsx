@@ -45,14 +45,14 @@ const Hero = () => {
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
                 {lang === 'es'
-                  ? <>Especialista en neurodiver<span className="text-primary font-semibold italic">gen</span>cia, infantojuvenil y regulación emocional. Presencial y online.</>
-                  : <>Specialist in neurodiver<span className="text-primary font-semibold italic">gen</span>ce, child & adolescent psychology and emotional regulation. In-person and online.</>}
+                  ? <>Especialista en neurodiver<span className="text-primary font-semibold">gen</span>cia, infantojuvenil y regulación emocional. Presencial y online.</>
+                  : <>Specialist in neurodiver<span className="text-primary font-semibold">gen</span>ce, child & adolescent psychology and emotional regulation. In-person and online.</>}
               </p>
               <p className="text-base sm:text-lg font-display text-foreground/80 italic max-w-lg">
                 {lang === 'es' ? (
-                  <>Sanar empieza por entender el ori<span className="text-primary font-semibold italic">gen</span>.</>
+                  <>Sanar empieza por entender el ori<span className="text-primary font-semibold">gen</span>.</>
                 ) : (
-                  <>Healing begins by understanding the ori<span className="text-primary font-semibold italic">gin</span>.</>
+                  <>Healing begins by understanding the ori<span className="text-primary font-semibold">gin</span>.</>
                 )}
               </p>
             </div>
