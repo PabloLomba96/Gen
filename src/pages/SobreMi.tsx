@@ -25,6 +25,41 @@ const SobreMi = () => {
         lang={lang}
         canonical={`${BASE}${lp('/sobre-mi')}`}
       />
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'MedicalBusiness',
+        name: 'Gen Centro de Psicología',
+        url: 'https://genpsicologia.com',
+        image: 'https://genpsicologia.com/og-image.png',
+        telephone: '+34611889209',
+        email: 'patricia@genpsicologia.com',
+        address: { '@type': 'PostalAddress', addressLocality: 'Valencia', addressCountry: 'ES' },
+        medicalSpecialty: 'Psychiatric',
+        isAcceptingNewPatients: true,
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Professional License',
+            recognizedBy: {
+              '@type': 'Organization',
+              name: 'Col·legi Oficial de Psicologia de la Comunitat Valenciana',
+              url: 'https://www.cop-cv.org',
+            },
+            name: 'Psicóloga General Sanitaria — CV16625',
+          },
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'Health Authorization',
+            name: 'Clínica autorizada por la Conselleria de Sanidad',
+          },
+        ],
+        founder: {
+          '@type': 'Person',
+          name: 'Patricia Martínez Díaz',
+          jobTitle: 'Psicóloga General Sanitaria',
+          identifier: 'CV16625',
+        },
+      }} />
       <Header />
       <main className="pt-20">
         {/* Hero */}
