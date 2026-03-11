@@ -1,10 +1,29 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { useLanguage } from '@/i18n/context';
 
 const BASE = 'https://genpsicologia.com';
 
-// Spanish path → English path (without /en prefix)
+// ── Service slug mapping (ES ↔ EN) ──
+const serviceSlugEsToEn: Record<string, string> = {
+  'terapia-individual-adultos': 'individual-therapy-adults',
+  'terapia-de-pareja': 'couples-therapy',
+  'neurodivergencias': 'neurodivergence',
+  'desarrollo-y-creatividad': 'development-creativity',
+  'dificultades-aprendizaje': 'learning-difficulties',
+  'terapia-familiar': 'family-therapy',
+  'regulacion-emocional-autoestima': 'emotional-regulation-self-esteem',
+  'evaluaciones-psicologicas': 'psychological-evaluations',
+  'terapia-expats-adultos': 'therapy-expats-adults',
+  'terapia-expats-infantojuvenil': 'therapy-expats-children',
+};
+
+const serviceSlugEnToEs: Record<string, string> = {};
+Object.entries(serviceSlugEsToEn).forEach(([es, en]) => {
+  serviceSlugEnToEs[en] = es;
+});
+
+// ── Static route mapping (ES path → EN segment without /en) ──
 const esToEn: Record<string, string> = {
   '/': '/',
   '/sobre-mi': '/about',
@@ -18,33 +37,48 @@ const esToEn: Record<string, string> = {
   '/cookies': '/cookies',
 };
 
-function getEsPaths(pathname: string, lang: 'es' | 'en'): { es: string; en: string } | null {
+function getAlternatePaths(
+  pathname: string,
+  lang: 'es' | 'en',
+): { es: string; en: string } | null {
   if (lang === 'es') {
-    // Dynamic service pages
+    // Service detail
     if (pathname.startsWith('/servicios/')) {
-      return { es: pathname, en: '/en/services/' + pathname.split('/servicios/')[1] };
+      const esSlug = pathname.split('/servicios/')[1];
+      const enSlug = serviceSlugEsToEn[esSlug];
+      if (!enSlug) return null; // unknown slug — don't emit broken hreflang
+      return { es: pathname, en: `/en/services/${enSlug}` };
     }
+    // Blog (slugs are identical in both languages)
     if (pathname.startsWith('/blog/')) {
-      return { es: pathname, en: '/en/blog/' + pathname.split('/blog/')[1] };
+      return { es: pathname, en: `/en/blog/${pathname.split('/blog/')[1]}` };
     }
+    // Static pages
     const enSegment = esToEn[pathname];
     if (enSegment) {
-      return { es: pathname, en: enSegment === '/' ? '/en' : '/en' + enSegment };
+      return { es: pathname, en: enSegment === '/' ? '/en' : `/en${enSegment}` };
     }
-  } else {
-    const withoutPrefix = pathname.replace(/^\/en/, '') || '/';
-    if (withoutPrefix.startsWith('/services/')) {
-      const slug = withoutPrefix.split('/services/')[1];
-      return { es: '/servicios/' + slug, en: pathname };
-    }
-    if (withoutPrefix.startsWith('/blog/')) {
-      return { es: '/blog/' + withoutPrefix.split('/blog/')[1], en: pathname };
-    }
-    // Reverse lookup
-    for (const [es, en] of Object.entries(esToEn)) {
-      if (en === withoutPrefix) {
-        return { es, en: pathname };
-      }
+    return null;
+  }
+
+  // English routes
+  const withoutPrefix = pathname.replace(/^\/en/, '') || '/';
+
+  // Service detail
+  if (withoutPrefix.startsWith('/services/')) {
+    const enSlug = withoutPrefix.split('/services/')[1];
+    const esSlug = serviceSlugEnToEs[enSlug];
+    if (!esSlug) return null;
+    return { es: `/servicios/${esSlug}`, en: pathname };
+  }
+  // Blog
+  if (withoutPrefix.startsWith('/blog/')) {
+    return { es: `/blog/${withoutPrefix.split('/blog/')[1]}`, en: pathname };
+  }
+  // Static reverse lookup
+  for (const [es, en] of Object.entries(esToEn)) {
+    if (en === withoutPrefix) {
+      return { es, en: pathname };
     }
   }
   return null;
@@ -54,43 +88,17 @@ const HrefLang = () => {
   const { lang } = useLanguage();
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    // Remove old hreflang links
-    document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
+  const paths = getAlternatePaths(pathname, lang);
 
-    const paths = getEsPaths(pathname, lang);
-    if (!paths) return;
+  if (!paths) return null;
 
-    const links = [
-      { rel: 'alternate', hreflang: 'es', href: BASE + paths.es },
-      { rel: 'alternate', hreflang: 'en', href: BASE + paths.en },
-      { rel: 'alternate', hreflang: 'x-default', href: BASE + paths.es },
-    ];
-
-    links.forEach(({ rel, hreflang, href }) => {
-      const link = document.createElement('link');
-      link.rel = rel;
-      link.hreflang = hreflang;
-      link.href = href;
-      link.setAttribute('data-hreflang', 'true');
-      document.head.appendChild(link);
-    });
-
-    // Also update canonical
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = BASE + pathname;
-
-    return () => {
-      document.querySelectorAll('link[data-hreflang]').forEach((el) => el.remove());
-    };
-  }, [pathname, lang]);
-
-  return null;
+  return (
+    <Helmet>
+      <link rel="alternate" hrefLang="es" href={`${BASE}${paths.es}`} />
+      <link rel="alternate" hrefLang="en" href={`${BASE}${paths.en}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${BASE}${paths.es}`} />
+    </Helmet>
+  );
 };
 
 export default HrefLang;
