@@ -228,9 +228,9 @@ const BlogArticle = () => {
                 </div>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-foreground">Patricia Martínez Díaz</p>
-                  <p className="text-xs text-muted-foreground">
-                    {s.authorCredentials ?? 'Psicóloga General Sanitaria · Colegiada CV16625 · Especialista en infancia, adolescencia y neurodivergencia'}
-                  </p>
+                  <p className="text-xs text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(
+                    s.authorCredentials ?? 'Psicóloga General Sanitaria · Colegiada CV16625 · Especialista en infancia, adolescencia y neurodivergencia'
+                  ) }} />
                 </div>
               </div>
 
