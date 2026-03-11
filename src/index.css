@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    color-scheme: light;
+    color-scheme: light only;
     /* 
       Palette inspired by the logo:
       - Granate circle = warmth, embrace, closeness → primary actions
@@ -77,6 +77,33 @@
     --shadow-card: 0 6px 28px -6px hsl(345 20% 16% / 0.08);
     --shadow-glow-primary: 0 8px 30px -6px hsl(345 38% 45% / 0.2);
     --shadow-glow-accent: 0 8px 30px -6px hsl(180 45% 58% / 0.2);
+  }
+
+  /* Force light mode even when Android browsers apply forced dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: light only !important;
+      --background: 40 33% 97%;
+      --foreground: 345 20% 16%;
+      --card: 40 30% 99%;
+      --card-foreground: 345 20% 16%;
+      --popover: 40 30% 99%;
+      --popover-foreground: 345 20% 16%;
+      --primary: 345 38% 45%;
+      --primary-foreground: 40 33% 97%;
+      --secondary: 35 25% 93%;
+      --secondary-foreground: 345 20% 20%;
+      --muted: 35 18% 91%;
+      --muted-foreground: 345 10% 44%;
+      --accent: 180 45% 58%;
+      --accent-foreground: 345 20% 16%;
+      --overlap: 320 20% 72%;
+      --destructive: 0 84% 60%;
+      --destructive-foreground: 0 0% 100%;
+      --border: 35 15% 89%;
+      --input: 35 15% 87%;
+      --ring: 345 38% 45%;
+    }
   }
 
 }

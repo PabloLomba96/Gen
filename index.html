@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light only" />
+    <meta name="supported-color-schemes" content="light" />
+    <style>
+      /* Force light mode on aggressive Android dark mode browsers */
+      html, body {
+        color-scheme: light only !important;
+        background-color: #FAF8F4 !important;
+        color: #312428 !important;
+      }
+      /* Ensure branded "gen" spans stay visible on any background */
+      .text-primary {
+        color: hsl(345 38% 45%) !important;
+        -webkit-text-fill-color: hsl(345 38% 45%) !important;
+      }
+    </style>
 
     <!-- Google Consent Mode v2 + GTM (hardcoded for crawler visibility) -->
     <script>
