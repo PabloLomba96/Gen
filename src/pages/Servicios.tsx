@@ -15,6 +15,7 @@ import { services, adultServices, childServices, expatServices, todosServices } 
 import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn, todosServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
 import { useLocation } from 'react-router-dom';
+import { brandGen } from '@/lib/brandGen';
 
 const Servicios = () => {
   const location = useLocation();
