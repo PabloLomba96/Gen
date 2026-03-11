@@ -117,8 +117,8 @@ const ServicioDetalle = () => {
               }`}>
                 <service.icon className="w-8 h-8" />
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">{service.title}</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">{service.longDescription}</p>
+              <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6" dangerouslySetInnerHTML={{ __html: brandGen(service.title) }} />
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl" dangerouslySetInnerHTML={{ __html: brandGen(service.longDescription) }} />
             </div>
           </div>
         </section>
