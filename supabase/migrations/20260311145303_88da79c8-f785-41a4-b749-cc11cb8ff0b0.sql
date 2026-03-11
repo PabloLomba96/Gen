@@ -1,0 +1,1 @@
+ALTER TABLE public.contact_messages ADD COLUMN modalidad text, ADD COLUMN contact_method text;
