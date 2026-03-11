@@ -289,7 +289,7 @@ const ServicioDetalle = () => {
                   }`}>
                     <sv.icon className="w-5 h-5" />
                   </div>
-                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{sv.shortTitle}</p>
+                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: brandGen(sv.shortTitle) }} />
                 </Link>
               ))}
             </div>
