@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { GraduationCap, Heart, Award, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/context';
+import { brandGen } from '@/lib/brandGen';
 
 const icons = [GraduationCap, Award, Heart];
 
