@@ -6,6 +6,7 @@ import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import SEO from '@/components/SEO';
 import { useLanguage } from '@/i18n/context';
+import { brandGen } from '@/lib/brandGen';
 
 const BASE = 'https://genpsicologia.com';
 const credentialIcons = [GraduationCap, Award, Users, Heart];
