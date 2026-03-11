@@ -5,6 +5,7 @@ import { adultServices, childServices, todosServices } from '@/data/services';
 import { adultServicesEn, childServicesEn, todosServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
 import { pushToDataLayer } from '@/hooks/useGTM';
+import { brandGen } from '@/lib/brandGen';
 
 const Services = () => {
   const { t, lp, lang } = useLanguage();
