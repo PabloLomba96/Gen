@@ -324,7 +324,7 @@ const Servicios = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto bg-accent/5 border border-accent/20 rounded-2xl p-6 text-center">
               <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">{s.minorNoteLabel}</strong> {s.minorNote}
+                <strong className="text-foreground">{s.minorNoteLabel}</strong> <span dangerouslySetInnerHTML={{ __html: brandGen(s.minorNote) }} />
               </p>
             </div>
           </div>

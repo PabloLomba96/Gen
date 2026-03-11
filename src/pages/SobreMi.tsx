@@ -73,9 +73,9 @@ const SobreMi = () => {
                     <>Therapy based on a <span className="text-primary font-semibold italic">gen</span>uine connection.</>
                   )}
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: s.bio1 }} />
-                <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: s.bio2 }} />
-                <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: s.bio3 }} />
+                <p className="text-lg text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(s.bio1) }} />
+                <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(s.bio2) }} />
+                <p className="text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(s.bio3) }} />
                 
                 <div className="flex flex-wrap gap-3">
                   <div className="flex items-center gap-2 text-muted-foreground">

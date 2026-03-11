@@ -28,9 +28,7 @@ const About = () => {
                 <>Therapy based on a <span className="text-primary font-semibold italic">gen</span>uine connection.</>
               )}
             </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              {t('about.subtitle')}
-            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(t('about.subtitle') as string) }} />
           </div>
 
           <div className="grid sm:grid-cols-3 gap-6">

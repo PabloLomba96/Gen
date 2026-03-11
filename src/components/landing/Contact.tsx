@@ -189,8 +189,8 @@ const Contact = () => {
                       <CalendarCheck className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">{t('contact.step3Title')}</p>
-                      <p className="text-sm text-muted-foreground">{t('contact.step3Text')}</p>
+                      <p className="font-medium text-foreground" dangerouslySetInnerHTML={{ __html: brandGen(t('contact.step3Title') as string) }} />
+                      <p className="text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(t('contact.step3Text') as string) }} />
                     </div>
                   </div>
                 </div>
