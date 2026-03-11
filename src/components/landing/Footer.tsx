@@ -4,6 +4,7 @@ import OverlappingCircles from '@/components/OverlappingCircles';
 import { useLanguage } from '@/i18n/context';
 import { Instagram } from 'lucide-react';
 import { pushToDataLayer } from '@/hooks/useGTM';
+import cvBadge from '@/assets/cv16625-badge.png';
 
 const Footer = () => {
   const { t, lp, lang } = useLanguage();
