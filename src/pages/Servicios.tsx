@@ -79,7 +79,7 @@ const Servicios = () => {
     adultsTitle: 'For adults',
     adultsDesc: 'Cultural adjustment stress, loneliness, workplace anxiety in a new environment, relationship difficulties due to relocation, migratory grief.',
     childrenTitle: 'For children & adolescents',
-    childrenDesc: 'School adaptation in a new language, social difficulties, neurodivergence diagnosed or suspected in a new educational system, emotional regulation.',
+    childrenDesc: 'School adaptation in a new language, social difficulties, neurodiver<span class="text-primary font-semibold italic">gen</span>ce diagnosed or suspected in a new educational system, emotional regulation.',
     cta: 'Contact in English',
     badges: ['Cultural adaptation', 'Bilingual therapy', 'School coordination', 'Online available'],
   };
