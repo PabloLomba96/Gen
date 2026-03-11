@@ -47,7 +47,7 @@ const Services = () => {
                 {lang === 'es' ? (
                   <>Date un mar<span className="text-primary font-semibold">gen</span> para sentir y recupera la a<span className="text-primary font-semibold">gen</span>cia de tu vida.</>
                 ) : (
-                  <>Give yourself the space to feel and reclaim your a<span className="text-primary font-semibold italic">gen</span>cy.</>
+                  <>Give yourself the space to feel and reclaim your a<span className="text-primary font-semibold">gen</span>cy.</>
                 )}
               </p>
             </div>
