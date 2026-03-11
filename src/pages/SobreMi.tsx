@@ -2,9 +2,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, GraduationCap, Heart, Award, Quote, MapPin, Video, Users, Star, CheckCircle, BookOpen, Shield, Brain, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logoPatricia from '@/assets/logo-patricia.png';
+import cvBadge from '@/assets/cv16625-badge.png';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import SEO from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
 import { useLanguage } from '@/i18n/context';
 import { brandGen } from '@/lib/brandGen';
 
