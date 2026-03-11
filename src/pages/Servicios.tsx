@@ -251,7 +251,7 @@ const Servicios = () => {
                       <h2 className="text-2xl font-display font-bold text-foreground">{expatsContent.title}</h2>
                     </div>
                   </div>
-                  <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed">{expatsContent.subtitle}</p>
+                  <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(expatsContent.subtitle) }} />
 
                   <div className="flex flex-wrap gap-2 mb-8">
                     {expatsContent.badges.map((b) => (
