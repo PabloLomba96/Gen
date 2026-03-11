@@ -33,17 +33,13 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       >
         <service.icon className="w-7 h-7" />
       </div>
-      <h3 className="text-xl font-display font-semibold text-foreground mb-3">
-        {service.title}
-      </h3>
-      <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-4 md:line-clamp-none flex-grow">
-        {service.description}
-      </p>
+      <h3 className="text-xl font-display font-semibold text-foreground mb-3" dangerouslySetInnerHTML={{ __html: brandGen(service.title) }} />
+      <p className="text-muted-foreground leading-relaxed mb-4 line-clamp-4 md:line-clamp-none flex-grow" dangerouslySetInnerHTML={{ __html: brandGen(service.description) }} />
       <ul className="space-y-2 mt-auto">
         {service.details.map((detail) => (
           <li key={detail} className="flex items-center gap-2 text-sm text-muted-foreground">
             <CheckCircle className="w-4 h-4 text-accent shrink-0" />
-            {detail}
+            <span dangerouslySetInnerHTML={{ __html: brandGen(detail) }} />
           </li>
         ))}
       </ul>
