@@ -2,6 +2,7 @@ import { CheckCircle } from 'lucide-react';
 import { LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/context';
+import { brandGen } from '@/lib/brandGen';
 
 interface ServiceCardProps {
   service: {
