@@ -230,7 +230,7 @@ const ServicioDetalle = () => {
                   {service.details.map((detail) => (
                     <li key={detail} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-accent mt-0.5 shrink-0" />
-                      <span className="text-muted-foreground">{detail}</span>
+                      <span className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(detail) }} />
                     </li>
                   ))}
                 </ul>
