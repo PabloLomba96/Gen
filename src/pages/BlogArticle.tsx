@@ -5,6 +5,7 @@ import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
 import SEO from '@/components/SEO';
+import { brandGen } from '@/lib/brandGen';
 import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { blogArticlesEn } from '@/data/blogArticles-en';
