@@ -45,7 +45,7 @@ const BRAND_PATTERNS: RegExp[] = [
 ];
 
 export function brandGen(text: string): string {
-  if (!text || text.includes('font-semibold italic')) return text;
+  if (!text || text.includes('text-primary font-semibold">gen</span>')) return text;
 
   let result = text;
   for (const pattern of BRAND_PATTERNS) {
