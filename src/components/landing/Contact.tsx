@@ -10,6 +10,7 @@ import { z } from 'zod';
 import { useLanguage } from '@/i18n/context';
 import { useSearchParams } from 'react-router-dom';
 import { pushToDataLayer } from '@/hooks/useGTM';
+import { brandGen } from '@/lib/brandGen';
 
 type ContactForm = {
   nombre: string;
