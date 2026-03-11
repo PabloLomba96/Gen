@@ -7,7 +7,7 @@
  * Render with dangerouslySetInnerHTML={{ __html: brandGen(text) }}
  */
 
-const GEN = '<span class="text-primary font-semibold italic">gen</span>';
+const GEN = '<span class="text-primary font-semibold">gen</span>';
 
 // Ordered longest-first to avoid partial replacements
 const BRAND_PATTERNS: RegExp[] = [
