@@ -108,7 +108,7 @@ const ServicioDetalle = () => {
               <span className="text-muted-foreground">/</span>
               <Link to={lp('/servicios')} className="text-muted-foreground hover:text-primary transition-colors">{t('nav.services')}</Link>
               <span className="text-muted-foreground">/</span>
-              <span className="text-foreground">{service.title}</span>
+              <span className="text-foreground" dangerouslySetInnerHTML={{ __html: brandGen(service.title) }} />
             </div>
 
             <div className="max-w-4xl">
