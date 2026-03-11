@@ -85,7 +85,7 @@ const Privacidad = () => {
               </div>
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">7. Menores de edad</h2>
-                <p>El tratamiento de datos de menores de 14 años requiere el consentimiento de sus padres o tutores legales. Para la atención psicológica de menores, es imprescindible el consentimiento firmado de ambos pro<span className="text-primary font-semibold italic">gen</span>itores o tutores legales.</p>
+                <p>El tratamiento de datos de menores de 14 años requiere el consentimiento de sus padres o tutores legales. Para la atención psicológica de menores, es imprescindible el consentimiento firmado de ambos pro<span className="text-primary font-semibold">gen</span>itores o tutores legales.</p>
               </div>
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">8. Seguridad</h2>
