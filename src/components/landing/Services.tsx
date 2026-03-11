@@ -45,7 +45,7 @@ const Services = () => {
               <p className="text-xs text-muted-foreground">{morningLabel}</p>
               <p className="text-sm font-display text-foreground/70 italic mt-1">
                 {lang === 'es' ? (
-                  <>Date un mar<span className="text-primary font-semibold italic">gen</span> para sentir y recupera la a<span className="text-primary font-semibold italic">gen</span>cia de tu vida.</>
+                  <>Date un mar<span className="text-primary font-semibold">gen</span> para sentir y recupera la a<span className="text-primary font-semibold">gen</span>cia de tu vida.</>
                 ) : (
                   <>Give yourself the space to feel and reclaim your a<span className="text-primary font-semibold italic">gen</span>cy.</>
                 )}
