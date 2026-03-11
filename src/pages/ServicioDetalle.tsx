@@ -11,6 +11,7 @@ import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
 import { useMemo } from 'react';
+import { brandGen } from '@/lib/brandGen';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
