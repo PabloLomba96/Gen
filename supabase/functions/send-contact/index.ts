@@ -47,7 +47,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    const { nombre, email, telefono, motivo, contactMethod, mensaje, lang, fromExpats } = await req.json();
+    const { nombre, email, telefono, motivo, modalidad, contactMethod, mensaje, lang, fromExpats } = await req.json();
 
     if (!nombre || !email || !motivo || !mensaje) {
       return new Response(
@@ -77,11 +77,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    const allowedMotivos = [
-      'Primera consulta', 'Información sobre tarifas', 'Consulta sobre servicios', 'Terapia online', 'Otro',
-      'First consultation', 'Pricing information', 'Service enquiry', 'Online therapy', 'Other',
-    ];
-    if (typeof motivo !== "string" || !allowedMotivos.includes(motivo)) {
+    if (typeof motivo !== "string" || motivo.length < 2 || motivo.length > 150) {
       return new Response(
         JSON.stringify({ error: "Motivo inválido" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
@@ -101,6 +97,8 @@ Deno.serve(async (req) => {
       telefono: telefono || null,
       motivo,
       mensaje,
+      modalidad: modalidad || null,
+      contact_method: contactMethod || null,
     });
 
     if (dbError) {

@@ -70,7 +70,7 @@ const Contact = () => {
       const validated = contactSchema.parse(formData);
 
       const { data, error } = await supabase.functions.invoke('send-contact', {
-        body: { ...validated, modalidad: formData.modalidad, lang, fromExpats },
+        body: { ...validated, modalidad: formData.modalidad, contactMethod: formData.contactMethod, lang, fromExpats },
       });
 
       if (error) throw error;

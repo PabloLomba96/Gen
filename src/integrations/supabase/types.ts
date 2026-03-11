@@ -16,31 +16,37 @@ export type Database = {
     Tables: {
       contact_messages: {
         Row: {
+          contact_method: string | null
           created_at: string
           email: string
           id: string
           leido: boolean
           mensaje: string
+          modalidad: string | null
           motivo: string
           nombre: string
           telefono: string | null
         }
         Insert: {
+          contact_method?: string | null
           created_at?: string
           email: string
           id?: string
           leido?: boolean
           mensaje: string
+          modalidad?: string | null
           motivo: string
           nombre: string
           telefono?: string | null
         }
         Update: {
+          contact_method?: string | null
           created_at?: string
           email?: string
           id?: string
           leido?: boolean
           mensaje?: string
+          modalidad?: string | null
           motivo?: string
           nombre?: string
           telefono?: string | null
