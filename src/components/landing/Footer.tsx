@@ -101,6 +101,20 @@ const Footer = () => {
                 <a href="tel:+34611889209" className="hover:text-background transition-colors">+34 611 889 209</a>
               </li>
             </ul>
+            <div className="mt-5 flex items-center gap-3">
+              <img
+                src={cvBadge}
+                alt={lang === 'es' ? 'Col·legi Oficial de Psicologia — Colegiada CV16625' : 'Official College of Psychology — Licensed CV16625'}
+                className="w-12 h-auto rounded-sm opacity-80"
+                width={48}
+                height={60}
+                loading="lazy"
+              />
+              <div className="text-xs text-background/45 leading-tight">
+                <p className="font-semibold text-background/60">{lang === 'es' ? 'Colegiada CV16625' : 'Licensed CV16625'}</p>
+                <p>{lang === 'es' ? 'Clínica autorizada Sanidad' : 'Health-authorized clinic'}</p>
+              </div>
+            </div>
           </div>
         </div>
 
