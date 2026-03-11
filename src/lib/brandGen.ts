@@ -54,7 +54,7 @@ export function brandGen(text: string): string {
 
   // Exception: "Centro Divergentes" is a proper name — never brand it
   result = result.replace(
-    /Centro Diver<span class="text-primary font-semibold italic">gen<\/span>tes/g,
+    /Centro Diver<span class="text-primary font-semibold">gen<\/span>tes/g,
     'Centro Divergentes',
   );
 

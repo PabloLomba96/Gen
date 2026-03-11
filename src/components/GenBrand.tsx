@@ -3,7 +3,7 @@
  * Usage: <GenBrand>gen</GenBrand> renders the styled span.
  */
 const GenBrand = () => (
-  <span className="text-primary font-semibold italic">gen</span>
+  <span className="text-primary font-semibold">gen</span>
 );
 
 export default GenBrand;
