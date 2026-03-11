@@ -64,12 +64,8 @@ const Services = () => {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
                   <service.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-display font-semibold text-foreground mb-2">
-                  {service.shortTitle}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
+                <h3 className="text-lg font-display font-semibold text-foreground mb-2" dangerouslySetInnerHTML={{ __html: brandGen(service.shortTitle) }} />
+                <p className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(service.description) }} />
               </Link>
             ))}
           </div>
