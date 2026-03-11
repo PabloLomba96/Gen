@@ -5,6 +5,7 @@ import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
 import JsonLd from '@/components/JsonLd';
 import SEO from '@/components/SEO';
+import { brandGen } from '@/lib/brandGen';
 import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { blogArticlesEn } from '@/data/blogArticles-en';
@@ -227,9 +228,9 @@ const BlogArticle = () => {
                 </div>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-foreground">Patricia Martínez Díaz</p>
-                  <p className="text-xs text-muted-foreground">
-                    {s.authorCredentials ?? 'Psicóloga General Sanitaria · Colegiada CV16625 · Especialista en infancia, adolescencia y neurodivergencia'}
-                  </p>
+                  <p className="text-xs text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(
+                    s.authorCredentials ?? 'Psicóloga General Sanitaria · Colegiada CV16625 · Especialista en infancia, adolescencia y neurodivergencia'
+                  ) }} />
                 </div>
               </div>
 
@@ -311,9 +312,9 @@ const BlogArticle = () => {
                 </div>
                 <div>
                   <p className="font-display font-semibold text-foreground text-lg mb-1">Patricia Martínez Díaz</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                    {s.authorBio ?? 'Psicóloga General Sanitaria colegiada CV16625. Especializada en psicología infantojuvenil, neurodivergencia (AACC, TDAH, TEA), regulación emocional y creatividad. Consulta presencial en Valencia y online.'}
-                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: brandGen(
+                    s.authorBio ?? 'Psicóloga General Sanitaria colegiada CV16625. Especializada en psicología infantojuvenil, neurodivergencia (AACC, TDAH, TEA), regulación emocional y creatividad. Consulta presencial en Valencia y online.'
+                  ) }} />
                   <div className="flex flex-wrap gap-2">
                     <Link to={lp('/sobre-mi')} className="text-sm text-primary font-medium hover:underline">
                       {s.authorReadMore ?? 'Más sobre Patricia →'}

@@ -11,6 +11,7 @@ import { blogArticles } from '@/data/blogArticles';
 import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
 import { useMemo } from 'react';
+import { brandGen } from '@/lib/brandGen';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -107,7 +108,7 @@ const ServicioDetalle = () => {
               <span className="text-muted-foreground">/</span>
               <Link to={lp('/servicios')} className="text-muted-foreground hover:text-primary transition-colors">{t('nav.services')}</Link>
               <span className="text-muted-foreground">/</span>
-              <span className="text-foreground">{service.title}</span>
+              <span className="text-foreground" dangerouslySetInnerHTML={{ __html: brandGen(service.title) }} />
             </div>
 
             <div className="max-w-4xl">
@@ -116,8 +117,8 @@ const ServicioDetalle = () => {
               }`}>
                 <service.icon className="w-8 h-8" />
               </div>
-              <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6">{service.title}</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">{service.longDescription}</p>
+              <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-6" dangerouslySetInnerHTML={{ __html: brandGen(service.title) }} />
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl" dangerouslySetInnerHTML={{ __html: brandGen(service.longDescription) }} />
             </div>
           </div>
         </section>
@@ -170,7 +171,7 @@ const ServicioDetalle = () => {
                       {service.adultApproach.items.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                          <span className="text-sm text-muted-foreground">{item}</span>
+                          <span className="text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(item) }} />
                         </li>
                       ))}
                     </ul>
@@ -187,7 +188,7 @@ const ServicioDetalle = () => {
                       {service.childApproach.items.map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <CheckCircle className="w-4 h-4 text-accent mt-0.5 shrink-0" />
-                          <span className="text-sm text-muted-foreground">{item}</span>
+                          <span className="text-sm text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(item) }} />
                         </li>
                       ))}
                     </ul>
@@ -229,7 +230,7 @@ const ServicioDetalle = () => {
                   {service.details.map((detail) => (
                     <li key={detail} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-accent mt-0.5 shrink-0" />
-                      <span className="text-muted-foreground">{detail}</span>
+                      <span className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(detail) }} />
                     </li>
                   ))}
                 </ul>
@@ -288,7 +289,7 @@ const ServicioDetalle = () => {
                   }`}>
                     <sv.icon className="w-5 h-5" />
                   </div>
-                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">{sv.shortTitle}</p>
+                  <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors" dangerouslySetInnerHTML={{ __html: brandGen(sv.shortTitle) }} />
                 </Link>
               ))}
             </div>

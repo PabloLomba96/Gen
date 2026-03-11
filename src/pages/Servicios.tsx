@@ -15,6 +15,7 @@ import { services, adultServices, childServices, expatServices, todosServices } 
 import { servicesEn, adultServicesEn, childServicesEn, expatServicesEn, todosServicesEn } from '@/data/services-en';
 import { useLanguage } from '@/i18n/context';
 import { useLocation } from 'react-router-dom';
+import { brandGen } from '@/lib/brandGen';
 
 const Servicios = () => {
   const location = useLocation();
@@ -69,7 +70,7 @@ const Servicios = () => {
     adultsTitle: 'Para adultos',
     adultsDesc: 'Estrés por adaptación cultural, soledad, ansiedad laboral en un entorno nuevo, dificultades de pareja por el cambio de país, duelo migratorio.',
     childrenTitle: 'Para niños y adolescentes',
-    childrenDesc: 'Adaptación escolar en un nuevo idioma, dificultades sociales, neurodivergencia diagnosticada o sospechada en un nuevo sistema educativo, regulación emocional.',
+    childrenDesc: 'Adaptación escolar en un nuevo idioma, dificultades sociales, neurodiver<span class="text-primary font-semibold italic">gen</span>cia diagnosticada o sospechada en un nuevo sistema educativo, regulación emocional.',
     cta: 'Contactar en inglés',
     badges: ['Cultural adaptation', 'Bilingual therapy', 'School coordination', 'Online available'],
   } : {
@@ -78,7 +79,7 @@ const Servicios = () => {
     adultsTitle: 'For adults',
     adultsDesc: 'Cultural adjustment stress, loneliness, workplace anxiety in a new environment, relationship difficulties due to relocation, migratory grief.',
     childrenTitle: 'For children & adolescents',
-    childrenDesc: 'School adaptation in a new language, social difficulties, neurodivergence diagnosed or suspected in a new educational system, emotional regulation.',
+    childrenDesc: 'School adaptation in a new language, social difficulties, neurodiver<span class="text-primary font-semibold italic">gen</span>ce diagnosed or suspected in a new educational system, emotional regulation.',
     cta: 'Contact in English',
     badges: ['Cultural adaptation', 'Bilingual therapy', 'School coordination', 'Online available'],
   };
@@ -250,7 +251,7 @@ const Servicios = () => {
                       <h2 className="text-2xl font-display font-bold text-foreground">{expatsContent.title}</h2>
                     </div>
                   </div>
-                  <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed">{expatsContent.subtitle}</p>
+                  <p className="text-muted-foreground mb-8 max-w-2xl leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(expatsContent.subtitle) }} />
 
                   <div className="flex flex-wrap gap-2 mb-8">
                     {expatsContent.badges.map((b) => (
@@ -323,7 +324,7 @@ const Servicios = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto bg-accent/5 border border-accent/20 rounded-2xl p-6 text-center">
               <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">{s.minorNoteLabel}</strong> {s.minorNote}
+                <strong className="text-foreground">{s.minorNoteLabel}</strong> <span dangerouslySetInnerHTML={{ __html: brandGen(s.minorNote) }} />
               </p>
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { GraduationCap, Heart, Award, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/context';
+import { brandGen } from '@/lib/brandGen';
 
 const icons = [GraduationCap, Award, Heart];
 
@@ -27,9 +28,7 @@ const About = () => {
                 <>Therapy based on a <span className="text-primary font-semibold italic">gen</span>uine connection.</>
               )}
             </p>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              {t('about.subtitle')}
-            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(t('about.subtitle') as string) }} />
           </div>
 
           <div className="grid sm:grid-cols-3 gap-6">
