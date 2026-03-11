@@ -87,7 +87,7 @@ export const servicesEn: ServiceData[] = [
       'Shows repetitive behaviours or very specific interests',
       'Reacts intensely to sensory stimuli',
       'Teachers have suggested you consult a specialist',
-      'Understand their <span class="text-primary font-semibold italic">gen</span>ius and embrace their giftedness',
+      'Understand their <span class="text-primary font-semibold">gen</span>ius and embrace their giftedness',
     ],
     color: 'primary',
     metaTitle: 'Neurodivergence Valencia — Giftedness, ASD, ADHD | Gen Psychology',

@@ -68,9 +68,9 @@ const SobreMi = () => {
                 </h1>
                 <p className="text-base sm:text-lg font-display text-foreground/80 italic">
                   {lang === 'es' ? (
-                    <>Una terapia basada en la conexión <span className="text-primary font-semibold italic">gen</span>uina.</>
+                    <>Una terapia basada en la conexión <span className="text-primary font-semibold">gen</span>uina.</>
                   ) : (
-                    <>Therapy based on a <span className="text-primary font-semibold italic">gen</span>uine connection.</>
+                    <>Therapy based on a <span className="text-primary font-semibold">gen</span>uine connection.</>
                   )}
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: brandGen(s.bio1) }} />

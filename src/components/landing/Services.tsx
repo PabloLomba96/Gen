@@ -84,7 +84,7 @@ const Services = () => {
                 {lang === 'es' ? (
                   <>Acompañamiento psicológico para cada <span className="text-primary font-semibold">gen</span>eración.</>
                 ) : (
-                  <>Psychological support for every <span className="text-primary font-semibold italic">gen</span>eration.</>
+                  <>Psychological support for every <span className="text-primary font-semibold">gen</span>eration.</>
                 )}
               </p>
             </div>
