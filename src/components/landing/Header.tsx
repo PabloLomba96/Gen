@@ -215,7 +215,7 @@ const Header = () => {
           <div className="md:hidden py-6 border-t border-border/50 animate-fade-up">
             <nav className="flex flex-col gap-1">
               {navLinks.slice(0, 2).map((link) => (
-                <Link key={link.href} to={lp(link.href)} onClick={() => setIsMenuOpen(false)}
+                <Link key={link.href} to={lp(link.href)} onClick={() => { pushToDataLayer('click_navigation', { link_name: link.label, location: 'mobile_menu' }); setIsMenuOpen(false); }}
                   className={`text-base font-medium py-3 px-4 rounded-xl transition-colors ${isActive(link.href) ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/50'}`}>
                   {link.label}
                 </Link>
