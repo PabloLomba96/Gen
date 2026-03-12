@@ -3,8 +3,6 @@ import { ArrowRight, BookOpen, Headphones, FileText, Star, ShoppingBag } from 'l
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/context';
 import { pushToDataLayer } from '@/hooks/useGTM';
-import { Link } from 'react-router-dom';
-import { useLanguage } from '@/i18n/context';
 
 const Resources = () => {
   const { lang, lp } = useLanguage();
