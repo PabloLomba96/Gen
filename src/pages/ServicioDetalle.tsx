@@ -263,7 +263,7 @@ const ServicioDetalle = () => {
                 </div>
 
                 <Button asChild size="lg" className="w-full h-14">
-                  <Link to={lp('/contacto')}>
+                  <Link to={lp('/contacto')} onClick={() => pushToDataLayer('click_book_session', { service_slug: service?.slug, location: 'service_detail_cta' })}>
                     {s.bookCta}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
