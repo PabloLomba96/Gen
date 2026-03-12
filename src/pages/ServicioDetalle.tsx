@@ -336,7 +336,7 @@ const ServicioDetalle = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{s.ctaSubtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="h-14 px-8">
-                <Link to={lp('/contacto')}>
+                <Link to={lp('/contacto')} onClick={() => pushToDataLayer('click_book_session', { service_slug: service?.slug, location: 'service_detail_footer_cta' })}>
                   {s.ctaContact}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>

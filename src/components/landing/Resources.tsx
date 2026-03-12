@@ -73,9 +73,14 @@ const Resources = () => {
                     <p className="text-muted-foreground text-sm leading-relaxed">{product.description}</p>
                     <div className="flex items-center justify-between pt-2">
                       <span className="text-2xl font-bold text-primary">{product.price}</span>
-                      <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                        {isEn ? 'Buy' : 'Comprar'}
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                      <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                        <Link
+                          to={lp('/tienda')}
+                          onClick={() => pushToDataLayer('click_resource_buy', { product_name: product.title, type: product.type })}
+                        >
+                          {isEn ? 'Buy' : 'Comprar'}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
                       </Button>
                     </div>
                   </div>

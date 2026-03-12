@@ -379,7 +379,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder={t('contact.formMessagePlaceholder') as string}
                     rows={5}
-                    className={errors.mensaje ? 'border-destructive' : ''}
+                    className={`text-base ${errors.mensaje ? 'border-destructive' : ''}`}
                   />
                   {errors.mensaje && <p className="text-xs text-destructive">{errors.mensaje}</p>}
                 </div>
