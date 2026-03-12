@@ -234,7 +234,7 @@ const Header = () => {
 
               {mobileServicesOpen && (
                 <div className="pl-4 space-y-1">
-                  <Link to={lp('/servicios')} onClick={() => setIsMenuOpen(false)}
+                  <Link to={lp('/servicios')} onClick={() => { pushToDataLayer('click_navigation', { link_name: 'View all services', location: 'mobile_menu_services' }); setIsMenuOpen(false); }}
                     className="block text-sm text-primary font-medium py-2 px-4">
                     {lang === 'es' ? 'Ver todos →' : 'View all →'}
                   </Link>

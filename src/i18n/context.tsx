@@ -97,9 +97,11 @@ function currentPathToOtherLang(pathname: string, currentLang: Lang): string {
     // Convert EN path to ES path
     const withoutPrefix = pathname.replace(/^\/en/, '') || '/';
 
-    // Handle dynamic segments
+    // Handle dynamic segments with slug translation
     if (withoutPrefix.startsWith('/services/')) {
-      return '/servicios/' + withoutPrefix.split('/services/')[1];
+      const enSlug = withoutPrefix.split('/services/')[1];
+      const esSlug = serviceSlugEnToEs[enSlug] || enSlug;
+      return '/servicios/' + esSlug;
     }
     if (withoutPrefix.startsWith('/blog/')) {
       return '/blog/' + withoutPrefix.split('/blog/')[1];
