@@ -57,9 +57,11 @@ Object.entries(serviceSlugEsToEn).forEach(([es, en]) => {
 function translatePath(esPath: string, targetLang: Lang): string {
   if (targetLang === 'es') return esPath;
 
-  // Handle dynamic service routes
+  // Handle dynamic service routes with slug translation
   if (esPath.startsWith('/servicios/')) {
-    return '/en/services/' + esPath.split('/servicios/')[1];
+    const esSlug = esPath.split('/servicios/')[1];
+    const enSlug = serviceSlugEsToEn[esSlug] || esSlug;
+    return '/en/services/' + enSlug;
   }
   // Handle dynamic blog routes
   if (esPath.startsWith('/blog/')) {
