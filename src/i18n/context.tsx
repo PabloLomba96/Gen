@@ -79,9 +79,11 @@ function translatePath(esPath: string, targetLang: Lang): string {
 function currentPathToOtherLang(pathname: string, currentLang: Lang): string {
   if (currentLang === 'es') {
     // Convert ES path to EN path
-    // Handle dynamic segments
+    // Handle dynamic segments with slug translation
     if (pathname.startsWith('/servicios/')) {
-      return '/en/services/' + pathname.split('/servicios/')[1];
+      const esSlug = pathname.split('/servicios/')[1];
+      const enSlug = serviceSlugEsToEn[esSlug] || esSlug;
+      return '/en/services/' + enSlug;
     }
     if (pathname.startsWith('/blog/')) {
       return '/en/blog/' + pathname.split('/blog/')[1];
