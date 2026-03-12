@@ -270,7 +270,7 @@ const Contact = () => {
                       value={formData.nombre}
                       onChange={handleChange}
                       placeholder={t('contact.formNamePlaceholder') as string}
-                      className={errors.nombre ? 'border-destructive' : ''}
+                      className={`text-base ${errors.nombre ? 'border-destructive' : ''}`}
                     />
                     {errors.nombre && <p className="text-xs text-destructive">{errors.nombre}</p>}
                   </div>
@@ -286,7 +286,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder={t('contact.formEmailPlaceholder') as string}
-                      className={errors.email ? 'border-destructive' : ''}
+                      className={`text-base ${errors.email ? 'border-destructive' : ''}`}
                     />
                     {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
                   </div>
@@ -304,6 +304,7 @@ const Contact = () => {
                       value={formData.telefono}
                       onChange={handleChange}
                       placeholder={t('contact.formPhonePlaceholder') as string}
+                      className="text-base"
                     />
                   </div>
 
@@ -316,7 +317,7 @@ const Contact = () => {
                       name="motivo"
                       value={formData.motivo}
                       onChange={handleChange}
-                      className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                      className={`flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                         errors.motivo ? 'border-destructive' : 'border-input'
                       }`}
                     >
@@ -339,7 +340,7 @@ const Contact = () => {
                       name="modalidad"
                       value={formData.modalidad}
                       onChange={handleChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
                       <option value="">{t('contact.formModalityPlaceholder')}</option>
                       {modalities.map(mod => (
@@ -357,7 +358,7 @@ const Contact = () => {
                       name="contactMethod"
                       value={formData.contactMethod}
                       onChange={handleChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                     >
                       <option value="">{t('contact.formContactMethodPlaceholder')}</option>
                       {contactMethods.map(method => (
@@ -378,7 +379,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder={t('contact.formMessagePlaceholder') as string}
                     rows={5}
-                    className={errors.mensaje ? 'border-destructive' : ''}
+                    className={`text-base ${errors.mensaje ? 'border-destructive' : ''}`}
                   />
                   {errors.mensaje && <p className="text-xs text-destructive">{errors.mensaje}</p>}
                 </div>

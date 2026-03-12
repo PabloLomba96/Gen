@@ -12,6 +12,7 @@ import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
 import { useMemo } from 'react';
 import { brandGen } from '@/lib/brandGen';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -144,7 +145,7 @@ const ServicioDetalle = () => {
                 </ul>
                 <p className="mt-6 text-sm text-muted-foreground text-center">
                   {s.symptomsFooter}{' '}
-                  <Link to={lp('/contacto')} className="text-primary font-medium hover:underline">{s.symptomsLink}</Link>
+                  <Link to={lp('/contacto')} className="text-primary font-medium hover:underline" onClick={() => pushToDataLayer('click_book_session', { service_slug: service?.slug, location: 'service_detail_symptoms' })}>{s.symptomsLink}</Link>
                 </p>
               </div>
             </div>
@@ -262,7 +263,7 @@ const ServicioDetalle = () => {
                 </div>
 
                 <Button asChild size="lg" className="w-full h-14">
-                  <Link to={lp('/contacto')}>
+                  <Link to={lp('/contacto')} onClick={() => pushToDataLayer('click_book_session', { service_slug: service?.slug, location: 'service_detail_cta' })}>
                     {s.bookCta}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
@@ -335,7 +336,7 @@ const ServicioDetalle = () => {
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{s.ctaSubtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="h-14 px-8">
-                <Link to={lp('/contacto')}>
+                <Link to={lp('/contacto')} onClick={() => pushToDataLayer('click_book_session', { service_slug: service?.slug, location: 'service_detail_footer_cta' })}>
                   {s.ctaContact}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
