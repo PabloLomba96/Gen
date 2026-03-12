@@ -304,6 +304,7 @@ const Contact = () => {
                       value={formData.telefono}
                       onChange={handleChange}
                       placeholder={t('contact.formPhonePlaceholder') as string}
+                      className="text-base"
                     />
                   </div>
 
