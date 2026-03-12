@@ -257,13 +257,13 @@ const Header = () => {
               )}
 
               {navLinks.slice(2).map((link) => (
-                <Link key={link.href} to={lp(link.href)} onClick={() => setIsMenuOpen(false)}
+                <Link key={link.href} to={lp(link.href)} onClick={() => { pushToDataLayer('click_navigation', { link_name: link.label, location: 'mobile_menu' }); setIsMenuOpen(false); }}
                   className={`text-base font-medium py-3 px-4 rounded-xl transition-colors ${isActive(link.href) ? 'text-primary bg-primary/5' : 'text-muted-foreground hover:text-foreground hover:bg-secondary/50'}`}>
                   {link.label}
                 </Link>
               ))}
               <Button asChild className="w-full mt-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full">
-                <Link to={lp('/contacto')} onClick={() => setIsMenuOpen(false)}>{t('nav.bookSession')}</Link>
+                <Link to={lp('/contacto')} onClick={() => { pushToDataLayer('click_book_session', { location: 'mobile_header_cta' }); setIsMenuOpen(false); }}>{t('nav.bookSession')}</Link>
               </Button>
             </nav>
           </div>
