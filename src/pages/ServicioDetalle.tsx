@@ -145,7 +145,7 @@ const ServicioDetalle = () => {
                 </ul>
                 <p className="mt-6 text-sm text-muted-foreground text-center">
                   {s.symptomsFooter}{' '}
-                  <Link to={lp('/contacto')} className="text-primary font-medium hover:underline">{s.symptomsLink}</Link>
+                  <Link to={lp('/contacto')} className="text-primary font-medium hover:underline" onClick={() => pushToDataLayer('click_book_session', { service_slug: service?.slug, location: 'service_detail_symptoms' })}>{s.symptomsLink}</Link>
                 </p>
               </div>
             </div>
