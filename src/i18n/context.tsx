@@ -35,12 +35,33 @@ Object.entries(esPathToEnSegment).forEach(([es, en]) => {
   enSegmentToEsPath[en] = es;
 });
 
+// Service slug mapping (ES ↔ EN) — must stay in sync with HrefLang.tsx
+const serviceSlugEsToEn: Record<string, string> = {
+  'terapia-individual-adultos': 'individual-therapy-adults',
+  'terapia-de-pareja': 'couples-therapy',
+  'neurodivergencias': 'neurodivergence',
+  'desarrollo-y-creatividad': 'development-creativity',
+  'dificultades-aprendizaje': 'learning-difficulties',
+  'terapia-familiar': 'family-therapy',
+  'regulacion-emocional-autoestima': 'emotional-regulation-self-esteem',
+  'evaluaciones-psicologicas': 'psychological-evaluations',
+  'terapia-expats-adultos': 'therapy-expats-adults',
+  'terapia-expats-infantojuvenil': 'therapy-expats-children',
+};
+
+const serviceSlugEnToEs: Record<string, string> = {};
+Object.entries(serviceSlugEsToEn).forEach(([es, en]) => {
+  serviceSlugEnToEs[en] = es;
+});
+
 function translatePath(esPath: string, targetLang: Lang): string {
   if (targetLang === 'es') return esPath;
 
-  // Handle dynamic service routes
+  // Handle dynamic service routes with slug translation
   if (esPath.startsWith('/servicios/')) {
-    return '/en/services/' + esPath.split('/servicios/')[1];
+    const esSlug = esPath.split('/servicios/')[1];
+    const enSlug = serviceSlugEsToEn[esSlug] || esSlug;
+    return '/en/services/' + enSlug;
   }
   // Handle dynamic blog routes
   if (esPath.startsWith('/blog/')) {
@@ -58,9 +79,11 @@ function translatePath(esPath: string, targetLang: Lang): string {
 function currentPathToOtherLang(pathname: string, currentLang: Lang): string {
   if (currentLang === 'es') {
     // Convert ES path to EN path
-    // Handle dynamic segments
+    // Handle dynamic segments with slug translation
     if (pathname.startsWith('/servicios/')) {
-      return '/en/services/' + pathname.split('/servicios/')[1];
+      const esSlug = pathname.split('/servicios/')[1];
+      const enSlug = serviceSlugEsToEn[esSlug] || esSlug;
+      return '/en/services/' + enSlug;
     }
     if (pathname.startsWith('/blog/')) {
       return '/en/blog/' + pathname.split('/blog/')[1];
@@ -74,9 +97,11 @@ function currentPathToOtherLang(pathname: string, currentLang: Lang): string {
     // Convert EN path to ES path
     const withoutPrefix = pathname.replace(/^\/en/, '') || '/';
 
-    // Handle dynamic segments
+    // Handle dynamic segments with slug translation
     if (withoutPrefix.startsWith('/services/')) {
-      return '/servicios/' + withoutPrefix.split('/services/')[1];
+      const enSlug = withoutPrefix.split('/services/')[1];
+      const esSlug = serviceSlugEnToEs[enSlug] || enSlug;
+      return '/servicios/' + esSlug;
     }
     if (withoutPrefix.startsWith('/blog/')) {
       return '/blog/' + withoutPrefix.split('/blog/')[1];
