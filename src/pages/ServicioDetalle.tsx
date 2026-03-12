@@ -12,6 +12,7 @@ import { blogArticlesFromServices } from '@/data/blogArticlesFromServices';
 import { useLanguage } from '@/i18n/context';
 import { useMemo } from 'react';
 import { brandGen } from '@/lib/brandGen';
+import { pushToDataLayer } from '@/hooks/useGTM';
 
 const ServicioDetalle = () => {
   const { slug } = useParams<{ slug: string }>();
