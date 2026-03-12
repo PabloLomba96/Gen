@@ -286,7 +286,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder={t('contact.formEmailPlaceholder') as string}
-                      className={errors.email ? 'border-destructive' : ''}
+                      className={`text-base ${errors.email ? 'border-destructive' : ''}`}
                     />
                     {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
                   </div>
