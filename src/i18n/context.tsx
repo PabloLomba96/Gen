@@ -35,6 +35,25 @@ Object.entries(esPathToEnSegment).forEach(([es, en]) => {
   enSegmentToEsPath[en] = es;
 });
 
+// Service slug mapping (ES ↔ EN) — must stay in sync with HrefLang.tsx
+const serviceSlugEsToEn: Record<string, string> = {
+  'terapia-individual-adultos': 'individual-therapy-adults',
+  'terapia-de-pareja': 'couples-therapy',
+  'neurodivergencias': 'neurodivergence',
+  'desarrollo-y-creatividad': 'development-creativity',
+  'dificultades-aprendizaje': 'learning-difficulties',
+  'terapia-familiar': 'family-therapy',
+  'regulacion-emocional-autoestima': 'emotional-regulation-self-esteem',
+  'evaluaciones-psicologicas': 'psychological-evaluations',
+  'terapia-expats-adultos': 'therapy-expats-adults',
+  'terapia-expats-infantojuvenil': 'therapy-expats-children',
+};
+
+const serviceSlugEnToEs: Record<string, string> = {};
+Object.entries(serviceSlugEsToEn).forEach(([es, en]) => {
+  serviceSlugEnToEs[en] = es;
+});
+
 function translatePath(esPath: string, targetLang: Lang): string {
   if (targetLang === 'es') return esPath;
 
