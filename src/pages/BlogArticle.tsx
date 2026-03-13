@@ -313,7 +313,7 @@ const BlogArticle = () => {
                 <div>
                   <p className="font-display font-semibold text-foreground text-lg mb-1">Patricia Martínez Díaz</p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: brandGen(
-                    s.authorBio ?? 'Psicóloga General Sanitaria colegiada CV16625. Especializada en psicología infantojuvenil, neurodivergencia (AACC, TDAH, TEA), regulación emocional y creatividad. Consulta presencial en Valencia y online.'
+                    s.authorBio ?? 'Psicóloga General Sanitaria (Nº Col. CV16625). Especializada en psicología infantojuvenil, neurodivergencia (AACC, TDAH, TEA), regulación emocional y creatividad. Consulta presencial en Valencia y online.'
                   ) }} />
                   <div className="flex flex-wrap gap-2">
                     <Link to={lp('/sobre-mi')} className="text-sm text-primary font-medium hover:underline">
