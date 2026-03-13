@@ -82,12 +82,12 @@ export const servicesEn: ServiceData[] = [
     symptoms: [
       'Learns much faster than other children their age',
       'Gets bored in class or feels unmotivated',
+      'Their inner genius doesn\'t find a space to express itself',
       'Struggles to maintain attention or is very impulsive',
       'Has difficulty understanding social rules',
       'Shows repetitive behaviours or very specific interests',
       'Reacts intensely to sensory stimuli',
       'Teachers have suggested you consult a specialist',
-      'Understand their <span class="text-primary font-semibold">gen</span>ius and embrace their giftedness',
     ],
     color: 'primary',
     metaTitle: 'Neurodivergence Valencia — Giftedness, ASD, ADHD | Gen Psychology',

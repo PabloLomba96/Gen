@@ -104,12 +104,12 @@ export const services: ServiceData[] = [
     symptoms: [
       'Aprende mucho más rápido que otros niños de su edad',
       'Se aburre en clase o se encuentra desmotivado/a',
+      'Su genio interior no encuentra un espacio donde expresarse',
       'Le cuesta mantener la atención o es muy impulsivo/a',
       'Tiene dificultades para entender normas sociales',
       'Muestra conductas repetitivas o intereses muy específicos',
       'Reacciona de forma intensa a estímulos sensoriales',
       'Los profesores te han sugerido que consultes con un especialista',
-      'Entiende tu <span class="text-primary font-semibold">gen</span>io y abraza tu alta capacidad',
     ],
     color: 'primary',
     metaTitle: 'Neurodivergencias Valencia — Altas Capacidades, TEA, TDAH | Gen Psicología',
