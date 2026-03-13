@@ -30,7 +30,12 @@ const ServicioDetalle = () => {
   );
 
 
-  if (!service) return <Navigate to={lp('/servicios')} replace />;
+  if (!service) {
+    if (slug && slugRedirects[slug]) {
+      return <Navigate to={lp(`/servicios/${slugRedirects[slug]}`)} replace />;
+    }
+    return <Navigate to={lp('/servicios')} replace />;
+  }
 
   const categoryLabels: Record<string, string> = {
     adultos: lang === 'es' ? 'Psicología para Adultos' : 'Adult Psychology',
