@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { slugRedirects } from '@/components/ServiceRedirect';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpen, User, Baby, UserCheck } from 'lucide-react';
 import Header from '@/components/landing/Header';
