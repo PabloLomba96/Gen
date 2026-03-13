@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
+import { slugRedirects } from '@/components/ServiceRedirect';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, CheckCircle, MapPin, Video, AlertCircle, BookOpen, User, Baby, UserCheck } from 'lucide-react';
 import Header from '@/components/landing/Header';
@@ -29,7 +30,12 @@ const ServicioDetalle = () => {
   );
 
 
-  if (!service) return <Navigate to={lp('/servicios')} replace />;
+  if (!service) {
+    if (slug && slugRedirects[slug]) {
+      return <Navigate to={lp(`/servicios/${slugRedirects[slug]}`)} replace />;
+    }
+    return <Navigate to={lp('/servicios')} replace />;
+  }
 
   const categoryLabels: Record<string, string> = {
     adultos: lang === 'es' ? 'Psicología para Adultos' : 'Adult Psychology',
@@ -49,24 +55,32 @@ const ServicioDetalle = () => {
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
+    '@type': 'MedicalTherapeuticProcedure',
     name: service.title,
     description: service.longDescription,
     url: serviceUrl,
     category: categoryLabels[service.category] || service.category,
     audience: audienceMap[service.category],
     provider: {
-      '@type': 'ProfessionalService',
-      name: 'Gen Centro de Psicología',
-      url: 'https://genpsicologia.com',
-      telephone: '+34611889209',
-      email: 'patricia@genpsicologia.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Valencia',
-        addressCountry: 'ES',
+      '@type': 'Physician',
+      name: 'Patricia Martínez Díaz',
+      jobTitle: 'Psicóloga General Sanitaria',
+      identifier: 'Nº Col. CV16625',
+      relevantSpecialty: 'Psychology',
+      url: 'https://genpsicologia.com/sobre-mi',
+      worksFor: {
+        '@type': 'MedicalBusiness',
+        name: 'Gen Centro de Psicología',
+        url: 'https://genpsicologia.com',
+        telephone: '+34611889209',
+        email: 'patricia@genpsicologia.com',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Valencia',
+          addressCountry: 'ES',
+        },
+        priceRange: '€€',
       },
-      priceRange: '€€',
     },
     areaServed: [
       { '@type': 'City', name: 'Valencia' },
