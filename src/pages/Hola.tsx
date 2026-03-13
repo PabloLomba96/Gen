@@ -14,7 +14,7 @@ import { pushToDataLayer } from '@/hooks/useGTM';
 
 const socialLinks = [
   { handle: '@genpsicologia', href: 'https://instagram.com/genpsicologia' },
-  { handle: '@patri_psicologia', href: 'https://instagram.com/patri_psicologia', followers: '9.5K' },
+  { handle: '@patri_psicologia', href: 'https://instagram.com/patri_psicologia', followers: '10.1K' },
 ];
 
 const Hola = () => {
