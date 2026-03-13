@@ -139,7 +139,7 @@ const ServicioDetalle = () => {
                   {service.symptoms.map((symptom, idx) => (
                     <li key={idx} className="flex items-start gap-3 bg-card rounded-xl p-4 border border-border">
                       <span className="text-accent mt-0.5 shrink-0">•</span>
-                      <span className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: symptom }} />
+                      <span className="text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(symptom) }} />
                     </li>
                   ))}
                 </ul>
