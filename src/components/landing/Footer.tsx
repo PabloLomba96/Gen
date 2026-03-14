@@ -119,6 +119,10 @@ const Footer = () => {
           </div>
         </div>
 
+        <div className="flex justify-center mb-8">
+          <img src={logoGen} alt="Gen Psicología" className="w-12 h-12 opacity-40" width={48} height={48} loading="lazy" />
+        </div>
+
         <div className="pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-background/35">
           <p>{(t('footer.copyright') as string).replace('{year}', new Date().getFullYear().toString())}</p>
           <div className="flex items-center gap-5">

@@ -218,8 +218,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">{t('contact.emailLabel')}</p>
-                      <a href="mailto:patricia@genpsicologia.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
-                        patricia@genpsicologia.com
+                      <a href="mailto:hola@genpsicologia.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                        hola@genpsicologia.com
                       </a>
                     </div>
                   </div>
