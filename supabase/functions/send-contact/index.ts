@@ -144,8 +144,11 @@ Deno.serve(async (req) => {
           },
           body: JSON.stringify({
             from: "Gen Psicología <no-reply@genpsicologia.com>",
-            to: ["patricia@genpsicologia.com"],
+            to: ["hola@genpsicologia.com"],
+            bcc: ["pablo@genpsicologia.com", "patricia@genpsicologia.com"],
             subject: `Nueva consulta: ${escapeHtml(motivo)} - ${escapeHtml(nombre)}`,
+            html: htmlBody,
+          }),
             html: htmlBody,
           }),
         });

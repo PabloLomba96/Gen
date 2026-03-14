@@ -87,7 +87,7 @@ Deno.serve(async (req) => {
           },
           body: JSON.stringify({
             from: "Gen Psicología <no-reply@genpsicologia.com>",
-            to: ["patricia@genpsicologia.com"],
+            to: ["pablo@genpsicologia.com"],
             subject: `Nueva suscripción newsletter: ${escapeHtml(email.trim())}`,
             html: `
               <h2>🎉 Nueva suscripción a Píldoras de Bienestar</h2>
