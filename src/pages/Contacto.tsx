@@ -15,7 +15,7 @@ const contactJsonLd = {
     '@type': 'ProfessionalService',
     name: 'Gen Centro de Psicología',
     telephone: '+34611889209',
-    email: 'patricia@genpsicologia.com',
+    email: 'hola@genpsicologia.com',
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
