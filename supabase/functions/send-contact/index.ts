@@ -149,8 +149,6 @@ Deno.serve(async (req) => {
             subject: `Nueva consulta: ${escapeHtml(motivo)} - ${escapeHtml(nombre)}`,
             html: htmlBody,
           }),
-            html: htmlBody,
-          }),
         });
       } catch (emailError) {
         console.error("Email error:", emailError);
