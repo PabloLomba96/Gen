@@ -5,6 +5,7 @@ import { useLanguage } from '@/i18n/context';
 import { Instagram } from 'lucide-react';
 import { pushToDataLayer } from '@/hooks/useGTM';
 import cvBadge from '@/assets/cv16625-badge.png';
+import logoGen from '@/assets/logo-gen.png';
 
 const Footer = () => {
   const { t, lp, lang } = useLanguage();
