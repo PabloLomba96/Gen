@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, GraduationCap, Heart, Award, Quote, MapPin, Video, Users, Star, CheckCircle, BookOpen, Shield, Brain, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logoPatricia from '@/assets/logo-patricia.png';
+import patriciaPrincipal from '@/assets/patricia-principal.jpg';
+import patriciaChaqueta1 from '@/assets/patricia-chaqueta-1.jpg';
+import patriciaChaqueta2 from '@/assets/patricia-chaqueta-2.jpg';
+import brandCircles from '@/assets/brand-circles.png';
 import cvBadge from '@/assets/cv16625-badge.png';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
@@ -32,7 +35,7 @@ const SobreMi = () => {
         url: 'https://genpsicologia.com',
         image: 'https://genpsicologia.com/og-image.png',
         telephone: '+34611889209',
-        email: 'patricia@genpsicologia.com', /* legal — keep personal */
+        email: 'patricia@genpsicologia.com',
         address: { '@type': 'PostalAddress', addressLocality: 'Valencia', addressCountry: 'ES' },
         medicalSpecialty: 'Psychiatric',
         isAcceptingNewPatients: true,
@@ -58,13 +61,21 @@ const SobreMi = () => {
           name: 'Patricia Martínez Díaz',
           jobTitle: 'Psicóloga General Sanitaria',
           identifier: 'CV16625',
+          image: 'https://genpsicologia.com/patricia-principal.jpg',
         },
       }} />
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="py-16 bg-gradient-to-b from-secondary/50 to-background">
-          <div className="container mx-auto px-4">
+        <section className="py-16 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
+          {/* Subtle brand watermark */}
+          <img
+            src={brandCircles}
+            alt=""
+            aria-hidden="true"
+            className="absolute top-10 right-0 w-64 md:w-96 opacity-[0.04] pointer-events-none select-none"
+          />
+          <div className="container mx-auto px-4 relative">
             <div className="flex items-center gap-2 mb-6">
               <Link to={lp('/')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('common.breadcrumbHome')}</Link>
               <span className="text-muted-foreground">/</span>
@@ -72,19 +83,19 @@ const SobreMi = () => {
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-              {/* Image Side */}
+              {/* Image Side — Hero photo */}
               <div className="relative">
-                <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0">
+                <div className="relative aspect-[3/4] max-w-md mx-auto lg:mx-0">
                   <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 blur-xl" />
                   <div className="absolute top-8 left-8 w-full h-full rounded-3xl border-2 border-primary/20" />
                   <div 
-                    className="relative h-full rounded-3xl bg-card overflow-hidden border border-border flex items-center justify-center p-8"
+                    className="relative h-full rounded-3xl overflow-hidden border border-border"
                     style={{ boxShadow: 'var(--shadow-card)' }}
                   >
                     <img 
-                      src={logoPatricia} 
+                      src={patriciaPrincipal} 
                       alt="Patricia Martínez Díaz — Psicóloga General Sanitaria CV16625 — Gen Centro de Psicología Valencia" 
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                   <div 
@@ -153,6 +164,30 @@ const SobreMi = () => {
                     <p className="text-muted-foreground text-xs">{lang === 'es' ? 'Clínica autorizada por la Conselleria de Sanidad' : 'Health-authorized clinic'}</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Editorial photo section with secondary images */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 items-stretch">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4]" style={{ boxShadow: 'var(--shadow-soft)' }}>
+                <img
+                  src={patriciaChaqueta1}
+                  alt={lang === 'es' ? 'Patricia Martínez Díaz en consulta — Psicóloga en Valencia' : 'Patricia Martínez Díaz in session — Psychologist in Valencia'}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4]" style={{ boxShadow: 'var(--shadow-soft)' }}>
+                <img
+                  src={patriciaChaqueta2}
+                  alt={lang === 'es' ? 'Patricia Martínez Díaz — Terapia presencial y online en Valencia' : 'Patricia Martínez Díaz — In-person and online therapy in Valencia'}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>

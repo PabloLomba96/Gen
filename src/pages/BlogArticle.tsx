@@ -13,6 +13,8 @@ import { blogArticlesFromServicesEn } from '@/data/blogArticlesFromServices-en';
 import { services } from '@/data/services';
 import { useLanguage } from '@/i18n/context';
 import React, { useMemo } from 'react';
+import patriciaPrincipal from '@/assets/patricia-principal.jpg';
+import brandCircles from '@/assets/brand-circles.png';
 
 const allArticlesEs = [...blogArticlesFromServices, ...blogArticles];
 const allArticlesEn = [...blogArticlesFromServicesEn, ...blogArticlesEn];
@@ -73,7 +75,9 @@ const BlogArticle = () => {
       '@type': 'Person',
       name: 'Patricia Martínez Díaz',
       jobTitle: 'Psicóloga General Sanitaria',
+      identifier: 'Nº Col. CV16625',
       url: 'https://genpsicologia.com/sobre-mi',
+      image: 'https://genpsicologia.com/patricia-principal.jpg',
       sameAs: ['https://www.instagram.com/genpsicologia/'],
       description: lang === 'en'
         ? 'Registered Health Psychologist (CV16625) specialising in child, adolescent and neurodivergence psychology in Valencia.'
@@ -223,13 +227,19 @@ const BlogArticle = () => {
             <article className="max-w-3xl mx-auto">
               {/* ── Author box (top, E-E-A-T) ── */}
               <div className="flex items-center gap-4 mb-10 p-4 rounded-xl bg-secondary/40 border border-border">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <User className="w-6 h-6 text-primary" />
-                </div>
+                <img
+                  src={patriciaPrincipal}
+                  alt="Patricia Martínez Díaz"
+                  className="w-12 h-12 rounded-full object-cover object-top shrink-0"
+                  width={48}
+                  height={48}
+                />
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-foreground">Patricia Martínez Díaz</p>
                   <p className="text-xs text-muted-foreground" dangerouslySetInnerHTML={{ __html: brandGen(
-                    s.authorCredentials ?? 'Psicóloga General Sanitaria (Nº Col. CV16625) · Especialista en infancia, adolescencia y neurodivergencia'
+                    lang === 'en'
+                      ? 'Registered Health Psychologist (Nº Col. CV16625) · Child, adolescent & neurodivergence specialist'
+                      : 'Psicóloga General Sanitaria (Nº Col. CV16625) · Especialista en infancia, adolescencia y neurodivergencia'
                   ) }} />
                 </div>
               </div>
@@ -299,6 +309,11 @@ const BlogArticle = () => {
           </div>
         </section>
 
+        {/* ── Brand stamp ── */}
+        <div className="flex justify-center py-6">
+          <img src={brandCircles} alt="Gen Psicología" className="w-20 h-auto opacity-20" loading="lazy" />
+        </div>
+
         {/* ── Author box (bottom, detailed E-E-A-T) ── */}
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -307,11 +322,18 @@ const BlogArticle = () => {
                 {s.authorTitle ?? 'Sobre la autora'}
               </h3>
               <div className="flex flex-col sm:flex-row gap-5">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mx-auto sm:mx-0">
-                  <User className="w-8 h-8 text-primary" />
-                </div>
+                <img
+                  src={patriciaPrincipal}
+                  alt="Patricia Martínez Díaz — Psicóloga General Sanitaria (Nº Col. CV16625)"
+                  className="w-16 h-16 rounded-full object-cover object-top shrink-0 mx-auto sm:mx-0"
+                  width={64}
+                  height={64}
+                />
                 <div>
                   <p className="font-display font-semibold text-foreground text-lg mb-1">Patricia Martínez Díaz</p>
+                  <p className="text-xs text-primary font-medium mb-2">
+                    {lang === 'en' ? 'Registered Health Psychologist (Nº Col. CV16625)' : 'Psicóloga General Sanitaria (Nº Col. CV16625)'}
+                  </p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3" dangerouslySetInnerHTML={{ __html: brandGen(
                     s.authorBio ?? 'Psicóloga General Sanitaria (Nº Col. CV16625). Especializada en psicología infantojuvenil, neurodivergencia (AACC, TDAH, TEA), regulación emocional y creatividad. Consulta presencial en Valencia y online.'
                   ) }} />
