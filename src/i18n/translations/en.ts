@@ -236,7 +236,7 @@ export const en = {
     breadcrumbServices: 'Services',
     title: 'How can I',
     titleHighlight: 'help you',
-    subtitle: 'Integrative psychology for adults (mornings) and child & adolescent therapy (afternoons). Every intervention is personalised, evidence-based and adapted to your stage in life.',
+    subtitle: 'Cognitive-behavioral psychology and psychotherapy for adults, adolescents and children. Each intervention is personalized, evidence-based and adapted to your life stage.',
     schoolCoordTitle: 'School Coordination',
     schoolCoordText: 'I believe in the importance of all the child\'s environments working in the same direction. That\'s why I maintain communication with schools (when authorised by the family) to share relevant information, unify criteria and support their school adaptation. This coordination ensures the child receives more complete and consistent support both at home and in the classroom.',
     minorNote: 'To begin working with a minor, it is essential that both parents or legal guardians agree and provide signed consent.',
