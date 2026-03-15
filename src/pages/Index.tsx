@@ -52,6 +52,34 @@ const faqJsonLd = {
   ],
 };
 
+const medicalClinicJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalClinic',
+  'name': 'Gen Psicología',
+  'description': 'Clínica de Psicología y Psicoterapia especializada en procesos terapéuticos y evaluaciones para adultos y población infantojuvenil.',
+  'url': 'https://genpsicologia.com/',
+  'logo': 'https://genpsicologia.com/logo-gen.png',
+  'image': 'https://genpsicologia.com/og-image.png',
+  'telephone': '+34611889209',
+  'email': 'hola@genpsicologia.com',
+  'address': {
+    '@type': 'PostalAddress',
+    'streetAddress': 'Valencia',
+    'addressLocality': 'Valencia',
+    'addressRegion': 'Comunidad Valenciana',
+    'postalCode': '46002',
+    'addressCountry': 'ES'
+  },
+  'founder': {
+    '@type': 'Person',
+    'name': 'Patricia Martinez Diaz',
+    'jobTitle': 'Psicóloga',
+    'identifier': 'Nº Col. CV16625',
+    'url': 'https://genpsicologia.com/sobre-mi'
+  },
+  'medicalSpecialty': 'Psychological'
+};
+
 const Index = () => {
   const { lang } = useLanguage();
 
