@@ -76,7 +76,7 @@ const Privacidad = () => {
                   <li><strong className="text-foreground">Limitación:</strong> Solicitar la limitación del tratamiento.</li>
                   <li><strong className="text-foreground">Portabilidad:</strong> Recibir tus datos en un formato estructurado.</li>
                 </ul>
-                <p className="mt-3">Puedes ejercer estos derechos enviando un email a <a href="mailto:patricia@genpsicologia.com" className="text-primary hover:underline">patricia@genpsicologia.com</a>. También tienes derecho a presentar una reclamación ante la <strong className="text-foreground">Agencia Española de Protección de Datos (AEPD)</strong> — <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.aepd.es</a>.</p>
+                <p className="mt-3">Puedes ejercer estos derechos enviando un email a <a href="mailto:hola@genpsicologia.com" className="text-primary hover:underline">hola@genpsicologia.com</a>. También tienes derecho a presentar una reclamación ante la <strong className="text-foreground">Agencia Española de Protección de Datos (AEPD)</strong> — <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">www.aepd.es</a>.</p>
               </div>
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">6. Destinatarios</h2>

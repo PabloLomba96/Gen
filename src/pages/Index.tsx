@@ -95,6 +95,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO title={seoTitle} description={seoDesc} lang={lang} canonical={canonical} />
       <JsonLd data={faqJsonLd} />
+      <JsonLd data={medicalClinicJsonLd} />
       <Header />
       <main>
         <Hero />

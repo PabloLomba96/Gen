@@ -86,7 +86,7 @@ const Cookies = () => {
               </div>
               <div>
                 <h2 className="text-lg font-display font-semibold text-foreground mb-3">5. Contacto</h2>
-                <p>Si tienes dudas sobre nuestra política de cookies, puedes contactar con nosotros en <a href="mailto:patricia@genpsicologia.com" className="text-primary hover:underline">patricia@genpsicologia.com</a>.</p>
+                <p>Si tienes dudas sobre nuestra política de cookies, puedes contactar con nosotros en <a href="mailto:hola@genpsicologia.com" className="text-primary hover:underline">hola@genpsicologia.com</a>.</p>
               </div>
 
               <div className="pt-6 border-t border-border">

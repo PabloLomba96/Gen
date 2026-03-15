@@ -73,7 +73,7 @@ const ServicioDetalle = () => {
         name: 'Gen Centro de Psicología',
         url: 'https://genpsicologia.com',
         telephone: '+34611889209',
-        email: 'patricia@genpsicologia.com',
+        email: 'hola@genpsicologia.com',
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Valencia',
