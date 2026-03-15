@@ -35,7 +35,7 @@ const SobreMi = () => {
         url: 'https://genpsicologia.com',
         image: 'https://genpsicologia.com/og-image.png',
         telephone: '+34611889209',
-        email: 'patricia@genpsicologia.com',
+        email: 'hola@genpsicologia.com',
         address: { '@type': 'PostalAddress', addressLocality: 'Valencia', addressCountry: 'ES' },
         medicalSpecialty: 'Psychiatric',
         isAcceptingNewPatients: true,

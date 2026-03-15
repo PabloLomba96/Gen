@@ -41,7 +41,7 @@ const AvisoLegal = () => {
                     <li><strong className="text-foreground">Titular:</strong> Patricia Martínez Díaz</li>
                     <li><strong className="text-foreground">Nombre comercial:</strong> Gen Centro de Psicología</li>
                     <li><strong className="text-foreground">Nº de Colegiada:</strong> CV16625 (Colegio Oficial de Psicología de la Comunitat Valenciana)</li>
-                    <li><strong className="text-foreground">Email:</strong> patricia@genpsicologia.com</li>
+                    <li><strong className="text-foreground">Email:</strong> hola@genpsicologia.com</li>
                     <li><strong className="text-foreground">Teléfono:</strong> +34 611 889 209</li>
                     <li><strong className="text-foreground">Ubicación:</strong> Valencia, España</li>
                   </ul>
