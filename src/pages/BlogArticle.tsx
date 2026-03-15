@@ -309,10 +309,6 @@ const BlogArticle = () => {
           </div>
         </section>
 
-        {/* ── Brand stamp ── */}
-        <div className="flex justify-center py-6">
-          <img src={brandCircles} alt="Gen Psicología" className="w-20 h-auto opacity-20" loading="lazy" />
-        </div>
 
         {/* ── Author box (bottom, detailed E-E-A-T) ── */}
         <section className="py-12">

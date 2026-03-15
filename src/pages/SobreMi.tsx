@@ -68,13 +68,6 @@ const SobreMi = () => {
       <main className="pt-20">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
-          {/* Subtle brand watermark */}
-          <img
-            src={brandCircles}
-            alt=""
-            aria-hidden="true"
-            className="absolute top-10 right-0 w-64 md:w-96 opacity-[0.04] pointer-events-none select-none"
-          />
           <div className="container mx-auto px-4 relative">
             <div className="flex items-center gap-2 mb-6">
               <Link to={lp('/')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('common.breadcrumbHome')}</Link>
