@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import patriciaPrincipal from '@/assets/patricia-principal.jpg';
 import patriciaChaqueta1 from '@/assets/patricia-chaqueta-1.jpg';
 import patriciaChaqueta2 from '@/assets/patricia-chaqueta-2.jpg';
-import brandCircles from '@/assets/brand-circles.png';
+
 import cvBadge from '@/assets/cv16625-badge.png';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
@@ -68,13 +68,6 @@ const SobreMi = () => {
       <main className="pt-20">
         {/* Hero */}
         <section className="py-16 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden">
-          {/* Subtle brand watermark */}
-          <img
-            src={brandCircles}
-            alt=""
-            aria-hidden="true"
-            className="absolute top-10 right-0 w-64 md:w-96 opacity-[0.04] pointer-events-none select-none"
-          />
           <div className="container mx-auto px-4 relative">
             <div className="flex items-center gap-2 mb-6">
               <Link to={lp('/')} className="text-sm text-muted-foreground hover:text-primary transition-colors">{t('common.breadcrumbHome')}</Link>
