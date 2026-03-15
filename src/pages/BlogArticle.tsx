@@ -63,34 +63,34 @@ const BlogArticle = () => {
   /* ── JSON-LD (Article schema) ── */
   const articleJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: article.title,
-    description: article.excerpt,
-    url: `https://genpsicologia.com/blog/${article.slug}`,
-    datePublished: article.date,
-    dateModified: article.date,
-    wordCount: article.content.join(' ').split(/\s+/).length,
-    inLanguage: lang === 'en' ? 'en' : 'es',
-    author: {
+    '@type': 'MedicalWebPage',
+    'headline': article.title,
+    'description': article.excerpt,
+    'url': `https://genpsicologia.com${lp(`/blog/${article.slug}`)}`,
+    'datePublished': article.date,
+    'inLanguage': lang === 'en' ? 'en' : 'es',
+    'author': {
       '@type': 'Person',
-      name: 'Patricia Martínez Díaz',
-      jobTitle: 'Psicóloga General Sanitaria',
-      identifier: 'Nº Col. CV16625',
-      url: 'https://genpsicologia.com/sobre-mi',
-      image: 'https://genpsicologia.com/patricia-principal.jpg',
-      sameAs: ['https://www.instagram.com/genpsicologia/'],
-      description: lang === 'en'
-        ? 'Registered Health Psychologist (CV16625) specialising in child, adolescent and neurodivergence psychology in Valencia.'
-        : 'Psicóloga Sanitaria colegiada CV16625 especializada en infancia, adolescencia y neurodivergencia en Valencia.',
+      'name': 'Patricia Martinez Diaz',
+      'jobTitle': 'Psicóloga',
+      'identifier': 'Nº Col. CV16625',
+      'url': 'https://genpsicologia.com/sobre-mi'
     },
-    publisher: {
+    'reviewedBy': {
+      '@type': 'Person',
+      'name': 'Patricia Martinez Diaz',
+      'jobTitle': 'Psicóloga General Sanitaria',
+      'identifier': 'Nº Col. CV16625',
+      'url': 'https://genpsicologia.com/sobre-mi'
+    },
+    'publisher': {
       '@type': 'Organization',
-      name: 'Gen Psicología',
-      url: 'https://genpsicologia.com',
-      logo: { '@type': 'ImageObject', url: 'https://genpsicologia.com/og-image.png' },
-    },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://genpsicologia.com/blog/${article.slug}` },
-    image: 'https://genpsicologia.com/og-image.png',
+      'name': 'Gen Psicología',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://genpsicologia.com/logo-gen.png'
+      }
+    }
   };
 
   /* ── Inline renderer: bold + links (supports nesting) ── */

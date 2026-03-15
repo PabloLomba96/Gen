@@ -55,42 +55,27 @@ const ServicioDetalle = () => {
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'MedicalTherapeuticProcedure',
-    name: service.title,
-    description: service.longDescription,
-    url: serviceUrl,
-    category: categoryLabels[service.category] || service.category,
-    audience: audienceMap[service.category],
-    provider: {
-      '@type': 'Physician',
-      name: 'Patricia Martínez Díaz',
-      jobTitle: 'Psicóloga General Sanitaria',
-      identifier: 'Nº Col. CV16625',
-      relevantSpecialty: 'Psychology',
-      url: 'https://genpsicologia.com/sobre-mi',
-      worksFor: {
-        '@type': 'MedicalBusiness',
-        name: 'Gen Centro de Psicología',
-        url: 'https://genpsicologia.com',
-        telephone: '+34611889209',
-        email: 'hola@genpsicologia.com',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Valencia',
-          addressCountry: 'ES',
-        },
-        priceRange: '€€',
-      },
+    '@type': 'PsychologicalTreatment',
+    'name': service.title,
+    'description': service.longDescription,
+    'url': `https://genpsicologia.com${lp(`/servicios/${service.slug}`)}`,
+    'provider': {
+      '@type': 'Person',
+      'name': 'Patricia Martinez Diaz',
+      'jobTitle': 'Psicóloga',
+      'identifier': 'Nº Col. CV16625',
+      'url': 'https://genpsicologia.com/sobre-mi'
     },
-    areaServed: [
-      { '@type': 'City', name: 'Valencia' },
-      { '@type': 'Country', name: 'España' },
-    ],
-    availableChannel: [
-      { '@type': 'ServiceChannel', serviceType: lang === 'es' ? 'Presencial' : 'In-person', serviceLocation: { '@type': 'Place', name: 'Valencia' } },
-      { '@type': 'ServiceChannel', serviceType: 'Online' },
-    ],
-    serviceType: service.title,
+    'audience': {
+      '@type': 'PeopleAudience',
+      'audienceType': service.category === 'adultos' ? 'Adults' : 'Children and Adolescents'
+    },
+    'offers': {
+      '@type': 'Offer',
+      'availability': 'https://schema.org/InStock',
+      'priceCurrency': 'EUR',
+      'url': `https://genpsicologia.com${lp('/contacto')}`
+    }
   };
 
   const breadcrumbJsonLd = {
