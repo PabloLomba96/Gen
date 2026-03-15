@@ -14,7 +14,7 @@ import { services } from '@/data/services';
 import { useLanguage } from '@/i18n/context';
 import React, { useMemo } from 'react';
 import patriciaPrincipal from '@/assets/patricia-principal.jpg';
-import brandCircles from '@/assets/brand-circles.png';
+
 
 const allArticlesEs = [...blogArticlesFromServices, ...blogArticles];
 const allArticlesEn = [...blogArticlesFromServicesEn, ...blogArticlesEn];
