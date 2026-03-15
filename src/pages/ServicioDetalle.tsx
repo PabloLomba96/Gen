@@ -77,10 +77,6 @@ const ServicioDetalle = () => {
       'url': `https://genpsicologia.com${lp('/contacto')}`
     }
   };
-      { '@type': 'ServiceChannel', serviceType: 'Online' },
-    ],
-    serviceType: service.title,
-  };
 
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
