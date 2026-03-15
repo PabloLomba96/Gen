@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import patriciaPrincipal from '@/assets/patricia-principal.jpg';
 import patriciaChaqueta1 from '@/assets/patricia-chaqueta-1.jpg';
 import patriciaChaqueta2 from '@/assets/patricia-chaqueta-2.jpg';
-import brandCircles from '@/assets/brand-circles.png';
+
 import cvBadge from '@/assets/cv16625-badge.png';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
