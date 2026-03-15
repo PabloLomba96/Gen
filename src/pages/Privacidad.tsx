@@ -38,7 +38,7 @@ const Privacidad = () => {
                 <ul className="space-y-1.5 list-none pl-0">
                   <li><strong className="text-foreground">Responsable:</strong> Patricia Martínez Díaz</li>
                   <li><strong className="text-foreground">Nombre comercial:</strong> Gen Centro de Psicología</li>
-                  <li><strong className="text-foreground">Email de contacto:</strong> patricia@genpsicologia.com</li>
+                  <li><strong className="text-foreground">Email de contacto:</strong> hola@genpsicologia.com</li>
                   <li><strong className="text-foreground">Finalidad:</strong> Gestión de consultas, citas, suscripciones a newsletter y prestación de servicios de psicología.</li>
                 </ul>
               </div>
